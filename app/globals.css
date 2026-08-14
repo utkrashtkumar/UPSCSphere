@@ -1,0 +1,359 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================================
+   UPSC SPHERE — INDIAN TRICOLOUR LIQUID GLASS DESIGN SYSTEM
+   Saffron (Kesari) · Pure Crystal Glass · Harit Green · Ashoka Navy
+   =================================================== */
+
+:root {
+  /* DARK THEME (DEFAULT: ASHOKA MIDNIGHT & GLOWING TRICOLOUR) */
+  --bg-main: #050b14;
+  --bg-card: rgba(10, 25, 47, 0.75);
+  --bg-card-hover: rgba(15, 34, 64, 0.88);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-hover: rgba(255, 103, 31, 0.5);
+  --glass-highlight: rgba(255, 255, 255, 0.25);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-heading: #ffffff;
+
+  /* Tricolour Accent Colors */
+  --color-saffron: #ff671f;
+  --color-saffron-glow: rgba(255, 103, 31, 0.35);
+  --color-green: #10b981;
+  --color-green-glow: rgba(16, 185, 129, 0.35);
+  --color-blue: #3b82f6;
+  --color-blue-glow: rgba(59, 130, 246, 0.3);
+
+  /* Flowing Background Aura Orbs */
+  --aurora-saffron: rgba(255, 103, 31, 0.18);
+  --aurora-blue: rgba(59, 130, 246, 0.16);
+  --aurora-green: rgba(16, 185, 129, 0.18);
+
+  --shadow-ambient: 0 12px 35px -5px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--glass-border);
+  --shadow-hover: 0 20px 45px -10px rgba(0, 0, 0, 0.75), 0 0 25px rgba(255, 103, 31, 0.25);
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Sora', system-ui, sans-serif;
+  --input-bg: rgba(5, 11, 20, 0.6);
+  --input-border: rgba(255, 255, 255, 0.12);
+}
+
+/* ===================== LIGHT THEME ===================== */
+html[data-theme="light"],
+html.light {
+  --bg-main: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.90);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(148, 163, 184, 0.25);
+  --glass-border-hover: rgba(217, 93, 15, 0.55);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-heading: #0f172a;
+
+  /* Tricolour Accent Colors for Light Mode (High Contrast) */
+  --color-saffron: #d95d0f;
+  --color-saffron-glow: rgba(217, 93, 15, 0.2);
+  --color-green: #046a38;
+  --color-green-glow: rgba(4, 106, 56, 0.2);
+  --color-blue: #1d4ed8;
+  --color-blue-glow: rgba(29, 78, 216, 0.2);
+
+  /* Flowing Background Aura Orbs in Light Mode */
+  --aurora-saffron: rgba(255, 103, 31, 0.10);
+  --aurora-blue: rgba(59, 130, 246, 0.08);
+  --aurora-green: rgba(16, 185, 129, 0.10);
+
+  --shadow-ambient: 0 6px 25px -3px rgba(15, 23, 42, 0.08), 0 0 0 1px var(--glass-border);
+  --shadow-hover: 0 14px 35px -6px rgba(15, 23, 42, 0.14), 0 0 20px rgba(217, 93, 15, 0.15);
+  --input-bg: rgba(255, 255, 255, 0.95);
+  --input-border: rgba(148, 163, 184, 0.3);
+}
+
+/* ===================== BASE STYLES ===================== */
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body, button, input, select, textarea {
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display, var(--font-body, 'Inter', system-ui, sans-serif));
+}
+
+/* ===================== RUNNING TRICOLOUR ANIMATED BACKGROUND ===================== */
+.tricolor-aurora-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Saffron top orb */
+.aurora-saffron-orb {
+  position: absolute;
+  top: -12%;
+  left: -5%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 720px;
+  max-height: 720px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--aurora-saffron) 0%, transparent 70%);
+  filter: blur(75px);
+  animation: floatSaffron 14s ease-in-out infinite alternate;
+}
+
+/* Ashoka Blue center-right orb */
+.aurora-blue-orb {
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  width: 55vw;
+  height: 55vw;
+  max-width: 650px;
+  max-height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--aurora-blue) 0%, transparent 70%);
+  filter: blur(80px);
+  animation: floatBlue 18s ease-in-out infinite alternate;
+}
+
+/* Harit Green bottom orb */
+.aurora-green-orb {
+  position: absolute;
+  bottom: -12%;
+  left: 15%;
+  width: 65vw;
+  height: 65vw;
+  max-width: 780px;
+  max-height: 780px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--aurora-green) 0%, transparent 70%);
+  filter: blur(80px);
+  animation: floatGreen 16s ease-in-out infinite alternate;
+}
+
+/* ===================== FLOATING STATE EMBLEM OF INDIA ===================== */
+.floating-emblem-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-emblem-img {
+  width: min(80vh, 560px);
+  height: auto;
+  opacity: 0.055;
+  filter: drop-shadow(0 0 50px rgba(255, 103, 31, 0.3));
+  animation: floatEmblem 12s ease-in-out infinite alternate;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+/* In dark mode: invert black lines to bright glowing silver/white */
+html.dark .floating-emblem-img,
+html[data-theme="dark"] .floating-emblem-img {
+  filter: invert(1) brightness(1.15) drop-shadow(0 0 60px rgba(59, 130, 246, 0.35));
+  opacity: 0.075;
+}
+
+/* In light mode: soft subtle classic watermark */
+html.light .floating-emblem-img,
+html[data-theme="light"] .floating-emblem-img {
+  filter: drop-shadow(0 0 40px rgba(217, 93, 15, 0.18));
+  opacity: 0.045;
+}
+
+@keyframes floatEmblem {
+  0% {
+    transform: translateY(-14px) rotate(-0.5deg) scale(1);
+  }
+  50% {
+    transform: translateY(14px) rotate(0.5deg) scale(1.035);
+  }
+  100% {
+    transform: translateY(-14px) rotate(-0.5deg) scale(1);
+  }
+}
+
+/* ===================== RUNNING ANIMATED LIQUID GLASS EFFECTS ===================== */
+
+/* Running Tricolour Gradient Line */
+.running-tricolor-line {
+  background: linear-gradient(90deg, #ff671f, #ffffff, #046a38, #ff671f);
+  background-size: 300% 100%;
+  animation: runningTricolor 6s linear infinite;
+}
+
+/* Running Tricolour Animated Border Card */
+.running-tricolor-card {
+  position: relative;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  z-index: 1;
+}
+
+.running-tricolor-card::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: calc(1.5rem + 1.5px);
+  background: linear-gradient(90deg, #ff671f, rgba(255,255,255,0.7), #10b981, #ff671f);
+  background-size: 300% 100%;
+  animation: runningTricolor 8s linear infinite;
+  z-index: -1;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.running-tricolor-card:hover::before {
+  opacity: 1;
+}
+
+/* Running Shimmer Stream */
+.running-shimmer-stream {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  animation: shimmerStream 3.5s infinite linear;
+  pointer-events: none;
+}
+
+/* Liquid Glass Cards */
+.liquid-glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-ambient);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-highlight), transparent);
+  opacity: 0.6;
+}
+
+.liquid-glass-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Liquid Glass Panel */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-ambient);
+}
+
+/* Liquid Glass Button */
+.liquid-glass-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.liquid-glass-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.liquid-glass-btn:active {
+  transform: translateY(0.5px) scale(0.99);
+}
+
+/* Tricolour Text Gradient */
+.tricolor-gradient-text {
+  background: linear-gradient(90deg, #ff671f, #ff9933, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="light"] .tricolor-gradient-text,
+html.light .tricolor-gradient-text {
+  background: linear-gradient(90deg, #c2410c, #d95d0f, #046a38);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===================== KEYFRAMES ===================== */
+@keyframes runningTricolor {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatSaffron {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(25px, -20px) scale(1.08); }
+}
+
+@keyframes floatGreen {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(-20px, 20px) scale(1.06); }
+}
+
+@keyframes floatBlue {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(15px, 25px) scale(0.96); }
+}
+
+@keyframes shimmerStream {
+  0%   { transform: translateX(-150%); }
+  100% { transform: translateX(150%); }
+}
+
+/* Custom Scrollbars with Tricolour Accent */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(5, 11, 20, 0.3); }
+::-webkit-scrollbar-thumb { background: rgba(255, 103, 31, 0.35); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-saffron); }
+
+html[data-theme="light"] ::-webkit-scrollbar-track,
+html.light ::-webkit-scrollbar-track { background: rgba(241, 245, 249, 0.5); }
+html[data-theme="light"] ::-webkit-scrollbar-thumb,
+html.light ::-webkit-scrollbar-thumb { background: rgba(217, 93, 15, 0.35); }
