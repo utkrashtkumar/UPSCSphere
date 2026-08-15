@@ -27,11 +27,25 @@ export default function PYQVaultPage() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [expandedQId, setExpandedQId] = useState<string | null>(null);
   const [bookmarkedIds, setBookmarkedIds] = useState<string[]>([]);
+  const [userSelectedPYQAnswers, setUserSelectedPYQAnswers] = useState<Record<string, number>>({});
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
   const [authModalConfig, setAuthModalConfig] = useState({
     title: 'Sign In to Attempt Official PYQ Test',
     description: 'Please sign in to take official 2-hour UPSC Prelims PYQ exam simulations with instant scoring, negative marking, and verified answer keys.'
   });
+
+  const handlePYQOptionClick = (questionId: string, optIdx: number) => {
+    if (!user) {
+      setAuthModalConfig({
+        title: 'Sign In to Check Your Answer',
+        description: 'Sign in to see if your answer is correct, view verified official UPSC answer keys, and unlock standard textbook page citations.'
+      });
+      setShowAuthModal(true);
+      return;
+    }
+    setUserSelectedPYQAnswers(prev => ({ ...prev, [questionId]: optIdx }));
+    setExpandedQId(questionId);
+  };
 
   React.useEffect(() => {
     setBookmarkedIds(getBookmarks());
@@ -212,22 +226,35 @@ export default function PYQVaultPage() {
 
               {/* Options */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-                {q.options.map((opt, optIdx) => (
-                  <div
-                    key={optIdx}
-                    className={`p-4 sm:p-5 rounded-2xl border flex items-start gap-3 text-sm sm:text-base leading-relaxed shadow-sm ${
-                      isExpanded && Boolean(user) && optIdx === q.correctAnswer
-                        ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-950 dark:text-emerald-100 font-bold'
-                        : 'bg-white/90 dark:bg-slate-900/60 border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-300'
-                    }`}
-                  >
-                    <span className="font-bold">{letters[optIdx]}.</span>
-                    <span className="flex-1">{opt}</span>
-                    {isExpanded && Boolean(user) && optIdx === q.correctAnswer && (
-                      <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                    )}
-                  </div>
-                ))}
+                {q.options.map((opt, optIdx) => {
+                  const selectedByLoggedUser = Boolean(user) && userSelectedPYQAnswers[q.id] === optIdx;
+                  const isCorrect = isExpanded && Boolean(user) && optIdx === q.correctAnswer;
+                  const isWrong = selectedByLoggedUser && optIdx !== q.correctAnswer;
+
+                  return (
+                    <button
+                      key={optIdx}
+                      type="button"
+                      onClick={() => handlePYQOptionClick(q.id, optIdx)}
+                      className={`text-left p-4 sm:p-5 rounded-2xl border flex items-start gap-3 text-sm sm:text-base leading-relaxed shadow-sm transition-all cursor-pointer hover:border-orange-400 hover:shadow-md ${
+                        isCorrect
+                          ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-950 dark:text-emerald-100 font-bold'
+                          : isWrong
+                          ? 'bg-rose-50 dark:bg-rose-950/60 border-rose-500 text-rose-950 dark:text-rose-100 font-medium'
+                          : 'bg-white/90 dark:bg-slate-900/60 border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-300 hover:bg-orange-50/40 dark:hover:bg-orange-500/5'
+                      }`}
+                    >
+                      <span className="font-bold">{letters[optIdx]}.</span>
+                      <span className="flex-1">{opt}</span>
+                      {isCorrect && (
+                        <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                      )}
+                      {isWrong && (
+                        <span className="text-rose-500 font-bold text-sm shrink-0">✕</span>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Expandable Solution & Book Page Reference */}

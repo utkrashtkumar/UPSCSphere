@@ -60,6 +60,20 @@ export default function DailyCAPage() {
 
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [expandedQuestions, setExpandedQuestions] = useState<Record<string, boolean>>({});
+  const [userSelectedCAAnswers, setUserSelectedCAAnswers] = useState<Record<string, number>>({});
+
+  const handleCAOptionClick = (questionId: string, optIdx: number) => {
+    if (!user) {
+      setAuthModalConfig({
+        title: 'Sign In to Check Your Answer',
+        description: 'Sign in to see if your answer is correct, view instant UPSC explanations, and unlock standard textbook page citations.'
+      });
+      setShowAuthModal(true);
+      return;
+    }
+    setUserSelectedCAAnswers(prev => ({ ...prev, [questionId]: optIdx }));
+    setExpandedQuestions(prev => ({ ...prev, [questionId]: true }));
+  };
 
   // Fetch today's automated edition from API on mount
   useEffect(() => {
@@ -449,21 +463,36 @@ export default function DailyCAPage() {
                 {/* Options List */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
                   {q.options.map((opt, optIdx) => {
+                    const selectedByLoggedUser = Boolean(user) && userSelectedCAAnswers[q.id] === optIdx;
                     const isCorrect = isExpanded && Boolean(user) && optIdx === q.correctAnswer;
+                    const isWrong = selectedByLoggedUser && optIdx !== q.correctAnswer;
+
                     return (
-                      <div
+                      <button
                         key={optIdx}
-                        className={`p-3 rounded-xl border text-xs transition-all ${
+                        type="button"
+                        onClick={() => handleCAOptionClick(q.id, optIdx)}
+                        className={`text-left p-3 rounded-xl border text-xs transition-all flex items-start justify-between gap-2 cursor-pointer hover:border-orange-400/80 hover:shadow-sm ${
                           isCorrect
                             ? 'bg-emerald-500/15 border-emerald-500 text-emerald-800 dark:text-emerald-300 font-bold'
-                            : 'bg-slate-50/60 dark:bg-slate-900/40 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300'
+                            : isWrong
+                            ? 'bg-rose-500/15 border-rose-500 text-rose-800 dark:text-rose-300 font-medium'
+                            : 'bg-slate-50/60 dark:bg-slate-900/40 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-orange-50/30 dark:hover:bg-orange-500/5'
                         }`}
                       >
-                        <span className="font-bold mr-2 text-slate-400">
-                          {String.fromCharCode(65 + optIdx)}.
-                        </span>
-                        {opt}
-                      </div>
+                        <div>
+                          <span className="font-bold mr-2 text-slate-400">
+                            {String.fromCharCode(65 + optIdx)}.
+                          </span>
+                          <span>{opt}</span>
+                        </div>
+                        {isCorrect && (
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                        )}
+                        {isWrong && (
+                          <span className="text-rose-500 font-bold text-xs shrink-0 mt-0.5">✕</span>
+                        )}
+                      </button>
                     );
                   })}
                 </div>
