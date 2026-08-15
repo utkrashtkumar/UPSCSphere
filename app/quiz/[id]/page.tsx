@@ -120,8 +120,11 @@ export default function LiveQuizSessionPage() {
   const hasAnsweredCurrent = currentAnswer.selectedOption !== null && currentAnswer.selectedOption !== undefined;
   const isBookmarked = bookmarkedIds.includes(currentQ.id);
 
+  const isFreeSession = Boolean(config.isPYQOnly && (config.pyqYear === 2026 || String(config.pyqYear) === '2026'));
+  const isSessionUnlocked = isFreeSession || Boolean(user);
+
   const handleSelectOption = (optionIndex: number) => {
-    if (!user) {
+    if (!isSessionUnlocked) {
       setShowAuthModal(true);
       return;
     }
@@ -135,7 +138,7 @@ export default function LiveQuizSessionPage() {
   };
 
   const handleToggleEliminate = (optionIndex: number) => {
-    if (!user) {
+    if (!isSessionUnlocked) {
       setShowAuthModal(true);
       return;
     }
@@ -182,7 +185,7 @@ export default function LiveQuizSessionPage() {
   };
 
   const handleSubmitQuiz = () => {
-    if (!user) {
+    if (!isSessionUnlocked) {
       setShowAuthModal(true);
       return;
     }
@@ -366,6 +369,7 @@ export default function LiveQuizSessionPage() {
             <InstantFeedbackBanner
               question={currentQ}
               selectedOption={currentAnswer.selectedOption}
+              isFreeSession={isFreeSession}
               onNext={
                 currentIndex < questions.length - 1
                   ? () => setCurrentIndex((prev) => prev + 1)
@@ -392,7 +396,7 @@ export default function LiveQuizSessionPage() {
               <BookOpen className="w-4 h-4 text-amber-600 dark:text-amber-400" />
               <span>Reference Source for this Topic</span>
             </div>
-            {user ? (
+            {isSessionUnlocked ? (
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-white/5 space-y-1.5 text-xs">
                 <div className="text-slate-500 dark:text-slate-400 text-[11px]">Mapped Standard Book:</div>
                 <div className="font-bold text-slate-900 dark:text-white">{currentQ.bookReference.bookName}</div>

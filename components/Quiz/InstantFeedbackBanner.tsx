@@ -12,6 +12,7 @@ interface InstantFeedbackBannerProps {
   selectedOption: number | null;
   onNext?: () => void;
   isLastQuestion?: boolean;
+  isFreeSession?: boolean;
 }
 
 export default function InstantFeedbackBanner({
@@ -19,6 +20,7 @@ export default function InstantFeedbackBanner({
   selectedOption,
   onNext,
   isLastQuestion = false,
+  isFreeSession = false,
 }: InstantFeedbackBannerProps) {
   const { user } = useAuth();
   const [isBookmarked, setIsBookmarked] = React.useState(false);
@@ -35,7 +37,9 @@ export default function InstantFeedbackBanner({
 
   if (selectedOption === null) return null;
 
-  if (!user) {
+  const isUnlocked = Boolean(user) || isFreeSession;
+
+  if (!isUnlocked) {
     return (
       <div className="mt-6 rounded-2xl border border-orange-500/40 liquid-card bg-slate-900/90 dark:bg-slate-950 p-6 text-center space-y-4 shadow-xl animate-slide-up">
         <div className="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-400 flex items-center justify-center mx-auto border border-orange-500/30">
