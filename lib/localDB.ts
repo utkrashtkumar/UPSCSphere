@@ -89,6 +89,16 @@ export function getStoredProfile(): UserProfile {
   }
 }
 
+export function clearStoredProfile(): void {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.removeItem(STORAGE_KEYS.PROFILE);
+    localStorage.removeItem('upsc_auth_session');
+  } catch (err) {
+    console.error('Failed to clear stored profile', err);
+  }
+}
+
 export function saveStoredProfile(profile: Partial<UserProfile>): UserProfile {
   if (typeof window === 'undefined') return defaultProfile;
   try {

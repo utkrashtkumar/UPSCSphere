@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { 
   Flame, 
   Calendar, 
@@ -24,6 +24,7 @@ import TypographyPanel from '@/components/TypographyPanel';
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const { theme, toggleTheme } = useTheme();
   const { user, profile, signOut } = useAuth();
 
@@ -211,9 +212,10 @@ export default function Navbar() {
 
                     <div className="pt-1 border-t border-slate-100 dark:border-white/10">
                       <button
-                        onClick={() => {
-                          signOut();
+                        onClick={async () => {
                           setUserDropdownOpen(false);
+                          await signOut();
+                          router.push('/auth');
                         }}
                         className="w-full flex items-center gap-2 px-3 py-1.5 rounded-xl text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-500/10 text-xs font-medium transition-colors"
                       >
@@ -283,9 +285,10 @@ export default function Navbar() {
                 My Aspirant Profile
               </Link>
               <button
-                onClick={() => {
-                  signOut();
+                onClick={async () => {
                   setMobileMenuOpen(false);
+                  await signOut();
+                  router.push('/auth');
                 }}
                 className="px-3 py-2 rounded-xl text-rose-500 bg-rose-500/10 font-bold text-xs"
               >

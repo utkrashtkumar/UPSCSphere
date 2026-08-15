@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { supabase, isSupabaseConfigured } from '@/lib/supabaseClient';
-import { getStoredProfile, saveStoredProfile, defaultProfile } from '@/lib/localDB';
+import { getStoredProfile, saveStoredProfile, clearStoredProfile, defaultProfile } from '@/lib/localDB';
 import { UserProfile } from '@/lib/types';
 
 export interface AuthUser {
@@ -52,12 +52,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Initial profile sync
-    const stored = getStoredProfile();
-    setProfile(stored);
-
-    // Helper to fetch full DB profile
-    const fetchSupabaseProfile = async (userId: string) => {
+    // Helper to fetch full DB profile for authenticated user
+    const fetchSupabaseProfile = async (userId: string, emailFallback?: string) => {
       if (!isSupabaseConfigured || !supabase) return;
       try {
         const { data: dbProfile } = await supabase
@@ -68,28 +64,28 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
         if (dbProfile) {
           const merged: UserProfile = {
-            ...getStoredProfile(),
-            name: dbProfile.name || stored.name,
-            email: dbProfile.email || stored.email,
-            targetYear: dbProfile.target_year || stored.targetYear,
-            optionalSubject: dbProfile.optional_subject || stored.optionalSubject,
-            streakCount: dbProfile.streak_count ?? stored.streakCount,
-            totalQuizzesTaken: dbProfile.total_quizzes ?? stored.totalQuizzesTaken,
-            averageScore: dbProfile.average_score ?? stored.averageScore,
-            highestScore: dbProfile.highest_score ?? stored.highestScore,
-            avatarUrl: dbProfile.avatar_url || stored.avatarUrl,
-            dob: dbProfile.dob || stored.dob,
-            homeTown: dbProfile.home_town || stored.homeTown,
-            homeState: dbProfile.home_state || stored.homeState,
-            graduationDegree: dbProfile.graduation_degree || stored.graduationDegree,
-            graduationCollege: dbProfile.graduation_college || stored.graduationCollege,
-            graduationCity: dbProfile.graduation_city || stored.graduationCity,
-            graduationYear: dbProfile.graduation_year || stored.graduationYear,
-            postGraduationDegree: dbProfile.post_graduation_degree || stored.postGraduationDegree,
-            postGraduationCollege: dbProfile.post_graduation_college || stored.postGraduationCollege,
-            postGraduationYear: dbProfile.post_graduation_year || stored.postGraduationYear,
-            attemptNumber: dbProfile.attempt_number || stored.attemptNumber || 1,
-            medium: dbProfile.medium || stored.medium || 'English',
+            ...defaultProfile,
+            name: dbProfile.name || emailFallback?.split('@')[0] || 'Aspirant',
+            email: dbProfile.email || emailFallback || '',
+            targetYear: dbProfile.target_year || 2027,
+            optionalSubject: dbProfile.optional_subject || 'General Studies',
+            streakCount: dbProfile.streak_count ?? 0,
+            totalQuizzesTaken: dbProfile.total_quizzes ?? 0,
+            averageScore: dbProfile.average_score ?? 0,
+            highestScore: dbProfile.highest_score ?? 0,
+            avatarUrl: dbProfile.avatar_url || '',
+            dob: dbProfile.dob || '',
+            homeTown: dbProfile.home_town || '',
+            homeState: dbProfile.home_state || '',
+            graduationDegree: dbProfile.graduation_degree || '',
+            graduationCollege: dbProfile.graduation_college || '',
+            graduationCity: dbProfile.graduation_city || '',
+            graduationYear: dbProfile.graduation_year || undefined,
+            postGraduationDegree: dbProfile.post_graduation_degree || '',
+            postGraduationCollege: dbProfile.post_graduation_college || '',
+            postGraduationYear: dbProfile.post_graduation_year || undefined,
+            attemptNumber: dbProfile.attempt_number || 1,
+            medium: dbProfile.medium || 'English',
           };
           saveStoredProfile(merged);
           setProfile(merged);
@@ -99,45 +95,51 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
     };
 
-    // Check if demo user or active session exists
+    // Check active session
     if (isSupabaseConfigured && supabase) {
       supabase.auth.getSession().then(({ data: { session } }) => {
-        if (session?.user) {
-          setUser({
-            id: session.user.id,
-            email: session.user.email || '',
-            name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Aspirant',
-            targetYear: session.user.user_metadata?.target_year || stored.targetYear,
-            avatarUrl: session.user.user_metadata?.avatar_url,
-          });
-          fetchSupabaseProfile(session.user.id);
-        } else {
-          // Check local auth cache
-          const localAuth = localStorage.getItem('upsc_auth_session');
-          if (localAuth) {
-            try {
-              setUser(JSON.parse(localAuth));
-            } catch {}
-          }
-        }
-        setIsLoading(false);
-      });
-
-      const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
         if (session?.user) {
           const authUser: AuthUser = {
             id: session.user.id,
             email: session.user.email || '',
             name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Aspirant',
-            targetYear: session.user.user_metadata?.target_year || stored.targetYear,
+            targetYear: session.user.user_metadata?.target_year || 2027,
             avatarUrl: session.user.user_metadata?.avatar_url,
           };
           setUser(authUser);
           localStorage.setItem('upsc_auth_session', JSON.stringify(authUser));
-          fetchSupabaseProfile(session.user.id);
+          fetchSupabaseProfile(session.user.id, session.user.email);
         } else {
+          // No active Supabase session — user is definitely logged out
           setUser(null);
-          localStorage.removeItem('upsc_auth_session');
+          setProfile(defaultProfile);
+          clearStoredProfile();
+        }
+        setIsLoading(false);
+      }).catch(() => {
+        setUser(null);
+        setProfile(defaultProfile);
+        clearStoredProfile();
+        setIsLoading(false);
+      });
+
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+        if (session?.user) {
+          const authUser: AuthUser = {
+            id: session.user.id,
+            email: session.user.email || '',
+            name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Aspirant',
+            targetYear: session.user.user_metadata?.target_year || 2027,
+            avatarUrl: session.user.user_metadata?.avatar_url,
+          };
+          setUser(authUser);
+          localStorage.setItem('upsc_auth_session', JSON.stringify(authUser));
+          fetchSupabaseProfile(session.user.id, session.user.email);
+        } else {
+          // Session expired or logged out
+          setUser(null);
+          setProfile(defaultProfile);
+          clearStoredProfile();
         }
       });
 
@@ -145,12 +147,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         subscription.unsubscribe();
       };
     } else {
-      // Offline / Local-first mode
+      // Offline / Local-first mode (when Supabase is not configured in environment)
       const localAuth = localStorage.getItem('upsc_auth_session');
       if (localAuth) {
         try {
           setUser(JSON.parse(localAuth));
-        } catch {}
+          setProfile(getStoredProfile());
+        } catch {
+          setUser(null);
+          setProfile(defaultProfile);
+        }
+      } else {
+        setUser(null);
+        setProfile(defaultProfile);
       }
       setIsLoading(false);
     }
@@ -392,10 +401,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (isSupabaseConfigured && supabase) {
       try {
         await supabase.auth.signOut();
-      } catch {}
+      } catch (e) {
+        console.warn('Supabase signOut notice:', e);
+      }
     }
     setUser(null);
-    localStorage.removeItem('upsc_auth_session');
+    setProfile(defaultProfile);
+    clearStoredProfile();
   };
 
   const updateUserProfile = async (updates: Partial<UserProfile>) => {

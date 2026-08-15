@@ -72,18 +72,25 @@ const AVATAR_OPTIONS = ['👨‍🎓', '👩‍🎓', '🏛️', '🇮🇳', '�
 
 export default function ProfilePage() {
   const router = useRouter();
-  const { user, profile, updateUserProfile, isSupabaseConnected } = useAuth();
+  const { user, profile, updateUserProfile, isSupabaseConnected, isLoading, signOut } = useAuth();
 
   const [formData, setFormData] = useState<UserProfile>(profile);
   const [isSaving, setIsSaving] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [activeTab, setActiveTab] = useState<'personal' | 'upsc' | 'academic'>('personal');
 
+  // Automatic redirect if user is not authenticated
   useEffect(() => {
-    if (profile) {
+    if (!isLoading && !user) {
+      router.replace('/auth?redirect=/profile');
+    }
+  }, [isLoading, user, router]);
+
+  useEffect(() => {
+    if (profile && user) {
       setFormData(profile);
     }
-  }, [profile]);
+  }, [profile, user]);
 
   const handleChange = (field: keyof UserProfile, value: any) => {
     setFormData(prev => ({
@@ -94,6 +101,10 @@ export default function ProfilePage() {
 
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!user) {
+      router.replace('/auth?redirect=/profile');
+      return;
+    }
     setIsSaving(true);
     setSaveSuccess(false);
 
@@ -107,6 +118,65 @@ export default function ProfilePage() {
       setIsSaving(false);
     }
   };
+
+  const handleSignOut = async () => {
+    await signOut();
+    router.replace('/auth');
+  };
+
+  // 1. Loading Skeleton State
+  if (isLoading) {
+    return (
+      <div className="w-full px-4 py-20 max-w-4xl mx-auto text-center space-y-6 animate-pulse">
+        <div className="w-16 h-16 rounded-2xl bg-orange-500/20 mx-auto flex items-center justify-center border border-orange-500/30">
+          <div className="w-8 h-8 border-3 border-orange-500 border-t-transparent rounded-full animate-spin" />
+        </div>
+        <div className="space-y-2">
+          <h2 className="text-xl font-black text-slate-900 dark:text-white">Verifying Secure Aspirant Session...</h2>
+          <p className="text-xs text-slate-500">Checking authenticated cloud credentials</p>
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Unauthenticated Security Barrier (Locked State)
+  if (!user) {
+    return (
+      <div className="w-full px-4 py-16 max-w-md mx-auto text-center space-y-6 animate-fade-in">
+        <div className="liquid-glass-card rounded-3xl p-8 border-orange-500/30 shadow-2xl space-y-5">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500/20 to-amber-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center mx-auto border-2 border-orange-500/30 shadow-lg">
+            <ShieldCheck className="w-8 h-8 text-orange-500" />
+          </div>
+          
+          <div className="space-y-2">
+            <h2 className="text-2xl font-black font-display text-slate-900 dark:text-white">
+              Authentication Required
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Your profile contains private demographic, academic, and exam milestone details. Please sign in to access or update your aspirant profile.
+            </p>
+          </div>
+
+          <div className="space-y-3 pt-2">
+            <Link
+              href="/auth?redirect=/profile"
+              className="liquid-glass-btn w-full py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-emerald-600 text-white font-extrabold text-sm shadow-xl shadow-orange-500/25 flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            >
+              <span>Sign In to Access Profile</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center w-full py-3 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            >
+              Back to Home
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Calculate Profile Completeness Percentage
   const calculateCompleteness = () => {
@@ -137,12 +207,22 @@ export default function ProfilePage() {
           <span>Back to Home</span>
         </Link>
 
-        {isSupabaseConnected && (
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-bold border border-emerald-500/20">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-            <span>Cloud Database Sync Active</span>
-          </div>
-        )}
+        <div className="flex items-center gap-3">
+          {isSupabaseConnected && (
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-bold border border-emerald-500/20">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
+              <span>Cloud Sync Active</span>
+            </div>
+          )}
+
+          <button
+            type="button"
+            onClick={handleSignOut}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 text-xs font-bold transition-colors border border-rose-500/20"
+          >
+            <span>Sign Out</span>
+          </button>
+        </div>
       </div>
 
       {/* Profile Banner Card */}

@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { 
   Sparkles, 
   ShieldCheck, 
@@ -22,8 +22,13 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/lib/authContext';
 
-export default function AuthPage() {
+function AuthContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const rawRedirect = searchParams.get('redirect');
+  // Safe redirect path (only internal paths starting with /)
+  const redirectPath = rawRedirect && rawRedirect.startsWith('/') && !rawRedirect.startsWith('//') ? rawRedirect : '/';
+
   const { user, signInWithEmail, signUpWithEmail, resendConfirmationEmail, signInWithMagicLink, signInWithGoogle } = useAuth();
 
   const [mode, setMode] = useState<'login' | 'signup' | 'magic_link'>('login');
@@ -90,7 +95,7 @@ export default function AuthPage() {
           setError(res.error);
         } else {
           setSuccess('Signed in successfully! Redirecting...');
-          setTimeout(() => router.push('/'), 800);
+          setTimeout(() => router.push(redirectPath), 800);
         }
       } else if (mode === 'magic_link') {
         const res = await signInWithMagicLink(email);
@@ -151,7 +156,7 @@ export default function AuthPage() {
         setError(res.error);
       } else {
         setSuccess('Authenticated with Google! Redirecting...');
-        setTimeout(() => router.push('/'), 800);
+        setTimeout(() => router.push(redirectPath), 800);
       }
     } catch (err: any) {
       setError(err.message || 'Google authentication failed.');
@@ -491,5 +496,19 @@ export default function AuthPage() {
       )}
 
     </div>
+  );
+}
+
+export default function AuthPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="max-w-md mx-auto px-4 py-20 text-center">
+          <div className="w-12 h-12 border-3 border-orange-500 border-t-transparent rounded-full animate-spin mx-auto" />
+        </div>
+      }
+    >
+      <AuthContent />
+    </Suspense>
   );
 }
