@@ -12,21 +12,26 @@ import {
   Send, 
   Bookmark, 
   BookOpen, 
-  Sparkles
+  Sparkles,
+  Lock
 } from 'lucide-react';
 import { Question, QuizConfig, QuizResult } from '@/lib/types';
 import { loadQuestions } from '@/lib/questionLoader';
 import { evaluateQuiz } from '@/lib/scoringEngine';
 import { saveQuizResult, toggleBookmark, getBookmarks } from '@/lib/localDB';
+import { useAuth } from '@/lib/authContext';
 import OptionButton from '@/components/Quiz/OptionButton';
 import InstantFeedbackBanner from '@/components/Quiz/InstantFeedbackBanner';
 import QuestionPalette from '@/components/Quiz/QuestionPalette';
 import CountdownTimer from '@/components/Quiz/CountdownTimer';
+import AuthLockModal from '@/components/AuthLockModal';
 
 export default function LiveQuizSessionPage() {
   const router = useRouter();
   const params = useParams();
   const quizId = (params?.id as string) || 'custom-quiz';
+  const { user } = useAuth();
+  const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
 
   const [config, setConfig] = useState<QuizConfig>({
     id: 'default-quiz',
@@ -116,6 +121,10 @@ export default function LiveQuizSessionPage() {
   const isBookmarked = bookmarkedIds.includes(currentQ.id);
 
   const handleSelectOption = (optionIndex: number) => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
     setAnswers((prev) => ({
       ...prev,
       [currentQ.id]: {
@@ -126,6 +135,10 @@ export default function LiveQuizSessionPage() {
   };
 
   const handleToggleEliminate = (optionIndex: number) => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
     setAnswers((prev) => {
       const currentElim = prev[currentQ.id]?.eliminatedOptions || [];
       const updatedElim = currentElim.includes(optionIndex)
@@ -169,6 +182,10 @@ export default function LiveQuizSessionPage() {
   };
 
   const handleSubmitQuiz = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
     if (isSubmitting) return;
     setIsSubmitting(true);
 
@@ -375,18 +392,41 @@ export default function LiveQuizSessionPage() {
               <BookOpen className="w-4 h-4 text-amber-600 dark:text-amber-400" />
               <span>Reference Source for this Topic</span>
             </div>
-            <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-white/5 space-y-1.5 text-xs">
-              <div className="text-slate-500 dark:text-slate-400 text-[11px]">Mapped Standard Book:</div>
-              <div className="font-bold text-slate-900 dark:text-white">{currentQ.bookReference.bookName}</div>
-              <div className="text-slate-600 dark:text-slate-300 text-[11px]">{currentQ.bookReference.chapter}</div>
-              <div className="pt-1 flex items-center justify-between text-[11px] border-t border-slate-200 dark:border-white/10 mt-2">
-                <span className="text-slate-500 dark:text-slate-400">Page Citation:</span>
-                <span className="font-bold text-amber-700 dark:text-amber-400">{currentQ.bookReference.pageNumber}</span>
+            {user ? (
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-white/5 space-y-1.5 text-xs">
+                <div className="text-slate-500 dark:text-slate-400 text-[11px]">Mapped Standard Book:</div>
+                <div className="font-bold text-slate-900 dark:text-white">{currentQ.bookReference.bookName}</div>
+                <div className="text-slate-600 dark:text-slate-300 text-[11px]">{currentQ.bookReference.chapter}</div>
+                <div className="pt-1 flex items-center justify-between text-[11px] border-t border-slate-200 dark:border-white/10 mt-2">
+                  <span className="text-slate-500 dark:text-slate-400">Page Citation:</span>
+                  <span className="font-bold text-amber-700 dark:text-amber-400">{currentQ.bookReference.pageNumber}</span>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="p-3.5 rounded-xl bg-slate-900/90 text-center space-y-2 text-xs border border-orange-500/30">
+                <Lock className="w-4 h-4 text-orange-400 mx-auto" />
+                <div className="text-white font-bold text-[11px]">Exact Book Page Citation Locked</div>
+                <button
+                  type="button"
+                  onClick={() => setShowAuthModal(true)}
+                  className="w-full py-1.5 rounded-lg bg-orange-500/20 text-orange-400 text-[10px] font-extrabold hover:bg-orange-500/30 transition-colors"
+                >
+                  Sign in to unlock
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
+
+      {/* Reusable Auth Lock Modal */}
+      <AuthLockModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        title="Sign In to Attempt Questions"
+        description="Please sign in to select options, record your answers, track time, evaluate negative marking, and view official book citations."
+        redirectPath="/quiz/create"
+      />
     </div>
   );
 }

@@ -9,19 +9,29 @@ import {
   Search,
   Bookmark,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  Lock,
+  ArrowRight
 } from 'lucide-react';
 import { pyqVault } from '@/data/pyqVault';
 import { PaperType } from '@/lib/types';
 import { toggleBookmark, getBookmarks } from '@/lib/localDB';
+import { useAuth } from '@/lib/authContext';
+import AuthLockModal from '@/components/AuthLockModal';
 
 export default function PYQVaultPage() {
   const router = useRouter();
+  const { user } = useAuth();
   const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
   const [selectedPaper, setSelectedPaper] = useState<PaperType | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [expandedQId, setExpandedQId] = useState<string | null>(null);
   const [bookmarkedIds, setBookmarkedIds] = useState<string[]>([]);
+  const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
+  const [authModalConfig, setAuthModalConfig] = useState({
+    title: 'Sign In to Attempt Official PYQ Test',
+    description: 'Please sign in to take official 2-hour UPSC Prelims PYQ exam simulations with instant scoring, negative marking, and verified answer keys.'
+  });
 
   React.useEffect(() => {
     setBookmarkedIds(getBookmarks());
@@ -40,6 +50,15 @@ export default function PYQVaultPage() {
   });
 
   const handleStartPYQTest = (year: number, paper: PaperType) => {
+    if (!user) {
+      setAuthModalConfig({
+        title: `Sign In to Take UPSC ${year} ${paper} Test`,
+        description: `Please sign in to attempt the full ${year} ${paper === 'GS' ? 'Prelims GS-1 (100 Qs)' : 'CSAT Paper 2 (80 Qs)'} under timed 2-hour exam conditions with instant negative marking.`
+      });
+      setShowAuthModal(true);
+      return;
+    }
+
     const config = {
       title: `UPSC ${year} ${paper === 'GS' ? 'Prelims GS Paper 1' : 'CSAT Paper 2'} Official PYQ`,
       subjects: ['mixed_mock'],
@@ -197,14 +216,14 @@ export default function PYQVaultPage() {
                   <div
                     key={optIdx}
                     className={`p-4 sm:p-5 rounded-2xl border flex items-start gap-3 text-sm sm:text-base leading-relaxed shadow-sm ${
-                      isExpanded && optIdx === q.correctAnswer
+                      isExpanded && Boolean(user) && optIdx === q.correctAnswer
                         ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-950 dark:text-emerald-100 font-bold'
                         : 'bg-white/90 dark:bg-slate-900/60 border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-300'
                     }`}
                   >
                     <span className="font-bold">{letters[optIdx]}.</span>
                     <span className="flex-1">{opt}</span>
-                    {isExpanded && optIdx === q.correctAnswer && (
+                    {isExpanded && Boolean(user) && optIdx === q.correctAnswer && (
                       <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                     )}
                   </div>
@@ -213,48 +232,87 @@ export default function PYQVaultPage() {
 
               {/* Expandable Solution & Book Page Reference */}
               {isExpanded && (
-                <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/10 space-y-3 animate-fade-in">
-                  {/* Book Citation Box */}
-                  <div className="p-4 rounded-2xl bg-gradient-to-r from-orange-500/5 via-slate-50 to-blue-500/5 dark:from-orange-500/10 dark:via-slate-950 dark:to-blue-500/10 border border-orange-500/30 text-xs shadow-sm">
-                    <div className="flex items-center gap-2 text-orange-700 dark:text-orange-400 font-bold mb-2">
-                      <BookOpen className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-                      <span>Official Source Book & Page Number Reference</span>
+                user ? (
+                  <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/10 space-y-3 animate-fade-in">
+                    {/* Book Citation Box */}
+                    <div className="p-4 rounded-2xl bg-gradient-to-r from-orange-500/5 via-slate-50 to-blue-500/5 dark:from-orange-500/10 dark:via-slate-950 dark:to-blue-500/10 border border-orange-500/30 text-xs shadow-sm">
+                      <div className="flex items-center gap-2 text-orange-700 dark:text-orange-400 font-bold mb-2">
+                        <BookOpen className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                        <span>Official Source Book & Page Number Reference</span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 font-medium">
+                        <div className="text-slate-800 dark:text-slate-300">
+                          <span className="text-slate-500 block text-[10px]">Standard Book:</span>
+                          {q.bookReference.bookName}
+                        </div>
+                        <div className="text-slate-800 dark:text-slate-300">
+                          <span className="text-slate-500 block text-[10px]">Chapter:</span>
+                          {q.bookReference.chapter}
+                        </div>
+                        <div className="text-orange-800 dark:text-orange-300">
+                          <span className="text-orange-600 block text-[10px]">Exact Page Number:</span>
+                          <span className="font-bold text-orange-800 dark:text-orange-400">{q.bookReference.pageNumber}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 font-medium">
-                      <div className="text-slate-800 dark:text-slate-300">
-                        <span className="text-slate-500 block text-[10px]">Standard Book:</span>
-                        {q.bookReference.bookName}
+
+                    {/* Elimination Trick */}
+                    {q.eliminationTip && (
+                      <div className="p-3.5 rounded-2xl bg-blue-50 dark:bg-blue-500/10 border border-blue-500/30 text-xs text-slate-700 dark:text-slate-300 shadow-sm">
+                        <strong className="text-blue-700 dark:text-blue-400 block mb-1">💡 UPSC Elimination Technique:</strong>
+                        {q.eliminationTip}
                       </div>
-                      <div className="text-slate-800 dark:text-slate-300">
-                        <span className="text-slate-500 block text-[10px]">Chapter:</span>
-                        {q.bookReference.chapter}
-                      </div>
-                      <div className="text-orange-800 dark:text-orange-300">
-                        <span className="text-orange-600 block text-[10px]">Exact Page Number:</span>
-                        <span className="font-bold text-orange-800 dark:text-orange-400">{q.bookReference.pageNumber}</span>
-                      </div>
+                    )}
+
+                    {/* Detailed Explanation */}
+                    <div className="p-4 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-white/5 text-xs text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed shadow-sm">
+                      <strong className="text-slate-900 dark:text-slate-200 block mb-1 font-bold">Official UPSC Analysis:</strong>
+                      {q.explanation}
                     </div>
                   </div>
-
-                  {/* Elimination Trick */}
-                  {q.eliminationTip && (
-                    <div className="p-3.5 rounded-2xl bg-blue-50 dark:bg-blue-500/10 border border-blue-500/30 text-xs text-slate-700 dark:text-slate-300 shadow-sm">
-                      <strong className="text-blue-700 dark:text-blue-400 block mb-1">💡 UPSC Elimination Technique:</strong>
-                      {q.eliminationTip}
+                ) : (
+                  <div className="mt-4 p-5 rounded-2xl bg-slate-900/90 dark:bg-slate-950 border border-orange-500/40 text-center space-y-3 shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center mx-auto border border-orange-500/30">
+                      <Lock className="w-5 h-5" />
                     </div>
-                  )}
-
-                  {/* Detailed Explanation */}
-                  <div className="p-4 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-white/5 text-xs text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed shadow-sm">
-                    <strong className="text-slate-900 dark:text-slate-200 block mb-1 font-bold">Official UPSC Analysis:</strong>
-                    {q.explanation}
+                    <div className="space-y-1">
+                      <h4 className="text-sm font-bold text-white">
+                        Official UPSC Answer & Book Page Reference Locked
+                      </h4>
+                      <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
+                        Sign in for 100% free access to official UPSC keys, standard textbook citations ({q.bookReference.bookName}, Chapter & Page {q.bookReference.pageNumber}), and strategic elimination notes.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setAuthModalConfig({
+                          title: 'Sign In to Unlock Citations & Solutions',
+                          description: 'Sign in to unlock detailed explanations, UPSC elimination techniques, and official book page citations.'
+                        });
+                        setShowAuthModal(true);
+                      }}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 text-white font-extrabold text-xs shadow-lg shadow-orange-500/20 hover:scale-105 transition-all"
+                    >
+                      <span>Sign In to Unlock Solution & Citations</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
                   </div>
-                </div>
+                )
               )}
             </div>
           );
         })}
       </div>
+
+      {/* Reusable Auth Requirement Modal */}
+      <AuthLockModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        title={authModalConfig.title}
+        description={authModalConfig.description}
+        redirectPath="/pyq"
+      />
     </div>
   );
 }

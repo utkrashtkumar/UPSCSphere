@@ -10,9 +10,12 @@ import {
   Sliders, 
   ShieldCheck, 
   ArrowRight,
-  GraduationCap
+  GraduationCap,
+  Lock
 } from 'lucide-react';
 import { QuizMode } from '@/lib/types';
+import { useAuth } from '@/lib/authContext';
+import AuthLockModal from '@/components/AuthLockModal';
 
 interface SubjectOption {
   id: string;
@@ -117,11 +120,12 @@ const timeLimitOptions = [
 
 export default function CreateQuizPage() {
   const router = useRouter();
-
-  const [mode, setMode] = useState<QuizMode>('instant');
-  const [selectedSubjects, setSelectedSubjects] = useState<string[]>(['geography']);
+  const { user } = useAuth();
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>(['polity']);
   const [questionCount, setQuestionCount] = useState<number>(10);
-  const [timeLimit, setTimeLimit] = useState<number>(15);
+  const [timeLimit, setTimeLimit] = useState<number | null>(15);
+  const [mode, setMode] = useState<QuizMode>('instant');
+  const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
 
   const handleSubjectToggle = (id: string) => {
     if (id === 'gs_full') {
@@ -139,6 +143,11 @@ export default function CreateQuizPage() {
   };
 
   const handleStartQuiz = () => {
+    if (!user) {
+      setShowAuthModal(true);
+      return;
+    }
+
     const config = {
       title: selectedSubjects.length === 1 
         ? `${subjectsList.find(s => s.id === selectedSubjects[0])?.name || 'UPSC'} Mock` 
@@ -368,6 +377,15 @@ export default function CreateQuizPage() {
           </button>
         </div>
       </div>
+
+      {/* Reusable Auth Lock Modal */}
+      <AuthLockModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        title="Sign In to Launch Custom Mock"
+        description="Please sign in to attempt custom UPSC speed mocks, evaluate negative marking, and record your score on the live All-India leaderboard."
+        redirectPath="/quiz/create"
+      />
     </div>
   );
 }

@@ -1,9 +1,11 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle2, XCircle, BookOpen, Lightbulb, Bookmark } from 'lucide-react';
+import Link from 'next/link';
+import { CheckCircle2, XCircle, BookOpen, Lightbulb, Bookmark, Lock, ArrowRight } from 'lucide-react';
 import { Question } from '@/lib/types';
 import { toggleBookmark, getBookmarks } from '@/lib/localDB';
+import { useAuth } from '@/lib/authContext';
 
 interface InstantFeedbackBannerProps {
   question: Question;
@@ -18,6 +20,7 @@ export default function InstantFeedbackBanner({
   onNext,
   isLastQuestion = false,
 }: InstantFeedbackBannerProps) {
+  const { user } = useAuth();
   const [isBookmarked, setIsBookmarked] = React.useState(false);
 
   React.useEffect(() => {
@@ -31,6 +34,29 @@ export default function InstantFeedbackBanner({
   };
 
   if (selectedOption === null) return null;
+
+  if (!user) {
+    return (
+      <div className="mt-6 rounded-2xl border border-orange-500/40 liquid-card bg-slate-900/90 dark:bg-slate-950 p-6 text-center space-y-4 shadow-xl animate-slide-up">
+        <div className="w-12 h-12 rounded-2xl bg-orange-500/20 text-orange-400 flex items-center justify-center mx-auto border border-orange-500/30">
+          <Lock className="w-6 h-6" />
+        </div>
+        <div className="space-y-1">
+          <h3 className="font-bold text-base text-white">Sign In to View Instant Citations & Solution</h3>
+          <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
+            Detailed textbook citations ({question.bookReference.bookName}), page numbers, elimination strategies, and scoring are available for registered members.
+          </p>
+        </div>
+        <Link
+          href="/auth"
+          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 text-white font-extrabold text-xs shadow-lg shadow-orange-500/25 hover:scale-105 transition-all"
+        >
+          <span>Sign In to Unlock Citations</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+    );
+  }
 
   const isCorrect = selectedOption === question.correctAnswer;
   const letters = ['A', 'B', 'C', 'D'];

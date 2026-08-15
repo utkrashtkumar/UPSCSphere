@@ -5,36 +5,48 @@ import { useRouter } from 'next/navigation';
 import { 
   Sparkles, 
   Flame, 
-  Play,
-  BookOpen,
-  CheckCircle2,
-  HelpCircle,
-  Lightbulb,
-  ExternalLink,
-  ChevronDown,
-  ChevronUp,
-  Tag,
-  ShieldCheck,
-  Globe2,
-  Cpu,
-  Landmark,
-  Leaf,
-  Coins,
-  Layers,
-  PlusCircle,
-  Loader2,
-  Award,
-  Clock
+  Play, 
+  BookOpen, 
+  CheckCircle2, 
+  HelpCircle, 
+  Lightbulb, 
+  ExternalLink, 
+  ChevronDown, 
+  ChevronUp, 
+  Tag, 
+  ShieldCheck, 
+  Globe2, 
+  Cpu, 
+  Landmark, 
+  Leaf, 
+  Coins, 
+  Layers, 
+  PlusCircle, 
+  Loader2, 
+  Award, 
+  Clock,
+  Lock,
+  ArrowRight
 } from 'lucide-react';
 import { dailyCAQuestions } from '@/data/dailyCAData';
 import { getStoredProfile } from '@/lib/localDB';
 import { UserProfile } from '@/lib/types';
+import { useAuth } from '@/lib/authContext';
 import DailyCANotificationBell from '@/components/DailyCANotificationBell';
+import AuthLockModal from '@/components/AuthLockModal';
 
 export default function DailyCAPage() {
   const router = useRouter();
+  const { user } = useAuth();
   const [mounted, setMounted] = useState<boolean>(false);
   const [profile, setProfile] = useState<UserProfile | null>(null);
+
+  // Auth lock modal state
+  const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
+  const [authModalConfig, setAuthModalConfig] = useState({
+    title: 'Sign In to Attempt Daily CA Mock',
+    description: 'Please sign in to attempt live timed mocks, record your All-India rank, and track negative marking.'
+  });
   
   // State for active questions (defaults to local fallback, updates from /api/daily-ca)
   const [questionsList, setQuestionsList] = useState(dailyCAQuestions);
@@ -90,6 +102,15 @@ export default function DailyCAPage() {
 
   // Handle on-demand generation of Set 2 (Next 10 questions)
   const handleGenerateSet2 = () => {
+    if (!user) {
+      setAuthModalConfig({
+        title: 'Sign In to Unlock Editorial Dossier (Set 2)',
+        description: 'Create a free account to unlock the additional 10 daily editorial questions, complete syllabus tracking, and AI citations.'
+      });
+      setShowAuthModal(true);
+      return;
+    }
+
     setIsGeneratingSet2(true);
     setGenerationSuccessMessage(null);
 
@@ -109,6 +130,15 @@ export default function DailyCAPage() {
 
   // Launch Quiz in Live Session
   const handleStartQuiz = (setChoice: 'set1' | 'set2' | 'all') => {
+    if (!user) {
+      setAuthModalConfig({
+        title: 'Sign In to Attempt Daily CA Test',
+        description: 'Please sign in to take this daily current affairs test in timed exam mode with instant scoring, negative marking (-0.66), and nationwide AIR ranking.'
+      });
+      setShowAuthModal(true);
+      return;
+    }
+
     const isFullMock = setChoice === 'all';
     const qCount = isFullMock ? questionsList.length : 10;
     const timeLimit = isFullMock ? 30 : 15;
@@ -419,7 +449,7 @@ export default function DailyCAPage() {
                 {/* Options List */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
                   {q.options.map((opt, optIdx) => {
-                    const isCorrect = isExpanded && optIdx === q.correctAnswer;
+                    const isCorrect = isExpanded && Boolean(user) && optIdx === q.correctAnswer;
                     return (
                       <div
                         key={optIdx}
@@ -452,70 +482,100 @@ export default function DailyCAPage() {
 
                 {/* Expanded Explanation & Book References */}
                 {isExpanded && (
-                  <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-4 animate-in fade-in slide-in-from-top-2 duration-200">
-                    {/* Correct Answer Banner */}
-                    <div className="flex items-center gap-2 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                      <span>
-                        Correct Option: {String.fromCharCode(65 + q.correctAnswer)} — {q.options[q.correctAnswer]}
-                      </span>
-                    </div>
-
-                    {/* Detailed Explanation */}
-                    <div className="space-y-1">
-                      <h4 className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
-                        <HelpCircle className="w-3.5 h-3.5 text-blue-500" />
-                        <span>Comprehensive Explanation:</span>
-                      </h4>
-                      <p className="text-xs text-slate-600 dark:text-slate-300 whitespace-pre-line leading-relaxed pl-5">
-                        {q.explanation}
-                      </p>
-                    </div>
-
-                    {/* Elimination Tip */}
-                    {q.eliminationTip && (
-                      <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-300 text-xs space-y-1">
-                        <div className="font-bold flex items-center gap-1.5 text-amber-700 dark:text-amber-400">
-                          <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
-                          <span>UPSC Elimination Strategy / Trap:</span>
-                        </div>
-                        <p className="pl-5 leading-relaxed">{q.eliminationTip}</p>
+                  user ? (
+                    <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-4 animate-in fade-in slide-in-from-top-2 duration-200">
+                      {/* Correct Answer Banner */}
+                      <div className="flex items-center gap-2 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                        <span>
+                          Correct Option: {String.fromCharCode(65 + q.correctAnswer)} — {q.options[q.correctAnswer]}
+                        </span>
                       </div>
-                    )}
 
-                    {/* Book / Source Reference Citation */}
-                    {q.bookReference && (
-                      <div className="p-3 rounded-xl bg-blue-500/5 dark:bg-blue-500/10 border border-blue-500/20 text-xs space-y-1.5">
-                        <div className="font-bold text-blue-700 dark:text-blue-300 flex items-center gap-1.5">
-                          <BookOpen className="w-3.5 h-3.5 text-blue-500" />
-                          <span>Source & Citation: {q.bookReference.bookName} ({q.bookReference.edition || '2026'})</span>
-                        </div>
-                        <p className="text-[11px] text-slate-600 dark:text-slate-400 pl-5">
-                          <span className="font-semibold">Chapter/Release:</span> {q.bookReference.chapter} | <span className="font-semibold">Reference:</span> {q.bookReference.pageNumber}
+                      {/* Detailed Explanation */}
+                      <div className="space-y-1">
+                        <h4 className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                          <HelpCircle className="w-3.5 h-3.5 text-blue-500" />
+                          <span>Comprehensive Explanation:</span>
+                        </h4>
+                        <p className="text-xs text-slate-600 dark:text-slate-300 whitespace-pre-line leading-relaxed pl-5">
+                          {q.explanation}
                         </p>
-                        {q.bookReference.keyExcerpt && (
-                          <p className="text-[11px] text-slate-500 dark:text-slate-400 italic pl-5 border-l-2 border-blue-400/40 ml-5 my-1">
-                            &quot;{q.bookReference.keyExcerpt}&quot;
-                          </p>
-                        )}
                       </div>
-                    )}
 
-                    {/* Tags */}
-                    {q.tags && q.tags.length > 0 && (
-                      <div className="flex items-center gap-1.5 flex-wrap pt-1">
-                        <Tag className="w-3 h-3 text-slate-400" />
-                        {q.tags.map((tag, tIdx) => (
-                          <span 
-                            key={tIdx}
-                            className="text-[10px] px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
-                          >
-                            #{tag}
-                          </span>
-                        ))}
+                      {/* Elimination Tip */}
+                      {q.eliminationTip && (
+                        <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-300 text-xs space-y-1">
+                          <div className="font-bold flex items-center gap-1.5 text-amber-700 dark:text-amber-400">
+                            <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
+                            <span>UPSC Elimination Strategy / Trap:</span>
+                          </div>
+                          <p className="pl-5 leading-relaxed">{q.eliminationTip}</p>
+                        </div>
+                      )}
+
+                      {/* Book / Source Reference Citation */}
+                      {q.bookReference && (
+                        <div className="p-3 rounded-xl bg-blue-500/5 dark:bg-blue-500/10 border border-blue-500/20 text-xs space-y-1.5">
+                          <div className="font-bold text-blue-700 dark:text-blue-300 flex items-center gap-1.5">
+                            <BookOpen className="w-3.5 h-3.5 text-blue-500" />
+                            <span>Source & Citation: {q.bookReference.bookName} ({q.bookReference.edition || '2026'})</span>
+                          </div>
+                          <p className="text-[11px] text-slate-600 dark:text-slate-400 pl-5">
+                            <span className="font-semibold">Chapter/Release:</span> {q.bookReference.chapter} | <span className="font-semibold">Reference:</span> {q.bookReference.pageNumber}
+                          </p>
+                          {q.bookReference.keyExcerpt && (
+                            <p className="text-[11px] text-slate-500 dark:text-slate-400 italic pl-5 border-l-2 border-blue-400/40 ml-5 my-1">
+                              &quot;{q.bookReference.keyExcerpt}&quot;
+                            </p>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Tags */}
+                      {q.tags && q.tags.length > 0 && (
+                        <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                          <Tag className="w-3 h-3 text-slate-400" />
+                          {q.tags.map((tag, tIdx) => (
+                            <span 
+                              key={tIdx}
+                              className="text-[10px] px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
+                            >
+                              #{tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="mt-4 p-5 rounded-2xl bg-slate-900/90 dark:bg-slate-950 border border-orange-500/40 text-center space-y-3 shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center mx-auto border border-orange-500/30">
+                        <Lock className="w-5 h-5" />
                       </div>
-                    )}
-                  </div>
+                      <div className="space-y-1">
+                        <h4 className="text-sm font-bold text-white">
+                          Answer, Full Explanation & Standard Book Citations Locked
+                        </h4>
+                        <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
+                          Create a 100% free account to reveal the verified official answer key, in-depth UPSC syllabus explanation, elimination techniques, and exact textbook citations ({q.bookReference?.bookName || 'Standard Books'}).
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setAuthModalConfig({
+                            title: 'Sign In to Unlock Citations & Solutions',
+                            description: 'Sign in to unlock detailed explanations, UPSC elimination techniques, and official book page citations.'
+                          });
+                          setShowAuthModal(true);
+                        }}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 text-white font-extrabold text-xs shadow-lg shadow-orange-500/20 hover:scale-105 transition-all"
+                      >
+                        <span>Sign In to Unlock Solution & Citations</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  )
                 )}
               </div>
             );
@@ -548,6 +608,15 @@ export default function DailyCAPage() {
           </button>
         </div>
       </div>
+
+      {/* Reusable Auth Requirement Modal */}
+      <AuthLockModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        title={authModalConfig.title}
+        description={authModalConfig.description}
+        redirectPath="/daily-ca"
+      />
     </div>
   );
 }
