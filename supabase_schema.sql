@@ -1,5 +1,6 @@
 -- ============================================================================
 --  UPSCSphere Complete Supabase Database Schema & RLS Security Policies
+--  100% Idempotent Script (Safe to run multiple times without errors)
 --  Copy and run this entire script in your Supabase SQL Editor (supabase.com)
 -- ============================================================================
 
@@ -13,28 +14,58 @@ CREATE TABLE IF NOT EXISTS public.profiles (
   id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   email TEXT NOT NULL,
   name TEXT DEFAULT 'Aspirant',
-  target_year INTEGER DEFAULT 2026,
+  target_year INTEGER DEFAULT 2027,
   optional_subject TEXT DEFAULT 'General Studies',
-  streak_count INTEGER DEFAULT 1,
+  streak_count INTEGER DEFAULT 0,
   total_quizzes INTEGER DEFAULT 0,
   average_score NUMERIC DEFAULT 0.0,
   highest_score NUMERIC DEFAULT 0.0,
   avatar_url TEXT,
+  dob DATE,
+  home_town TEXT,
+  home_state TEXT,
+  graduation_degree TEXT,
+  graduation_college TEXT,
+  graduation_city TEXT,
+  graduation_year INTEGER,
+  post_graduation_degree TEXT,
+  post_graduation_college TEXT,
+  post_graduation_year INTEGER,
+  attempt_number INTEGER DEFAULT 1,
+  medium TEXT DEFAULT 'English',
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
+-- Ensure newly added columns exist if table was created previously
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS dob DATE;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS home_town TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS home_state TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS graduation_degree TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS graduation_college TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS graduation_city TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS graduation_year INTEGER;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS post_graduation_degree TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS post_graduation_college TEXT;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS post_graduation_year INTEGER;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS attempt_number INTEGER DEFAULT 1;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS medium TEXT DEFAULT 'English';
+
+
 -- Enable RLS for Profiles
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Public profiles are viewable by everyone for leaderboard" ON public.profiles;
 CREATE POLICY "Public profiles are viewable by everyone for leaderboard"
   ON public.profiles FOR SELECT
   USING (true);
 
+DROP POLICY IF EXISTS "Users can insert their own profile" ON public.profiles;
 CREATE POLICY "Users can insert their own profile"
   ON public.profiles FOR INSERT
   WITH CHECK (auth.uid() = id);
 
+DROP POLICY IF EXISTS "Users can update their own profile" ON public.profiles;
 CREATE POLICY "Users can update their own profile"
   ON public.profiles FOR UPDATE
   USING (auth.uid() = id);
@@ -63,10 +94,12 @@ CREATE TABLE IF NOT EXISTS public.quiz_results (
 -- Enable RLS for Quiz Results
 ALTER TABLE public.quiz_results ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Users can read their own quiz results" ON public.quiz_results;
 CREATE POLICY "Users can read their own quiz results"
   ON public.quiz_results FOR SELECT
   USING (auth.uid() = user_id);
 
+DROP POLICY IF EXISTS "Users can insert their own quiz results" ON public.quiz_results;
 CREATE POLICY "Users can insert their own quiz results"
   ON public.quiz_results FOR INSERT
   WITH CHECK (auth.uid() = user_id);
@@ -84,6 +117,7 @@ CREATE TABLE IF NOT EXISTS public.bookmarks (
 
 ALTER TABLE public.bookmarks ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Users can manage their own bookmarks" ON public.bookmarks;
 CREATE POLICY "Users can manage their own bookmarks"
   ON public.bookmarks FOR ALL
   USING (auth.uid() = user_id);
@@ -104,6 +138,7 @@ CREATE TABLE IF NOT EXISTS public.syllabus_progress (
 
 ALTER TABLE public.syllabus_progress ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Users can manage their syllabus progress" ON public.syllabus_progress;
 CREATE POLICY "Users can manage their syllabus progress"
   ON public.syllabus_progress FOR ALL
   USING (auth.uid() = user_id);
@@ -128,16 +163,48 @@ CREATE TABLE IF NOT EXISTS public.duels (
 
 ALTER TABLE public.duels ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Anyone can view live duels" ON public.duels;
 CREATE POLICY "Anyone can view live duels"
   ON public.duels FOR SELECT
   USING (true);
 
+DROP POLICY IF EXISTS "Authenticated users can create/update duels" ON public.duels;
 CREATE POLICY "Authenticated users can create/update duels"
   ON public.duels FOR ALL
   USING (auth.role() = 'authenticated');
 
 -- ----------------------------------------------------------------------------
--- 7. Automatic Profile Creation on New User Signup Trigger
+-- 7. Daily Current Affairs Automated Editions Table
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public.daily_ca_editions (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  edition_date DATE UNIQUE NOT NULL,
+  headline TEXT NOT NULL,
+  questions JSONB NOT NULL DEFAULT '[]'::jsonb,
+  sources JSONB DEFAULT '[]'::jsonb,
+  total_count INTEGER DEFAULT 20,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+-- Enable RLS for Daily CA Editions
+ALTER TABLE public.daily_ca_editions ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Anyone can view daily current affairs editions" ON public.daily_ca_editions;
+CREATE POLICY "Anyone can view daily current affairs editions"
+  ON public.daily_ca_editions FOR SELECT
+  USING (true);
+
+DROP POLICY IF EXISTS "Allow service and public insert/upsert for daily editions" ON public.daily_ca_editions;
+CREATE POLICY "Allow service and public insert/upsert for daily editions"
+  ON public.daily_ca_editions FOR ALL
+  USING (true);
+
+-- Create index on edition_date for ultra-fast queries
+CREATE INDEX IF NOT EXISTS idx_daily_ca_editions_date ON public.daily_ca_editions(edition_date);
+
+-- ----------------------------------------------------------------------------
+-- 8. Automatic Profile Creation on New User Signup Trigger
 -- ----------------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS trigger AS $$
@@ -147,9 +214,10 @@ BEGIN
     new.id,
     new.email,
     COALESCE(new.raw_user_meta_data->>'full_name', split_part(new.email, '@', 1)),
-    COALESCE((new.raw_user_meta_data->>'target_year')::integer, 2026),
+    COALESCE((new.raw_user_meta_data->>'target_year')::integer, 2027),
     new.raw_user_meta_data->>'avatar_url'
-  );
+  )
+  ON CONFLICT (id) DO NOTHING;
   RETURN new;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
@@ -160,6 +228,32 @@ CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
 
+-- ----------------------------------------------------------------------------
+-- 9. Daily Current Affairs Push Subscriptions Table (PWA & Web Push)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public.push_subscriptions (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+  endpoint TEXT UNIQUE NOT NULL,
+  p256dh TEXT,
+  auth_key TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+ALTER TABLE public.push_subscriptions ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Anyone can insert push subscriptions" ON public.push_subscriptions;
+CREATE POLICY "Anyone can insert push subscriptions"
+  ON public.push_subscriptions FOR INSERT
+  WITH CHECK (true);
+
+DROP POLICY IF EXISTS "Users can view and manage their push subscriptions" ON public.push_subscriptions;
+CREATE POLICY "Users can view and manage their push subscriptions"
+  ON public.push_subscriptions FOR ALL
+  USING (true);
+
 -- ============================================================================
 -- End of Supabase Schema Script
 -- ============================================================================
+

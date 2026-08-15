@@ -1,4 +1,5 @@
 import { QuizResult, UserProfile, SpacedItem, Question, UserAnswer } from '@/lib/types';
+import { supabase, isSupabaseConfigured } from '@/lib/supabaseClient';
 
 const STORAGE_KEYS = {
   PROFILE: 'upsc_user_profile',
@@ -14,26 +15,75 @@ const STORAGE_KEYS = {
 
 export const defaultProfile: UserProfile = {
   name: 'Aspirant',
-  email: 'aspirant@upsc.gov.in',
-  targetYear: 2026,
-  optionalSubject: 'PSIR',
+  email: '',
+  targetYear: 2027,
+  optionalSubject: 'General Studies',
   category: 'General',
-  streakCount: 5,
-  lastActiveDate: new Date().toISOString().split('T')[0],
-  totalQuizzesTaken: 12,
-  averageScore: 92.5,
-  highestScore: 134.0,
+  streakCount: 0,
+  lastActiveDate: '',
+  totalQuizzesTaken: 0,
+  averageScore: 0,
+  highestScore: 0,
+  avatarUrl: '',
+  dob: '',
+  homeTown: '',
+  homeState: '',
+  graduationDegree: '',
+  graduationCollege: '',
+  graduationCity: '',
+  graduationYear: undefined,
+  postGraduationDegree: '',
+  postGraduationCollege: '',
+  postGraduationYear: undefined,
+  attemptNumber: 1,
+  medium: 'English',
 };
 
 export function getStoredProfile(): UserProfile {
   if (typeof window === 'undefined') return defaultProfile;
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.PROFILE);
+    const history = getQuizHistory();
+
     if (!raw) {
       localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(defaultProfile));
       return defaultProfile;
     }
-    return JSON.parse(raw);
+    const profile: UserProfile = JSON.parse(raw);
+
+    // Auto-purge stale prototype mock cache (e.g. legacy total 12 mocks or 92.5 avg marks)
+    if (history.length === 0) {
+      profile.totalQuizzesTaken = 0;
+      profile.averageScore = 0;
+      profile.highestScore = 0;
+      if (!profile.lastActiveDate) {
+        profile.streakCount = 0;
+      }
+    } else {
+      profile.totalQuizzesTaken = history.length;
+      const allScores = history.map(q => q.score);
+      profile.averageScore = parseFloat((allScores.reduce((a, b) => a + b, 0) / allScores.length).toFixed(1));
+      profile.highestScore = Math.max(...allScores);
+    }
+
+    // Dynamic Streak Validation against current date
+    if (profile.lastActiveDate) {
+      const today = new Date().toISOString().split('T')[0];
+      const lastDate = new Date(profile.lastActiveDate);
+      const currentDate = new Date(today);
+      const diffTime = currentDate.getTime() - lastDate.getTime();
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+      // If user missed more than 1 day, streak resets to 0
+      if (diffDays > 1 && (profile.streakCount || 0) > 0) {
+        profile.streakCount = 0;
+      }
+    }
+
+    // Save cleaned real profile to localStorage
+    localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(profile));
+
+    return profile;
   } catch {
     return defaultProfile;
   }
@@ -66,22 +116,36 @@ export function saveQuizResult(result: QuizResult): void {
   try {
     const history = getQuizHistory();
     history.unshift(result);
-    // Keep last 50 quizzes in local storage to stay lightweight
+    // Keep last 50 quizzes in local storage
     const trimmed = history.slice(0, 50);
     localStorage.setItem(STORAGE_KEYS.QUIZ_HISTORY, JSON.stringify(trimmed));
 
-    // Update user profile stats
+    // Update real user profile stats
     const profile = getStoredProfile();
-    const totalTaken = profile.totalQuizzesTaken + 1;
-    const allScores = trimmed.map(q => q.score);
+    const totalTaken = history.length;
+    const allScores = history.map(q => q.score);
     const avgScore = parseFloat((allScores.reduce((a, b) => a + b, 0) / allScores.length).toFixed(1));
-    const highestScore = Math.max(profile.highestScore, result.score);
+    const highestScore = Math.max(profile.highestScore || 0, result.score);
 
-    // Update streak if today
+    // Calculate real dynamic streak
     const today = new Date().toISOString().split('T')[0];
-    let newStreak = profile.streakCount;
-    if (profile.lastActiveDate !== today) {
-      newStreak += 1;
+    let newStreak = profile.streakCount || 0;
+
+    if (!profile.lastActiveDate) {
+      newStreak = 1;
+    } else {
+      const lastDate = new Date(profile.lastActiveDate);
+      const currentDate = new Date(today);
+      const diffTime = currentDate.getTime() - lastDate.getTime();
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+      if (diffDays === 1) {
+        newStreak += 1;
+      } else if (diffDays > 1) {
+        newStreak = 1;
+      } else if (diffDays === 0 && newStreak === 0) {
+        newStreak = 1;
+      }
     }
 
     saveStoredProfile({
@@ -91,6 +155,50 @@ export function saveQuizResult(result: QuizResult): void {
       lastActiveDate: today,
       streakCount: newStreak,
     });
+
+    // Cloud Sync to Supabase for Real-Time Global Leaderboard
+    if (isSupabaseConfigured && supabase) {
+      const sessionRaw = localStorage.getItem('upsc_auth_session');
+      if (sessionRaw) {
+        try {
+          const authUser = JSON.parse(sessionRaw);
+          if (authUser?.id && !authUser?.isDemo) {
+            // Update profile stats
+            supabase
+              .from('profiles')
+              .upsert({
+                id: authUser.id,
+                name: authUser.name || profile.name,
+                target_year: authUser.targetYear || profile.targetYear,
+                optional_subject: profile.optionalSubject || 'General Studies',
+                streak_count: newStreak,
+                total_quizzes_taken: totalTaken,
+                average_score: avgScore,
+                updated_at: new Date().toISOString(),
+              })
+              .then();
+
+            // Insert quiz submission log
+            supabase
+              .from('quiz_results')
+              .insert({
+                user_id: authUser.id,
+                quiz_id: result.quizId,
+                score: result.score,
+                accuracy: result.accuracy,
+                total_questions: result.totalQuestions,
+                correct_count: result.correct,
+                incorrect_count: result.wrong,
+                unattempted_count: result.unattempted,
+                completed_at: result.date || new Date().toISOString(),
+              })
+              .then();
+          }
+        } catch (syncErr) {
+          console.error('Supabase async cloud sync skipped:', syncErr);
+        }
+      }
+    }
   } catch (err) {
     console.error('Failed to save quiz result to local storage', err);
   }

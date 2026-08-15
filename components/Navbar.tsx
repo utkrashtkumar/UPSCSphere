@@ -11,9 +11,12 @@ import {
   Sun, 
   Moon, 
   LogOut, 
-  ChevronDown,
-  Trophy,
-  RotateCcw
+  ChevronDown, 
+  Trophy, 
+  RotateCcw,
+  User,
+  BookOpen,
+  HelpCircle
 } from 'lucide-react';
 import { useTheme } from '@/lib/themeContext';
 import { useAuth } from '@/lib/authContext';
@@ -26,7 +29,12 @@ export default function Navbar() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -41,13 +49,13 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [userDropdownOpen]);
 
-  // Calculate days to UPSC Prelims 2026 (May 24, 2026)
+  // Calculate days to next upcoming UPSC Prelims 2027 (May 23, 2027)
   const calculateDaysToPrelims = () => {
-    const prelimsDate = new Date('2026-05-24T09:30:00');
+    const prelimsDate = new Date('2027-05-23T09:30:00');
     const now = new Date();
     const diffTime = prelimsDate.getTime() - now.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDays > 0 ? diffDays : 285;
+    return Math.max(0, diffDays);
   };
 
   const navLinks = [
@@ -58,14 +66,15 @@ export default function Navbar() {
     { name: 'Syllabus', href: '/syllabus' },
     { name: '1v1 Duel', href: '/duel' },
     { name: 'Revision', href: '/revision' },
+    { name: 'About', href: '/about' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-2xl bg-white/90 dark:bg-[#050b14]/90 border-b border-slate-200/80 dark:border-white/10 transition-colors relative">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-2xl bg-white/95 dark:bg-[#050b14]/95 border-b border-slate-200/80 dark:border-white/10 transition-colors shadow-sm">
       {/* Running Tricolour Ambient Top Stream Line */}
       <div className="absolute top-0 left-0 right-0 h-[2px] running-tricolor-line opacity-90" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16">
         <div className="flex items-center justify-between h-14 sm:h-16">
           
           {/* Left: Indian Tricolour Brand Logo */}
@@ -111,14 +120,16 @@ export default function Navbar() {
             {/* Prelims Countdown Chip */}
             <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-white/5 text-xs text-slate-600 dark:text-slate-300 font-medium border border-slate-200/50 dark:border-white/5">
               <Calendar className="w-3.5 h-3.5 text-blue-500" />
-              <span className="font-bold text-slate-900 dark:text-white">{calculateDaysToPrelims()}d</span>
+              <span className="font-bold text-slate-900 dark:text-white" suppressHydrationWarning>
+                {calculateDaysToPrelims()}d
+              </span>
               <span className="text-[11px] opacity-70">to Prelims</span>
             </div>
 
             {/* Daily Streak Chip */}
             <div className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 font-bold text-xs border border-orange-500/20">
               <Flame className="w-3.5 h-3.5 text-orange-500" />
-              <span>{profile?.streakCount || 5}</span>
+              <span suppressHydrationWarning>{mounted ? (profile?.streakCount ?? 0) : 0}</span>
             </div>
 
             {/* Typography Font & Size Panel */}
@@ -163,12 +174,21 @@ export default function Navbar() {
                     </div>
 
                     <Link
+                      href="/profile"
+                      onClick={() => setUserDropdownOpen(false)}
+                      className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold text-orange-600 dark:text-orange-400 bg-orange-500/10 hover:bg-orange-500/20 transition-colors"
+                    >
+                      <User className="w-3.5 h-3.5" />
+                      <span>My Aspirant Profile</span>
+                    </Link>
+
+                    <Link
                       href="/leaderboard"
                       onClick={() => setUserDropdownOpen(false)}
                       className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
-                      <Trophy className="w-3.5 h-3.5 text-orange-500" />
-                      <span>AIR Rank: #142</span>
+                      <Trophy className="w-3.5 h-3.5 text-amber-500" />
+                      <span>Nationwide Leaderboard</span>
                     </Link>
 
                     <Link
@@ -176,7 +196,7 @@ export default function Navbar() {
                       onClick={() => setUserDropdownOpen(false)}
                       className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
-                      <RotateCcw className="w-3.5 h-3.5 text-blue-500" />
+                      <BookOpen className="w-3.5 h-3.5 text-blue-500" />
                       <span>How to Use Guide</span>
                     </Link>
 
@@ -185,7 +205,7 @@ export default function Navbar() {
                       onClick={() => setUserDropdownOpen(false)}
                       className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
                     >
-                      <RotateCcw className="w-3.5 h-3.5 text-orange-500" />
+                      <HelpCircle className="w-3.5 h-3.5 text-emerald-500" />
                       <span>Contact Support</span>
                     </Link>
 
@@ -253,7 +273,26 @@ export default function Navbar() {
             })}
           </div>
 
-          {!user && (
+          {user ? (
+            <div className="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-white/5">
+              <Link
+                href="/profile"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex-1 py-2 text-center rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 font-bold text-xs border border-orange-500/20"
+              >
+                My Aspirant Profile
+              </Link>
+              <button
+                onClick={() => {
+                  signOut();
+                  setMobileMenuOpen(false);
+                }}
+                className="px-3 py-2 rounded-xl text-rose-500 bg-rose-500/10 font-bold text-xs"
+              >
+                Sign Out
+              </button>
+            </div>
+          ) : (
             <Link
               href="/auth"
               onClick={() => setMobileMenuOpen(false)}

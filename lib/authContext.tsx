@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { supabase, isSupabaseConfigured } from '@/lib/supabaseClient';
-import { getStoredProfile, saveStoredProfile } from '@/lib/localDB';
+import { getStoredProfile, saveStoredProfile, defaultProfile } from '@/lib/localDB';
 import { UserProfile } from '@/lib/types';
 
 export interface AuthUser {
@@ -20,33 +20,84 @@ interface AuthContextType {
   isLoading: boolean;
   isSupabaseConnected: boolean;
   signInWithEmail: (email: string, password: string) => Promise<{ error: string | null }>;
-  signUpWithEmail: (email: string, password: string, name: string, targetYear: number) => Promise<{ error: string | null }>;
+  signUpWithEmail: (email: string, password: string, name: string, targetYear: number) => Promise<{ error: string | null; requiresConfirmation?: boolean }>;
+  resendConfirmationEmail: (email: string) => Promise<{ error: string | null; message?: string }>;
+  signInWithMagicLink: (email: string) => Promise<{ error: string | null; message?: string }>;
   signInWithGoogle: () => Promise<{ error: string | null }>;
+  resetPasswordForEmail: (email: string) => Promise<{ error: string | null; message?: string }>;
+  updateUserPassword: (newPassword: string) => Promise<{ error: string | null }>;
   signOut: () => Promise<void>;
   updateUserProfile: (updates: Partial<UserProfile>) => void;
 }
 
 const AuthContext = createContext<AuthContextType>({
   user: null,
-  profile: getStoredProfile(),
+  profile: defaultProfile,
   isLoading: true,
   isSupabaseConnected: false,
   signInWithEmail: async () => ({ error: null }),
   signUpWithEmail: async () => ({ error: null }),
+  resendConfirmationEmail: async () => ({ error: null }),
+  signInWithMagicLink: async () => ({ error: null }),
   signInWithGoogle: async () => ({ error: null }),
+  resetPasswordForEmail: async () => ({ error: null }),
+  updateUserPassword: async () => ({ error: null }),
   signOut: async () => {},
   updateUserProfile: () => {},
 });
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null);
-  const [profile, setProfile] = useState<UserProfile>(getStoredProfile());
+  const [profile, setProfile] = useState<UserProfile>(defaultProfile);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Initial profile sync
     const stored = getStoredProfile();
     setProfile(stored);
+
+    // Helper to fetch full DB profile
+    const fetchSupabaseProfile = async (userId: string) => {
+      if (!isSupabaseConfigured || !supabase) return;
+      try {
+        const { data: dbProfile } = await supabase
+          .from('profiles')
+          .select('*')
+          .eq('id', userId)
+          .maybeSingle();
+
+        if (dbProfile) {
+          const merged: UserProfile = {
+            ...getStoredProfile(),
+            name: dbProfile.name || stored.name,
+            email: dbProfile.email || stored.email,
+            targetYear: dbProfile.target_year || stored.targetYear,
+            optionalSubject: dbProfile.optional_subject || stored.optionalSubject,
+            streakCount: dbProfile.streak_count ?? stored.streakCount,
+            totalQuizzesTaken: dbProfile.total_quizzes ?? stored.totalQuizzesTaken,
+            averageScore: dbProfile.average_score ?? stored.averageScore,
+            highestScore: dbProfile.highest_score ?? stored.highestScore,
+            avatarUrl: dbProfile.avatar_url || stored.avatarUrl,
+            dob: dbProfile.dob || stored.dob,
+            homeTown: dbProfile.home_town || stored.homeTown,
+            homeState: dbProfile.home_state || stored.homeState,
+            graduationDegree: dbProfile.graduation_degree || stored.graduationDegree,
+            graduationCollege: dbProfile.graduation_college || stored.graduationCollege,
+            graduationCity: dbProfile.graduation_city || stored.graduationCity,
+            graduationYear: dbProfile.graduation_year || stored.graduationYear,
+            postGraduationDegree: dbProfile.post_graduation_degree || stored.postGraduationDegree,
+            postGraduationCollege: dbProfile.post_graduation_college || stored.postGraduationCollege,
+            postGraduationYear: dbProfile.post_graduation_year || stored.postGraduationYear,
+            attemptNumber: dbProfile.attempt_number || stored.attemptNumber || 1,
+            medium: dbProfile.medium || stored.medium || 'English',
+          };
+          saveStoredProfile(merged);
+          setProfile(merged);
+        }
+      } catch (e) {
+        console.warn('Could not fetch remote profile:', e);
+      }
+    };
 
     // Check if demo user or active session exists
     if (isSupabaseConfigured && supabase) {
@@ -59,6 +110,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             targetYear: session.user.user_metadata?.target_year || stored.targetYear,
             avatarUrl: session.user.user_metadata?.avatar_url,
           });
+          fetchSupabaseProfile(session.user.id);
         } else {
           // Check local auth cache
           const localAuth = localStorage.getItem('upsc_auth_session');
@@ -82,6 +134,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           };
           setUser(authUser);
           localStorage.setItem('upsc_auth_session', JSON.stringify(authUser));
+          fetchSupabaseProfile(session.user.id);
         } else {
           setUser(null);
           localStorage.removeItem('upsc_auth_session');
@@ -117,7 +170,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             id: data.user.id,
             email: data.user.email || email,
             name: data.user.user_metadata?.full_name || email.split('@')[0],
-            targetYear: data.user.user_metadata?.target_year || 2026,
+            targetYear: data.user.user_metadata?.target_year || 2027,
           };
           setUser(authUser);
           localStorage.setItem('upsc_auth_session', JSON.stringify(authUser));
@@ -134,7 +187,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         id: 'local_' + Math.random().toString(36).substring(2, 9),
         email,
         name: email.split('@')[0].replace(/[^a-zA-Z0-9]/g, ' ') || 'Aspirant',
-        targetYear: profile.targetYear || 2026,
+        targetYear: profile.targetYear || 2027,
         isDemo: true,
       };
       setUser(authUser);
@@ -145,7 +198,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const signUpWithEmail = async (email: string, password: string, name: string, targetYear: number): Promise<{ error: string | null }> => {
+  const signUpWithEmail = async (email: string, password: string, name: string, targetYear: number): Promise<{ error: string | null; requiresConfirmation?: boolean }> => {
     if (!email || !password || !name) {
       return { error: 'Please fill in all required fields.' };
     }
@@ -156,6 +209,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     if (isSupabaseConfigured && supabase) {
       try {
+        const emailRedirectTo = typeof window !== 'undefined' ? `${window.location.origin}/auth/callback` : undefined;
         const { data, error } = await supabase.auth.signUp({
           email,
           password,
@@ -164,10 +218,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
               full_name: name,
               target_year: targetYear,
             },
+            emailRedirectTo,
           },
         });
+
         if (error) return { error: error.message };
-        if (data.user) {
+
+        // If email confirmation is enabled on Supabase, data.session will be null and user needs confirmation
+        if (data.user && !data.session) {
+          saveStoredProfile({ email, name, targetYear });
+          return { error: null, requiresConfirmation: true };
+        }
+
+        if (data.user && data.session) {
           const authUser: AuthUser = {
             id: data.user.id,
             email: data.user.email || email,
@@ -179,24 +242,73 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           saveStoredProfile({ email, name, targetYear });
           setProfile(getStoredProfile());
         }
-        return { error: null };
+        return { error: null, requiresConfirmation: false };
       } catch (err: any) {
         return { error: err.message || 'Sign up failed' };
       }
     } else {
-      // Local-first Sign Up
+      // Local/offline Sign Up
+      return { error: null, requiresConfirmation: true };
+    }
+  };
+
+  const resendConfirmationEmail = async (email: string): Promise<{ error: string | null; message?: string }> => {
+    if (!email) {
+      return { error: 'Email address is required to resend confirmation.' };
+    }
+    if (isSupabaseConfigured && supabase) {
+      try {
+        const emailRedirectTo = typeof window !== 'undefined' ? `${window.location.origin}/auth/callback` : undefined;
+        const { error } = await supabase.auth.resend({
+          type: 'signup',
+          email,
+          options: {
+            emailRedirectTo,
+          },
+        });
+        if (error) return { error: error.message };
+        return { error: null, message: `Verification email resent to ${email}!` };
+      } catch (err: any) {
+        return { error: err.message || 'Failed to resend confirmation email.' };
+      }
+    } else {
+      return { error: null, message: `Verification email simulated for ${email}!` };
+    }
+  };
+
+  const signInWithMagicLink = async (email: string): Promise<{ error: string | null; message?: string }> => {
+    if (!email) {
+      return { error: 'Please enter your email address to receive a magic login link.' };
+    }
+
+    if (isSupabaseConfigured && supabase) {
+      try {
+        const emailRedirectTo = typeof window !== 'undefined' ? `${window.location.origin}/auth/callback` : undefined;
+        const { error } = await supabase.auth.signInWithOtp({
+          email,
+          options: {
+            emailRedirectTo,
+          },
+        });
+        if (error) return { error: error.message };
+        return { error: null, message: `Magic login link dispatched to ${email}! Click the link in your inbox to sign in instantly.` };
+      } catch (err: any) {
+        return { error: err.message || 'Failed to send magic link.' };
+      }
+    } else {
+      // Local / Demo Simulation
       const authUser: AuthUser = {
-        id: 'local_' + Math.random().toString(36).substring(2, 9),
+        id: 'magic_' + Math.random().toString(36).substring(2, 9),
         email,
-        name,
-        targetYear,
+        name: email.split('@')[0] || 'Aspirant',
+        targetYear: 2027,
         isDemo: true,
       };
       setUser(authUser);
       localStorage.setItem('upsc_auth_session', JSON.stringify(authUser));
-      saveStoredProfile({ email, name, targetYear });
+      saveStoredProfile({ email, name: authUser.name });
       setProfile(getStoredProfile());
-      return { error: null };
+      return { error: null, message: `Magic login link simulated for ${email}! Signed in successfully.` };
     }
   };
 
@@ -220,13 +332,58 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         id: 'google_demo_user',
         email: 'ias.aspirant@gmail.com',
         name: 'Aspirant (Google)',
-        targetYear: 2026,
+        targetYear: 2027,
         isDemo: true,
       };
       setUser(authUser);
       localStorage.setItem('upsc_auth_session', JSON.stringify(authUser));
       saveStoredProfile({ email: authUser.email, name: authUser.name });
       setProfile(getStoredProfile());
+      return { error: null };
+    }
+  };
+
+  const resetPasswordForEmail = async (email: string): Promise<{ error: string | null; message?: string }> => {
+    if (!email) {
+      return { error: 'Please enter your registered email address.' };
+    }
+
+    if (isSupabaseConfigured && supabase) {
+      try {
+        const redirectTo = typeof window !== 'undefined' ? `${window.location.origin}/auth/reset-password` : undefined;
+        const { error } = await supabase.auth.resetPasswordForEmail(email, {
+          redirectTo,
+        });
+        if (error) return { error: error.message };
+        return { error: null, message: `A secure password reset link has been sent to ${email}. Please check your inbox and spam folder.` };
+      } catch (err: any) {
+        return { error: err.message || 'Failed to send reset link.' };
+      }
+    } else {
+      // Offline/Local Simulation
+      return {
+        error: null,
+        message: `A password reset link has been simulated for ${email}. (In production with Supabase, a verification link is dispatched to your mailbox).`,
+      };
+    }
+  };
+
+  const updateUserPassword = async (newPassword: string): Promise<{ error: string | null }> => {
+    if (!newPassword || newPassword.length < 6) {
+      return { error: 'Password must be at least 6 characters long.' };
+    }
+
+    if (isSupabaseConfigured && supabase) {
+      try {
+        const { error } = await supabase.auth.updateUser({
+          password: newPassword,
+        });
+        if (error) return { error: error.message };
+        return { error: null };
+      } catch (err: any) {
+        return { error: err.message || 'Failed to update password.' };
+      }
+    } else {
       return { error: null };
     }
   };
@@ -241,11 +398,40 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     localStorage.removeItem('upsc_auth_session');
   };
 
-  const updateUserProfile = (updates: Partial<UserProfile>) => {
+  const updateUserProfile = async (updates: Partial<UserProfile>) => {
     const updated = saveStoredProfile(updates);
     setProfile(updated);
     if (user && updates.name) {
       setUser({ ...user, name: updates.name });
+    }
+
+    // Sync to Supabase cloud database if user is logged in
+    if (isSupabaseConfigured && supabase && user?.id) {
+      try {
+        const payload: Record<string, any> = {
+          updated_at: new Date().toISOString(),
+        };
+        if (updates.name !== undefined) payload.name = updates.name;
+        if (updates.targetYear !== undefined) payload.target_year = updates.targetYear;
+        if (updates.optionalSubject !== undefined) payload.optional_subject = updates.optionalSubject;
+        if (updates.avatarUrl !== undefined) payload.avatar_url = updates.avatarUrl;
+        if (updates.dob !== undefined) payload.dob = updates.dob || null;
+        if (updates.homeTown !== undefined) payload.home_town = updates.homeTown;
+        if (updates.homeState !== undefined) payload.home_state = updates.homeState;
+        if (updates.graduationDegree !== undefined) payload.graduation_degree = updates.graduationDegree;
+        if (updates.graduationCollege !== undefined) payload.graduation_college = updates.graduationCollege;
+        if (updates.graduationCity !== undefined) payload.graduation_city = updates.graduationCity;
+        if (updates.graduationYear !== undefined) payload.graduation_year = updates.graduationYear || null;
+        if (updates.postGraduationDegree !== undefined) payload.post_graduation_degree = updates.postGraduationDegree;
+        if (updates.postGraduationCollege !== undefined) payload.post_graduation_college = updates.postGraduationCollege;
+        if (updates.postGraduationYear !== undefined) payload.post_graduation_year = updates.postGraduationYear || null;
+        if (updates.attemptNumber !== undefined) payload.attempt_number = updates.attemptNumber;
+        if (updates.medium !== undefined) payload.medium = updates.medium;
+
+        await supabase.from('profiles').update(payload).eq('id', user.id);
+      } catch (err) {
+        console.warn('Could not sync profile update to Supabase:', err);
+      }
     }
   };
 
@@ -258,7 +444,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         isSupabaseConnected: isSupabaseConfigured,
         signInWithEmail,
         signUpWithEmail,
+        resendConfirmationEmail,
+        signInWithMagicLink,
         signInWithGoogle,
+        resetPasswordForEmail,
+        updateUserPassword,
         signOut,
         updateUserProfile,
       }}

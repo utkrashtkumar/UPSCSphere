@@ -62,26 +62,26 @@ export default function OptionButton({
       <button
         onClick={() => onSelect(index)}
         disabled={isEliminated || (showInstantFeedback && !isSelected && !isCorrect ? false : false)}
-        className={`w-full text-left px-4 py-3.5 sm:px-5 sm:py-4 rounded-2xl border flex items-start gap-3.5 transition-all duration-150 ${containerStyle} ${
+        className={`w-full text-left px-5 py-4 sm:px-6 sm:py-5 rounded-2xl border flex items-start gap-4 transition-all duration-150 ${containerStyle} ${
           isEliminated ? 'cursor-not-allowed' : 'cursor-pointer'
         }`}
       >
         {/* UPSC-style (a) (b) (c) (d) badge */}
         <span
-          className={`min-w-[2rem] h-8 rounded-lg text-xs flex items-center justify-center shrink-0 border transition-colors ${badgeStyle}`}
+          className={`min-w-[2.5rem] h-9 rounded-xl text-sm flex items-center justify-center shrink-0 border transition-colors ${badgeStyle}`}
         >
           {showInstantFeedback && isCorrect ? (
-            <Check className="w-4 h-4 stroke-[3]" />
+            <Check className="w-5 h-5 stroke-[3]" />
           ) : showInstantFeedback && isSelected && !isCorrect ? (
-            <X className="w-4 h-4 stroke-[3]" />
+            <X className="w-5 h-5 stroke-[3]" />
           ) : (
-            <span className="font-semibold tracking-tight">{label}</span>
+            <span className="font-bold tracking-tight">{label}</span>
           )}
         </span>
 
         {/* Option text */}
         <span
-          className={`text-sm leading-relaxed flex-1 pt-0.5 ${
+          className={`text-sm sm:text-base leading-relaxed flex-1 pt-1 ${
             isEliminated ? 'line-through text-slate-400 dark:text-slate-600' : ''
           }`}
         >

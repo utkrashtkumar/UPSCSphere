@@ -114,7 +114,7 @@ export default function HowToUsePage() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14 space-y-10">
+    <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-10 sm:py-14 space-y-10">
       
       {/* Back Link & Header */}
       <div>

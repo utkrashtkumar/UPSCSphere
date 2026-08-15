@@ -64,6 +64,10 @@ export default function LiveQuizSessionPage() {
         count: activeConfig.questionCount || 10,
         paperType: activeConfig.paperType || 'GS',
         difficulty: activeConfig.difficulty || 'all',
+        isPYQOnly: activeConfig.isPYQOnly,
+        pyqYear: activeConfig.pyqYear,
+        isDailyCA: activeConfig.isDailyCA,
+        dailyCASet: activeConfig.dailyCASet,
       });
 
       setQuestions(selected);
@@ -186,23 +190,23 @@ export default function LiveQuizSessionPage() {
   const letters = ['A', 'B', 'C', 'D'];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
+    <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-6">
       {/* Top Test Header Bar */}
-      <div className="liquid-card rounded-2xl p-4 border border-slate-200 dark:border-white/10 bg-white/90 dark:bg-slate-950/70 mb-6 flex items-center justify-between flex-wrap gap-4 shadow-sm">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-amber-500/10 dark:bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-700 dark:text-amber-400 font-bold">
+      <div className="liquid-card rounded-2xl p-5 sm:p-6 border border-slate-200 dark:border-white/10 bg-white/90 dark:bg-slate-950/70 mb-6 flex items-center justify-between flex-wrap gap-4 shadow-sm">
+        <div className="flex items-center gap-3.5">
+          <div className="w-12 h-12 rounded-2xl bg-amber-500/10 dark:bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-700 dark:text-amber-400 font-black text-lg">
             Q{currentIndex + 1}
           </div>
           <div>
-            <div className="flex items-center gap-2">
-              <h2 className="font-bold text-slate-900 dark:text-white text-sm sm:text-base">{currentQ.topic}</h2>
+            <div className="flex items-center gap-2.5">
+              <h2 className="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg">{currentQ.topic}</h2>
               {currentQ.isPYQ && (
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-500/10 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-500/30">
+                <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-purple-500/10 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-500/30">
                   UPSC PYQ {currentQ.pyqYear}
                 </span>
               )}
             </div>
-            <p className="text-xs text-slate-600 dark:text-slate-400">{currentQ.subTopic}</p>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-0.5">{currentQ.subTopic}</p>
           </div>
         </div>
 
@@ -216,9 +220,9 @@ export default function LiveQuizSessionPage() {
 
           <button
             onClick={handleSubmitQuiz}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-slate-950 font-extrabold text-xs shadow-lg shadow-emerald-500/20 transition-all"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-slate-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-emerald-500/20 transition-all hover:scale-105"
           >
-            <Send className="w-3.5 h-3.5" />
+            <Send className="w-4 h-4" />
             <span>Submit Test</span>
           </button>
         </div>
@@ -228,34 +232,34 @@ export default function LiveQuizSessionPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Column: Question & Options (8 cols) */}
         <div className="lg:col-span-8 space-y-6">
-          <div className="liquid-card rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-white/10 bg-white/90 dark:bg-slate-950/70 relative shadow-sm">
+          <div className="liquid-card rounded-3xl p-6 sm:p-9 border border-slate-200 dark:border-white/10 bg-white/90 dark:bg-slate-950/70 relative shadow-sm">
             {/* Action icons (Bookmark, Mark for Review, Difficulty tag) */}
-            <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/10 mb-6 flex-wrap gap-2">
-              <div className="flex items-center gap-2">
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+            <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/10 mb-6 flex-wrap gap-2.5">
+              <div className="flex items-center gap-2.5">
+                <span className="text-xs font-bold px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
                   {currentQ.difficulty}
                 </span>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20">
+                <span className="text-xs font-bold px-3 py-1 rounded-xl bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20">
                   {config.paperType === 'GS' ? '+2.0 / -0.66 Marks' : '+2.5 / -0.83 Marks'}
                 </span>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5">
                 <button
                   onClick={handleToggleReview}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
                     currentAnswer.isMarkedForReview
                       ? 'bg-amber-500/20 text-amber-800 dark:text-amber-300 border-amber-500/40'
                       : 'bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
-                  <Flag className={`w-3.5 h-3.5 ${currentAnswer.isMarkedForReview ? 'fill-amber-500 text-amber-500' : ''}`} />
+                  <Flag className={`w-4 h-4 ${currentAnswer.isMarkedForReview ? 'fill-amber-500 text-amber-500' : ''}`} />
                   <span>{currentAnswer.isMarkedForReview ? 'Marked' : 'Mark for Review'}</span>
                 </button>
 
                 <button
                   onClick={handleToggleBookmark}
-                  className={`p-2 rounded-lg border transition-all ${
+                  className={`p-2.5 rounded-xl border transition-all ${
                     isBookmarked
                       ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/40'
                       : 'bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-800 hover:text-slate-900 dark:hover:text-white'
@@ -268,12 +272,12 @@ export default function LiveQuizSessionPage() {
             </div>
 
             {/* Question Text */}
-            <div className="text-sm sm:text-base font-medium text-slate-900 dark:text-slate-100 leading-relaxed whitespace-pre-line mb-8">
+            <div className="text-base sm:text-lg font-medium text-slate-900 dark:text-slate-100 leading-relaxed whitespace-pre-line mb-8">
               {currentQ.question}
             </div>
 
             {/* Options List */}
-            <div className="space-y-3">
+            <div className="space-y-4">
               {currentQ.options.map((optionText, idx) => (
                 <OptionButton
                   key={idx}

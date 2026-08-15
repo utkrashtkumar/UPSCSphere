@@ -20,7 +20,7 @@ export default function ContactUsPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [category, setCategory] = useState('Question Feedback / Errata');
-  const [targetYear, setTargetYear] = useState('2026');
+  const [targetYear, setTargetYear] = useState('2027');
   const [message, setMessage] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -41,7 +41,7 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14 space-y-10">
+    <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-10 sm:py-14 space-y-10">
       
       {/* Back Link & Header */}
       <div>
@@ -158,10 +158,10 @@ export default function ContactUsPage() {
                     onChange={(e) => setTargetYear(e.target.value)}
                     className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2.5 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-orange-500 shadow-sm cursor-pointer"
                   >
-                    <option value="2025">UPSC 2025</option>
-                    <option value="2026">UPSC 2026</option>
-                    <option value="2027">UPSC 2027</option>
-                    <option value="Later">2028 or Later</option>
+                    <option value="2027">UPSC 2027 (Next Upcoming)</option>
+                    <option value="2028">UPSC 2028</option>
+                    <option value="2029">UPSC 2029</option>
+                    <option value="Later">2030 or Later</option>
                   </select>
                 </div>
               </div>

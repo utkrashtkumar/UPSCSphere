@@ -1,0 +1,42 @@
+﻿{
+  "name": "UPSCSphere — Daily UPSC CSE Prelims Hub",
+  "short_name": "UPSCSphere",
+  "description": "Master UPSC Prelims with 20 Daily Real-Time Current Affairs Questions, 12-Year PYQ Vault, and Exact Book Citations.",
+  "start_url": "/daily-ca?utm_source=pwa",
+  "display": "standalone",
+  "background_color": "#050b14",
+  "theme_color": "#ff671f",
+  "orientation": "portrait-primary",
+  "categories": ["education", "news", "productivity"],
+  "icons": [
+    {
+      "src": "/emblem.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/emblem.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Current Affairs (20 MCQs)",
+      "url": "/daily-ca",
+      "description": "Solve today's 20 fresh UPSC Prelims current affairs questions"
+    },
+    {
+      "name": "12-Yr PYQ Vault",
+      "url": "/pyq",
+      "description": "Practice official UPSC Prelims papers (2015–2026)"
+    },
+    {
+      "name": "Custom Mock Generator",
+      "url": "/quiz/create",
+      "description": "Generate custom timed speed mocks"
+    }
+  ]
+}

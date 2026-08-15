@@ -80,7 +80,7 @@ export default function QuizResultPage() {
   });
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 space-y-8">
+    <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8 space-y-8">
       {/* Header */}
       <div className="text-center">
         <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">

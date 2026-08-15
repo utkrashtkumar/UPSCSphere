@@ -16,7 +16,7 @@ import {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10 sm:py-14 space-y-10">
+    <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-10 sm:py-14 space-y-10">
       
       {/* Back Link & Header */}
       <div>
@@ -126,13 +126,39 @@ export default function PrivacyPolicyPage() {
           </p>
         </div>
 
-        {/* Section 5 */}
+        {/* Section 5: Google User Data Policy Compliance */}
+        <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 space-y-3.5 shadow-sm border-orange-500/20">
+          <div className="flex items-center gap-2.5 text-slate-900 dark:text-white font-bold text-lg font-display">
+            <div className="p-2 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400">
+              <ShieldCheck className="w-4 h-4" />
+            </div>
+            <h2>5. Google API Services User Data Policy Compliance</h2>
+          </div>
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            UPSCSphere uses Google OAuth solely for user authentication and cross-device account synchronization. 
+          </p>
+          <div className="p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20 text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+            <p className="font-semibold text-slate-900 dark:text-white">
+              Limited Use Disclosure:
+            </p>
+            <p className="leading-relaxed">
+              UPSCSphere&apos;s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" className="text-orange-600 dark:text-orange-400 underline font-bold">Google API Services User Data Policy</a>, including the Limited Use requirements.
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-xs opacity-90 pt-1">
+              <li>We only access basic profile information (email, full name, avatar URL) to establish your account.</li>
+              <li>We do not transfer or disclose Google user data to third parties, data brokers, or advertising networks.</li>
+              <li>We do not use Google user data for training generalized AI or machine learning models.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Section 6 */}
         <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 space-y-3.5 shadow-sm">
           <div className="flex items-center gap-2.5 text-slate-900 dark:text-white font-bold text-lg font-display">
             <div className="p-2 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400">
               <HelpCircle className="w-4 h-4" />
             </div>
-            <h2>5. Contact & Privacy Inquiries</h2>
+            <h2>6. Contact & Privacy Inquiries</h2>
           </div>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
             If you have questions regarding this Privacy Policy, wish to request account deletion, or want to export your study records, please contact our data grievance desk:

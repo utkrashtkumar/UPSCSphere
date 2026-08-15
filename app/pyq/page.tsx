@@ -59,7 +59,7 @@ export default function PYQVaultPage() {
   const letters = ['A', 'B', 'C', 'D'];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 space-y-8">
+    <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8 space-y-8">
       {/* Header */}
       <div className="text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold mb-3">
@@ -75,25 +75,25 @@ export default function PYQVaultPage() {
       </div>
 
       {/* 12-Year Quick Test Launch Cards */}
-      <div className="liquid-glass-card rounded-3xl p-6 shadow-sm">
-        <h2 className="font-bold text-base text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-          <Calendar className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+      <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 shadow-sm space-y-5">
+        <h2 className="font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white flex items-center gap-2.5">
+          <Calendar className="w-5 h-5 text-blue-600 dark:text-blue-400" />
           <span>Take Full-Length 2-Hour Official PYQ Test (Last 12 Years: 2015–2026)</span>
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-3">
           {years.map((yr) => (
-            <div key={yr} className="flex flex-col gap-1.5">
+            <div key={yr} className="flex flex-col gap-2">
               <button
                 onClick={() => handleStartPYQTest(yr, 'GS')}
-                className="p-2.5 rounded-xl bg-white/90 dark:bg-slate-900 border border-slate-200 dark:border-white/10 hover:border-orange-500 text-center transition-all group shadow-sm"
+                className="p-3 sm:p-3.5 rounded-2xl bg-white/90 dark:bg-slate-900 border border-slate-200 dark:border-white/10 hover:border-orange-500 text-center transition-all group shadow-sm hover:scale-105"
               >
-                <span className="font-extrabold text-sm text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 block">{yr}</span>
-                <span className="text-[10px] font-bold text-orange-600 dark:text-orange-400 block mt-0.5">GS-1 Mock</span>
+                <span className="font-black text-base sm:text-lg text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 block">{yr}</span>
+                <span className="text-xs font-extrabold text-orange-600 dark:text-orange-400 block mt-0.5">GS-1 Mock</span>
               </button>
               <button
                 onClick={() => handleStartPYQTest(yr, 'CSAT')}
-                className="p-1.5 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-center transition-all text-[10px] text-emerald-700 dark:text-emerald-400 font-bold shadow-sm"
+                className="p-2 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 text-center transition-all text-xs text-emerald-700 dark:text-emerald-400 font-extrabold shadow-sm hover:scale-105"
               >
                 CSAT Paper
               </button>
@@ -103,48 +103,46 @@ export default function PYQVaultPage() {
       </div>
 
       {/* Filter & Search Bar */}
-      <div className="liquid-glass-card rounded-2xl p-5 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
+      <div className="liquid-glass-card rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
         {/* Search */}
-        <div className="relative w-full md:w-80">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+        <div className="relative w-full md:w-96">
+          <Search className="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search topic, book, or keyword..."
-            className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-xl pl-9 pr-4 py-2 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 shadow-sm"
+            placeholder="Search questions, keywords, books, topics..."
+            className="w-full pl-11 pr-4 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-blue-500 transition-colors shadow-sm"
           />
         </div>
 
-        {/* Filters */}
-        <div className="flex items-center gap-2 flex-wrap w-full md:w-auto justify-end">
-          {/* Year Filter */}
+        {/* Year and Paper Dropdowns */}
+        <div className="flex items-center gap-3 w-full md:w-auto flex-wrap">
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value === 'all' ? 'all' : Number(e.target.value))}
-            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-orange-500 shadow-sm cursor-pointer"
+            className="px-4 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-sm text-slate-800 dark:text-slate-200 focus:outline-none focus:border-blue-500 shadow-sm cursor-pointer"
           >
-            <option value="all">All Years (2015-2026)</option>
+            <option value="all">All Years (2015–2026)</option>
             {years.map((y) => (
-              <option key={y} value={y}>{y} Exam</option>
+              <option key={y} value={y}>UPSC {y}</option>
             ))}
           </select>
 
-          {/* Paper Filter */}
           <select
             value={selectedPaper}
             onChange={(e) => setSelectedPaper(e.target.value as any)}
-            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-orange-500 shadow-sm cursor-pointer"
+            className="px-4 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-sm text-slate-800 dark:text-slate-200 focus:outline-none focus:border-blue-500 shadow-sm cursor-pointer"
           >
-            <option value="all">All Papers (GS1 + CSAT)</option>
-            <option value="GS">GS Paper 1</option>
-            <option value="CSAT">CSAT Paper 2</option>
+            <option value="all">All Papers (GS + CSAT)</option>
+            <option value="GS">GS Paper 1 Only</option>
+            <option value="CSAT">CSAT Paper 2 Only</option>
           </select>
         </div>
       </div>
 
       {/* PYQ Questions List with Book & Page Number Accordion */}
-      <div className="space-y-4">
+      <div className="space-y-5">
         {filteredPYQs.map((q) => {
           const isExpanded = expandedQId === q.id;
           const isBookmarked = bookmarkedIds.includes(q.id);
@@ -152,18 +150,18 @@ export default function PYQVaultPage() {
           return (
             <div
               key={q.id}
-              className="liquid-glass-card rounded-3xl p-6 space-y-4 shadow-sm"
+              className="liquid-glass-card rounded-3xl p-6 sm:p-8 space-y-5 shadow-sm"
             >
               {/* Question Header */}
-              <div className="flex items-center justify-between flex-wrap gap-2 pb-3 border-b border-slate-200 dark:border-white/10">
-                <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-xs px-2.5 py-1 rounded-lg bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-500/30">
+              <div className="flex items-center justify-between flex-wrap gap-3 pb-4 border-b border-slate-200 dark:border-white/10">
+                <div className="flex items-center gap-2.5">
+                  <span className="font-black text-xs sm:text-sm px-3 py-1 rounded-xl bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-500/30">
                     UPSC {q.pyqYear} ({q.pyqPaper})
                   </span>
-                  <span className="text-xs font-bold text-slate-900 dark:text-white">{q.topic}</span>
+                  <span className="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white">{q.topic}</span>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5">
                   <button
                     onClick={() => {
                       const state = toggleBookmark(q.id);
@@ -171,34 +169,34 @@ export default function PYQVaultPage() {
                         state ? [...prev, q.id] : prev.filter((id) => id !== q.id)
                       );
                     }}
-                    className={`p-2 rounded-xl border text-xs transition-all ${
+                    className={`p-2.5 rounded-2xl border text-xs transition-all ${
                       isBookmarked ? 'bg-orange-500/20 text-orange-600 dark:text-orange-400 border-orange-500/40' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-white/10'
                     }`}
                   >
-                    <Bookmark className={`w-3.5 h-3.5 ${isBookmarked ? 'fill-orange-500' : ''}`} />
+                    <Bookmark className={`w-4 h-4 ${isBookmarked ? 'fill-orange-500' : ''}`} />
                   </button>
 
                   <button
                     onClick={() => setExpandedQId(isExpanded ? null : q.id)}
-                    className="flex items-center gap-1 text-xs font-bold text-orange-700 dark:text-orange-400 bg-orange-500/10 px-3 py-1.5 rounded-xl border border-orange-500/20 hover:bg-orange-500/20 transition-all"
+                    className="flex items-center gap-1.5 text-xs sm:text-sm font-extrabold text-orange-700 dark:text-orange-400 bg-orange-500/10 px-4 py-2 rounded-2xl border border-orange-500/20 hover:bg-orange-500/20 transition-all"
                   >
                     <span>{isExpanded ? 'Hide Solution' : 'View Answer & Page Ref'}</span>
-                    {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                    {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                   </button>
                 </div>
               </div>
 
               {/* Question Text */}
-              <div className="text-sm font-medium text-slate-900 dark:text-slate-100 whitespace-pre-line leading-relaxed">
+              <div className="text-base sm:text-lg font-medium text-slate-900 dark:text-slate-100 whitespace-pre-line leading-relaxed">
                 {q.question}
               </div>
 
               {/* Options */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                 {q.options.map((opt, optIdx) => (
                   <div
                     key={optIdx}
-                    className={`p-3.5 rounded-2xl border flex items-start gap-2.5 text-xs shadow-sm ${
+                    className={`p-4 sm:p-5 rounded-2xl border flex items-start gap-3 text-sm sm:text-base leading-relaxed shadow-sm ${
                       isExpanded && optIdx === q.correctAnswer
                         ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-500 text-emerald-950 dark:text-emerald-100 font-bold'
                         : 'bg-white/90 dark:bg-slate-900/60 border-slate-200 dark:border-white/10 text-slate-800 dark:text-slate-300'
@@ -207,7 +205,7 @@ export default function PYQVaultPage() {
                     <span className="font-bold">{letters[optIdx]}.</span>
                     <span className="flex-1">{opt}</span>
                     {isExpanded && optIdx === q.correctAnswer && (
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                     )}
                   </div>
                 ))}

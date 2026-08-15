@@ -25,7 +25,7 @@ export default function Footer() {
       {/* Running Tricolour Accent Stream Line */}
       <div className="h-[2px] w-full running-tricolor-line opacity-90" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           
           {/* Col 1 & 2: Brand, Mission & Badges */}
@@ -47,7 +47,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-sm">
-              India&apos;s 100% free UPSC Civil Services Prelims platform. Built with high-speed performance, real-time evaluation, and page-exact standard book citations.
+              <strong>UPSCSphere</strong> is India&apos;s 100% free UPSC Civil Services Prelims platform. Built with high-speed performance, real-time evaluation, and page-exact standard book citations.
             </p>
 
             <div className="flex flex-wrap gap-2 pt-1">
@@ -227,6 +227,13 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-slate-200/80 dark:border-white/10 space-y-4">
           {/* Tier 1: Dedicated Legal & Navigation Links */}
           <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-slate-600 dark:text-slate-400">
+            <Link 
+              href="/about" 
+              className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors whitespace-nowrap py-0.5"
+            >
+              About Us
+            </Link>
+            <span className="text-slate-300 dark:text-white/10 hidden sm:inline">•</span>
             <Link 
               href="/how-to-use" 
               className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors whitespace-nowrap py-0.5"

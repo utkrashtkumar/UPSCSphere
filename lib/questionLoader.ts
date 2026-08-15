@@ -11,6 +11,8 @@ export interface LoadQuestionsOptions {
   isPYQOnly?: boolean;
   pyqYear?: number;
   pyqPaper?: PaperType;
+  isDailyCA?: boolean;
+  dailyCASet?: 'set1' | 'set2' | 'all';
 }
 
 export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
@@ -22,7 +24,35 @@ export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
     isPYQOnly = false,
     pyqYear,
     pyqPaper,
+    isDailyCA = false,
+    dailyCASet = 'all',
   } = options;
+
+  // Direct Daily CA loading
+  if (isDailyCA) {
+    let sourceQuestions = dailyCAQuestions;
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = sessionStorage.getItem('daily_ca_active_questions');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            sourceQuestions = parsed;
+          }
+        }
+      } catch {
+        // fallback to standard
+      }
+    }
+
+    if (dailyCASet === 'set1') {
+      return sourceQuestions.slice(0, Math.min(10, count));
+    }
+    if (dailyCASet === 'set2') {
+      return sourceQuestions.slice(10, 20).slice(0, count);
+    }
+    return sourceQuestions.slice(0, count);
+  }
 
   let pool: Question[] = [...standardQuestions, ...pyqVault, ...dailyCAQuestions];
 

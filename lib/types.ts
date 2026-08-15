@@ -65,6 +65,8 @@ export interface QuizConfig {
   difficulty: 'all' | DifficultyLevel;
   isPYQOnly?: boolean;
   pyqYear?: number;
+  isDailyCA?: boolean;
+  dailyCASet?: 'set1' | 'set2' | 'all';
 }
 
 export interface QuizResult {
@@ -140,4 +142,18 @@ export interface UserProfile {
   totalQuizzesTaken: number;
   averageScore: number;
   highestScore: number;
+  avatarUrl?: string;
+  dob?: string;
+  homeTown?: string;
+  homeState?: string;
+  graduationDegree?: string;
+  graduationCollege?: string;
+  graduationCity?: string;
+  graduationYear?: number;
+  postGraduationDegree?: string;
+  postGraduationCollege?: string;
+  postGraduationYear?: number;
+  attemptNumber?: number;
+  medium?: 'English' | 'Hindi' | 'Other';
 }
+
