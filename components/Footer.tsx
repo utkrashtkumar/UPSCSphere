@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   ShieldCheck, 
   BookOpen, 
@@ -31,10 +32,14 @@ export default function Footer() {
           {/* Col 1 & 2: Brand, Mission & Badges */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3 group inline-flex">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-orange-500 via-amber-500 to-emerald-600 p-[1.5px] shadow-sm group-hover:scale-105 transition-transform">
-                <div className="w-full h-full rounded-[14px] bg-white dark:bg-[#050b14] flex items-center justify-center text-lg font-black">
-                  🏛️
-                </div>
+              <div className="relative w-11 h-11 rounded-full overflow-hidden p-[1.5px] bg-gradient-to-tr from-orange-500 via-amber-400 to-emerald-500 shadow-md group-hover:scale-105 transition-transform">
+                <Image
+                  src="/logo.png"
+                  alt="UPSCSphere Official Logo"
+                  width={44}
+                  height={44}
+                  className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900"
+                />
               </div>
               <div>
                 <span className="font-extrabold text-xl text-slate-900 dark:text-white tracking-tight">

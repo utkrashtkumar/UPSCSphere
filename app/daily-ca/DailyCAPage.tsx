@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { 
   Sparkles, 
@@ -216,15 +217,23 @@ export default function DailyCAPage() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8 space-y-8">
       {/* Hero Header */}
-      <div className="text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold mb-3">
-          <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+      <div className="text-center space-y-3">
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold shadow-sm">
+          <div className="relative w-4 h-4 rounded-full overflow-hidden shrink-0">
+            <Image
+              src="/logo.png"
+              alt="UPSCSphere"
+              width={16}
+              height={16}
+              className="w-full h-full object-cover"
+            />
+          </div>
           <span>Real-time Current Affairs — 20 Daily Questions with Strict Citations</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Daily UPSC <span className="tricolor-gradient-text">Current Affairs Hub</span>
         </h1>
-        <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-2xl mx-auto">
+        <p className="text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           Attempt the initial 10 high-yield questions, then unlock an extra 10 editorial dossier questions (up to 20 MCQs daily) curated from The Hindu, Indian Express, PIB, Down To Earth, and PRS India.
         </p>
       </div>

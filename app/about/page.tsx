@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Zap, 
   BookOpen, 
@@ -34,9 +35,20 @@ export default function AboutPage() {
         <div className="running-shimmer-stream" />
 
         <div className="relative z-10 max-w-4xl space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs sm:text-sm font-black tracking-wide">
-            <GraduationCap className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-            <span>ABOUT UPSCSPHERE • OUR PHILOSOPHY & VISION</span>
+          <div className="flex items-center gap-3.5 flex-wrap">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden p-[1.5px] bg-gradient-to-tr from-orange-500 via-amber-400 to-emerald-500 shadow-md">
+              <Image
+                src="/logo.png"
+                alt="UPSCSphere Official Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900"
+              />
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs sm:text-sm font-black tracking-wide">
+              <GraduationCap className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+              <span>ABOUT UPSCSPHERE • OUR PHILOSOPHY & VISION</span>
+            </div>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight text-slate-900 dark:text-white leading-[1.14]">

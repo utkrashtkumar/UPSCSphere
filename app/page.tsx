@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { 
   Zap, 
@@ -125,8 +126,16 @@ export default function HomePage() {
           <div className="lg:col-span-8 space-y-5">
             
             {/* Top Tricolour Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs font-black tracking-wide">
-              <span className="text-sm">🏛️</span>
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/80 dark:bg-slate-900/80 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs font-black tracking-wide shadow-sm">
+              <div className="relative w-6 h-6 rounded-full overflow-hidden shrink-0 border border-orange-400/40">
+                <Image
+                  src="/logo.png"
+                  alt="UPSCSphere Official Emblem"
+                  width={24}
+                  height={24}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <span>UPSCSphere • 100% FREE PRELIMS ECOSYSTEM • HIGH-SPEED MOCK ENGINE</span>
             </div>
 

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Compass, 
   Zap, 
@@ -126,9 +127,20 @@ export default function HowToUsePage() {
           <span>Back to Home</span>
         </Link>
 
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs font-bold mb-3">
-          <Compass className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
-          <span>Aspirant Guide & Platform Walkthrough</span>
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden p-[1.5px] bg-gradient-to-tr from-orange-500 via-amber-400 to-emerald-500 shadow-md">
+            <Image
+              src="/logo.png"
+              alt="UPSCSphere Official Logo"
+              width={40}
+              height={40}
+              className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900"
+            />
+          </div>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs font-bold">
+            <Compass className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
+            <span>Aspirant Guide & Platform Walkthrough</span>
+          </div>
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight font-display">

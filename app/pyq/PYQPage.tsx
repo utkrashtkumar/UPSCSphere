@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   BookOpen, 
   Calendar, 
@@ -98,15 +99,23 @@ export default function PYQVaultPage() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8 space-y-8">
       {/* Header */}
-      <div className="text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold mb-3">
-          <BookOpen className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+      <div className="text-center space-y-3">
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold shadow-sm">
+          <div className="relative w-4 h-4 rounded-full overflow-hidden shrink-0">
+            <Image
+              src="/logo.png"
+              alt="UPSCSphere"
+              width={16}
+              height={16}
+              className="w-full h-full object-cover"
+            />
+          </div>
           <span>Last 12 Years (2015 – 2026) Official Vault</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           UPSC Prelims & CSAT <span className="tricolor-gradient-text">PYQ Archive (12 Years)</span>
         </h1>
-        <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-2xl mx-auto">
+        <p className="text-sm text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           Every single question from the last 12 years (2015 to 2026) with official UPSC answer keys, standard book page citations, and elimination strategies. <strong className="text-emerald-700 dark:text-emerald-400 font-bold">✨ 2026 Paper is 100% Free & Unlocked!</strong>
         </p>
       </div>

@@ -76,6 +76,15 @@ export const metadata: Metadata = {
     images: ['https://www.upscsphere.in/og-image.png'],
   },
 
+  icons: {
+    icon: [
+      { url: '/logo.png' },
+      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+    ],
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
+
   // Verification for Google Search Console, Bing Webmaster
   verification: {
     google: 'REPLACE_WITH_GOOGLE_SITE_VERIFICATION_TOKEN',

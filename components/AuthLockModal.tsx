@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ShieldCheck, Lock, ArrowRight, X, Sparkles, BookOpen, Trophy } from 'lucide-react';
 
 interface AuthLockModalProps {
@@ -36,10 +37,16 @@ export default function AuthLockModal({
           <X className="w-5 h-5" />
         </button>
 
-        {/* Icon & Badge */}
+        {/* Official Brand Logo Icon & Badge */}
         <div className="space-y-3 pt-2">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500/20 via-amber-500/20 to-emerald-500/20 text-orange-600 dark:text-orange-400 flex items-center justify-center mx-auto border-2 border-orange-500/30 shadow-lg shadow-orange-500/20">
-            <Lock className="w-8 h-8 text-orange-600 dark:text-orange-400" />
+          <div className="relative w-20 h-20 rounded-full overflow-hidden p-[2px] bg-gradient-to-tr from-orange-500 via-amber-400 to-emerald-500 shadow-xl shadow-orange-500/20 mx-auto animate-bounce-subtle">
+            <Image
+              src="/logo.png"
+              alt="UPSCSphere Official Logo"
+              width={80}
+              height={80}
+              className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900"
+            />
           </div>
           
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/10 text-orange-700 dark:text-orange-300 text-xs font-black uppercase tracking-wider border border-orange-500/30">

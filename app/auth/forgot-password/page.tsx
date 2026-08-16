@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   KeyRound, 
   Mail, 
@@ -59,10 +60,18 @@ export default function ForgotPasswordPage() {
           <div className="h-[3px] absolute top-0 left-0 right-0 running-tricolor-line opacity-90" />
 
           {/* Header */}
-          <div className="text-center space-y-2.5">
-            <div className="w-14 h-14 rounded-2xl bg-orange-500/15 text-orange-600 dark:text-orange-400 flex items-center justify-center mx-auto border border-orange-500/30 shadow-md">
-              <KeyRound className="w-7 h-7" />
-            </div>
+          <div className="text-center space-y-3">
+            <Link href="/" className="inline-block group">
+              <div className="relative w-16 h-16 rounded-full overflow-hidden p-[1.5px] bg-gradient-to-tr from-orange-500 via-amber-400 to-emerald-500 shadow-lg shadow-orange-500/20 mx-auto group-hover:scale-105 transition-transform">
+                <Image
+                  src="/logo.png"
+                  alt="UPSCSphere Official Logo"
+                  width={64}
+                  height={64}
+                  className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900"
+                />
+              </div>
+            </Link>
 
             <h1 className="text-2xl sm:text-3xl font-black font-display text-slate-900 dark:text-white tracking-tight">
               Reset Your <span className="tricolor-gradient-text">Password</span>

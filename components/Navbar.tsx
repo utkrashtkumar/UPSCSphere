@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { 
   Flame, 
@@ -13,9 +14,9 @@ import {
   LogOut, 
   ChevronDown, 
   Trophy, 
-  RotateCcw,
-  User,
-  BookOpen,
+  RotateCcw, 
+  User, 
+  BookOpen, 
   HelpCircle
 } from 'lucide-react';
 import { useTheme } from '@/lib/themeContext';
@@ -80,12 +81,17 @@ export default function Navbar() {
           
           {/* Left: Indian Tricolour Brand Logo */}
           <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-orange-500 via-amber-500 to-emerald-600 p-[1.5px] shadow-sm group-hover:scale-105 transition-transform">
-              <div className="w-full h-full rounded-[10px] bg-white dark:bg-[#050b14] flex items-center justify-center text-sm font-black">
-                🏛️
-              </div>
+            <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden p-[1px] bg-gradient-to-tr from-orange-500 via-amber-400 to-emerald-500 shadow-sm group-hover:scale-105 transition-transform">
+              <Image
+                src="/logo.png"
+                alt="UPSCSphere Official Logo"
+                width={36}
+                height={36}
+                className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900"
+                priority
+              />
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">
                 UPSC<span className="text-orange-500 dark:text-orange-400">Sphere</span>
               </span>

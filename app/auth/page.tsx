@@ -2,6 +2,7 @@
 
 import React, { useState, Suspense } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { 
   Sparkles, 
@@ -168,11 +169,27 @@ function AuthContent() {
   return (
     <div className="max-w-xl mx-auto px-4 py-12 space-y-8">
       {/* Header */}
-      <div className="text-center space-y-2">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs font-black tracking-wide">
-          <Sparkles className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
-          <span>100% FREE UPSC ASPIRANT PORTAL</span>
+      <div className="text-center space-y-3">
+        <Link href="/" className="inline-block group">
+          <div className="relative w-20 h-20 rounded-full overflow-hidden p-[2px] bg-gradient-to-tr from-orange-500 via-amber-400 to-emerald-500 shadow-xl shadow-orange-500/20 mx-auto group-hover:scale-105 transition-transform">
+            <Image
+              src="/logo.png"
+              alt="UPSCSphere Official Logo"
+              width={80}
+              height={80}
+              className="w-full h-full object-cover rounded-full bg-white dark:bg-slate-900"
+              priority
+            />
+          </div>
+        </Link>
+
+        <div>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs font-black tracking-wide">
+            <Sparkles className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
+            <span>100% FREE UPSC ASPIRANT PORTAL</span>
+          </div>
         </div>
+
         <h1 className="text-3xl sm:text-4xl font-black font-display tracking-tight text-slate-900 dark:text-white">
           {mode === 'login' && 'Welcome Back, Aspirant'}
           {mode === 'magic_link' && 'Passwordless Magic Sign-In ✨'}

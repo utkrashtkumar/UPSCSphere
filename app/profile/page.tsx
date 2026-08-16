@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { 
   User, 
@@ -240,10 +241,22 @@ export default function ProfilePage() {
           </div>
 
           <div className="space-y-1">
-            <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+            <div className="flex items-center gap-2.5 flex-wrap justify-center sm:justify-start">
               <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
                 {formData.name || 'Aspirant'}
               </h1>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-black border border-emerald-500/20">
+                <div className="relative w-3.5 h-3.5 rounded-full overflow-hidden shrink-0">
+                  <Image
+                    src="/logo.png"
+                    alt="UPSCSphere"
+                    width={14}
+                    height={14}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span>Verified Aspirant</span>
+              </div>
               <span className="px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 text-xs font-black border border-orange-500/20">
                 UPSC {formData.targetYear || 2027}
               </span>
