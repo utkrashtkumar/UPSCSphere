@@ -1,4 +1,4 @@
-﻿/**
+/**
  * UPSCSphere Daily Current Affairs Notification & PWA Manager
  */
 
@@ -51,8 +51,8 @@ export async function enableDailyCANotifications(): Promise<{ success: boolean; 
       if (registration && registration.showNotification) {
         registration.showNotification('🔔 Daily Current Affairs Alerts Enabled!', {
           body: 'You will now receive today\'s 20 fresh UPSC Prelims MCQs and editorial dossiers every morning at 7:30 AM IST.',
-          icon: '/emblem.png',
-          badge: '/emblem.png',
+          icon: '/logo.png',
+          badge: '/logo.png',
           tag: 'daily-ca-enabled-confirm',
           data: { url: '/daily-ca' },
         });
@@ -114,8 +114,8 @@ export async function triggerTestNotification(): Promise<{ success: boolean; mes
     if (reg && reg.showNotification) {
       await reg.showNotification('🏛️ UPSCSphere Daily CA Alert (Test)', {
         body: 'Today\'s 20 fresh UPSC Prelims Current Affairs MCQs with official book citations & elimination traps are ready. Tap to solve now!',
-        icon: '/emblem.png',
-        badge: '/emblem.png',
+        icon: '/logo.png',
+        badge: '/logo.png',
         tag: 'daily-ca-test-sample',
         data: { url: '/daily-ca' },
       });
@@ -123,7 +123,7 @@ export async function triggerTestNotification(): Promise<{ success: boolean; mes
     } else {
       new Notification('🏛️ UPSCSphere Daily CA Alert (Test)', {
         body: 'Today\'s 20 fresh UPSC Prelims Current Affairs MCQs are ready. Tap to solve!',
-        icon: '/emblem.png',
+        icon: '/logo.png',
       });
       return { success: true, message: '🎉 Test alert sent!' };
     }

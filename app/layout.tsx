@@ -140,8 +140,8 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="UPSCSphere" />
-        <link rel="apple-touch-icon" href="/emblem.png" />
-        <link rel="icon" type="image/png" href="/emblem.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="icon" type="image/png" href="/logo.png" />
 
         {/* Service Worker Auto-Registration for PWA & Daily CA Push Alerts */}
         <script
@@ -197,7 +197,7 @@ export default function RootLayout({
                   url: 'https://www.upscsphere.in',
                   logo: {
                     '@type': 'ImageObject',
-                    url: 'https://www.upscsphere.in/emblem.png',
+                    url: 'https://www.upscsphere.in/logo.png',
                     width: 512,
                     height: 512,
                   },
