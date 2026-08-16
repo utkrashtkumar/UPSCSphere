@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 import { ThemeProvider } from '@/lib/themeContext';
 import { AuthProvider } from '@/lib/authContext';
 import { TypographyProvider } from '@/lib/typographyContext';
@@ -290,6 +291,9 @@ export default function RootLayout({
 
               {/* Redesigned 4-Column Liquid Glass Footer */}
               <Footer />
+
+              {/* Floating Go To Top Button with Circular Scroll Progress */}
+              <ScrollToTop />
             </AuthProvider>
           </ThemeProvider>
         </TypographyProvider>
