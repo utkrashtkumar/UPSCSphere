@@ -136,21 +136,21 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span>UPSCSphere • 100% FREE PRELIMS ECOSYSTEM • HIGH-SPEED MOCK ENGINE</span>
+              <span>UPSCSphere • 100% FREE UPSC MOCK TESTS • DAILY CURRENT AFFAIRS • FULL PYQ VAULT</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight text-slate-900 dark:text-white leading-[1.14]">
-              <span className="text-orange-600 dark:text-orange-400">UPSCSphere</span>: Master UPSC Prelims with <br />
+              <span className="text-orange-600 dark:text-orange-400">Free Mock Tests</span>, <br />
               <span className="tricolor-gradient-text">
-                On-the-Spot Feedback
+                Free Daily Current Affairs
               </span> <br />
-              & Exact Book Citations
+              & Full PYQ with Proper Citations
             </h1>
 
             {/* Description */}
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl font-normal">
-              <strong>UPSCSphere</strong> is an open-access educational platform tailored for UPSC Civil Services Examination (CSE) aspirants. Practice configurable GS-1 & CSAT mocks, explore our 12-year official PYQ vault (2015–2026), leverage 50:50 option elimination, study exact book page citations (Laxmikanth, Spectrum, NCERT), and compare live nationwide AIR benchmarks.
+              <strong>UPSCSphere</strong> is India&apos;s #1 open-access portal for UPSC Civil Services Examination (CSE) Prelims preparation. Access <strong>100% free mock tests</strong> for GS-1 & CSAT, solve <strong>free daily current affairs & news information MCQs</strong> from <em>The Hindu & PIB</em>, and practice the <strong>free full PYQ archive (2015–2026)</strong> with proper citations and standard textbook references (Laxmikanth, Spectrum, Ramesh Singh, NCERTs).
             </p>
 
             {/* Action CTAs */}
@@ -603,6 +603,134 @@ export default function HomePage() {
                 Terms of Service →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Free UPSC Mock Tests, Free Current Affairs & Full PYQ Knowledge Base (SEO Authority Section) */}
+      <section className="liquid-glass-card rounded-3xl p-8 sm:p-12 border border-orange-500/30 space-y-8 shadow-xl">
+        <div className="space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs font-black tracking-wide">
+            <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <span>FREE UPSC CSE PRELIMS PREPARATION DIRECTORY</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-black font-display text-slate-900 dark:text-white tracking-tight">
+            Free Mock Tests, Free Current Affairs & Full PYQ of UPSC Prelims with Proper Citations and Reference
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl">
+            Everything you need to crack UPSC Civil Services Examination (CSE) Prelims in one open-access platform. Master high-yield General Studies (GS Paper 1) and Civil Services Aptitude Test (CSAT Paper 2) with verified syllabus-mapped question banks, daily news information, and past year question papers.
+          </p>
+        </div>
+
+        {/* 4 Feature Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-white/10 space-y-3 shadow-sm">
+            <div className="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center font-bold text-lg">
+              🎯
+            </div>
+            <h3 className="font-extrabold text-base text-slate-900 dark:text-white">
+              Free Mock Tests & Test Series
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Customizable GS & CSAT mock tests (5, 10, 20, 50, and 100 questions) with realistic timer options, negative marking calculations (-0.667 for GS, -0.833 for CSAT), and instant AI performance diagnostics.
+            </p>
+            <Link href="/quiz/create" className="text-xs font-bold text-orange-600 dark:text-orange-400 hover:underline inline-flex items-center gap-1">
+              <span>Create Free Mock Test</span> →
+            </Link>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-white/10 space-y-3 shadow-sm">
+            <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-lg">
+              📰
+            </div>
+            <h3 className="font-extrabold text-base text-slate-900 dark:text-white">
+              Free Current Affairs & Daily News
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              20 daily fresh Prelims MCQs curated every morning from <em>The Hindu, Indian Express, Press Information Bureau (PIB), and Down To Earth</em> with deep editorial explanations and source links.
+            </p>
+            <Link href="/daily-ca" className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1">
+              <span>Solve Today&apos;s 20 MCQs</span> →
+            </Link>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-white/10 space-y-3 shadow-sm">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
+              📜
+            </div>
+            <h3 className="font-extrabold text-base text-slate-900 dark:text-white">
+              Free Full PYQ Vault (2015–2026)
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Complete official question papers of the last 12 years with official UPSC keys, 50:50 elimination tactics, and 2-hour full exam simulations for Prelims GS-1 and CSAT Paper-2.
+            </p>
+            <Link href="/pyq" className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-1">
+              <span>Explore 12-Year Vault</span> →
+            </Link>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-white/10 space-y-3 shadow-sm">
+            <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold text-lg">
+              📖
+            </div>
+            <h3 className="font-extrabold text-base text-slate-900 dark:text-white">
+              Proper Citations & Book References
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Every single solution references standard textbooks: <em>M. Laxmikanth (7th Ed), Spectrum Rajiv Ahir, Ramesh Singh Indian Economy, Shankar IAS Environment, and NCERTs</em> with exact chapter and page numbers.
+            </p>
+            <Link href="/syllabus" className="text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline inline-flex items-center gap-1">
+              <span>View Syllabus Topics</span> →
+            </Link>
+          </div>
+        </div>
+
+        {/* Semantic Expandable FAQ List */}
+        <div className="pt-4 border-t border-slate-200 dark:border-white/10 space-y-3">
+          <h3 className="font-extrabold text-lg text-slate-900 dark:text-white">
+            Frequently Asked Questions — Free UPSC CSE Prelims Preparation
+          </h3>
+
+          <div className="space-y-2.5">
+            <details className="group liquid-glass-card rounded-2xl p-4 border border-slate-200 dark:border-white/10 text-xs sm:text-sm cursor-pointer">
+              <summary className="font-bold text-slate-900 dark:text-white flex items-center justify-between list-none">
+                <span>Where can I attempt 100% free UPSC Prelims GS and CSAT mock tests online?</span>
+                <span className="text-orange-500 group-open:rotate-180 transition-transform font-black">▼</span>
+              </summary>
+              <p className="mt-2.5 text-slate-600 dark:text-slate-300 leading-relaxed">
+                You can attempt free full-length and subject-wise UPSC Prelims mock tests on UPSCSphere. Our test configurator allows you to select subjects (Indian Polity, Economy, Modern History, Geography, Environment, CSAT Quant & Reasoning), choose time limits, and simulate real negative marking (+2.0 / -0.667 for GS, +2.5 / -0.833 for CSAT).
+              </p>
+            </details>
+
+            <details className="group liquid-glass-card rounded-2xl p-4 border border-slate-200 dark:border-white/10 text-xs sm:text-sm cursor-pointer">
+              <summary className="font-bold text-slate-900 dark:text-white flex items-center justify-between list-none">
+                <span>How does the free Daily Current Affairs and News Information quiz work?</span>
+                <span className="text-orange-500 group-open:rotate-180 transition-transform font-black">▼</span>
+              </summary>
+              <p className="mt-2.5 text-slate-600 dark:text-slate-300 leading-relaxed">
+                UPSCSphere auto-generates 20 high-yield Current Affairs MCQs every morning at 7:00 AM IST from verified national sources including The Hindu, The Indian Express, PIB, and Down To Earth. Each question comes with full editorial background, related GS static concepts, and standard textbook citations.
+              </p>
+            </details>
+
+            <details className="group liquid-glass-card rounded-2xl p-4 border border-slate-200 dark:border-white/10 text-xs sm:text-sm cursor-pointer">
+              <summary className="font-bold text-slate-900 dark:text-white flex items-center justify-between list-none">
+                <span>Are full previous year questions (PYQs) of UPSC Prelims 2015 to 2026 available with proper citations?</span>
+                <span className="text-orange-500 group-open:rotate-180 transition-transform font-black">▼</span>
+              </summary>
+              <p className="mt-2.5 text-slate-600 dark:text-slate-300 leading-relaxed">
+                Yes! The UPSCSphere 12-Year PYQ Vault contains every official UPSC question asked between 2015 and 2026 for both General Studies Paper-1 (100 Qs) and CSAT Paper-2 (80 Qs). Each question includes official UPSC answer keys, elimination guidance, and exact standard textbook citations (e.g. M. Laxmikanth Chapter 13 Page 145).
+              </p>
+            </details>
+
+            <details className="group liquid-glass-card rounded-2xl p-4 border border-slate-200 dark:border-white/10 text-xs sm:text-sm cursor-pointer">
+              <summary className="font-bold text-slate-900 dark:text-white flex items-center justify-between list-none">
+                <span>How does the 50:50 Option Elimination technique help in UPSC CSE Prelims?</span>
+                <span className="text-orange-500 group-open:rotate-180 transition-transform font-black">▼</span>
+              </summary>
+              <p className="mt-2.5 text-slate-600 dark:text-slate-300 leading-relaxed">
+                Prelims requires eliminating extreme statements, identifying subtle distracters, and resolving 50:50 ambiguities under pressure. UPSCSphere features an interactive Strike-Out tool on every option and explains the specific elimination logic for each question so aspirants develop high-accuracy exam intuition.
+              </p>
+            </details>
           </div>
         </div>
       </section>

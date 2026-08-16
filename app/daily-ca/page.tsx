@@ -2,32 +2,36 @@ import type { Metadata } from 'next';
 import DailyCAPage from './DailyCAPage';
 
 export const metadata: Metadata = {
-  title: 'Daily Current Affairs (20 UPSC MCQs) from The Hindu, PIB & Indian Express',
+  title: 'Free Daily Current Affairs & News Information for UPSC (20 MCQs Daily) with Citations',
   description:
-    '20 fresh UPSC Prelims Current Affairs MCQs every morning at 7 AM IST from The Hindu, PIB, Indian Express and Down To Earth with exact Laxmikanth, Shankar IAS and Ramesh Singh book citations. Solve free online.',
+    'Practice 100% free daily current affairs and news information MCQs for UPSC Prelims. Daily 20 high-yield questions curated from The Hindu, Indian Express, PIB & Down To Earth with verified textbook page citations and strategic elimination notes.',
   keywords: [
-    'UPSC Current Affairs 2026',
-    'UPSC Daily MCQ',
-    'The Hindu UPSC questions',
-    'PIB UPSC current affairs',
-    'UPSC Prelims current affairs free',
-    'daily current affairs UPSC 2026',
+    'free current affairs',
+    'free daily current affairs',
+    'free daily news information',
+    'free daily news information for upsc',
+    'free upsc current affairs mcq',
+    'the hindu daily current affairs quiz',
+    'pib daily upsc questions',
+    'upsc prelims current affairs free 2026',
+    'daily editorial mcqs upsc',
+    'upsc news analysis quiz',
   ],
   alternates: {
     canonical: 'https://www.upscsphere.in/daily-ca',
   },
   openGraph: {
-    title: 'Daily Current Affairs (20 UPSC MCQs) | UPSCSphere',
+    title: 'Free Daily Current Affairs & News Information for UPSC | UPSCSphere',
     description:
-      '20 fresh UPSC Prelims Current Affairs MCQs every morning from The Hindu, PIB & Indian Express with exact book citations. 100% Free.',
+      'Practice 20 free daily current affairs & editorial news MCQs from The Hindu, PIB & Indian Express with standard book citations. 100% Free.',
     url: 'https://www.upscsphere.in/daily-ca',
     type: 'website',
-    images: [{ url: 'https://www.upscsphere.in/og-image.png', width: 1200, height: 630, alt: 'UPSCSphere Daily Current Affairs' }],
+    images: [{ url: 'https://www.upscsphere.in/og-image.png', width: 1200, height: 630, alt: 'Free Daily UPSC Current Affairs' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Daily 20 UPSC CA MCQs | UPSCSphere',
-    description: 'AI-generated from The Hindu, PIB, Indian Express. Free. With exact book citations.',
+    title: 'Free Daily Current Affairs & News Information (20 MCQs) | UPSCSphere',
+    description: '100% Free daily current affairs from The Hindu & PIB with verified textbook citations.',
     images: ['https://www.upscsphere.in/og-image.png'],
   },
 };
