@@ -53,7 +53,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Helper to fetch full DB profile for authenticated user
-    const fetchSupabaseProfile = async (userId: string, emailFallback?: string) => {
+    const fetchSupabaseProfile = async (userId: string, emailFallback?: string, avatarFallback?: string) => {
       if (!isSupabaseConfigured || !supabase) return;
       try {
         const { data: dbProfile } = await supabase
@@ -73,7 +73,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             totalQuizzesTaken: dbProfile.total_quizzes ?? 0,
             averageScore: dbProfile.average_score ?? 0,
             highestScore: dbProfile.highest_score ?? 0,
-            avatarUrl: dbProfile.avatar_url || '',
+            avatarUrl: dbProfile.avatar_url || avatarFallback || '',
             dob: dbProfile.dob || '',
             homeTown: dbProfile.home_town || '',
             homeState: dbProfile.home_state || '',
@@ -89,6 +89,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           };
           saveStoredProfile(merged);
           setProfile(merged);
+        } else {
+          // If remote DB profile does not exist yet, initialize local profile with auth metadata
+          const currentStored = getStoredProfile();
+          const seeded: UserProfile = {
+            ...defaultProfile,
+            ...currentStored,
+            email: emailFallback || currentStored.email || '',
+            avatarUrl: currentStored.avatarUrl || avatarFallback || '',
+          };
+          saveStoredProfile(seeded);
+          setProfile(seeded);
         }
       } catch (e) {
         console.warn('Could not fetch remote profile:', e);
@@ -99,16 +110,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (isSupabaseConfigured && supabase) {
       supabase.auth.getSession().then(({ data: { session } }) => {
         if (session?.user) {
+          const avatar = session.user.user_metadata?.avatar_url || session.user.user_metadata?.picture;
           const authUser: AuthUser = {
             id: session.user.id,
             email: session.user.email || '',
             name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Aspirant',
             targetYear: session.user.user_metadata?.target_year || 2027,
-            avatarUrl: session.user.user_metadata?.avatar_url,
+            avatarUrl: avatar,
           };
           setUser(authUser);
           localStorage.setItem('upsc_auth_session', JSON.stringify(authUser));
-          fetchSupabaseProfile(session.user.id, session.user.email);
+          fetchSupabaseProfile(session.user.id, session.user.email, avatar);
         } else {
           // No active Supabase session — user is definitely logged out
           setUser(null);
@@ -125,16 +137,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
         if (session?.user) {
+          const avatar = session.user.user_metadata?.avatar_url || session.user.user_metadata?.picture;
           const authUser: AuthUser = {
             id: session.user.id,
             email: session.user.email || '',
             name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Aspirant',
             targetYear: session.user.user_metadata?.target_year || 2027,
-            avatarUrl: session.user.user_metadata?.avatar_url,
+            avatarUrl: avatar,
           };
           setUser(authUser);
           localStorage.setItem('upsc_auth_session', JSON.stringify(authUser));
-          fetchSupabaseProfile(session.user.id, session.user.email);
+          fetchSupabaseProfile(session.user.id, session.user.email, avatar);
         } else {
           // Session expired or logged out
           setUser(null);

@@ -157,3 +157,8 @@ export interface UserProfile {
   medium?: 'English' | 'Hindi' | 'Other';
 }
 
+export function isImageUrl(url?: string | null): boolean {
+  if (!url || typeof url !== 'string') return false;
+  const trimmed = url.trim();
+  return /^(https?:\/\/|\/|data:image\/)/i.test(trimmed);
+}

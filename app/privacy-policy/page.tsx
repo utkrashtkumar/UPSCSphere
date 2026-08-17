@@ -11,10 +11,13 @@ import {
   HelpCircle, 
   ArrowLeft,
   Mail,
-  CheckCircle2
+  CheckCircle2,
+  Sliders
 } from 'lucide-react';
+import { useCookies } from '@/lib/cookieContext';
 
 export default function PrivacyPolicyPage() {
+  const { openPreferencesModal } = useCookies();
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-10 sm:py-14 space-y-10">
       
@@ -114,16 +117,32 @@ export default function PrivacyPolicyPage() {
         </div>
 
         {/* Section 4 */}
-        <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 space-y-3.5 shadow-sm">
+        <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
           <div className="flex items-center gap-2.5 text-slate-900 dark:text-white font-bold text-lg font-display">
             <div className="p-2 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400">
               <Cookie className="w-4 h-4" />
             </div>
-            <h2>4. Cookies & Session Management</h2>
+            <h2>4. Cookies, Local Storage &amp; Study Preferences</h2>
           </div>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            We use strictly essential cookies and session tokens exclusively to keep you authenticated when you log in and to prevent test session loss during network fluctuations. We do not use cross-site tracking cookies.
+            We use strictly essential cookies and session tokens exclusively to keep you securely authenticated when you log in, preserve test session state during network fluctuations, and remember your dark/light theme and study customization settings. We do not use cross-site advertisement tracking cookies.
           </p>
+          <div className="flex items-center gap-3 flex-wrap pt-1">
+            <button
+              type="button"
+              onClick={openPreferencesModal}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-700 dark:text-purple-300 font-bold text-xs border border-purple-500/20 transition-colors cursor-pointer"
+            >
+              <Sliders className="w-3.5 h-3.5" />
+              <span>Manage Cookie Options</span>
+            </button>
+            <Link
+              href="/cookies"
+              className="text-xs text-orange-600 dark:text-orange-400 font-bold hover:underline"
+            >
+              View Full Cookie Policy →
+            </Link>
+          </div>
         </div>
 
         {/* Section 5: Google User Data Policy Compliance */}

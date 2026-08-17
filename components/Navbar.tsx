@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { useTheme } from '@/lib/themeContext';
 import { useAuth } from '@/lib/authContext';
+import { isImageUrl } from '@/lib/types';
 import TypographyPanel from '@/components/TypographyPanel';
 
 export default function Navbar() {
@@ -163,8 +164,19 @@ export default function Navbar() {
                   onClick={() => setUserDropdownOpen(!userDropdownOpen)}
                   className="flex items-center gap-1.5 p-1 pl-1.5 pr-2 rounded-xl hover:bg-slate-100 dark:hover:bg-white/5 transition-colors text-left border border-slate-200 dark:border-white/10"
                 >
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-black text-xs flex items-center justify-center shadow-sm">
-                    {user.name ? user.name.charAt(0).toUpperCase() : 'A'}
+                  <div className="w-6 h-6 rounded-full overflow-hidden bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-black text-xs flex items-center justify-center shadow-sm shrink-0 border border-orange-500/20">
+                    {isImageUrl(profile?.avatarUrl || user.avatarUrl) ? (
+                      <img
+                        src={profile?.avatarUrl || user.avatarUrl}
+                        alt={user.name || 'User'}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    ) : (profile?.avatarUrl && !isImageUrl(profile.avatarUrl)) ? (
+                      <span className="text-[10px] leading-none">{profile.avatarUrl}</span>
+                    ) : (
+                      <span>{user.name ? user.name.charAt(0).toUpperCase() : 'A'}</span>
+                    )}
                   </div>
                   <span className="text-xs font-semibold text-slate-800 dark:text-slate-200 hidden md:inline max-w-[100px] truncate">
                     {user.name}
@@ -175,9 +187,27 @@ export default function Navbar() {
                 {/* Dropdown Menu */}
                 {userDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-56 rounded-2xl shadow-xl z-50 animate-slide-up overflow-hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-200 dark:border-white/10 p-2 space-y-1">
-                    <div className="px-3 py-2 border-b border-slate-100 dark:border-white/10">
-                      <div className="text-xs font-semibold text-slate-900 dark:text-white truncate">{user.name}</div>
-                      <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">{user.email}</div>
+                    <div className="px-3 py-2 border-b border-slate-100 dark:border-white/10 flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-xl overflow-hidden bg-orange-500/10 border border-orange-500/20 flex items-center justify-center shrink-0">
+                        {isImageUrl(profile?.avatarUrl || user.avatarUrl) ? (
+                          <img
+                            src={profile?.avatarUrl || user.avatarUrl}
+                            alt={user.name || 'User'}
+                            className="w-full h-full object-cover"
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : (profile?.avatarUrl && !isImageUrl(profile.avatarUrl)) ? (
+                          <span className="text-base">{profile.avatarUrl}</span>
+                        ) : (
+                          <span className="text-xs font-black text-orange-600 dark:text-orange-400">
+                            {user.name ? user.name.charAt(0).toUpperCase() : 'A'}
+                          </span>
+                        )}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-xs font-semibold text-slate-900 dark:text-white truncate">{user.name}</div>
+                        <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">{user.email}</div>
+                      </div>
                     </div>
 
                     <Link

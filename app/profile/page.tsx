@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -24,10 +24,14 @@ import {
   ChevronRight,
   School,
   Building,
-  Languages
+  Languages,
+  Camera,
+  Upload,
+  Trash2,
+  Image as ImageIcon
 } from 'lucide-react';
 import { useAuth } from '@/lib/authContext';
-import { UserProfile } from '@/lib/types';
+import { UserProfile, isImageUrl } from '@/lib/types';
 import DailyCANotificationBell from '@/components/DailyCANotificationBell';
 
 const INDIAN_STATES = [
@@ -71,6 +75,49 @@ const POPULAR_OPTIONALS = [
 
 const AVATAR_OPTIONS = ['👨‍🎓', '👩‍🎓', '🏛️', '🇮🇳', '🎯', '📚', '⚡', '👑'];
 
+const compressAndResizeImage = (file: File): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const img = document.createElement('img');
+      img.onload = () => {
+        const MAX_SIZE = 320;
+        let width = img.width;
+        let height = img.height;
+
+        if (width > height) {
+          if (width > MAX_SIZE) {
+            height = Math.round((height * MAX_SIZE) / width);
+            width = MAX_SIZE;
+          }
+        } else {
+          if (height > MAX_SIZE) {
+            width = Math.round((width * MAX_SIZE) / height);
+            height = MAX_SIZE;
+          }
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          resolve(event.target?.result as string);
+          return;
+        }
+
+        ctx.drawImage(img, 0, 0, width, height);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.88);
+        resolve(dataUrl);
+      };
+      img.onerror = () => reject(new Error('Failed to parse image file'));
+      img.src = event.target?.result as string;
+    };
+    reader.onerror = () => reject(new Error('Failed to read file'));
+    reader.readAsDataURL(file);
+  });
+};
+
 export default function ProfilePage() {
   const router = useRouter();
   const { user, profile, updateUserProfile, isSupabaseConnected, isLoading, signOut } = useAuth();
@@ -79,6 +126,48 @@ export default function ProfilePage() {
   const [isSaving, setIsSaving] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [activeTab, setActiveTab] = useState<'personal' | 'upsc' | 'academic'>('personal');
+
+  // File upload state & ref
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [isUploadingPhoto, setIsUploadingPhoto] = useState(false);
+  const [photoUploadError, setPhotoUploadError] = useState<string | null>(null);
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+      setPhotoUploadError('Please select a valid image file (JPEG, PNG, WEBP).');
+      return;
+    }
+
+    if (file.size > 10 * 1024 * 1024) {
+      setPhotoUploadError('Selected image is too large. Please select a photo under 10 MB.');
+      return;
+    }
+
+    setIsUploadingPhoto(true);
+    setPhotoUploadError(null);
+
+    try {
+      const resizedBase64 = await compressAndResizeImage(file);
+      handleChange('avatarUrl', resizedBase64);
+    } catch (err) {
+      console.error('Failed to process image:', err);
+      setPhotoUploadError('Could not process the selected image. Please try another.');
+    } finally {
+      setIsUploadingPhoto(false);
+      if (e.target) {
+        e.target.value = '';
+      }
+    }
+  };
+
+  const handleTriggerUpload = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
 
   // Automatic redirect if user is not authenticated
   useEffect(() => {
@@ -198,6 +287,15 @@ export default function ProfilePage() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8 space-y-8 max-w-6xl mx-auto">
       
+      {/* Hidden File Input for Custom Profile Photo Upload */}
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/png, image/jpeg, image/webp, image/jpg, image/gif"
+        onChange={handleFileChange}
+        className="hidden"
+      />
+
       {/* Top Breadcrumb & Navigation */}
       <div className="flex items-center justify-between flex-wrap gap-4">
         <Link
@@ -230,14 +328,43 @@ export default function ProfilePage() {
       <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 border-orange-500/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
         
         <div className="flex items-center gap-5 flex-col sm:flex-row text-center sm:text-left">
-          {/* Avatar Selector */}
-          <div className="relative group">
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-500 text-white font-black text-3xl flex items-center justify-center shadow-lg shadow-orange-500/30 border-2 border-amber-200">
-              {formData.avatarUrl || '👨‍🎓'}
+          {/* Avatar Selector with Upload Overlay */}
+          <div className="relative group shrink-0">
+            <div 
+              onClick={handleTriggerUpload}
+              className="w-20 h-20 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-500 text-white font-black text-3xl flex items-center justify-center shadow-lg shadow-orange-500/30 border-2 border-amber-200 overflow-hidden relative cursor-pointer group/avatar transition-transform hover:scale-105"
+              title="Click to upload custom picture"
+            >
+              {isUploadingPhoto ? (
+                <div className="w-7 h-7 border-3 border-white border-t-transparent rounded-full animate-spin" />
+              ) : isImageUrl(formData.avatarUrl) ? (
+                <img
+                  src={formData.avatarUrl}
+                  alt={formData.name || 'Aspirant'}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              ) : (
+                <span>{formData.avatarUrl || '👨‍🎓'}</span>
+              )}
+
+              {/* Hover upload overlay */}
+              <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover/avatar:opacity-100 transition-opacity flex flex-col items-center justify-center text-white pointer-events-none">
+                <Camera className="w-5 h-5 text-amber-300" />
+                <span className="text-[9px] font-extrabold mt-0.5">Upload</span>
+              </div>
             </div>
-            <div className="absolute -bottom-2 -right-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-slate-700 shadow-sm">
-              Avatar
-            </div>
+
+            <button
+              type="button"
+              onClick={handleTriggerUpload}
+              disabled={isUploadingPhoto}
+              className="absolute -bottom-2 -right-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-[10px] font-extrabold px-2 py-0.5 rounded-full border border-slate-700 shadow-sm hover:scale-105 transition-transform flex items-center gap-1 cursor-pointer"
+              title="Upload your photo"
+            >
+              <Camera className="w-2.5 h-2.5 text-orange-400" />
+              <span>Change</span>
+            </button>
           </div>
 
           <div className="space-y-1">
@@ -353,21 +480,95 @@ export default function ProfilePage() {
             </div>
 
             {/* Avatar Selector */}
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block">
-                Choose Your Aspirant Avatar Icon
-              </label>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <div>
+                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block">
+                    Choose Aspirant Avatar or Upload Custom Photo
+                  </label>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                    Upload your own photo or pick an aspirant badge icon.
+                  </p>
+                </div>
+
+                {isImageUrl(formData.avatarUrl) && (
+                  <button
+                    type="button"
+                    onClick={() => handleChange('avatarUrl', '👨‍🎓')}
+                    className="text-[11px] font-bold text-rose-500 hover:text-rose-600 dark:text-rose-400 flex items-center gap-1 transition-colors cursor-pointer"
+                  >
+                    <Trash2 className="w-3 h-3" />
+                    <span>Reset to Emoji Avatar</span>
+                  </button>
+                )}
+              </div>
+
+              {photoUploadError && (
+                <div className="text-xs text-rose-600 dark:text-rose-400 bg-rose-500/10 border border-rose-500/20 px-3 py-2 rounded-xl font-medium flex items-center gap-2">
+                  <span>⚠️</span>
+                  <span>{photoUploadError}</span>
+                </div>
+              )}
+
               <div className="flex items-center gap-2.5 flex-wrap">
+                {/* Upload Custom Photo Button */}
+                <button
+                  type="button"
+                  onClick={handleTriggerUpload}
+                  disabled={isUploadingPhoto}
+                  className={`h-12 px-3.5 rounded-2xl flex items-center gap-2 text-xs font-bold transition-all border cursor-pointer ${
+                    isImageUrl(formData.avatarUrl) && formData.avatarUrl !== (user?.avatarUrl || profile?.avatarUrl)
+                      ? 'bg-orange-500/20 border-orange-500 text-orange-600 dark:text-orange-400 shadow-md ring-2 ring-orange-500/30'
+                      : 'bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5'
+                  }`}
+                  title="Upload custom image from your device"
+                >
+                  {isUploadingPhoto ? (
+                    <div className="w-4 h-4 border-2 border-orange-500 border-t-transparent rounded-full animate-spin" />
+                  ) : (
+                    <Upload className="w-4 h-4 text-orange-500" />
+                  )}
+                  <span>
+                    {isImageUrl(formData.avatarUrl) && formData.avatarUrl !== (user?.avatarUrl || profile?.avatarUrl)
+                      ? 'Custom Photo ✓'
+                      : 'Upload Photo'}
+                  </span>
+                </button>
+
+                {/* Google Account Profile Photo (if user has an image URL) */}
+                {((user?.avatarUrl && isImageUrl(user.avatarUrl)) || (profile?.avatarUrl && isImageUrl(profile.avatarUrl))) && (
+                  <button
+                    key="google-avatar"
+                    type="button"
+                    onClick={() => handleChange('avatarUrl', user?.avatarUrl || profile?.avatarUrl)}
+                    className={`w-12 h-12 rounded-2xl overflow-hidden flex items-center justify-center transition-all relative ${
+                      formData.avatarUrl === (user?.avatarUrl || profile?.avatarUrl)
+                        ? 'border-2 border-orange-500 scale-110 shadow-md ring-2 ring-orange-500/30'
+                        : 'bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/5 opacity-80 hover:opacity-100'
+                    }`}
+                    title="Use Google Account Photo"
+                  >
+                    <img
+                      src={user?.avatarUrl || profile?.avatarUrl}
+                      alt="Google Photo"
+                      className="w-full h-full object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                  </button>
+                )}
+
+                {/* Aspirant Emoji Options */}
                 {AVATAR_OPTIONS.map(emoji => (
                   <button
                     key={emoji}
                     type="button"
                     onClick={() => handleChange('avatarUrl', emoji)}
                     className={`w-12 h-12 rounded-2xl text-2xl flex items-center justify-center transition-all ${
-                      (formData.avatarUrl || '👨‍🎓') === emoji
-                        ? 'bg-orange-500/20 border-2 border-orange-500 scale-110 shadow-md'
+                      formData.avatarUrl === emoji || (!formData.avatarUrl && emoji === '👨‍🎓')
+                        ? 'bg-orange-500/20 border-2 border-orange-500 scale-110 shadow-md ring-2 ring-orange-500/30'
                         : 'bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-white/5'
                     }`}
+                    title={`Select ${emoji} icon`}
                   >
                     {emoji}
                   </button>

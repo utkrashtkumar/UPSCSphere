@@ -7,6 +7,9 @@ import ScrollToTop from '@/components/ScrollToTop';
 import { ThemeProvider } from '@/lib/themeContext';
 import { AuthProvider } from '@/lib/authContext';
 import { TypographyProvider } from '@/lib/typographyContext';
+import { CookieProvider } from '@/lib/cookieContext';
+import CookieBanner from '@/components/CookieBanner';
+import CookiePreferencesModal from '@/components/CookiePreferencesModal';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.upscsphere.in'),
@@ -271,42 +274,50 @@ export default function RootLayout({
             }),
           }}
         />
-        <TypographyProvider>
-          <ThemeProvider>
-            <AuthProvider>
-              {/* Running Ambient Tricolour Aurora Background */}
-              <div className="tricolor-aurora-bg" aria-hidden="true">
-                <div className="aurora-saffron-orb" />
-                <div className="aurora-blue-orb" />
-                <div className="aurora-green-orb" />
-              </div>
+        <CookieProvider>
+          <TypographyProvider>
+            <ThemeProvider>
+              <AuthProvider>
+                {/* Running Ambient Tricolour Aurora Background */}
+                <div className="tricolor-aurora-bg" aria-hidden="true">
+                  <div className="aurora-saffron-orb" />
+                  <div className="aurora-blue-orb" />
+                  <div className="aurora-green-orb" />
+                </div>
 
-              {/* Floating State Emblem of India Background Watermark (Locked to exact center) */}
-              <div className="floating-emblem-container" aria-hidden="true">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/emblem.png"
-                  alt="State Emblem of India"
-                  className="floating-emblem-img"
-                />
-              </div>
+                {/* Floating State Emblem of India Background Watermark (Locked to exact center) */}
+                <div className="floating-emblem-container" aria-hidden="true">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/emblem.png"
+                    alt="State Emblem of India"
+                    className="floating-emblem-img"
+                  />
+                </div>
 
-              {/* Sticky Glass Navbar */}
-              <Navbar />
+                {/* Sticky Glass Navbar */}
+                <Navbar />
 
-              {/* Main Content Area (Offset with top padding for fixed navbar) */}
-              <main className="relative z-10 flex-1 w-full max-w-[100vw] overflow-x-hidden pt-14 sm:pt-16">
-                {children}
-              </main>
+                {/* Main Content Area (Offset with top padding for fixed navbar) */}
+                <main className="relative z-10 flex-1 w-full max-w-[100vw] overflow-x-hidden pt-14 sm:pt-16">
+                  {children}
+                </main>
 
-              {/* Redesigned 4-Column Liquid Glass Footer */}
-              <Footer />
+                {/* Redesigned Liquid Glass Footer */}
+                <Footer />
 
-              {/* Floating Go To Top Button with Circular Scroll Progress */}
-              <ScrollToTop />
-            </AuthProvider>
-          </ThemeProvider>
-        </TypographyProvider>
+                {/* Floating Go To Top Button with Circular Scroll Progress */}
+                <ScrollToTop />
+
+                {/* Interactive Cookie Consent Banner */}
+                <CookieBanner />
+
+                {/* Granular Cookie Preferences Modal */}
+                <CookiePreferencesModal />
+              </AuthProvider>
+            </ThemeProvider>
+          </TypographyProvider>
+        </CookieProvider>
       </body>
     </html>
   );

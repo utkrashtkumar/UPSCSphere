@@ -27,6 +27,7 @@ export default function AuthCallbackPage() {
           const name = session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Aspirant';
           const email = session.user.email || '';
           const targetYear = session.user.user_metadata?.target_year || 2027;
+          const avatarUrl = session.user.user_metadata?.avatar_url || session.user.user_metadata?.picture || '';
 
           localStorage.setItem(
             'upsc_auth_session',
@@ -35,11 +36,11 @@ export default function AuthCallbackPage() {
               email,
               name,
               targetYear,
-              avatarUrl: session.user.user_metadata?.avatar_url,
+              avatarUrl,
             })
           );
 
-          saveStoredProfile({ email, name, targetYear });
+          saveStoredProfile({ email, name, targetYear, avatarUrl });
           router.push('/');
         } else {
           router.push('/');

@@ -17,10 +17,13 @@ import {
   Mail,
   Linkedin,
   Instagram,
-  ExternalLink
+  ExternalLink,
+  Cookie
 } from 'lucide-react';
+import { useCookies } from '@/lib/cookieContext';
 
 export default function Footer() {
+  const { openPreferencesModal } = useCookies();
   return (
     <footer className="relative z-10 mt-20 border-t border-slate-200/80 dark:border-white/10 liquid-glass-panel bg-white/90 dark:bg-[#050b14]/90 backdrop-blur-2xl">
       {/* Running Tricolour Accent Stream Line */}
@@ -266,6 +269,22 @@ export default function Footer() {
             >
               Terms & Conditions
             </Link>
+            <span className="text-slate-300 dark:text-white/10 hidden sm:inline">•</span>
+            <Link 
+              href="/cookies" 
+              className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors whitespace-nowrap py-0.5"
+            >
+              Cookie Policy
+            </Link>
+            <span className="text-slate-300 dark:text-white/10 hidden sm:inline">•</span>
+            <button
+              type="button"
+              onClick={openPreferencesModal}
+              className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors whitespace-nowrap py-0.5 inline-flex items-center gap-1 cursor-pointer font-semibold"
+            >
+              <Cookie className="w-3.5 h-3.5 text-orange-500" />
+              <span>Cookie Options</span>
+            </button>
           </div>
 
           {/* Tier 2: Clean 2-Side Copyright & Dedication Bar */}
