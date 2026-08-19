@@ -135,26 +135,34 @@ export default function ScoreShareCardModal({
     ctx.fillStyle = radialGlow;
     ctx.fillRect(0, 0, width, height);
 
-    // 4. Header Brand Text
-    ctx.textAlign = 'center';
-    ctx.font = 'bold 36px "Inter", "Segoe UI", sans-serif';
+    // 4. Header Brand Text (Dynamically measured to avoid any text overlap)
+    ctx.font = 'bold 36px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    const brandPart1 = 'UPSCSphere';
+    const brandPart2 = '  Prelims Test Suite';
+    const w1 = ctx.measureText(brandPart1).width;
+    const w2 = ctx.measureText(brandPart2).width;
+    const totalBrandW = w1 + w2;
+    const brandStartX = (width - totalBrandW) / 2;
+
+    ctx.textAlign = 'left';
     ctx.fillStyle = '#f97316';
-    ctx.fillText('UPSCSphere', width / 2 - 80, 100);
+    ctx.fillText(brandPart1, brandStartX, 100);
 
     ctx.fillStyle = '#ffffff';
-    ctx.fillText('Prelims Test Suite', width / 2 + 100, 100);
+    ctx.fillText(brandPart2, brandStartX + w1, 100);
 
-    ctx.font = 'bold 22px "Inter", "Segoe UI", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.font = 'bold 22px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#94a3b8';
     ctx.fillText('OFFICIAL DIAGNOSTIC SCORECARD', width / 2, 145);
 
-    // 5. Test Title Box
-    ctx.font = 'bold 38px "Inter", "Segoe UI", sans-serif';
+    // 5. Test Title Box (Safe truncation)
+    ctx.font = 'bold 38px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#ffffff';
-    const cleanTitle = result.title.length > 38 ? result.title.slice(0, 36) + '...' : result.title;
+    const cleanTitle = result.title.length > 34 ? result.title.slice(0, 32) + '...' : result.title;
     ctx.fillText(cleanTitle, width / 2, 230);
 
-    ctx.font = '24px "Inter", "Segoe UI", sans-serif';
+    ctx.font = '24px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#64748b';
     ctx.fillText(`Aspirant: ${userName} • 🔥 ${userStreak} Day Streak`, width / 2, 280);
 
@@ -185,18 +193,31 @@ export default function ScoreShareCardModal({
     ctx.stroke();
 
     // Score label
-    ctx.font = 'bold 26px "Inter", "Segoe UI", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.font = 'bold 26px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#f59e0b';
     ctx.fillText('NET PRELIMS SCORE', width / 2, cardY + 70);
 
-    // Big Score
-    ctx.font = '900 110px "Inter", "Segoe UI", sans-serif';
-    ctx.fillStyle = '#ffffff';
-    ctx.fillText(`${result.score}`, width / 2 - 80, cardY + 190);
+    // Big Score (Dynamically centered compound string)
+    ctx.font = '900 100px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    const scoreStr = `${result.score}`;
+    const scoreW = ctx.measureText(scoreStr).width;
 
-    ctx.font = 'bold 44px "Inter", "Segoe UI", sans-serif';
+    ctx.font = 'bold 44px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    const maxScoreStr = `  / ${result.maxScore} pts`;
+    const maxScoreW = ctx.measureText(maxScoreStr).width;
+
+    const totalScoreW = scoreW + maxScoreW;
+    const scoreStartX = (width - totalScoreW) / 2;
+
+    ctx.textAlign = 'left';
+    ctx.font = '900 100px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+    ctx.fillStyle = '#ffffff';
+    ctx.fillText(scoreStr, scoreStartX, cardY + 190);
+
+    ctx.font = 'bold 44px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#94a3b8';
-    ctx.fillText(`/ ${result.maxScore}`, width / 2 + 130, cardY + 180);
+    ctx.fillText(maxScoreStr, scoreStartX + scoreW, cardY + 182);
 
     // Metric Badges Bar (Percentile & Accuracy & Time)
     const metricsY = cardY + 280;
@@ -210,10 +231,11 @@ export default function ScoreShareCardModal({
     ctx.fill();
     ctx.stroke();
 
-    ctx.font = 'bold 22px "Inter", "Segoe UI", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.font = 'bold 22px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#10b981';
     ctx.fillText('ALL-INDIA PERCENTILE', 320, metricsY + 45);
-    ctx.font = '900 36px "Inter", "Segoe UI", sans-serif';
+    ctx.font = '900 36px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#ffffff';
     ctx.fillText(`${result.percentile}th %ile`, 320, metricsY + 90);
 
@@ -225,16 +247,18 @@ export default function ScoreShareCardModal({
     ctx.fill();
     ctx.stroke();
 
-    ctx.font = 'bold 22px "Inter", "Segoe UI", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.font = 'bold 22px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#60a5fa';
     ctx.fillText('ACCURACY RATE', 760, metricsY + 45);
-    ctx.font = '900 36px "Inter", "Segoe UI", sans-serif';
+    ctx.font = '900 36px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#ffffff';
     ctx.fillText(`${result.accuracy}%`, 760, metricsY + 90);
 
     // 7. Stat Details Grid (Correct, Wrong, Time Spent)
     const statsY = 840;
-    ctx.font = 'bold 24px "Inter", "Segoe UI", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.font = 'bold 24px "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
     ctx.fillStyle = '#94a3b8';
     ctx.fillText(`✅ Correct: ${result.correct}   •   ❌ Wrong: ${result.wrong}   •   ⏱️ Time: ${Math.floor(result.timeSpentSeconds / 60)}m ${result.timeSpentSeconds % 60}s`, width / 2, statsY);
 
