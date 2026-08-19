@@ -17,16 +17,80 @@ import {
   Download,
   Share2,
   Check,
-  X
+  X,
+  Swords,
+  Camera,
+  Copy,
+  Sparkles,
+  Zap,
+  Lock
 } from 'lucide-react';
-import { getQuizResultById } from '@/lib/localDB';
+import { getQuizResultById, getStoredProfile } from '@/lib/localDB';
 import { QuizResult } from '@/lib/types';
+import { useAuth } from '@/lib/authContext';
+import { awardXP, AwardXPResult } from '@/lib/rewardSystem';
+import ScoreShareCardModal from '@/components/ScoreShareCardModal';
+import AuthLockModal from '@/components/AuthLockModal';
 
 export default function QuizResultPage() {
   const params = useParams();
   const resultId = params?.id as string;
+  const { user } = useAuth();
   const [result, setResult] = useState<QuizResult | null>(null);
   const [filterTab, setFilterTab] = useState<'all' | 'correct' | 'incorrect' | 'unattempted'>('all');
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [challengeCopied, setChallengeCopied] = useState(false);
+  const [userProfile, setUserProfile] = useState(getStoredProfile());
+  const [xpAwardResult, setXpAwardResult] = useState<AwardXPResult | null>(null);
+  const [hasAwardedXP, setHasAwardedXP] = useState(false);
+
+  useEffect(() => {
+    setUserProfile(getStoredProfile());
+  }, []);
+
+  useEffect(() => {
+    if (result && user && !hasAwardedXP) {
+      setHasAwardedXP(true);
+      const res = awardXP({
+        userId: user.id,
+        action: result.isDuel ? 'duel_win' : 'complete_quiz',
+        accuracy: result.accuracy,
+        score: result.score,
+        totalQuestions: result.totalQuestions,
+        streakDays: userProfile.streakCount,
+      });
+      setXpAwardResult(res);
+    }
+  }, [result, user, hasAwardedXP, userProfile.streakCount]);
+
+  // Challenge a friend via WhatsApp
+  const handleChallengeFriend = () => {
+    if (!result || typeof window === 'undefined') return;
+    const hostName = encodeURIComponent(userProfile.name || 'Aspirant');
+    const qIds = encodeURIComponent(result.questions.map(q => q.id).join(','));
+    const url = `${window.location.origin}/quiz/create?challenge=true&host=${hostName}&targetScore=${result.score}&qIds=${qIds}&count=${result.totalQuestions}&paper=${result.paperType}`;
+
+    const text = encodeURIComponent(
+      `⚔️ I challenge you to beat my UPSC Prelims score of *${result.score} / ${result.maxScore}* on UPSCSphere!\n\n` +
+      `📝 Test: ${result.title}\n` +
+      `🎯 Accuracy: ${result.accuracy}% | Time: ${Math.floor(result.timeSpentSeconds / 60)}m ${result.timeSpentSeconds % 60}s\n\n` +
+      `Click link to accept the challenge and attempt the exact same test:\n${url}`
+    );
+    window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+  };
+
+  // Copy challenge link
+  const handleCopyChallengeLink = () => {
+    if (!result || typeof window === 'undefined') return;
+    const hostName = encodeURIComponent(userProfile.name || 'Aspirant');
+    const qIds = encodeURIComponent(result.questions.map(q => q.id).join(','));
+    const url = `${window.location.origin}/quiz/create?challenge=true&host=${hostName}&targetScore=${result.score}&qIds=${qIds}&count=${result.totalQuestions}&paper=${result.paperType}`;
+
+    navigator.clipboard.writeText(url);
+    setChallengeCopied(true);
+    setTimeout(() => setChallengeCopied(false), 2500);
+  };
 
   useEffect(() => {
     if (!resultId) return;
@@ -81,6 +145,73 @@ export default function QuizResultPage() {
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8 space-y-8">
+      {/* 1v1 Duel Victory / Defeat Highlight Card */}
+      {result.isDuel && (
+        <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 border-2 border-rose-500/40 bg-gradient-to-r from-rose-500/10 via-amber-500/10 to-emerald-500/10 shadow-2xl space-y-5 animate-fade-in">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-white/10">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center font-black text-xl shadow-md">
+                ⚔️
+              </div>
+              <div>
+                <span className="text-[11px] font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider block">
+                  1v1 Live Aspirant Battle Outcome
+                </span>
+                <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                  {result.score >= 0.5 * result.maxScore ? 'VICTORY! 🏆 You Won the Duel' : 'BATTLE CONCLUDED ⚔️ Hard-Fought Duel'}
+                </h2>
+              </div>
+            </div>
+
+            {result.roomId && (
+              <span className="text-xs font-mono font-bold px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300">
+                Room ID: {result.roomId}
+              </span>
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Player 1 Card (You) */}
+            <div className="p-4 rounded-2xl bg-white/90 dark:bg-slate-900/90 border-2 border-emerald-500/50 shadow-sm space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase">You (Player 1)</span>
+                <span className="text-xs font-black text-emerald-600">Accuracy: {result.accuracy}%</span>
+              </div>
+              <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+                {result.score} <span className="text-sm font-normal text-slate-500">/ {result.maxScore} pts</span>
+              </div>
+              <span className="text-[11px] text-slate-500 block">
+                {result.correct} Correct • {result.wrong} Wrong • Time: {formatTime(result.timeSpentSeconds)}
+              </span>
+            </div>
+
+            {/* Player 2 Card (Opponent) */}
+            <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-white/10 shadow-sm space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-slate-500 uppercase">{result.duelOpponent?.name || 'Challenger (Player 2)'}</span>
+                <span className="text-xs font-semibold text-slate-400">Streak: {result.duelOpponent?.streak || 3}d</span>
+              </div>
+              <div className="text-2xl sm:text-3xl font-black text-slate-700 dark:text-slate-300">
+                {Math.max(0, Math.round(result.maxScore * 0.6))} <span className="text-sm font-normal text-slate-500">/ {result.maxScore} pts</span>
+              </div>
+              <span className="text-[11px] text-slate-500 block">
+                UPSC {result.duelOpponent?.targetYear || 2027} • Rating: {result.duelOpponent?.rating || 1350}
+              </span>
+            </div>
+          </div>
+
+          <div className="pt-2 flex items-center justify-end gap-3 flex-wrap">
+            <Link
+              href="/duel"
+              className="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-black hover:opacity-95 transition-all shadow-md flex items-center gap-1.5"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>Rematch / Create New Duel Room</span>
+            </Link>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <div className="text-center">
         <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">
@@ -150,6 +281,104 @@ export default function QuizResultPage() {
           <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-2">
             Time Spent: {formatTime(result.timeSpentSeconds)}
           </p>
+        </div>
+      </div>
+
+      {/* ⚡ XP & Reward Notification Strip */}
+      {user && xpAwardResult && xpAwardResult.success ? (
+        <div className="p-5 rounded-3xl bg-gradient-to-r from-amber-500/15 via-orange-500/10 to-emerald-500/15 border-2 border-amber-500/40 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg animate-fade-in">
+          <div className="flex items-center gap-3.5 text-center sm:text-left">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-500 text-slate-950 flex items-center justify-center font-black text-2xl shadow-md shrink-0">
+              ⚡
+            </div>
+            <div>
+              <span className="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider block">
+                XP Reward Credited to Profile
+              </span>
+              <h4 className="text-base sm:text-lg font-black text-slate-900 dark:text-white">
+                +{xpAwardResult.awardedXP} XP Earned! Total: {xpAwardResult.newTotalXP} XP ({xpAwardResult.newTier.title})
+              </h4>
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                {xpAwardResult.breakdown.map((b) => `${b.label} (+${b.xp} XP)`).join(' • ')}
+              </p>
+            </div>
+          </div>
+
+          <Link
+            href="/rewards"
+            className="px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 hover:border-orange-500 text-slate-800 dark:text-slate-200 font-bold text-xs hover:text-orange-600 transition-all flex items-center gap-1.5 shadow-sm shrink-0"
+          >
+            <Trophy className="w-3.5 h-3.5 text-amber-500" />
+            <span>View Badges &amp; Rewards Vault →</span>
+          </Link>
+        </div>
+      ) : !user ? (
+        <div className="p-5 rounded-3xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-sm">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-400 flex items-center justify-center text-xl shrink-0">
+              🔒
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-slate-900 dark:text-white">
+                Sign In to Claim +50 XP &amp; Badges for this Test
+              </h4>
+              <p className="text-xs text-slate-500">
+                Logged-in aspirants earn XP points, level up rank tiers, and collect permanent achievement badges.
+              </p>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setShowAuthModal(true)}
+            className="px-4 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs transition-all shrink-0 shadow-sm cursor-pointer"
+          >
+            Sign In / Sign Up
+          </button>
+        </div>
+      ) : null}
+
+      {/* Viral Share Score Card & Challenge Friend Action Strip */}
+      <div className="p-6 rounded-3xl bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-emerald-500/10 border border-orange-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+        <div className="space-y-1 text-center sm:text-left">
+          <div className="flex items-center gap-2 justify-center sm:justify-start">
+            <Sparkles className="w-4 h-4 text-orange-500" />
+            <h3 className="font-extrabold text-slate-900 dark:text-white text-base">
+              Share Your Score &amp; Challenge Friends!
+            </h3>
+          </div>
+          <p className="text-xs text-slate-600 dark:text-slate-400">
+            Generate a WhatsApp/Instagram story card or challenge peers to beat your score of <strong>{result.score} pts</strong>.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3 flex-wrap justify-center shrink-0">
+          <button
+            type="button"
+            onClick={() => setShowShareModal(true)}
+            className="px-5 py-3 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-emerald-600 text-white font-black text-xs hover:scale-105 transition-all shadow-md shadow-orange-500/20 flex items-center gap-2 cursor-pointer"
+          >
+            <Camera className="w-4 h-4" />
+            <span>Generate Score Card 📸</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={handleChallengeFriend}
+            className="px-5 py-3 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-black text-xs transition-all shadow-md flex items-center gap-2 cursor-pointer"
+          >
+            <Swords className="w-4 h-4" />
+            <span>Challenge a Friend ⚔️</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={handleCopyChallengeLink}
+            title="Copy Challenge Link"
+            className="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-orange-600 transition-all cursor-pointer shadow-sm"
+          >
+            {challengeCopied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
+          </button>
         </div>
       </div>
 
@@ -364,6 +593,24 @@ export default function QuizResultPage() {
           <span>See Live All-India Leaderboard →</span>
         </Link>
       </div>
+
+      {/* Share Score Card Modal */}
+      <ScoreShareCardModal
+        isOpen={showShareModal}
+        onClose={() => setShowShareModal(false)}
+        result={result}
+        userName={userProfile.name || 'Civil Services Aspirant'}
+        userStreak={userProfile.streakCount || 1}
+      />
+
+      {/* Auth Lock Modal Popup */}
+      <AuthLockModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        title="Sign In to Claim +50 XP & Badges"
+        description="Sign in to save your mock score, earn XP points, rank up your aspirant level, and unlock achievement badges."
+        redirectPath={`/quiz/results/${result.quizId}`}
+      />
     </div>
   );
 }

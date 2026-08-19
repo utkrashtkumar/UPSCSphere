@@ -54,6 +54,16 @@ export interface UserAnswer {
   eliminatedOptions: number[]; // indices of struck out options
 }
 
+export interface DuelOpponent {
+  name: string;
+  avatarUrl?: string;
+  targetYear: number;
+  optional?: string;
+  streak?: number;
+  rating?: number;
+  isAI?: boolean;
+}
+
 export interface QuizConfig {
   id: string;
   title: string;
@@ -67,6 +77,10 @@ export interface QuizConfig {
   pyqYear?: number;
   isDailyCA?: boolean;
   dailyCASet?: 'set1' | 'set2' | 'all';
+  isDuel?: boolean;
+  roomId?: string;
+  duelOpponent?: DuelOpponent;
+  customQuestionIds?: string[];
 }
 
 export interface QuizResult {
@@ -91,6 +105,9 @@ export interface QuizResult {
   strongAreas: string[];
   answers: UserAnswer[];
   questions: Question[];
+  isDuel?: boolean;
+  roomId?: string;
+  duelOpponent?: DuelOpponent;
 }
 
 export interface LeaderboardEntry {
@@ -131,6 +148,32 @@ export interface SyllabusItem {
   notes?: string;
 }
 
+export interface XPHistoryItem {
+  id: string;
+  action: string;
+  xpGained: number;
+  timestamp: string;
+  description: string;
+}
+
+export interface AchievementBadge {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  category: 'quiz' | 'streak' | 'accuracy' | 'special' | 'duel';
+  unlockedAt?: string;
+}
+
+export interface RankTier {
+  level: number;
+  title: string;
+  minXP: number;
+  maxXP: number;
+  perk: string;
+  badgeIcon: string;
+}
+
 export interface UserProfile {
   name: string;
   email: string;
@@ -155,6 +198,10 @@ export interface UserProfile {
   postGraduationYear?: number;
   attemptNumber?: number;
   medium?: 'English' | 'Hindi' | 'Other';
+  xp?: number;
+  rankTier?: string;
+  unlockedBadgeIds?: string[];
+  xpHistory?: XPHistoryItem[];
 }
 
 export function isImageUrl(url?: string | null): boolean {

@@ -553,7 +553,7 @@ Use these responsive HTML email templates in your **Supabase Dashboard** under:
                       🚨 Did not make this change?
                     </p>
                     <p style="margin: 0; font-size: 12px; line-height: 1.5; color: #7f1d1d;">
-                      If you did not initiate this password change, your account may be compromised. Please <a href="https://www.upscsphere.in/auth/forgot-password" style="color: #dc2626; font-weight: 700; text-decoration: underline;">reset your password immediately</a> or contact us directly at <a href="mailto:utkrashtkumar@gmail.com" style="color: #dc2626; font-weight: 700;">utkrashtkumar@gmail.com</a>.
+                      If you did not initiate this password change, your account may be compromised. Please <a href="https://www.upscsphere.in/auth/forgot-password" style="color: #dc2626; font-weight: 700; text-decoration: underline;">reset your password immediately</a> or contact us directly at <a href="mailto:upscsphereindia@gmail.com" style="color: #dc2626; font-weight: 700;">upscsphereindia@gmail.com</a>.
                     </p>
                   </td>
                 </tr>

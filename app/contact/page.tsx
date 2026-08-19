@@ -6,7 +6,6 @@ import {
   Mail, 
   Send, 
   Linkedin, 
-  Instagram, 
   MessageSquare, 
   CheckCircle, 
   Sparkles, 
@@ -37,7 +36,7 @@ export default function ContactUsPage() {
     );
 
     // Provide user with direct email fallback
-    window.location.href = `mailto:utkrashtkumar@gmail.com?subject=${subjectLine}&body=${bodyContent}`;
+    window.location.href = `mailto:upscsphereindia@gmail.com?subject=${subjectLine}&body=${bodyContent}`;
   };
 
   return (
@@ -89,7 +88,7 @@ export default function ContactUsPage() {
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-base">Message Drafted Successfully!</h3>
               <p className="text-xs text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
-                Your email client was triggered with your pre-filled inquiry. If it didn&apos;t open automatically, you can email us directly at <strong className="text-orange-600 dark:text-orange-400 font-bold">utkrashtkumar@gmail.com</strong>.
+                Your email client was triggered with your pre-filled inquiry. If it didn&apos;t open automatically, you can email us directly at <strong className="text-orange-600 dark:text-orange-400 font-bold">upscsphereindia@gmail.com</strong>.
               </p>
               <button
                 onClick={() => setIsSubmitted(false)}
@@ -110,7 +109,7 @@ export default function ContactUsPage() {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="e.g. Utkrasht Kumar / Rahul Sharma"
+                  placeholder="e.g. Rahul Sharma / Ananya Verma"
                   className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 shadow-sm"
                 />
               </div>
@@ -213,10 +212,10 @@ export default function ContactUsPage() {
             </p>
 
             <a
-              href="mailto:utkrashtkumar@gmail.com"
+              href="mailto:upscsphereindia@gmail.com"
               className="p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 flex items-center justify-between text-xs font-bold text-orange-600 dark:text-orange-400 hover:border-orange-500 transition-colors group shadow-sm"
             >
-              <span className="truncate">utkrashtkumar@gmail.com</span>
+              <span className="truncate">upscsphereindia@gmail.com</span>
               <Send className="w-3.5 h-3.5 shrink-0 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -231,7 +230,7 @@ export default function ContactUsPage() {
             <div className="space-y-2">
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/utkrashtkumar/"
+                href="https://www.linkedin.com/company/upscsphere/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 hover:border-blue-500 flex items-center justify-between text-xs text-slate-800 dark:text-slate-200 transition-all group shadow-sm"
@@ -242,7 +241,7 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <span className="font-bold block text-xs">LinkedIn</span>
-                    <span className="text-[10px] text-slate-500">/in/utkrashtkumar</span>
+                    <span className="text-[10px] text-slate-500">/company/upscsphere</span>
                   </div>
                 </div>
                 <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 group-hover:underline">Follow →</span>
@@ -267,25 +266,6 @@ export default function ContactUsPage() {
                   </div>
                 </div>
                 <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300 group-hover:underline">Follow →</span>
-              </a>
-
-              {/* Instagram */}
-              <a
-                href="https://www.instagram.com/utkrashtkumarr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 hover:border-pink-500 flex items-center justify-between text-xs text-slate-800 dark:text-slate-200 transition-all group shadow-sm"
-              >
-                <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-pink-500/10 text-pink-600">
-                    <Instagram className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="font-bold block text-xs">Instagram</span>
-                    <span className="text-[10px] text-slate-500">@utkrashtkumarr</span>
-                  </div>
-                </div>
-                <span className="text-[10px] font-bold text-pink-600 dark:text-pink-400 group-hover:underline">Follow →</span>
               </a>
             </div>
           </div>

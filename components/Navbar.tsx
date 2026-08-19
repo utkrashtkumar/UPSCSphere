@@ -17,7 +17,9 @@ import {
   RotateCcw, 
   User, 
   BookOpen, 
-  HelpCircle
+  HelpCircle,
+  Zap,
+  Award
 } from 'lucide-react';
 import { useTheme } from '@/lib/themeContext';
 import { useAuth } from '@/lib/authContext';
@@ -65,6 +67,9 @@ export default function Navbar() {
     { name: 'Custom Mock', href: '/quiz/create' },
     { name: '12-Yr PYQ Vault', href: '/pyq' },
     { name: 'Daily CA', href: '/daily-ca' },
+    { name: 'Rewards', href: '/rewards' },
+    { name: 'Exam Tracker', href: '/tracker' },
+    { name: 'Knowledge Hub', href: '/blog' },
     { name: 'Leaderboard', href: '/leaderboard' },
     { name: 'Syllabus', href: '/syllabus' },
     { name: '1v1 Duel', href: '/duel' },
@@ -139,6 +144,18 @@ export default function Navbar() {
               <Flame className="w-3.5 h-3.5 text-orange-500" />
               <span suppressHydrationWarning>{mounted ? (profile?.streakCount ?? 0) : 0}</span>
             </div>
+
+            {/* XP Points Chip (Logged-In Users Only) */}
+            {user && (
+              <Link
+                href="/rewards"
+                title="View Aspirant Rewards & Badges Vault"
+                className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-700 dark:text-amber-300 font-bold text-xs border border-amber-500/25 transition-all shadow-xs"
+              >
+                <Zap className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                <span suppressHydrationWarning>{mounted ? (profile?.xp ?? 0) : 0} XP</span>
+              </Link>
+            )}
 
             {/* Typography Font & Size Panel */}
             <TypographyPanel />
@@ -217,6 +234,15 @@ export default function Navbar() {
                     >
                       <User className="w-3.5 h-3.5" />
                       <span>My Aspirant Profile</span>
+                    </Link>
+
+                    <Link
+                      href="/rewards"
+                      onClick={() => setUserDropdownOpen(false)}
+                      className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs text-amber-700 dark:text-amber-300 hover:bg-amber-500/10 transition-colors font-semibold"
+                    >
+                      <Award className="w-3.5 h-3.5 text-amber-500" />
+                      <span>Rewards &amp; Badges Vault</span>
                     </Link>
 
                     <Link

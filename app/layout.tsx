@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     'ias prelims online preparation free',
     'UPSCSphere',
   ],
-  authors: [{ name: 'Utkrasht Kumar', url: 'https://www.upscsphere.in/about' }],
-  creator: 'Utkrasht Kumar',
+  authors: [{ name: 'UPSCSphere Team', url: 'https://www.upscsphere.in/about' }],
+  creator: 'UPSCSphere',
   publisher: 'UPSCSphere',
   category: 'Education',
   classification: 'UPSC Civil Services Examination Preparation',
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@upscsphere',
-    creator: '@utkrashtkumar',
+    creator: '@upscsphere',
     title: 'UPSCSphere — Free UPSC Mock Tests, Free Daily Current Affairs & Full PYQ with Citations',
     description:
       '100% Free UPSC GS-1 & CSAT mock tests, 20 Daily Current Affairs MCQs, and full 12-Year PYQ vault with exact textbook citations and references.',
@@ -216,13 +216,12 @@ export default function RootLayout({
                   },
                   sameAs: [
                     'https://x.com/utkrashtkumar',
-                    'https://www.instagram.com/utkrashtkumarr/',
-                    'https://www.linkedin.com/in/utkrashtkumar/',
+                    'https://www.linkedin.com/company/upscsphere/',
                     'https://github.com/utkrashtkumar/UPSCSphere',
                   ],
                   contactPoint: {
                     '@type': 'ContactPoint',
-                    email: 'utkrashtkumar@gmail.com',
+                    email: 'upscsphereindia@gmail.com',
                     contactType: 'customer support',
                     availableLanguage: ['English', 'Hindi'],
                   },

@@ -357,6 +357,16 @@ export default function PYQVaultPage() {
                       <strong className="text-slate-900 dark:text-slate-200 block mb-1 font-bold">Official UPSC Analysis:</strong>
                       {q.explanation}
                     </div>
+
+                    {/* Standalone Question Page Link */}
+                    <div className="pt-1 flex justify-end">
+                      <Link
+                        href={`/pyq/${q.pyqYear || selectedYear}/${(q.pyqPaper || selectedPaper).toLowerCase()}/${q.id}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 dark:text-orange-400 hover:underline"
+                      >
+                        <span>Open Standalone Question &amp; Discussion Page →</span>
+                      </Link>
+                    </div>
                   </div>
                 ) : (
                   <div className="mt-4 p-5 rounded-2xl bg-slate-900/90 dark:bg-slate-950 border border-orange-500/40 text-center space-y-3 shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">

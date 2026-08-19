@@ -16,9 +16,9 @@ import {
   CheckCircle,
   Mail,
   Linkedin,
-  Instagram,
   ExternalLink,
-  Cookie
+  Cookie,
+  Calendar
 } from 'lucide-react';
 import { useCookies } from '@/lib/cookieContext';
 
@@ -105,6 +105,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/tracker" className="hover:text-orange-600 dark:hover:text-orange-400 flex items-center gap-1.5 transition-colors">
+                  <Calendar className="w-3.5 h-3.5 text-blue-500" />
+                  <span>UPSC 2027 Exam Tracker</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-orange-600 dark:hover:text-orange-400 flex items-center gap-1.5 transition-colors">
+                  <BookOpen className="w-3.5 h-3.5 text-purple-500" />
+                  <span>Knowledge Hub &amp; Guides</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/duel" className="hover:text-orange-600 dark:hover:text-orange-400 flex items-center gap-1.5 transition-colors">
                   <Swords className="w-3.5 h-3.5 text-rose-500" />
                   <span>1v1 Aspirant Speed Duel</span>
@@ -122,32 +134,48 @@ export default function Footer() {
           {/* Col 4: Verified Book Citations */}
           <div className="space-y-3">
             <h4 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-slate-200">
-              Verified Book Citing
+              Verified Textbook Citations
             </h4>
             <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-400">
               <li className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
                 <span>M. Laxmikanth (Polity 7th Ed)</span>
               </li>
               <li className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                <span>Spectrum (Modern India)</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                <span>Spectrum Rajiv Ahir (Modern India)</span>
               </li>
               <li className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span>Ramesh Singh (Indian Economy)</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
+                <span>Nitin Singhania (Art &amp; Culture 4th Ed)</span>
               </li>
               <li className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-500" />
-                <span>Shankar IAS (Environment)</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                <span>Ramesh Singh (Indian Economy 16th Ed)</span>
               </li>
               <li className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-                <span>NCERT Class XI & XII Physical Geo</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0" />
+                <span>Shankar IAS &amp; PMF IAS (Environment)</span>
               </li>
               <li className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-orange-600" />
-                <span>The Hindu & PIB Editorials</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0" />
+                <span>NCERT Class XI &amp; XII (Geo &amp; History)</span>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0" />
+                <span>GC Leong (Physical &amp; Human Geo)</span>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shrink-0" />
+                <span>Ravi P. Agrahari (Science &amp; Tech 7th Ed)</span>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-rose-500 shrink-0" />
+                <span>The Hindu, PIB &amp; Indian Express</span>
+              </li>
+              <li className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0" />
+                <span>Union Budget &amp; Economic Survey (MoF)</span>
               </li>
             </ul>
           </div>
@@ -162,13 +190,13 @@ export default function Footer() {
               <div>
                 <span className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 block mb-1">Email Support</span>
                 <a
-                  href="mailto:utkrashtkumar@gmail.com"
+                  href="mailto:upscsphereindia@gmail.com"
                   className="flex items-center gap-2 text-xs font-bold text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 transition-colors group"
                 >
                   <div className="p-1.5 rounded-lg bg-orange-500/10 text-orange-600 dark:text-orange-400 group-hover:bg-orange-500 group-hover:text-white transition-colors">
                     <Mail className="w-3.5 h-3.5" />
                   </div>
-                  <span className="truncate">utkrashtkumar@gmail.com</span>
+                  <span className="truncate">upscsphereindia@gmail.com</span>
                 </a>
               </div>
 
@@ -178,10 +206,10 @@ export default function Footer() {
                 <div className="flex items-center gap-2">
                   {/* LinkedIn */}
                   <a
-                    href="https://www.linkedin.com/in/utkrashtkumar/"
+                    href="https://www.linkedin.com/company/upscsphere/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="LinkedIn: Utkrasht Kumar"
+                    title="LinkedIn"
                     aria-label="LinkedIn Profile"
                     className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-blue-600 hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-500/10 transition-all shadow-sm"
                   >
@@ -193,7 +221,7 @@ export default function Footer() {
                     href="https://x.com/utkrashtkumar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="X (Twitter): @utkrashtkumar"
+                    title="X (Twitter)"
                     aria-label="X Profile"
                     className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-200/50 dark:hover:bg-white/10 transition-all shadow-sm"
                   >
@@ -203,21 +231,9 @@ export default function Footer() {
                     </svg>
                   </a>
 
-                  {/* Instagram */}
-                  <a
-                    href="https://www.instagram.com/utkrashtkumarr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Instagram: @utkrashtkumarr"
-                    aria-label="Instagram Profile"
-                    className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-pink-600 hover:border-pink-500 hover:bg-pink-50/50 dark:hover:bg-pink-500/10 transition-all shadow-sm"
-                  >
-                    <Instagram className="w-4 h-4" />
-                  </a>
-
                   {/* Direct Contact Button */}
                   <a
-                    href="mailto:utkrashtkumar@gmail.com"
+                    href="mailto:upscsphereindia@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="ml-auto inline-flex items-center gap-1 text-[11px] font-bold text-orange-600 dark:text-orange-400 hover:underline"
@@ -228,6 +244,56 @@ export default function Footer() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Verified Standard Academic Citations Bar */}
+        <div className="mt-10 pt-6 border-t border-slate-200/80 dark:border-white/10 space-y-3 bg-orange-500/5 dark:bg-orange-500/10 p-5 rounded-2xl border border-orange-500/20">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+            <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
+              <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
+              <span>Official Academic Citation &amp; Source Verification Guarantee</span>
+            </div>
+            <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+              100% Verified against UPSC Master Keys &amp; Standard Publications
+            </span>
+          </div>
+
+          <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+            Every question, answer key, and explanation on <strong>UPSCSphere</strong> includes exact chapter and page citations from authoritative standard textbooks and government publications:
+          </p>
+
+          <div className="flex items-center gap-2 flex-wrap text-[11px] font-bold text-slate-700 dark:text-slate-300">
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              📖 Indian Polity (M. Laxmikanth 7th Ed)
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              📜 Modern India (Spectrum Rajiv Ahir)
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              🏛️ Indian Art &amp; Culture (Nitin Singhania)
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              📈 Indian Economy (Ramesh Singh 16th Ed)
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              🌿 Environment (Shankar IAS &amp; PMF IAS)
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              🌍 Physical &amp; Human Geo (GC Leong &amp; NCERT)
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              🔬 Science &amp; Technology (Ravi P. Agrahari)
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              📰 The Hindu, PIB &amp; Indian Express Editorials
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              🏛️ Union Budget &amp; Economic Survey (MoF)
+            </span>
+            <span className="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xs">
+              🎯 Official UPSC CSE Master Answer Keys (2015–2026)
+            </span>
           </div>
         </div>
 
@@ -247,6 +313,20 @@ export default function Footer() {
               className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors whitespace-nowrap py-0.5"
             >
               How to Use Guide
+            </Link>
+            <span className="text-slate-300 dark:text-white/10 hidden sm:inline">•</span>
+            <Link 
+              href="/tracker" 
+              className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors whitespace-nowrap py-0.5"
+            >
+              Exam Tracker
+            </Link>
+            <span className="text-slate-300 dark:text-white/10 hidden sm:inline">•</span>
+            <Link 
+              href="/blog" 
+              className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors whitespace-nowrap py-0.5"
+            >
+              Knowledge Hub
             </Link>
             <span className="text-slate-300 dark:text-white/10 hidden sm:inline">•</span>
             <Link 
@@ -292,7 +372,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 text-center sm:text-left flex-wrap justify-center sm:justify-start">
               <span>© 2026 UPSCSphere. Open Aspirants Initiative.</span>
               <span className="text-slate-300 dark:text-white/10 hidden sm:inline">•</span>
-              <span className="whitespace-nowrap">Created by <strong className="text-slate-800 dark:text-slate-200 font-semibold">Utkrasht Kumar</strong></span>
+              <span className="whitespace-nowrap">100% Free UPSC Civil Services Preparation Platform</span>
             </div>
 
             <div className="flex items-center justify-center gap-1.5 shrink-0 whitespace-nowrap text-slate-600 dark:text-slate-400">

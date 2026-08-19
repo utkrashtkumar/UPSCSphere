@@ -15,7 +15,6 @@ import {
   ArrowRight,
   Mail,
   Linkedin,
-  Instagram,
   GraduationCap,
   Sparkles,
   Heart,
@@ -285,16 +284,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. Founder & Author Profile */}
+      {/* 5. Mission & Platform Dedication */}
       <section className="liquid-glass-card rounded-3xl p-8 sm:p-12 border border-orange-500/30 space-y-8 shadow-lg">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-white/10">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 text-orange-700 dark:text-orange-400 text-xs font-bold">
               <Heart className="w-3.5 h-3.5 text-orange-500 fill-orange-500" />
-              <span>CREATOR & LEAD ARCHITECT</span>
+              <span>100% FREE PRELIMS PORTAL</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-black font-display text-slate-900 dark:text-white">
-              Built with Passion by Utkrasht Kumar
+              Built with Passion for UPSC Aspirants
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xl">
               UPSCSphere was engineered to empower the millions of hardworking aspirants preparing in libraries, hostels, and homes across India.
@@ -304,7 +303,7 @@ export default function AboutPage() {
           {/* Connect Badges */}
           <div className="flex items-center gap-2.5 flex-wrap">
             <a
-              href="https://www.linkedin.com/in/utkrashtkumar/"
+              href="https://www.linkedin.com/company/upscsphere/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-bold shadow-md hover:bg-blue-700 transition-all"
@@ -326,17 +325,7 @@ export default function AboutPage() {
             </a>
 
             <a
-              href="https://www.instagram.com/utkrashtkumarr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-bold shadow-md hover:opacity-90 transition-all"
-            >
-              <Instagram className="w-4 h-4" />
-              <span>Instagram</span>
-            </a>
-
-            <a
-              href="mailto:utkrashtkumar@gmail.com"
+              href="mailto:upscsphereindia@gmail.com"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 text-xs font-bold border border-slate-200 dark:border-white/10 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
             >
               <Mail className="w-4 h-4 text-orange-500" />

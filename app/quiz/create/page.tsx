@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
 import QuizCreatePage from './QuizCreatePage';
 
@@ -37,5 +38,14 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <QuizCreatePage />;
+  return (
+    <Suspense fallback={
+      <div className="w-full px-4 py-24 text-center space-y-4 max-w-xl mx-auto">
+        <div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin mx-auto" />
+        <p className="text-xs font-bold text-slate-600 dark:text-slate-400">Loading Quiz Builder...</p>
+      </div>
+    }>
+      <QuizCreatePage />
+    </Suspense>
+  );
 }

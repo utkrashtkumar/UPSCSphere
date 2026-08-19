@@ -123,14 +123,14 @@ export default function TermsAndConditionsPage() {
           <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
             <div>
               <span className="font-bold text-slate-900 dark:text-white block">Academic Errata & Support Desk</span>
-              <span className="text-slate-500 dark:text-slate-400">Utkrasht Kumar • Developer & Platform Lead</span>
+              <span className="text-slate-500 dark:text-slate-400">UPSCSphere Academic Review Team</span>
             </div>
             <a
-              href="mailto:utkrashtkumar@gmail.com"
+              href="mailto:upscsphereindia@gmail.com"
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-orange-500 text-white font-bold hover:bg-orange-600 transition-colors shadow-sm"
             >
               <Mail className="w-3.5 h-3.5" />
-              <span>utkrashtkumar@gmail.com</span>
+              <span>upscsphereindia@gmail.com</span>
             </a>
           </div>
         </div>

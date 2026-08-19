@@ -37,6 +37,10 @@ export const defaultProfile: UserProfile = {
   postGraduationYear: undefined,
   attemptNumber: 1,
   medium: 'English',
+  xp: 0,
+  rankTier: 'Rookie Aspirant',
+  unlockedBadgeIds: [],
+  xpHistory: [],
 };
 
 export function getStoredProfile(): UserProfile {

@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { 
   Zap, 
   Clock, 
@@ -11,9 +11,12 @@ import {
   ShieldCheck, 
   ArrowRight,
   GraduationCap,
-  Lock
+  Lock,
+  Swords,
+  Flame,
+  Trophy
 } from 'lucide-react';
-import { QuizMode } from '@/lib/types';
+import { QuizMode, SubjectCategory, QuizConfig } from '@/lib/types';
 import { useAuth } from '@/lib/authContext';
 import AuthLockModal from '@/components/AuthLockModal';
 
@@ -69,11 +72,11 @@ const subjectsList: SubjectOption[] = [
   },
   {
     id: 'science_tech',
-    name: 'Science & Technology',
+    name: 'Science & Emerging Tech / AI',
     paper: 'GS',
-    standardBook: 'Ravi P. Agrahari & Current Science',
+    standardBook: 'Ravi P. Agrahari (McGraw Hill)',
     icon: BookOpen,
-    description: 'Biotechnology, CRISPR, Space, AI, Supercomputing, Defense',
+    description: 'Biotechnology, Space Missions, AI, Quantum, Defence Systems',
   },
   {
     id: 'current_affairs',
@@ -120,12 +123,27 @@ const timeLimitOptions = [
 
 export default function CreateQuizPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { user } = useAuth();
+
+  // Challenge mode detection
+  const isChallenge = searchParams.get('challenge') === 'true';
+  const challengeHost = searchParams.get('host') || 'Aspirant Peer';
+  const targetScore = searchParams.get('targetScore');
+  const qIdsParam = searchParams.get('qIds');
+  const customQuestionIds = qIdsParam ? qIdsParam.split(',').filter(Boolean) : undefined;
+
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>(['polity']);
   const [questionCount, setQuestionCount] = useState<number>(10);
   const [timeLimit, setTimeLimit] = useState<number | null>(15);
   const [mode, setMode] = useState<QuizMode>('instant');
   const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (customQuestionIds && customQuestionIds.length > 0) {
+      setQuestionCount(customQuestionIds.length);
+    }
+  }, [customQuestionIds]);
 
   const handleSubjectToggle = (id: string) => {
     if (id === 'gs_full') {
@@ -148,27 +166,61 @@ export default function CreateQuizPage() {
       return;
     }
 
-    const config = {
-      title: selectedSubjects.length === 1 
+    const config: QuizConfig = {
+      id: isChallenge ? `challenge-${Date.now()}` : `custom-${Date.now()}`,
+      title: isChallenge
+        ? `Challenge Match vs ${challengeHost}`
+        : selectedSubjects.length === 1 
         ? `${subjectsList.find(s => s.id === selectedSubjects[0])?.name || 'UPSC'} Mock` 
         : `Custom UPSC ${selectedSubjects.length}-Topic Drill`,
-      subjects: selectedSubjects,
-      questionCount,
+      subjects: selectedSubjects as SubjectCategory[],
+      questionCount: customQuestionIds ? customQuestionIds.length : questionCount,
       timeLimitMinutes: timeLimit,
       mode,
       paperType: selectedSubjects.some(s => s.startsWith('csat')) ? 'CSAT' : 'GS',
       difficulty: 'all',
+      customQuestionIds,
+      isDuel: isChallenge,
+      duelOpponent: isChallenge ? {
+        name: challengeHost,
+        targetYear: 2027,
+        streak: 4,
+        rating: 1350,
+      } : undefined,
     };
     
     // Store in session storage so live quiz page initializes with these exact settings
     sessionStorage.setItem('active_quiz_config', JSON.stringify(config));
-    router.push('/quiz/session');
+    router.push(`/quiz/${config.id}`);
   };
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8">
+    <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8 space-y-6 max-w-6xl mx-auto">
+      
+      {/* Challenge Match Received Banner */}
+      {isChallenge && (
+        <div className="p-6 rounded-3xl bg-gradient-to-r from-rose-500/15 via-amber-500/10 to-orange-500/15 border-2 border-rose-500/40 shadow-xl space-y-3 animate-scale-up">
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center font-black text-xl shadow-md">
+              ⚔️
+            </div>
+            <div>
+              <span className="text-[11px] font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wider block">
+                Direct Aspirant Challenge Accepted
+              </span>
+              <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                Can you beat <span className="text-rose-600 dark:text-rose-400">{challengeHost}</span>&apos;s score of {targetScore ? `${targetScore} pts` : 'Top Score'}?
+              </h2>
+            </div>
+          </div>
+          <p className="text-xs text-slate-600 dark:text-slate-400">
+            You will attempt the <strong>exact same {customQuestionIds?.length || questionCount} questions</strong> with standard UPSC negative marking. Click Launch below to start the challenge!
+          </p>
+        </div>
+      )}
+
       {/* Header */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 text-orange-700 dark:text-orange-300 text-xs font-bold mb-3">
           <Zap className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
           <span>Real-Time Custom Quiz Builder</span>

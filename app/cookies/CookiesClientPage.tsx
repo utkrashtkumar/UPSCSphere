@@ -258,8 +258,8 @@ export default function CookiesClientPage() {
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
             For questions about our Cookie Policy or data storage, contact our support team at{' '}
-            <a href="mailto:utkrashtkumar@gmail.com" className="text-orange-600 dark:text-orange-400 font-bold hover:underline">
-              utkrashtkumar@gmail.com
+            <a href="mailto:upscsphereindia@gmail.com" className="text-orange-600 dark:text-orange-400 font-bold hover:underline">
+              upscsphereindia@gmail.com
             </a>.
           </p>
         </section>

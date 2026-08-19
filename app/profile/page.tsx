@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/lib/authContext';
 import { UserProfile, isImageUrl } from '@/lib/types';
+import { getUserRankTier, ALL_BADGES } from '@/lib/rewardSystem';
 import DailyCANotificationBell from '@/components/DailyCANotificationBell';
 
 const INDIAN_STATES = [
@@ -410,6 +411,39 @@ export default function ProfilePage() {
         </div>
       </div>
 
+      {/* Aspirant Standing & XP Tier Strip */}
+      <div className="p-6 rounded-3xl bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-emerald-500/10 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md animate-fade-in">
+        <div className="flex items-center gap-4 text-center sm:text-left">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-500 text-slate-950 flex items-center justify-center font-black text-3xl shadow-lg shrink-0">
+            {getUserRankTier(formData.xp || 0).currentTier.badgeIcon}
+          </div>
+          <div>
+            <div className="flex items-center justify-center sm:justify-start gap-2">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-700 dark:text-amber-300 uppercase tracking-wider">
+                Level {getUserRankTier(formData.xp || 0).currentTier.level} Tier
+              </span>
+              <span className="font-mono text-xs font-black text-orange-600 dark:text-orange-400">
+                {formData.xp || 0} XP
+              </span>
+            </div>
+            <h3 className="text-lg font-black text-slate-900 dark:text-white mt-0.5">
+              {getUserRankTier(formData.xp || 0).currentTier.title}
+            </h3>
+            <p className="text-xs text-slate-600 dark:text-slate-400">
+              {formData.unlockedBadgeIds?.length || 0} of {ALL_BADGES.length} Achievement Badges Unlocked • Next: {getUserRankTier(formData.xp || 0).nextTier?.title || 'Max Level'}
+            </p>
+          </div>
+        </div>
+
+        <Link
+          href="/rewards"
+          className="px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 hover:border-orange-500 text-slate-800 dark:text-slate-200 font-bold text-xs hover:text-orange-600 transition-all flex items-center gap-2 shadow-sm shrink-0"
+        >
+          <Award className="w-4 h-4 text-amber-500" />
+          <span>Open Rewards &amp; Badges Vault →</span>
+        </Link>
+      </div>
+
       {/* Save Success Alert */}
       {saveSuccess && (
         <div className="p-4 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-sm font-bold flex items-center gap-3 animate-in fade-in slide-in-from-top-3 duration-300 shadow-lg">
@@ -587,7 +621,7 @@ export default function ProfilePage() {
                   required
                   value={formData.name || ''}
                   onChange={(e) => handleChange('name', e.target.value)}
-                  placeholder="e.g. Utkrasht Kumar"
+                  placeholder="e.g. Rahul Sharma"
                   className="w-full px-4 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50"
                 />
               </div>

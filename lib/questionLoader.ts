@@ -13,6 +13,7 @@ export interface LoadQuestionsOptions {
   pyqPaper?: PaperType;
   isDailyCA?: boolean;
   dailyCASet?: 'set1' | 'set2' | 'all';
+  customQuestionIds?: string[];
 }
 
 export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
@@ -26,7 +27,16 @@ export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
     pyqPaper,
     isDailyCA = false,
     dailyCASet = 'all',
+    customQuestionIds,
   } = options;
+
+  // Direct loading by specific IDs (e.g. synchronized 1v1 duels)
+  if (customQuestionIds && customQuestionIds.length > 0) {
+    const all = [...standardQuestions, ...pyqVault, ...dailyCAQuestions];
+    const map = new Map(all.map(q => [q.id, q]));
+    const matched = customQuestionIds.map(id => map.get(id)).filter((q): q is Question => q !== undefined);
+    if (matched.length > 0) return matched;
+  }
 
   // Direct Daily CA loading
   if (isDailyCA) {
@@ -115,4 +125,21 @@ export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
 export function getQuestionById(id: string): Question | null {
   const all = [...standardQuestions, ...pyqVault, ...dailyCAQuestions];
   return all.find(q => q.id === id) || null;
+}
+
+export function getPYQAdjacentQuestions(year: number, paper: PaperType, currentId: string): { prev: Question | null; next: Question | null; allInSet: Question[] } {
+  const inSet = pyqVault.filter(q => q.pyqYear === year && (q.pyqPaper === paper || (!q.pyqPaper && paper === 'GS')));
+  const idx = inSet.findIndex(q => q.id === currentId);
+  return {
+    prev: idx > 0 ? inSet[idx - 1] : null,
+    next: idx >= 0 && idx < inSet.length - 1 ? inSet[idx + 1] : null,
+    allInSet: inSet,
+  };
+}
+
+export function getRelatedQuestions(question: Question, count: number = 4): Question[] {
+  const all = [...pyqVault, ...standardQuestions];
+  return all
+    .filter(q => q.id !== question.id && (q.subject === question.subject || q.topic === question.topic))
+    .slice(0, count);
 }

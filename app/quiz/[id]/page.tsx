@@ -73,6 +73,7 @@ export default function LiveQuizSessionPage() {
         pyqYear: activeConfig.pyqYear,
         isDailyCA: activeConfig.isDailyCA,
         dailyCASet: activeConfig.dailyCASet,
+        customQuestionIds: activeConfig.customQuestionIds,
       });
 
       setQuestions(selected);
@@ -108,7 +109,7 @@ export default function LiveQuizSessionPage() {
     );
   }
 
-  const currentQ = questions[currentIndex];
+  const currentQ = questions[currentIndex] || questions[0];
   const currentAnswer = answers[currentQ.id] || {
     selectedOption: null,
     isMarkedForReview: false,
@@ -201,6 +202,12 @@ export default function LiveQuizSessionPage() {
       totalTimeElapsed
     );
 
+    if (config.isDuel) {
+      result.isDuel = true;
+      result.roomId = config.roomId;
+      result.duelOpponent = config.duelOpponent;
+    }
+
     saveQuizResult(result);
     sessionStorage.setItem(`quiz_result_${result.quizId}`, JSON.stringify(result));
     router.push(`/quiz/results/${result.quizId}`);
@@ -211,6 +218,50 @@ export default function LiveQuizSessionPage() {
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-6">
+      
+      {/* 1v1 Live Aspirant Duel Arena Status HUD */}
+      {config.isDuel && (
+        <div className="mb-6 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-rose-500/10 via-amber-500/10 to-emerald-500/10 border-2 border-rose-500/30 flex items-center justify-between flex-wrap gap-4 shadow-md animate-fade-in">
+          {/* Player 1 (You) */}
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-orange-500/20 text-orange-600 dark:text-orange-400 border border-orange-500/40 flex items-center justify-center font-black text-sm">
+              👨‍🎓
+            </div>
+            <div>
+              <span className="text-[10px] font-bold text-slate-500 uppercase block">Player 1 (You)</span>
+              <h4 className="text-xs sm:text-sm font-black text-slate-900 dark:text-white">
+                {user?.name || 'Aspirant'}
+              </h4>
+            </div>
+          </div>
+
+          {/* Center VS Indicator */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="px-3 py-1 rounded-full bg-rose-500 text-white font-black text-xs uppercase shadow-sm">
+              ⚔️ 1v1 LIVE DUEL
+            </span>
+            {config.roomId && (
+              <span className="text-xs font-mono font-bold text-slate-700 dark:text-slate-300 bg-white/80 dark:bg-slate-900/80 px-2.5 py-0.5 rounded-lg border border-slate-200 dark:border-white/10">
+                Room: {config.roomId}
+              </span>
+            )}
+          </div>
+
+          {/* Player 2 (Opponent) */}
+          <div className="flex items-center gap-3">
+            <div className="text-right">
+              <span className="text-[10px] font-bold text-slate-500 uppercase block">Challenger</span>
+              <h4 className="text-xs sm:text-sm font-black text-slate-900 dark:text-white">
+                {config.duelOpponent?.name || 'Challenger Aspirant'}
+              </h4>
+            </div>
+            <div className="w-10 h-10 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/40 flex items-center justify-center font-black text-sm">
+              👩‍🎓
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Top Test Header Bar */}
       <div className="liquid-card rounded-2xl p-5 sm:p-6 border border-slate-200 dark:border-white/10 bg-white/90 dark:bg-slate-950/70 mb-6 flex items-center justify-between flex-wrap gap-4 shadow-sm">
         <div className="flex items-center gap-3.5">

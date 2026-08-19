@@ -154,16 +154,13 @@ Open [**http://localhost:3000**](http://localhost:3000) on your machine or acces
 
 ---
 
-## 👨‍💻 Author & Connect
+## 🌐 Project & Community
 
 Developed with ❤️ for Civil Services Aspirants across Bharat 🇮🇳
 
-* **Developer**: **Utkrasht Kumar**
+* **Platform**: **UPSCSphere** (Open Aspirants Initiative)
 * **Repository**: [github.com/utkrashtkumar/UPSCSphere](https://github.com/utkrashtkumar/UPSCSphere)
-* **Email**: [`utkrashtkumar@gmail.com`](mailto:utkrashtkumar@gmail.com)
-* **LinkedIn**: [linkedin.com/in/utkrashtkumar](https://www.linkedin.com/in/utkrashtkumar/)
-* **X (Twitter)**: [x.com/utkrashtkumar](https://x.com/utkrashtkumar)
-* **Instagram**: [instagram.com/utkrashtkumarr](https://www.instagram.com/utkrashtkumarr/)
+* **Email Support**: [`upscsphereindia@gmail.com`](mailto:upscsphereindia@gmail.com)
 
 ---
 
