@@ -1,4 +1,4 @@
-﻿import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { supabase, isSupabaseConfigured } from '@/lib/supabaseClient';
 import { getTodayISTDate, generateDailyCAEdition } from '@/lib/dailyCAGenerator';
 
@@ -6,18 +6,18 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 /**
- * GET /api/daily-ca?date=YYYY-MM-DD
- * Fetches today's 20 Current Affairs questions.
- * If cached in Supabase, returns instant cache.
- * If not, generates on-the-fly, saves to Supabase, and returns.
+ * GET /api/daily-ca?date=YYYY-MM-DD&refresh=true
+ * Fetches Current Affairs questions for the requested date.
+ * If refresh=true is passed, bypasses cache and generates a fresh verified set.
  */
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const requestedDate = searchParams.get('date') || getTodayISTDate();
+    const forceRefresh = searchParams.get('refresh') === 'true' || searchParams.get('force') === 'true';
 
-    // 1. Check Supabase Cache if configured
-    if (isSupabaseConfigured && supabase) {
+    // 1. Check Supabase Cache if configured and not forcing refresh
+    if (!forceRefresh && isSupabaseConfigured && supabase) {
       try {
         const { data: cachedEdition, error: fetchError } = await supabase
           .from('daily_ca_editions')
@@ -30,6 +30,7 @@ export async function GET(req: NextRequest) {
             success: true,
             date: requestedDate,
             headline: cachedEdition.headline,
+            generated_at: cachedEdition.updated_at || cachedEdition.created_at,
             questions: cachedEdition.questions,
             sources: cachedEdition.sources,
             total: cachedEdition.questions.length,
@@ -41,7 +42,7 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // 2. Not cached or DB not configured: Generate fresh 20 questions
+    // 2. Not cached, force refresh, or DB not configured: Generate fresh questions
     const generated = await generateDailyCAEdition(requestedDate);
 
     // 3. Save to Supabase for future requests
@@ -67,6 +68,7 @@ export async function GET(req: NextRequest) {
       success: true,
       date: requestedDate,
       headline: generated.headline,
+      generated_at: generated.generated_at,
       questions: generated.questions,
       sources: generated.sources,
       total: generated.total_count,
@@ -74,12 +76,13 @@ export async function GET(req: NextRequest) {
     });
   } catch (error: any) {
     console.error('Failed to process /api/daily-ca request:', error);
-    // Fallback to today's static questions so the user never gets an error
+    // Fallback to curated questions so user never receives an error
     const fallback = await generateDailyCAEdition(getTodayISTDate());
     return NextResponse.json({
       success: true,
       date: fallback.edition_date,
       headline: fallback.headline,
+      generated_at: fallback.generated_at,
       questions: fallback.questions,
       sources: fallback.sources,
       total: fallback.total_count,

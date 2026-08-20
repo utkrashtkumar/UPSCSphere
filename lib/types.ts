@@ -43,6 +43,9 @@ export interface Question {
   pyqPaper?: PaperType;
   frequency?: number; // How many times UPSC repeated this topic
   tags?: string[];
+  generatedAt?: string; // e.g. "20 Aug 2026, 06:00 AM IST" or ISO timestamp
+  editionDate?: string; // e.g. "2026-08-20"
+  sourcePublisher?: string; // e.g. "The Hindu • Editorial Desk" or "PIB Delhi"
 }
 
 export interface UserAnswer {

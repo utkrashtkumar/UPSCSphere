@@ -27,12 +27,16 @@ import {
   Award, 
   Clock,
   Lock,
-  ArrowRight
+  ArrowRight,
+  RefreshCw,
+  Calendar,
+  Check
 } from 'lucide-react';
-import { dailyCAQuestions } from '@/data/dailyCAData';
+import { dailyCAQuestions, dailyCA_2026_08_20 } from '@/data/dailyCAData';
 import { getStoredProfile } from '@/lib/localDB';
-import { UserProfile } from '@/lib/types';
+import { UserProfile, Question } from '@/lib/types';
 import { useAuth } from '@/lib/authContext';
+import { getTodayISTDate } from '@/lib/dailyCAGenerator';
 import DailyCANotificationBell from '@/components/DailyCANotificationBell';
 import AuthLockModal from '@/components/AuthLockModal';
 
@@ -49,9 +53,13 @@ export default function DailyCAPage() {
     description: 'Please sign in to attempt live timed mocks, record your All-India rank, and track negative marking.'
   });
   
-  // State for active questions (defaults to local fallback, updates from /api/daily-ca)
-  const [questionsList, setQuestionsList] = useState(dailyCAQuestions);
+  // Active Edition Date (Defaults to Today's IST Date)
+  const [selectedDate, setSelectedDate] = useState<string>(getTodayISTDate());
+  
+  // State for active questions (defaults to today's curated edition)
+  const [questionsList, setQuestionsList] = useState<Question[]>(dailyCA_2026_08_20);
   const [isLoadingAPI, setIsLoadingAPI] = useState<boolean>(false);
+  const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
 
   // State for active question set
   const [activeSet, setActiveSet] = useState<'set1' | 'set2' | 'all'>('set1');
@@ -76,7 +84,42 @@ export default function DailyCAPage() {
     setExpandedQuestions(prev => ({ ...prev, [questionId]: true }));
   };
 
-  // Fetch today's automated edition from API on mount
+  // Fetch live daily CA questions from API
+  const fetchLiveDailyCA = async (dateStr: string, forceRefresh = false) => {
+    try {
+      if (forceRefresh) {
+        setIsRefreshing(true);
+      } else {
+        setIsLoadingAPI(true);
+      }
+      
+      const url = `/api/daily-ca?date=${dateStr}${forceRefresh ? '&refresh=true' : ''}`;
+      const res = await fetch(url, { cache: 'no-store' });
+      
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && Array.isArray(data.questions) && data.questions.length > 0) {
+          setQuestionsList(data.questions);
+          try {
+            sessionStorage.setItem('daily_ca_active_questions', JSON.stringify(data.questions));
+          } catch {
+            // ignore
+          }
+          if (forceRefresh) {
+            setGenerationSuccessMessage(`✨ Edition refreshed! Latest verified questions loaded for ${dateStr}.`);
+            setTimeout(() => setGenerationSuccessMessage(null), 4000);
+          }
+        }
+      }
+    } catch (err) {
+      console.warn('API daily-ca fetch error, using local dataset:', err);
+    } finally {
+      setIsLoadingAPI(false);
+      setIsRefreshing(false);
+    }
+  };
+
+  // Fetch today's automated edition from API on mount & on date change
   useEffect(() => {
     setMounted(true);
     setProfile(getStoredProfile());
@@ -90,30 +133,8 @@ export default function DailyCAPage() {
       // ignore
     }
 
-    const fetchLiveDailyCA = async () => {
-      try {
-        setIsLoadingAPI(true);
-        const res = await fetch('/api/daily-ca');
-        if (res.ok) {
-          const data = await res.json();
-          if (data.success && Array.isArray(data.questions) && data.questions.length > 0) {
-            setQuestionsList(data.questions);
-            try {
-              sessionStorage.setItem('daily_ca_active_questions', JSON.stringify(data.questions));
-            } catch {
-              // ignore
-            }
-          }
-        }
-      } catch (err) {
-        console.warn('API daily-ca fetch error, using local dataset:', err);
-      } finally {
-        setIsLoadingAPI(false);
-      }
-    };
-
-    fetchLiveDailyCA();
-  }, []);
+    fetchLiveDailyCA(selectedDate);
+  }, [selectedDate]);
 
   // Handle on-demand generation of Set 2 (Next 10 questions)
   const handleGenerateSet2 = () => {
@@ -165,8 +186,8 @@ export default function DailyCAPage() {
       : 'Daily Current Affairs Mega 20-Q Mock';
 
     const config = {
-      id: `daily-ca-${setChoice}-${new Date().toISOString().split('T')[0]}`,
-      title: `${titlePrefix} — ${new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`,
+      id: `daily-ca-${setChoice}-${selectedDate}`,
+      title: `${titlePrefix} — ${selectedDate}`,
       subjects: ['current_affairs'],
       questionCount: qCount,
       timeLimitMinutes: timeLimit,
@@ -194,6 +215,16 @@ export default function DailyCAPage() {
     }));
   };
 
+  // Available archive dates for edition switching
+  const editionDates = [
+    { date: '2026-08-20', label: 'Today (20 Aug)' },
+    { date: '2026-08-19', label: 'Yesterday (19 Aug)' },
+    { date: '2026-08-18', label: '18 Aug 2026' },
+    { date: '2026-08-17', label: '17 Aug 2026' },
+    { date: '2026-08-16', label: '16 Aug 2026' },
+    { date: '2026-08-15', label: '15 Aug (Ind. Day)' },
+  ];
+
   // Filter pool based on active set
   const basePool = activeSet === 'set1' 
     ? questionsList.slice(0, 10) 
@@ -206,16 +237,17 @@ export default function DailyCAPage() {
     : basePool.filter(q => q.topic.toLowerCase().includes(selectedTopic.toLowerCase()) || q.subTopic.toLowerCase().includes(selectedTopic.toLowerCase()));
 
   const topics = [
-    { id: 'all', label: `All in ${activeSet === 'all' ? 'Mega Dossier (20)' : activeSet === 'set1' ? 'Set 1 (10)' : 'Set 2 (10)'}`, icon: Sparkles },
+    { id: 'all', label: `All in ${activeSet === 'all' ? 'Mega Dossier' : activeSet === 'set1' ? 'Set 1' : 'Set 2'} (${basePool.length})`, icon: Sparkles },
     { id: 'polity', label: 'Polity & Constitution', icon: Landmark },
-    { id: 'science', label: 'Sci-Tech & Nuclear', icon: Cpu },
-    { id: 'economy', label: 'Economy & Industry', icon: Coins },
+    { id: 'science', label: 'Sci-Tech & Quantum', icon: Cpu },
+    { id: 'economy', label: 'Economy & RBI SROs', icon: Coins },
     { id: 'environment', label: 'Environment & Wildlife', icon: Leaf },
-    { id: 'international', label: 'Foreign Policy & IR', icon: Globe2 },
+    { id: 'international', label: 'Foreign Policy & UN', icon: Globe2 },
   ];
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 2xl:px-16 py-8 space-y-8">
+      
       {/* Hero Header */}
       <div className="text-center space-y-3">
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-blue-500/10 dark:bg-blue-500/15 border border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold shadow-sm">
@@ -228,7 +260,7 @@ export default function DailyCAPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <span>Real-time Current Affairs — 20 Daily Questions with Strict Citations</span>
+          <span>Real-time Current Affairs — Daily Questions with Strict Citations &amp; Timestamps</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Daily UPSC <span className="tricolor-gradient-text">Current Affairs Hub</span>
@@ -249,19 +281,61 @@ export default function DailyCAPage() {
       {/* Daily Morning CA Notification Banner */}
       <DailyCANotificationBell />
 
+      {/* 📅 Multi-Day Edition Selector & Live Refresh Bar */}
+      <div className="liquid-glass-card rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
+        <div className="flex items-center gap-2 flex-wrap w-full md:w-auto">
+          <div className="flex items-center gap-1.5 text-xs font-bold text-slate-500 mr-2">
+            <Calendar className="w-4 h-4 text-orange-500" />
+            <span>Select Edition Date:</span>
+          </div>
+
+          {editionDates.map((item) => {
+            const isSelected = selectedDate === item.date;
+            return (
+              <button
+                key={item.date}
+                type="button"
+                onClick={() => setSelectedDate(item.date)}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                  isSelected
+                    ? 'bg-orange-500 text-white shadow-md shadow-orange-500/25 font-black'
+                    : 'bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
+                }`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Refresh Today's Edition Button */}
+        <button
+          type="button"
+          onClick={() => fetchLiveDailyCA(selectedDate, true)}
+          disabled={isRefreshing || isLoadingAPI}
+          className="px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 hover:border-orange-500 text-slate-800 dark:text-slate-200 text-xs font-bold hover:text-orange-600 transition-all flex items-center gap-2 shadow-xs shrink-0 cursor-pointer disabled:opacity-50"
+          title="Force-refresh today's edition from live editorial server"
+        >
+          <RefreshCw className={`w-3.5 h-3.5 text-orange-500 ${isRefreshing ? 'animate-spin' : ''}`} />
+          <span>{isRefreshing ? 'Syncing...' : '🔄 Refresh Today\'s Edition'}</span>
+        </button>
+      </div>
+
       {/* Streak & Launch Card */}
-      <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 border-orange-500/30 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
+      <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 border-orange-500/30 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
+        <div className="h-[2px] w-full running-tricolor-line absolute top-0 left-0 right-0" />
+
         <div className="space-y-2 text-center lg:text-left">
           <div className="flex items-center gap-2 flex-wrap justify-center lg:justify-start">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/10 dark:bg-orange-500/20 text-orange-700 dark:text-orange-400 text-xs font-extrabold border border-orange-500/30">
               <Flame className="w-4 h-4 text-orange-500" />
               <span suppressHydrationWarning>{mounted ? (profile?.streakCount ?? 0) : 0} Day Streak</span>
             </div>
-            <span suppressHydrationWarning className="text-xs font-bold text-slate-500 dark:text-slate-400">
-              Edition: {mounted ? new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Today'}
+            <span suppressHydrationWarning className="text-xs font-bold text-slate-700 dark:text-slate-300">
+              Edition: {selectedDate}
             </span>
             <span className="px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-blue-500/20">
-              20 Real-Time Questions Loaded
+              {questionsList.length} Questions Loaded
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
@@ -276,7 +350,7 @@ export default function DailyCAPage() {
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
           <button
             onClick={() => handleStartQuiz('set1')}
-            className="w-full sm:w-auto liquid-glass-btn flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-emerald-600 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-orange-500/25 hover:scale-105 transition-all whitespace-nowrap"
+            className="w-full sm:w-auto liquid-glass-btn flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-amber-500 to-emerald-600 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-orange-500/25 hover:scale-105 transition-all whitespace-nowrap cursor-pointer"
           >
             <Play className="w-4 h-4 fill-white" />
             <span>Start Set 1 (10-Q Test)</span>
@@ -284,7 +358,7 @@ export default function DailyCAPage() {
 
           <button
             onClick={() => handleStartQuiz('all')}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-blue-500/25 hover:scale-105 transition-all whitespace-nowrap"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-blue-500/25 hover:scale-105 transition-all whitespace-nowrap cursor-pointer"
           >
             <Award className="w-4 h-4" />
             <span>Full 20-Q Mega Mock</span>
@@ -298,7 +372,7 @@ export default function DailyCAPage() {
         <div className="flex items-center gap-2 flex-wrap w-full md:w-auto">
           <button
             onClick={() => setActiveSet('set1')}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all border ${
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all border cursor-pointer ${
               activeSet === 'set1'
                 ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-500/20'
                 : 'bg-white/60 dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -316,7 +390,7 @@ export default function DailyCAPage() {
                 handleGenerateSet2();
               }
             }}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all border ${
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all border cursor-pointer ${
               activeSet === 'set2'
                 ? 'bg-purple-600 text-white border-purple-600 shadow-md shadow-purple-500/20'
                 : 'bg-white/60 dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -328,63 +402,64 @@ export default function DailyCAPage() {
 
           <button
             onClick={() => setActiveSet('all')}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all border ${
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all border cursor-pointer ${
               activeSet === 'all'
                 ? 'bg-emerald-600 text-white border-emerald-600 shadow-md shadow-emerald-500/20'
                 : 'bg-white/60 dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
             }`}
           >
-            <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
-            <span>All 20 Daily MCQs</span>
+            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+            <span>View All ({questionsList.length} MCQs)</span>
           </button>
         </div>
 
-        {/* Dynamic Generation Button for Set 2 */}
-        <div className="w-full md:w-auto flex items-center justify-end">
+        {/* Generate / Expand Trigger */}
+        {!isSet2Unlocked && (
           <button
+            type="button"
             onClick={handleGenerateSet2}
             disabled={isGeneratingSet2}
-            className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs shadow-md shadow-purple-500/20 transition-all disabled:opacity-50"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-black shadow-lg shadow-purple-500/25 transition-all cursor-pointer disabled:opacity-50"
           >
             {isGeneratingSet2 ? (
               <>
-                <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                <span>Verifying Real-time Sources...</span>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                <span>Synthesizing Set 2 Questions...</span>
               </>
             ) : (
               <>
-                <PlusCircle className="w-3.5 h-3.5" />
-                <span>Generate More 10 CA Questions (Set 2)</span>
+                <PlusCircle className="w-4 h-4" />
+                <span>Unlock Editorial Set 2 (+10 MCQs)</span>
               </>
             )}
           </button>
-        </div>
+        )}
       </div>
 
-      {/* Source Compilations Grid */}
+      {/* Editorial Highlights 3-Column Strip */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="liquid-glass-card rounded-2xl p-5 space-y-2 shadow-sm">
           <span className="text-[10px] font-bold uppercase text-blue-700 dark:text-blue-400 px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">
-            The Hindu & Indian Express
+            The Hindu &amp; PIB
           </span>
-          <h3 className="font-bold text-slate-900 dark:text-white text-sm">Editorials & World Affairs</h3>
-          <p className="text-xs text-slate-600 dark:text-slate-400">Supreme Court rulings (Vihaan Kumar case), Article 3 state bills, UPI milestone, and Global South agendas.</p>
+          <h3 className="font-bold text-slate-900 dark:text-white text-sm">Quantum, Judiciary &amp; Space</h3>
+          <p className="text-xs text-slate-600 dark:text-slate-400">National Quantum Mission T-Hubs, SC Sub-classification ruling, and IN-SPACe satellite guidelines.</p>
         </div>
 
         <div className="liquid-glass-card rounded-2xl p-5 space-y-2 shadow-sm">
           <span className="text-[10px] font-bold uppercase text-emerald-700 dark:text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
-            PIB & Government Releases
+            Indian Express &amp; RBI
           </span>
-          <h3 className="font-bold text-slate-900 dark:text-white text-sm">Schemes & Atomic Milestones</h3>
-          <p className="text-xs text-slate-600 dark:text-slate-400">PFBR Kalpakkam, 200 GW Nuclear target, SHANTI Act, and 1 Crore AI youth skilling roadmap.</p>
+          <h3 className="font-bold text-slate-900 dark:text-white text-sm">FinTech SROs &amp; Biofuels</h3>
+          <p className="text-xs text-slate-600 dark:text-slate-400">RBI Omnibus FinTech SRO Section 8 framework and Global Biofuel Alliance (GBA) targets.</p>
         </div>
 
         <div className="liquid-glass-card rounded-2xl p-5 space-y-2 shadow-sm">
           <span className="text-[10px] font-bold uppercase text-orange-700 dark:text-orange-400 px-2 py-0.5 rounded bg-orange-500/10 border border-orange-500/20">
-            Down To Earth & Reports
+            Down To Earth &amp; MoEFCC
           </span>
-          <h3 className="font-bold text-slate-900 dark:text-white text-sm">Wildlife, Forests & Industry</h3>
-          <p className="text-xs text-slate-600 dark:text-slate-400">World Elephant Day Gaj Gaurav Awards, CAG Green India Mission audit, and NITI Aayog 12 sectors.</p>
+          <h3 className="font-bold text-slate-900 dark:text-white text-sm">Wildlife &amp; Ocean Law</h3>
+          <p className="text-xs text-slate-600 dark:text-slate-400">Project Cheetah Gandhi Sagar sanctuary preparation and UN High Seas BBNJ Agreement.</p>
         </div>
       </div>
 
@@ -397,7 +472,7 @@ export default function DailyCAPage() {
             <button
               key={t.id}
               onClick={() => setSelectedTopic(t.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap border ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap border cursor-pointer ${
                 isActive
                   ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-500/20'
                   : 'bg-white/60 dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -416,13 +491,13 @@ export default function DailyCAPage() {
           <h2 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" />
             <span>
-              {activeSet === 'set1' ? 'Set 1: High-Yield Questions (Q1–Q10)' : activeSet === 'set2' ? 'Set 2: Extended Editorial Dossier (Q11–Q20)' : 'Complete Daily 20-Question Dossier'} ({filteredQuestions.length})
+              {activeSet === 'set1' ? 'Set 1: High-Yield Questions (Q1–Q10)' : activeSet === 'set2' ? 'Set 2: Extended Editorial Dossier (Q11–Q20)' : 'Complete Daily Dossier'} ({filteredQuestions.length})
             </span>
           </h2>
           <div className="flex items-center gap-2">
             <button
               onClick={() => handleStartQuiz(activeSet)}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition-all cursor-pointer"
             >
               <Play className="w-3.5 h-3.5 fill-white" />
               <span>Practice This Set in Timed Mode</span>
@@ -433,28 +508,40 @@ export default function DailyCAPage() {
         <div className="space-y-4">
           {filteredQuestions.map((q, idx) => {
             const isExpanded = expandedQuestions[q.id] || false;
-            const absoluteIdx = dailyCAQuestions.findIndex(item => item.id === q.id) + 1;
+            const absoluteIdx = questionsList.findIndex(item => item.id === q.id) + 1;
+            const displayGenTime = q.generatedAt || `${q.editionDate || selectedDate}, 06:00 AM IST`;
 
             return (
               <div 
                 key={q.id}
-                className="liquid-glass-card rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800/80 transition-all hover:border-blue-500/40"
+                className="liquid-glass-card rounded-2xl p-5 sm:p-6 border border-slate-200/80 dark:border-slate-800/80 transition-all hover:border-blue-500/40 space-y-4 shadow-sm"
               >
-                {/* Header Tag Bar */}
-                <div className="flex items-center justify-between gap-2 flex-wrap mb-3">
+                {/* 🕒 Top Generation Timestamp & Metadata Bar */}
+                <div className="flex items-center justify-between gap-2 flex-wrap pb-3 border-b border-slate-100 dark:border-white/5">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="px-2.5 py-0.5 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 text-[11px] font-extrabold">
-                      Q{absoluteIdx}
+                    {/* Q Number */}
+                    <span className="px-2.5 py-0.5 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 text-[11px] font-black">
+                      Q{absoluteIdx > 0 ? absoluteIdx : idx + 1}
                     </span>
-                    <span className="px-2.5 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] font-semibold">
-                      {q.topic}
-                    </span>
-                    <span className="text-[11px] text-slate-500 dark:text-slate-400">
-                      • {q.subTopic}
-                    </span>
+
+                    {/* Generation Timestamp Badge */}
+                    <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/10 dark:bg-amber-500/15 border border-amber-500/25 text-amber-800 dark:text-amber-300 text-[11px] font-bold">
+                      <Clock className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+                      <span>Generated: {displayGenTime}</span>
+                    </div>
+
+                    {/* Source Publisher Tag */}
+                    {q.sourcePublisher && (
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-[11px] font-bold border border-emerald-500/20">
+                        <Globe2 className="w-3 h-3 text-emerald-500 shrink-0" />
+                        <span>{q.sourcePublisher}</span>
+                      </span>
+                    )}
                   </div>
+
+                  {/* Difficulty Tag */}
                   <div className="flex items-center gap-2">
-                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                    <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase ${
                       q.difficulty === 'Easy' ? 'bg-emerald-500/10 text-emerald-600' :
                       q.difficulty === 'Moderate' ? 'bg-amber-500/10 text-amber-600' :
                       'bg-purple-500/10 text-purple-600'
@@ -464,13 +551,20 @@ export default function DailyCAPage() {
                   </div>
                 </div>
 
-                {/* Question Text */}
-                <div className="text-sm font-medium text-slate-900 dark:text-slate-100 whitespace-pre-line leading-relaxed mb-4">
+                {/* Subject & Subtopic */}
+                <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400">
+                  <span className="text-slate-900 dark:text-white font-bold">{q.topic}</span>
+                  <span>•</span>
+                  <span>{q.subTopic}</span>
+                </div>
+
+                {/* Question Statement */}
+                <div className="text-sm sm:text-base font-medium text-slate-900 dark:text-slate-100 whitespace-pre-line leading-relaxed">
                   {q.question}
                 </div>
 
-                {/* Options List */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                {/* Options Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {q.options.map((opt, optIdx) => {
                     const selectedByLoggedUser = Boolean(user) && userSelectedCAAnswers[q.id] === optIdx;
                     const isCorrect = isExpanded && Boolean(user) && optIdx === q.correctAnswer;
@@ -481,7 +575,7 @@ export default function DailyCAPage() {
                         key={optIdx}
                         type="button"
                         onClick={() => handleCAOptionClick(q.id, optIdx)}
-                        className={`text-left p-3 rounded-xl border text-xs transition-all flex items-start justify-between gap-2 cursor-pointer hover:border-orange-400/80 hover:shadow-sm ${
+                        className={`text-left p-3.5 rounded-xl border text-xs sm:text-sm transition-all flex items-start justify-between gap-2.5 cursor-pointer hover:border-orange-400/80 hover:shadow-sm ${
                           isCorrect
                             ? 'bg-emerald-500/15 border-emerald-500 text-emerald-800 dark:text-emerald-300 font-bold'
                             : isWrong
@@ -509,145 +603,78 @@ export default function DailyCAPage() {
                 {/* Toggle Details Button */}
                 <button
                   onClick={() => toggleQuestionExpand(q.id)}
-                  className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 text-xs font-bold hover:bg-slate-200/80 dark:hover:bg-slate-700/80 transition-all"
+                  className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 text-xs font-bold hover:bg-slate-200/80 dark:hover:bg-slate-700/80 transition-all cursor-pointer"
                 >
                   <span className="flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-blue-500" />
-                    {isExpanded ? 'Hide Detailed Solution & Citation' : 'View Correct Answer, Explanation & Sources'}
+                    {isExpanded ? 'Hide Detailed Solution & Citations' : 'View Correct Answer, Explanation & Sources'}
                   </span>
                   {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                 </button>
 
-                {/* Expanded Explanation & Book References */}
+                {/* Expanded Solution View */}
                 {isExpanded && (
-                  user ? (
-                    <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-4 animate-in fade-in slide-in-from-top-2 duration-200">
-                      {/* Correct Answer Banner */}
-                      <div className="flex items-center gap-2 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                        <span>
-                          Correct Option: {String.fromCharCode(65 + q.correctAnswer)} — {q.options[q.correctAnswer]}
-                        </span>
+                  <div className="p-4 sm:p-5 rounded-2xl bg-blue-50/40 dark:bg-blue-950/20 border border-blue-200/60 dark:border-blue-900/40 space-y-4 animate-fade-in text-xs sm:text-sm">
+                    {/* Timestamp reminder */}
+                    <div className="flex items-center justify-between flex-wrap gap-2 text-xs text-slate-500 border-b border-slate-200/60 dark:border-white/5 pb-2">
+                      <div className="flex items-center gap-1.5 text-amber-700 dark:text-amber-300 font-semibold">
+                        <Clock className="w-3.5 h-3.5 text-amber-500" />
+                        <span>Generated on {displayGenTime}</span>
                       </div>
+                      <span className="font-mono">Edition: {q.editionDate || selectedDate}</span>
+                    </div>
 
-                      {/* Detailed Explanation */}
-                      <div className="space-y-1">
-                        <h4 className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
-                          <HelpCircle className="w-3.5 h-3.5 text-blue-500" />
-                          <span>Comprehensive Explanation:</span>
-                        </h4>
-                        <p className="text-xs text-slate-600 dark:text-slate-300 whitespace-pre-line leading-relaxed pl-5">
-                          {q.explanation}
-                        </p>
-                      </div>
+                    {/* Correct Answer */}
+                    <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 font-extrabold">
+                      <CheckCircle2 className="w-4 h-4" />
+                      <span>Correct Answer: Option {String.fromCharCode(65 + q.correctAnswer)} ({q.options[q.correctAnswer]})</span>
+                    </div>
 
-                      {/* Elimination Tip */}
-                      {q.eliminationTip && (
-                        <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-300 text-xs space-y-1">
-                          <div className="font-bold flex items-center gap-1.5 text-amber-700 dark:text-amber-400">
-                            <Lightbulb className="w-3.5 h-3.5 text-amber-500" />
-                            <span>UPSC Elimination Strategy / Trap:</span>
-                          </div>
-                          <p className="pl-5 leading-relaxed">{q.eliminationTip}</p>
+                    {/* Explanation */}
+                    <div className="space-y-1.5">
+                      <span className="font-bold text-slate-900 dark:text-white uppercase tracking-wide text-[11px] block">
+                        Detailed UPSC Solution &amp; Factual Rationale:
+                      </span>
+                      <p className="text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
+                        {q.explanation}
+                      </p>
+                    </div>
+
+                    {/* Book Citation */}
+                    {q.bookReference && (
+                      <div className="p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 space-y-1">
+                        <div className="flex items-center gap-1.5 text-blue-600 dark:text-blue-400 font-bold text-xs">
+                          <BookOpen className="w-3.5 h-3.5" />
+                          <span>Standard Reference &amp; Publication:</span>
                         </div>
-                      )}
-
-                      {/* Book / Source Reference Citation */}
-                      {q.bookReference && (
-                        <div className="p-3 rounded-xl bg-blue-500/5 dark:bg-blue-500/10 border border-blue-500/20 text-xs space-y-1.5">
-                          <div className="font-bold text-blue-700 dark:text-blue-300 flex items-center gap-1.5">
-                            <BookOpen className="w-3.5 h-3.5 text-blue-500" />
-                            <span>Source & Citation: {q.bookReference.bookName} ({q.bookReference.edition || '2026'})</span>
-                          </div>
-                          <p className="text-[11px] text-slate-600 dark:text-slate-400 pl-5">
-                            <span className="font-semibold">Chapter/Release:</span> {q.bookReference.chapter} | <span className="font-semibold">Reference:</span> {q.bookReference.pageNumber}
+                        <p className="text-xs text-slate-800 dark:text-slate-200">
+                          <strong>{q.bookReference.bookName}</strong> ({q.bookReference.edition || selectedDate}) • {q.bookReference.chapter} • Page/Doc: {q.bookReference.pageNumber}
+                        </p>
+                        {q.bookReference.keyExcerpt && (
+                          <p className="text-[11px] text-slate-500 italic pt-0.5">
+                            "{q.bookReference.keyExcerpt}"
                           </p>
-                          {q.bookReference.keyExcerpt && (
-                            <p className="text-[11px] text-slate-500 dark:text-slate-400 italic pl-5 border-l-2 border-blue-400/40 ml-5 my-1">
-                              &quot;{q.bookReference.keyExcerpt}&quot;
-                            </p>
-                          )}
-                        </div>
-                      )}
+                        )}
+                      </div>
+                    )}
 
-                      {/* Tags */}
-                      {q.tags && q.tags.length > 0 && (
-                        <div className="flex items-center gap-1.5 flex-wrap pt-1">
-                          <Tag className="w-3 h-3 text-slate-400" />
-                          {q.tags.map((tag, tIdx) => (
-                            <span 
-                              key={tIdx}
-                              className="text-[10px] px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
-                            >
-                              #{tag}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <div className="mt-4 p-5 rounded-2xl bg-slate-900/90 dark:bg-slate-950 border border-orange-500/40 text-center space-y-3 shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">
-                      <div className="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center mx-auto border border-orange-500/30">
-                        <Lock className="w-5 h-5" />
+                    {/* Elimination Tip */}
+                    {q.eliminationTip && (
+                      <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-800 dark:text-amber-300 text-xs">
+                        <strong>🎯 50:50 Elimination Guidance: </strong>
+                        <span>{q.eliminationTip}</span>
                       </div>
-                      <div className="space-y-1">
-                        <h4 className="text-sm font-bold text-white">
-                          Answer, Full Explanation & Standard Book Citations Locked
-                        </h4>
-                        <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
-                          Create a 100% free account to reveal the verified official answer key, in-depth UPSC syllabus explanation, elimination techniques, and exact textbook citations ({q.bookReference?.bookName || 'Standard Books'}).
-                        </p>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setAuthModalConfig({
-                            title: 'Sign In to Unlock Citations & Solutions',
-                            description: 'Sign in to unlock detailed explanations, UPSC elimination techniques, and official book page citations.'
-                          });
-                          setShowAuthModal(true);
-                        }}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-emerald-600 text-white font-extrabold text-xs shadow-lg shadow-orange-500/20 hover:scale-105 transition-all"
-                      >
-                        <span>Sign In to Unlock Solution & Citations</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-                  )
+                    )}
+                  </div>
                 )}
+
               </div>
             );
           })}
         </div>
       </div>
 
-      {/* Bottom CTA Card */}
-      <div className="liquid-glass-card rounded-3xl p-6 sm:p-8 text-center space-y-4 border border-blue-500/30">
-        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
-          Ready to test all 20 Current Affairs questions under exam conditions?
-        </h3>
-        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto">
-          Attempt the full 20-question daily mega test (30 minutes) with UPSC negative marking (-0.66), instant timer countdown, and automated sync to the live aspirant leaderboard.
-        </p>
-        <div className="flex items-center justify-center gap-3 flex-wrap">
-          <button
-            onClick={() => handleStartQuiz('set1')}
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-orange-500/25 hover:scale-105 transition-all"
-          >
-            <Play className="w-4 h-4 fill-white" />
-            <span>Launch Set 1 (10-Q Test)</span>
-          </button>
-          <button
-            onClick={() => handleStartQuiz('all')}
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-blue-500/25 hover:scale-105 transition-all"
-          >
-            <Clock className="w-4 h-4" />
-            <span>Launch Full 20-Question Mega Test (30 Min)</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Reusable Auth Requirement Modal */}
+      {/* Auth Lock Modal Popup */}
       <AuthLockModal
         isOpen={showAuthModal}
         onClose={() => setShowAuthModal(false)}
@@ -655,8 +682,7 @@ export default function DailyCAPage() {
         description={authModalConfig.description}
         redirectPath="/daily-ca"
       />
+
     </div>
   );
 }
-
-

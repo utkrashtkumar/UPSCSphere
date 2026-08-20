@@ -488,6 +488,11 @@ export default function QuizResultPage() {
                       Q{idx + 1}
                     </span>
                     <span className="text-xs font-semibold text-amber-700 dark:text-amber-400">{q.topic}</span>
+                    {q.generatedAt && (
+                      <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">
+                        🕒 Generated: {q.generatedAt}
+                      </span>
+                    )}
                   </div>
 
                   <div>
