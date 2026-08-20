@@ -50,6 +50,10 @@ ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS post_graduation_college TEX
 ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS post_graduation_year INTEGER;
 ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS attempt_number INTEGER DEFAULT 1;
 ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS medium TEXT DEFAULT 'English';
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS xp INTEGER DEFAULT 0;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS rank_tier TEXT DEFAULT 'Rookie Aspirant';
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS unlocked_badges JSONB DEFAULT '[]'::jsonb;
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS xp_history JSONB DEFAULT '[]'::jsonb;
 
 
 -- Enable RLS for Profiles

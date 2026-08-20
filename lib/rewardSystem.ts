@@ -354,8 +354,13 @@ export function awardXP(params: {
       supabase
         .from('profiles')
         .update({
+          xp: newTotalXP,
+          rank_tier: newTier.title,
+          unlocked_badges: Array.from(existingBadgeIds),
+          xp_history: updatedProfile.xpHistory,
           average_score: updatedProfile.averageScore,
           streak_count: updatedProfile.streakCount,
+          updated_at: new Date().toISOString(),
         })
         .eq('id', userId)
         .then(() => {});

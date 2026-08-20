@@ -84,6 +84,25 @@ export function getStoredProfile(): UserProfile {
       }
     }
 
+    // Recover user rewards backup if current profile XP is 0 but user had earned rewards previously
+    if ((!profile.xp || profile.xp === 0) && profile.email) {
+      try {
+        const backupKey = `upsc_rewards_user_${profile.email.toLowerCase().trim()}`;
+        const backupRaw = localStorage.getItem(backupKey);
+        if (backupRaw) {
+          const backup = JSON.parse(backupRaw);
+          if (backup && typeof backup.xp === 'number' && backup.xp > 0) {
+            profile.xp = backup.xp;
+            profile.rankTier = backup.rankTier || profile.rankTier;
+            profile.unlockedBadgeIds = backup.unlockedBadgeIds || profile.unlockedBadgeIds || [];
+            profile.xpHistory = backup.xpHistory || profile.xpHistory || [];
+          }
+        }
+      } catch {
+        // ignore
+      }
+    }
+
     // Save cleaned real profile to localStorage
     localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(profile));
 
@@ -108,7 +127,33 @@ export function saveStoredProfile(profile: Partial<UserProfile>): UserProfile {
   try {
     const current = getStoredProfile();
     const updated = { ...current, ...profile };
+
+    // If new profile didn't provide XP or provided 0 but current has XP, preserve existing XP
+    if (profile.xp === undefined && (current.xp || 0) > 0) {
+      updated.xp = current.xp;
+      updated.rankTier = current.rankTier || updated.rankTier;
+      updated.unlockedBadgeIds = current.unlockedBadgeIds || updated.unlockedBadgeIds;
+      updated.xpHistory = current.xpHistory || updated.xpHistory;
+    }
+
     localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(updated));
+
+    // Persist user-scoped rewards vault whenever email and XP are available
+    if (updated.email && (updated.xp || 0) > 0) {
+      try {
+        const backupKey = `upsc_rewards_user_${updated.email.toLowerCase().trim()}`;
+        localStorage.setItem(backupKey, JSON.stringify({
+          xp: updated.xp,
+          rankTier: updated.rankTier,
+          unlockedBadgeIds: updated.unlockedBadgeIds || [],
+          xpHistory: updated.xpHistory || [],
+          updatedAt: new Date().toISOString(),
+        }));
+      } catch {
+        // ignore
+      }
+    }
+
     return updated;
   } catch {
     return defaultProfile;

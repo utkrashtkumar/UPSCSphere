@@ -62,41 +62,97 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           .eq('id', userId)
           .maybeSingle();
 
+        const currentStored = getStoredProfile();
+        const effectiveEmail = (dbProfile?.email || emailFallback || currentStored.email || '').toLowerCase().trim();
+
+        let userScopedXP = 0;
+        let userScopedBadges: string[] = [];
+        let userScopedHistory: any[] = [];
+        let userScopedRank = 'Rookie Aspirant';
+
+        if (effectiveEmail) {
+          try {
+            const backupRaw = localStorage.getItem(`upsc_rewards_user_${effectiveEmail}`);
+            if (backupRaw) {
+              const backup = JSON.parse(backupRaw);
+              userScopedXP = backup.xp || 0;
+              userScopedBadges = backup.unlockedBadgeIds || [];
+              userScopedHistory = backup.xpHistory || [];
+              userScopedRank = backup.rankTier || userScopedRank;
+            }
+          } catch {
+            // ignore
+          }
+        }
+
+        const resolvedXP = Math.max(
+          dbProfile?.xp ?? 0,
+          userScopedXP,
+          currentStored.xp ?? 0
+        );
+
+        const resolvedBadges = Array.from(new Set([
+          ...(Array.isArray(dbProfile?.unlocked_badges) ? dbProfile.unlocked_badges : []),
+          ...userScopedBadges,
+          ...(currentStored.unlockedBadgeIds || [])
+        ]));
+
+        const resolvedHistory = (Array.isArray(dbProfile?.xp_history) && dbProfile.xp_history.length > 0)
+          ? dbProfile.xp_history
+          : (userScopedHistory.length > 0 ? userScopedHistory : currentStored.xpHistory || []);
+
         if (dbProfile) {
           const merged: UserProfile = {
             ...defaultProfile,
+            ...currentStored,
             name: dbProfile.name || emailFallback?.split('@')[0] || 'Aspirant',
             email: dbProfile.email || emailFallback || '',
             targetYear: dbProfile.target_year || 2027,
             optionalSubject: dbProfile.optional_subject || 'General Studies',
-            streakCount: dbProfile.streak_count ?? 0,
-            totalQuizzesTaken: dbProfile.total_quizzes ?? 0,
-            averageScore: dbProfile.average_score ?? 0,
-            highestScore: dbProfile.highest_score ?? 0,
-            avatarUrl: dbProfile.avatar_url || avatarFallback || '',
-            dob: dbProfile.dob || '',
-            homeTown: dbProfile.home_town || '',
-            homeState: dbProfile.home_state || '',
-            graduationDegree: dbProfile.graduation_degree || '',
-            graduationCollege: dbProfile.graduation_college || '',
-            graduationCity: dbProfile.graduation_city || '',
-            graduationYear: dbProfile.graduation_year || undefined,
-            postGraduationDegree: dbProfile.post_graduation_degree || '',
-            postGraduationCollege: dbProfile.post_graduation_college || '',
-            postGraduationYear: dbProfile.post_graduation_year || undefined,
-            attemptNumber: dbProfile.attempt_number || 1,
-            medium: dbProfile.medium || 'English',
+            streakCount: Math.max(dbProfile.streak_count ?? 0, currentStored.streakCount ?? 0),
+            totalQuizzesTaken: Math.max(dbProfile.total_quizzes ?? 0, currentStored.totalQuizzesTaken ?? 0),
+            averageScore: dbProfile.average_score ?? currentStored.averageScore ?? 0,
+            highestScore: Math.max(dbProfile.highest_score ?? 0, currentStored.highestScore ?? 0),
+            avatarUrl: dbProfile.avatar_url || avatarFallback || currentStored.avatarUrl || '',
+            dob: dbProfile.dob || currentStored.dob || '',
+            homeTown: dbProfile.home_town || currentStored.homeTown || '',
+            homeState: dbProfile.home_state || currentStored.homeState || '',
+            graduationDegree: dbProfile.graduation_degree || currentStored.graduationDegree || '',
+            graduationCollege: dbProfile.graduation_college || currentStored.graduationCollege || '',
+            graduationCity: dbProfile.graduation_city || currentStored.graduationCity || '',
+            graduationYear: dbProfile.graduation_year || currentStored.graduationYear || undefined,
+            postGraduationDegree: dbProfile.post_graduation_degree || currentStored.postGraduationDegree || '',
+            postGraduationCollege: dbProfile.post_graduation_college || currentStored.postGraduationCollege || '',
+            postGraduationYear: dbProfile.post_graduation_year || currentStored.postGraduationYear || undefined,
+            attemptNumber: dbProfile.attempt_number || currentStored.attemptNumber || 1,
+            medium: dbProfile.medium || currentStored.medium || 'English',
+            xp: resolvedXP,
+            rankTier: dbProfile.rank_tier || userScopedRank || currentStored.rankTier || 'Rookie Aspirant',
+            unlockedBadgeIds: resolvedBadges,
+            xpHistory: resolvedHistory,
           };
           saveStoredProfile(merged);
           setProfile(merged);
+
+          // If local XP was higher than DB, sync to Supabase
+          if (resolvedXP > (dbProfile.xp ?? 0)) {
+            supabase.from('profiles').update({
+              xp: resolvedXP,
+              rank_tier: merged.rankTier,
+              unlocked_badges: resolvedBadges,
+              xp_history: resolvedHistory,
+            }).eq('id', userId).then(() => {});
+          }
         } else {
           // If remote DB profile does not exist yet, initialize local profile with auth metadata
-          const currentStored = getStoredProfile();
           const seeded: UserProfile = {
             ...defaultProfile,
             ...currentStored,
             email: emailFallback || currentStored.email || '',
             avatarUrl: currentStored.avatarUrl || avatarFallback || '',
+            xp: resolvedXP,
+            unlockedBadgeIds: resolvedBadges,
+            xpHistory: resolvedHistory,
           };
           saveStoredProfile(seeded);
           setProfile(seeded);
@@ -450,8 +506,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (updates.postGraduationDegree !== undefined) payload.post_graduation_degree = updates.postGraduationDegree;
         if (updates.postGraduationCollege !== undefined) payload.post_graduation_college = updates.postGraduationCollege;
         if (updates.postGraduationYear !== undefined) payload.post_graduation_year = updates.postGraduationYear || null;
-        if (updates.attemptNumber !== undefined) payload.attempt_number = updates.attemptNumber;
         if (updates.medium !== undefined) payload.medium = updates.medium;
+        if (updates.xp !== undefined) payload.xp = updates.xp;
+        if (updates.rankTier !== undefined) payload.rank_tier = updates.rankTier;
+        if (updates.unlockedBadgeIds !== undefined) payload.unlocked_badges = updates.unlockedBadgeIds;
+        if (updates.xpHistory !== undefined) payload.xp_history = updates.xpHistory;
 
         await supabase.from('profiles').update(payload).eq('id', user.id);
       } catch (err) {
