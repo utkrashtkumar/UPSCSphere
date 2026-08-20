@@ -5,6 +5,7 @@ export type SubjectCategory =
   | 'geography'
   | 'environment'
   | 'science_tech'
+  | 'international'
   | 'current_affairs'
   | 'csat_quant'
   | 'csat_reasoning'
@@ -80,6 +81,7 @@ export interface QuizConfig {
   pyqYear?: number;
   isDailyCA?: boolean;
   dailyCASet?: 'set1' | 'set2' | 'all';
+  dailyCASubject?: 'all' | 'polity' | 'economy' | 'science_tech' | 'international' | 'environment' | 'history';
   isDuel?: boolean;
   roomId?: string;
   duelOpponent?: DuelOpponent;

@@ -55,6 +55,29 @@ export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
       }
     }
 
+    const { dailyCASubject } = options as any;
+    if (dailyCASubject && dailyCASubject !== 'all') {
+      const subjectKeywords: Record<string, string[]> = {
+        polity: ['polity', 'governance', 'constitution', 'judiciary', 'parliament'],
+        economy: ['economy', 'banking', 'finance', 'taxation', 'industry', 'trade'],
+        science_tech: ['science', 'tech', 'quantum', 'space', 'nuclear', 'telecom'],
+        international: ['international', 'foreign', 'asean', 'un', 'treaty', 'global'],
+        environment: ['environment', 'ecology', 'wildlife', 'climate', 'pollution', 'cheetah'],
+        history: ['history', 'culture', 'heritage', 'art', 'amrit', 'akademi'],
+      };
+      const keywords = subjectKeywords[dailyCASubject] || [dailyCASubject];
+      const filteredBySubject = sourceQuestions.filter(q => 
+        keywords.some(k => 
+          q.subject?.toLowerCase().includes(k) || 
+          q.topic?.toLowerCase().includes(k) || 
+          q.subTopic?.toLowerCase().includes(k)
+        )
+      );
+      if (filteredBySubject.length > 0) {
+        return filteredBySubject.slice(0, count);
+      }
+    }
+
     if (dailyCASet === 'set1') {
       return sourceQuestions.slice(0, Math.min(10, count));
     }

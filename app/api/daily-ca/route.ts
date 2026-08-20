@@ -6,18 +6,18 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 /**
- * GET /api/daily-ca?date=YYYY-MM-DD&refresh=true
- * Fetches Current Affairs questions for the requested date.
- * If refresh=true is passed, bypasses cache and generates a fresh verified set.
+ * GET /api/daily-ca?date=YYYY-MM-DD&subject=polity|economy|...&refresh=true
+ * Fetches Current Affairs questions across 6 core subjects (60 total MCQs) or filtered by subject.
  */
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const requestedDate = searchParams.get('date') || getTodayISTDate();
+    const subjectFilter = searchParams.get('subject') || undefined;
     const forceRefresh = searchParams.get('refresh') === 'true' || searchParams.get('force') === 'true';
 
     // 1. Check Supabase Cache if configured and not forcing refresh
-    if (!forceRefresh && isSupabaseConfigured && supabase) {
+    if (!forceRefresh && !subjectFilter && isSupabaseConfigured && supabase) {
       try {
         const { data: cachedEdition, error: fetchError } = await supabase
           .from('daily_ca_editions')
@@ -42,11 +42,11 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // 2. Not cached, force refresh, or DB not configured: Generate fresh questions
-    const generated = await generateDailyCAEdition(requestedDate);
+    // 2. Generate 60 questions across all 6 core subjects
+    const generated = await generateDailyCAEdition(requestedDate, subjectFilter);
 
-    // 3. Save to Supabase for future requests
-    if (isSupabaseConfigured && supabase && generated.questions.length > 0) {
+    // 3. Save full edition to Supabase for future requests
+    if (!subjectFilter && isSupabaseConfigured && supabase && generated.questions.length > 0) {
       try {
         await supabase.from('daily_ca_editions').upsert(
           {
@@ -72,11 +72,11 @@ export async function GET(req: NextRequest) {
       questions: generated.questions,
       sources: generated.sources,
       total: generated.total_count,
+      subject_counts: generated.subject_counts,
       isCached: false,
     });
   } catch (error: any) {
     console.error('Failed to process /api/daily-ca request:', error);
-    // Fallback to curated questions so user never receives an error
     const fallback = await generateDailyCAEdition(getTodayISTDate());
     return NextResponse.json({
       success: true,
