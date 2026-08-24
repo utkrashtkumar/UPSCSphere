@@ -28,7 +28,7 @@ import {
   HelpCircle,
   ArrowRight
 } from 'lucide-react';
-import { dailyCA_2026_08_20_All } from '@/data/dailyCAData';
+import { getCuratedQuestionsForDate } from '@/data/dailyCAData';
 import { getStoredProfile } from '@/lib/localDB';
 import { UserProfile, Question } from '@/lib/types';
 import { useAuth } from '@/lib/authContext';
@@ -140,8 +140,8 @@ export default function DailyCAPage() {
   // Active Edition Date (Defaults to Today's IST Date)
   const [selectedDate, setSelectedDate] = useState<string>(getTodayISTDate());
   
-  // State for all 60 active questions
-  const [questionsList, setQuestionsList] = useState<Question[]>(dailyCA_2026_08_20_All);
+  // State for all 60 active questions (defaults to today's date)
+  const [questionsList, setQuestionsList] = useState<Question[]>(() => getCuratedQuestionsForDate(getTodayISTDate()));
   const [isLoadingAPI, setIsLoadingAPI] = useState<boolean>(false);
   const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
 
@@ -225,12 +225,9 @@ export default function DailyCAPage() {
     try {
       if (newFav) {
         localStorage.setItem('user_fav_ca_subject', newFav);
-        setFeedbackToast(`⭐ Pinned ${subId.toUpperCase()} as your favorite field of interest!`);
       } else {
         localStorage.removeItem('user_fav_ca_subject');
-        setFeedbackToast('Removed favorite subject pin.');
       }
-      setTimeout(() => setFeedbackToast(null), 3000);
     } catch {
       // ignore
     }
@@ -287,15 +284,30 @@ export default function DailyCAPage() {
     }));
   };
 
-  // Available archive dates for edition switching
-  const editionDates = [
-    { date: '2026-08-20', label: 'Today (20 Aug)' },
-    { date: '2026-08-19', label: 'Yesterday (19 Aug)' },
-    { date: '2026-08-18', label: '18 Aug 2026' },
-    { date: '2026-08-17', label: '17 Aug 2026' },
-    { date: '2026-08-16', label: '16 Aug 2026' },
-    { date: '2026-08-15', label: '15 Aug (Ind. Day)' },
-  ];
+  // Dynamically compute the 7 most recent dates starting from Today (IST)
+  const editionDates = React.useMemo(() => {
+    const dates: { date: string; label: string }[] = [];
+    const todayStr = getTodayISTDate(); // e.g. "2026-08-24"
+    const [year, month, day] = todayStr.split('-').map(Number);
+    const base = new Date(Date.UTC(year, month - 1, day));
+
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(base.getTime() - i * 24 * 60 * 60 * 1000);
+      const yyyy = d.getUTCFullYear();
+      const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+      const dd = String(d.getUTCDate()).padStart(2, '0');
+      const dateStr = `${yyyy}-${mm}-${dd}`;
+      const dayNum = d.getUTCDate();
+      const monthShort = d.toLocaleDateString('en-GB', { month: 'short', timeZone: 'UTC' });
+
+      let label = `${dayNum} ${monthShort}`;
+      if (i === 0) label = `Today (${dayNum} ${monthShort})`;
+      else if (i === 1) label = `Yesterday (${dayNum} ${monthShort})`;
+
+      dates.push({ date: dateStr, label });
+    }
+    return dates;
+  }, []);
 
   // Filter questions based on selected subject tab
   const filteredQuestions = selectedSubjectTab === 'all' 

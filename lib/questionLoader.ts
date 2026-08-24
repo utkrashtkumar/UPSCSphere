@@ -1,7 +1,8 @@
 import { Question, SubjectCategory, PaperType, DifficultyLevel } from '@/lib/types';
 import { standardQuestions } from '@/data/questionsBank';
 import { pyqVault } from '@/data/pyqVault';
-import { dailyCAQuestions } from '@/data/dailyCAData';
+import { dailyCAQuestions, getCuratedQuestionsForDate } from '@/data/dailyCAData';
+import { getTodayISTDate } from '@/lib/dailyCAGenerator';
 
 export interface LoadQuestionsOptions {
   subjects?: SubjectCategory[];
@@ -30,17 +31,19 @@ export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
     customQuestionIds,
   } = options;
 
-  // Direct loading by specific IDs (e.g. synchronized 1v1 duels)
+  // Custom curated list
   if (customQuestionIds && customQuestionIds.length > 0) {
-    const all = [...standardQuestions, ...pyqVault, ...dailyCAQuestions];
-    const map = new Map(all.map(q => [q.id, q]));
-    const matched = customQuestionIds.map(id => map.get(id)).filter((q): q is Question => q !== undefined);
+    const allPool = [...standardQuestions, ...pyqVault, ...getCuratedQuestionsForDate(getTodayISTDate())];
+    const qMap = new Map(allPool.map((q) => [q.id, q]));
+    const matched = customQuestionIds
+      .map((id) => qMap.get(id))
+      .filter((q): q is Question => Boolean(q));
     if (matched.length > 0) return matched;
   }
 
   // Direct Daily CA loading
   if (isDailyCA) {
-    let sourceQuestions = dailyCAQuestions;
+    let sourceQuestions = getCuratedQuestionsForDate(getTodayISTDate());
     if (typeof window !== 'undefined') {
       try {
         const stored = sessionStorage.getItem('daily_ca_active_questions');
