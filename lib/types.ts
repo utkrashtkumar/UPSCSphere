@@ -14,7 +14,7 @@ export type SubjectCategory =
 
 export type PaperType = 'GS' | 'CSAT';
 
-export type DifficultyLevel = 'Easy' | 'Moderate' | 'UPSC Standard' | 'Tricky';
+export type DifficultyLevel = 'Easy' | 'Moderate' | 'UPSC Standard' | 'Tricky' | 'Hard';
 
 export type QuizMode = 'instant' | 'exam';
 

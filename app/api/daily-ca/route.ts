@@ -7,7 +7,12 @@ export const revalidate = 0;
 
 /**
  * GET /api/daily-ca?date=YYYY-MM-DD&subject=polity|economy|...&refresh=true
- * Fetches Current Affairs questions across 6 core subjects (60 total MCQs) or filtered by subject.
+ * 
+ * Hybrid daily CA question system:
+ * 1. Checks Supabase cache first (fastest)
+ * 2. Uses curated question archive if available
+ * 3. Generates fresh questions via Gemini API for uncached dates
+ * 4. Saves to Supabase to avoid re-generation
  */
 export async function GET(req: NextRequest) {
   try {
@@ -32,8 +37,10 @@ export async function GET(req: NextRequest) {
             headline: cachedEdition.headline,
             generated_at: cachedEdition.updated_at || cachedEdition.created_at,
             questions: cachedEdition.questions,
-            sources: cachedEdition.sources,
+            sources: cachedEdition.sources || [],
             total: cachedEdition.questions.length,
+            subject_counts: cachedEdition.subject_counts || {},
+            source_type: cachedEdition.source_type || 'cached',
             isCached: true,
           });
         }
@@ -42,10 +49,10 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // 2. Generate 60 questions across all 6 core subjects
+    // 2. Generate via hybrid system (curated → Gemini → fallback)
     const generated = await generateDailyCAEdition(requestedDate, subjectFilter);
 
-    // 3. Save full edition to Supabase for future requests
+    // 3. Save full edition to Supabase for future requests (avoid re-generation)
     if (!subjectFilter && isSupabaseConfigured && supabase && generated.questions.length > 0) {
       try {
         await supabase.from('daily_ca_editions').upsert(
@@ -55,6 +62,8 @@ export async function GET(req: NextRequest) {
             questions: generated.questions,
             sources: generated.sources,
             total_count: generated.total_count,
+            subject_counts: generated.subject_counts,
+            source_type: generated.source_type || 'generated',
             updated_at: new Date().toISOString(),
           },
           { onConflict: 'edition_date' }
@@ -73,10 +82,12 @@ export async function GET(req: NextRequest) {
       sources: generated.sources,
       total: generated.total_count,
       subject_counts: generated.subject_counts,
+      source_type: generated.source_type || 'generated',
       isCached: false,
     });
   } catch (error: any) {
     console.error('Failed to process /api/daily-ca request:', error);
+    // Fallback — serve curated data at minimum
     const fallback = await generateDailyCAEdition(getTodayISTDate());
     return NextResponse.json({
       success: true,
@@ -86,6 +97,7 @@ export async function GET(req: NextRequest) {
       questions: fallback.questions,
       sources: fallback.sources,
       total: fallback.total_count,
+      source_type: 'fallback',
       fallback: true,
     });
   }
