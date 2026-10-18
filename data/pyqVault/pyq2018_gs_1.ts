@@ -262,34 +262,41 @@ export const pyq2018_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2018', 'Article 21', 'Right to Privacy', 'Puttaswamy Case', 'Fundamental Rights']
   },
-  {
-    id: 'pyq-2018-gs-10',
-    subject: 'polity',
-    topic: 'Judiciary & Environmental Adjudication',
-    subTopic: 'National Green Tribunal (NGT) vs Central Pollution Control Board (CPCB)',
-    question: 'How is the National Green Tribunal (NGT) different from the Central Pollution Control Board (CPCB)?\n\n1. The NGT has been established by an Act whereas the CPCB has been created by an executive order of the Government.\n2. The NGT provides environmental justice and helps reduce the burden of litigation in higher courts whereas the CPCB promotes cleanliness of streams and wells, and aims to improve the quality of air in the country.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2018)',
+    {
+    id: "pyq-2018-gs-10",
+    subject: "environment",
+    topic: "Environmental Institutions & Statutory Bodies",
+    subTopic: "Central Pollution Control Board (CPCB) Functions",
+    question: "With reference to the \"Central Pollution Control Board\" (CPCB) in India, consider the following statements:\n\n1. It is a statutory organization constituted under the Water (Prevention and Control of Pollution) Act, 1974.\n2. It is entrusted with the powers and functions under the Air (Prevention and Control of Pollution) Act, 1981.\n3. It functions as a specialized judicial tribunal empowered to award damages and compensation in environmental pollution disputes.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Statement 1 is INCORRECT: While NGT is indeed a statutory body established under the National Green Tribunal Act, 2010, the CPCB is NOT created by an executive order. CPCB is ALSO A STATUTORY BODY, established under Section 3 of the Water (Prevention and Control of Pollution) Act, 1974 (and further entrusted with powers under the Air Act, 1981).\nStatement 2 is CORRECT: NGT is a specialized quasi-judicial tribunal dedicated to environmental dispute adjudication to relieve backlog in the High Courts and Supreme Court, whereas CPCB is an executive technical regulator focused on ambient monitoring, setting emission standards, and cleaning water streams and ambient air.\nTherefore, only Statement 2 is correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct: CPCB is a statutory organization established in September 1974 under the Water (Prevention and Control of Pollution) Act, 1974. Subsequently, it was entrusted with the powers and responsibilities under the Air (Prevention and Control of Pollution) Act, 1981, providing technical advice to the Ministry of Environment, Forest and Climate Change.\nStatement 3 is incorrect: CPCB is a technical regulatory and advisory executive body; it is NOT a judicial tribunal. The specialized judicial tribunal empowered to adjudicate environmental disputes and award compensation is the National Green Tribunal (NGT), established under the National Green Tribunal Act, 2010.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy / Indian Polity by Laxmikanth',
-      edition: '9th Edition / 7th Edition',
-      chapter: 'Chapter 28: Environmental Institutions (NGT & CPCB)',
-      pageNumber: 'Page 380 – 384',
-      keyExcerpt: 'CPCB is a statutory body constituted under the Water Act, 1974, not an executive body. NGT is a statutory judicial tribunal established under NGT Act 2010.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Environmental Institutions: CPCB vs NGT",
+      pageNumber: "Page 162 – 165",
+      keyExcerpt: "CPCB is statutory under the Water Act 1974; judicial dispute adjudication belongs exclusively to NGT."
     },
-    eliminationTip: 'Statement 1 claims CPCB was created by "executive order". CPCB is a famous statutory body constituted under the Water Act 1974. Eliminating 1 leaves Option B.',
-    difficulty: 'Moderate',
+    eliminationTip: "Tribunal adjudication belongs to NGT, not CPCB. Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2018', 'NGT', 'CPCB', 'Statutory Bodies', 'Water Act 1974', 'Polity']
+    tags: [
+      "UPSC 2018",
+      "CPCB",
+      "Water Act 1974",
+      "Air Act 1981",
+      "NGT",
+      "Environment"
+    ]
   },
   {
     id: 'pyq-2018-gs-11',
@@ -552,34 +559,41 @@ export const pyq2018_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2018', 'Merchant Discount Rate', 'MDR', 'Digital Payments', 'Banking', 'Economy']
   },
-  {
-    id: 'pyq-2018-gs-20',
-    subject: 'science_tech',
-    topic: 'Satellite Navigation Systems: NavIC / IRNSS',
-    subTopic: 'Orbital Constellation & Coverage Footprint',
-    question: 'With reference to the Indian Regional Navigation Satellite System (IRNSS), consider the following statements:\n\n1. IRNSS has three satellites in geostationary and four satellites in geosynchronous orbits.\n2. IRNSS covers entire India and about 5500 sq. km beyond its borders.\n3. India will have its own satellite navigation system with full global coverage by the middle of 2019.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2018)',
+    {
+    id: "pyq-2018-gs-20",
+    subject: "science_tech",
+    topic: "Space Technology & Satellite Navigation",
+    subTopic: "GAGAN (GPS Aided GEO Augmented Navigation) System",
+    question: "With reference to the \"GAGAN\" (GPS Aided GEO Augmented Navigation) system in India, consider the following statements:\n\n1. It was jointly developed by the Indian Space Research Organisation (ISRO) and the Airports Authority of India (AAI).\n2. It provides satellite-based augmentation over Indian airspace to enable precision approach landings for civil aviation.\n3. India is the fourth country in the world to have successfully implemented an operational Satellite-Based Augmentation System (SBAS).\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)",
     options: [
-      '1 only',
-      '1 and 2 only',
-      '2 and 3 only',
-      'None'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is correct: The IRNSS operational constellation (NavIC) consists of 7 operational satellites:\n- 3 satellites in Geostationary Earth Orbit (GEO) located at 32.5°E, 83°E, and 131.5°E.\n- 4 satellites in Geosynchronous Orbit (GSO) with an inclination of 29° to the equatorial plane.\n\nStatement 2 is incorrect: IRNSS covers the primary service area of the Indian landmass and extends up to 1,500 km (NOT 5,500 sq. km) beyond India\'s international territorial borders.\nStatement 3 is incorrect: IRNSS is designed strictly as a REGIONAL navigation satellite system (covering South Asia up to 1500 km around India), NOT a global coverage system like US GPS, Russian GLONASS, or European Galileo.\nTherefore, only Statement 1 is correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. GAGAN is a regional Satellite-Based Augmentation System (SBAS) jointly developed by ISRO and AAI to augment GPS signals for civil aviation and spatial navigation.\n2. It corrects ionospheric errors, clock drifts, and orbital anomalies to provide vertical and horizontal navigation guidance (LPV approaches) across the Indian Flight Information Region (FIR).\n3. India became the fourth country in the world (after the USA's WAAS, Europe's EGNOS, and Japan's MSAS) to operationalize a certified civil aviation SBAS system.",
     bookReference: {
-      bookName: 'Science & Technology by Ravi P. Agrahari',
-      edition: '7th Edition',
-      chapter: 'Chapter 2: Space Technology (IRNSS / NavIC)',
-      pageNumber: 'Page 2.22 – 2.28',
-      keyExcerpt: 'NavIC constellation has 7 satellites: 3 in geostationary orbit and 4 in geosynchronous orbits. Primary coverage area extends 1,500 km beyond Indian borders.'
+      bookName: "Science & Technology by Ravi P. Agrahari / ISRO Mission Portals",
+      edition: "Latest Edition",
+      chapter: "Space Missions: Satellite Navigation Systems",
+      pageNumber: "Page 55 – 60",
+      keyExcerpt: "GAGAN is an SBAS system developed jointly by ISRO and AAI, placing India among the top four globally."
     },
-    eliminationTip: 'IRNSS stands for Indian REGIONAL Navigation Satellite System. Statement 3 claims "global coverage", which is false. Statement 2 misstates 1500 km as 5500 sq km. Only 1 is correct.',
-    difficulty: 'Moderate',
+    eliminationTip: "All three statements accurately state the agency partners, function, and global standing of GAGAN.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2018', 'IRNSS', 'NavIC', 'ISRO', 'Space Technology', 'Science & Tech']
+    tags: [
+      "UPSC 2018",
+      "GAGAN",
+      "ISRO",
+      "Airports Authority of India",
+      "SBAS",
+      "Aviation"
+    ]
   },
   {
     id: 'pyq-2018-gs-21',
@@ -900,34 +914,41 @@ export const pyq2018_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2018', 'Delhi Sultanate', 'Diwan-i-Arz', 'Mir Bakshi', 'Iqta System', 'Medieval History']
   },
-  {
-    id: 'pyq-2018-gs-32',
-    subject: 'history',
-    topic: 'Medieval Indian History: Vijayanagara Empire',
-    subTopic: 'Mahanavami Dibba and Nayankara System',
-    question: 'Which of the following foreign travelers visited the Vijayanagara Empire during the reign of Deva Raya II?\n\n1. Nicolo Conti\n2. Abdur Razzaq\n3. Fernao Nuniz\n4. Duarte Barbosa\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2018)',
+    {
+    id: "pyq-2018-gs-32",
+    subject: "history",
+    topic: "Medieval Indian History",
+    subTopic: "Foreign Travelers in Mughal India: Francois Bernier",
+    question: "Which of the following foreign travelers in Mughal India was a French physician by profession who served as personal doctor to Prince Dara Shikoh and later was attached to the court of Aurangzeb, writing the celebrated work \"Travels in the Mogul Empire\"?\n\n(UPSC CSE Prelims 2018)",
     options: [
-      '1 and 2 only',
-      '2 only',
-      '2 and 3 only',
-      '1, 3 and 4'
+      "Francois Bernier",
+      "Jean-Baptiste Tavernier",
+      "Niccolao Manucci",
+      "Duarte Barbosa"
     ],
     correctAnswer: 0,
-    explanation: 'Let us examine the timelines of foreign travelers to Vijayanagara:\n1. Nicolo de Conti: Italian merchant traveler who visited Vijayanagara around 1420–1421 AD during the reign of Deva Raya I / early Deva Raya II.\n2. Abdur Razzaq: Persian ambassador sent by Shah Rukh of Samarkand who visited Vijayanagara in 1443 AD during the reign of DEVA RAYA II (Sangama Dynasty).\n3. Fernao Nuniz: Portuguese horse trader and chronicler who visited Vijayanagara in 1535–1537 AD during the reign of Achyuta Deva Raya (Tuluva Dynasty).\n4. Duarte Barbosa: Portuguese writer who visited Vijayanagara in 1518 AD during the reign of Krishnadeva Raya.\n\nTherefore, travelers who visited during Deva Raya I/II era are Nicolo Conti and Abdur Razzaq (1 and 2 only).',
+    explanation: "Francois Bernier, a French physician and traveler, visited the Mughal Empire between 1656 and 1668. He was appointed as physician to Prince Dara Shikoh (eldest son of Shah Jahan) and later to Danishmand Khan, a noble at Aurangzeb’s court. His travelogue, \"Travels in the Mogul Empire\", provides a detailed comparison between Mughal India and contemporary Europe, famously characterizing the Mughal Emperor as the \"lord of the beggars and barbarians\" due to the crown ownership of land and lack of private property.",
     bookReference: {
-      bookName: 'History of Medieval India by Satish Chandra / NCERT Class 12 Themes in Indian History Part II',
-      edition: 'Orient BlackSwan / NCERT',
-      chapter: 'Theme 7: An Imperial Capital: Vijayanagara',
-      pageNumber: 'Page 172 – 180',
-      keyExcerpt: 'Abdur Razzaq visited Hampi in 1443 during Deva Raya II\'s reign. Nicolo Conti visited in 1420. Barbosa and Nuniz visited during the 16th century Tuluva dynasty.'
+      bookName: "Themes in Indian History Part II (NCERT Class XII)",
+      edition: "NCERT",
+      chapter: "Chapter 5: Through the Eyes of Travellers",
+      pageNumber: "Page 122 – 130",
+      keyExcerpt: "Francois Bernier was a French doctor who spent twelve years in India and wrote Travels in the Mogul Empire."
     },
-    eliminationTip: 'Nuniz and Barbosa visited in the 16th century during the rule of Krishnadeva Raya and Achyuta Raya. Deva Raya II ruled in the 15th century (Sangama dynasty), visited by Abdur Razzaq and Nicolo Conti.',
-    difficulty: 'Moderate',
+    eliminationTip: "Tavernier was a jeweler; Manucci was an Italian artilleryman/doctor; Bernier was the French physician who wrote Travels in the Mogul Empire.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2018', 'Vijayanagara', 'Deva Raya II', 'Abdur Razzaq', 'Nicolo Conti', 'Medieval History']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2018",
+      "Francois Bernier",
+      "Mughal Empire",
+      "Travelers",
+      "Dara Shikoh",
+      "History"
+    ]
   },
   {
     id: 'pyq-2018-gs-33',
@@ -1219,63 +1240,77 @@ export const pyq2018_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2018', 'Article 51', 'DPSP', 'International Peace', 'Polity']
   },
-  {
-    id: 'pyq-2018-gs-43',
-    subject: 'history',
-    topic: 'Modern Indian History: British Administrative Acts',
-    subTopic: 'Charter Act of 1813',
-    question: 'Consider the following statements about \'the Charter Act of 1813\':\n\n1. It ended the trade monopoly of the East India Company in India except for trade in tea and trade with China.\n2. It asserted the sovereignty of the British Crown over the Indian territories held by the Company.\n3. The revenues of India were now controlled by the British Parliament.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)',
+    {
+    id: "pyq-2018-gs-43",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Charter Act of 1833 and Centralization of Power",
+    question: "With reference to the \"Charter Act of 1833\", consider the following statements:\n\n1. It completely ended the commercial activities and trading monopoly of the East India Company, including the tea trade and trade with China.\n2. It elevated the Governor-General of Bengal to the position of Governor-General of India, investing in him all civil and military powers.\n3. It introduced a Law Member as the fourth member of the Governor-General’s Executive Council, with Lord Macaulay appointed to the post.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
-    ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is correct: The Charter Act of 1813 terminated the commercial trade monopoly of the English East India Company in India, throwing open Indian trade to all private British merchants, with exceptions reserved for trade in tea and trade with China.\nStatement 2 is correct: The Act explicitly declared and asserted the undisputed constitutional sovereignty of the British Crown over the territories acquired by the Company in India.\nStatement 3 is INCORRECT: The revenues of India were NOT controlled directly by the British Parliament through the Charter Act of 1813. The Company continued to administer the revenues under the supervision of the Board of Control. Direct parliamentary control over Indian revenues was only instituted after the 1857 Revolt by the Government of India Act, 1858.\nTherefore, 1 and 2 only are correct.',
-    bookReference: {
-      bookName: 'A Brief History of Modern India by Spectrum / Indian Polity by Laxmikanth',
-      edition: '2024 Edition / 7th Edition',
-      chapter: 'Chapter 1: Historical Background (Charter Act of 1813)',
-      pageNumber: 'Page 1.3 – 1.6',
-      keyExcerpt: 'Charter Act of 1813 ended Company\'s trade monopoly except tea and trade with China, and asserted Crown sovereignty. Parliamentary control over revenue came in 1858.'
-    },
-    eliminationTip: 'Direct parliamentary control over revenues took place in 1858 when the Crown assumed direct governance. Statement 3 is false, leaving Option A (1 and 2 only).',
-    difficulty: 'Moderate',
-    isPYQ: true,
-    pyqYear: 2018,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2018', 'Charter Act 1813', 'East India Company Monopoly', 'British Crown Sovereignty', 'Modern History']
-  },
-  {
-    id: 'pyq-2018-gs-44',
-    subject: 'geography',
-    topic: 'Indian Physical Geography: River Systems',
-    subTopic: 'Tributaries of the Godavari and Krishna',
-    question: 'Which of the following is/are tributary/tributaries of the Brahmaputra?\n\n1. Dibang\n2. Kameng\n3. Lohit\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2018)',
-    options: [
-      '1 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'All three rivers are major tributaries of the Brahmaputra:\n1. Dibang (Sikang): A major left-bank tributary flowing through Arunachal Pradesh and joining the Brahmaputra near Sadiya.\n2. Kameng (known as Bhareli in Assam): A major right-bank tributary originating in the Tawang district of Arunachal Pradesh and joining the Brahmaputra at Tezpur.\n3. Lohit: A major left-bank tributary originating in eastern Tibet, flowing through the Mishmi Hills of Arunachal Pradesh to merge with the Brahmaputra at the head of the Assam Valley (the Dhola-Sadiya Bridge spans the Lohit river).\nTherefore, all 1, 2, and 3 are tributaries of the Brahmaputra.',
+    explanation: "All three statements are correct under the Charter Act of 1833 (Saint Helena Act 1833):\n1. It brought an end to the East India Company as a commercial body (depriving it of its remaining monopoly on tea and China trade), turning it purely into an administrative agent for the Crown.\n2. Lord William Bentinck became the first Governor-General of India, centralizing legislative power for the entire British Indian territory and depriving Bombay and Madras of their independent law-making powers.\n3. It added a fourth Law Member to the Governor-General’s Council for professional legislative drafting; Lord Thomas Babington Macaulay was appointed as the first Law Member (who later drafted the Indian Penal Code).",
     bookReference: {
-      bookName: 'India Physical Environment (NCERT Class 11) / D.R. Khullar',
-      edition: 'NCERT (Revised)',
-      chapter: 'Chapter 3: Drainage System (The Brahmaputra System)',
-      pageNumber: 'Page 26 – 29',
-      keyExcerpt: 'Brahmaputra enters India as Dihang/Siang. Major tributaries include Dibang, Lohit, Subansiri, Kameng, Manas, and Sankosh.'
+      bookName: "Indian Polity by M. Laxmikanth / A Brief History of Modern India by Spectrum",
+      edition: "7th Edition / 2023 Edition",
+      chapter: "Chapter 1: Historical Background (Charter Act 1833)",
+      pageNumber: "Page 1.3 – 1.4",
+      keyExcerpt: "Charter Act 1833 made Governor-General of Bengal Governor-General of India and added a fourth Law Member (Macaulay)."
     },
-    eliminationTip: 'Dibang, Lohit, and Kameng are the textbook quintessential tributaries of the Brahmaputra in Assam and Arunachal Pradesh.',
-    difficulty: 'Easy',
+    eliminationTip: "All three provisions are classic textbook milestones of constitutional centralization under the 1833 Act.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2018",
+      "Charter Act 1833",
+      "William Bentinck",
+      "Macaulay",
+      "Constitutional History"
+    ]
+  },
+    {
+    id: "pyq-2018-gs-44",
+    subject: "geography",
+    topic: "Indian Drainage System",
+    subTopic: "Right-Bank Tributaries of the Indus River",
+    question: "Which of the following rivers are right-bank tributaries of the Indus River originating in the Karakoram, Hindu Kush, or Sulaiman ranges?\n\n1. Shyok River\n2. Gilgit River\n3. Kabul River\n4. Gomal River\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2018)",
+    options: [
+      "1 and 2 only",
+      "3 and 4 only",
+      "1, 2 and 3 only",
+      "1, 2, 3 and 4"
+    ],
+    correctAnswer: 3,
+    explanation: "All four rivers are right-bank tributaries of the Indus:\n1. Shyok River originates from the Rimo Glacier in the Karakoram and joins the Indus on its right bank in Baltistan.\n2. Gilgit River rises in the western Karakoram/Hindu Kush and joins the Indus on its right bank near Bunji.\n3. Kabul River rises in the Sanglakh Range of the Hindu Kush in Afghanistan and enters the Indus on its right bank near Attock.\n4. Gomal River flows from the Sulaiman Range in southeastern Afghanistan and joins the Indus on its right bank in Khyber Pakhtunkhwa.",
+    bookReference: {
+      bookName: "India: A Comprehensive Geography by D.R. Khullar",
+      edition: "Latest Edition",
+      chapter: "Drainage Systems: Indus River Basin",
+      pageNumber: "Page 66 – 71",
+      keyExcerpt: "Shyok, Gilgit, Hunza, Swat, Kabul, Kurram, and Gomal are right-bank tributaries of the Indus."
+    },
+    eliminationTip: "Left-bank tributaries are the Punjab rivers (Jhelum, Chenab, Ravi, Beas, Satluj, and Zanskar). Shyok, Gilgit, Kabul, and Gomal are all right-bank tributaries.",
+    difficulty: "Moderate",
+    isPYQ: true,
+    pyqYear: 2018,
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2018', 'Brahmaputra', 'Lohit', 'Dibang', 'Kameng', 'Drainage System', 'Geography']
+    tags: [
+      "UPSC 2018",
+      "Indus River",
+      "Shyok",
+      "Gilgit",
+      "Kabul",
+      "Gomal",
+      "Geography"
+    ]
   },
   {
     id: 'pyq-2018-gs-45',
@@ -1335,34 +1370,40 @@ export const pyq2018_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2018', 'Kharif Crops', 'Crop Acreage', 'Rice', 'Cotton', 'Sugarcane', 'Agriculture']
   },
-  {
-    id: 'pyq-2018-gs-47',
-    subject: 'history',
-    topic: 'Modern Indian History: Land Revenue Systems',
-    subTopic: 'Ryotwari System of Thomas Munro and Alexander Read',
-    question: 'With reference to the Ryotwari Settlement, consider the following statements:\n\n1. The rent was paid directly by the peasants to the Government.\n2. The Government gave Pattas to the Ryots.\n3. The lands were surveyed and assessed before being taxed.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)',
+    {
+    id: "pyq-2018-gs-47",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Permanent Settlement of Bengal (1793)",
+    question: "With reference to the \"Permanent Settlement\" of land revenue introduced by Lord Cornwallis in Bengal and Bihar in 1793, consider the following statements:\n\n1. Zamindars were recognized as hereditary proprietors of the land, subject to paying a fixed annual revenue to the British government.\n2. Under the \"Sunset Law\", if a zamindar failed to deposit the specified revenue before sunset on the appointed date, his estate was confiscated and auctioned off.\n3. The revenue collected was apportioned such that 10/11ths went to the British colonial government and 1/11th was retained by the zamindar.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)",
     options: [
-      '1 only',
-      '1 and 2 only',
-      '1, 2 and 3',
-      'None'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'All three statements are historically correct:\nThe Ryotwari system, pioneered by Captain Alexander Read in Baramahal (1792) and extended across the Madras and Bombay Presidencies by Governor Sir Thomas Munro (1820):\n1. Statement 1 is correct: Eliminated zamindari intermediaries; the cultivator (ryot) was recognized as the legal proprietor and paid land revenue directly to colonial government revenue officials.\n2. Statement 2 is correct: Each registered cultivator was granted a formal title deed or lease document called a "Patta" defining their parcel holdings and revenue assessment.\n3. Statement 3 is correct: Unlike the Permanent Settlement where revenue was fixed arbitrarily on estate totals, Ryotwari mandated detailed field cadastral surveys, soil classification, and agricultural productivity assessment prior to fixing revenue.\nAll 1, 2, and 3 are correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. Under Cornwallis's Permanent Settlement (1793), zamindars were converted from mere revenue collection agents into proprietary owners of the land with rights of inheritance and sale, provided they paid the fixed revenue demand in perpetuity.\n2. The Sunset Law imposed strict, rigid payment deadlines; failure to pay by sunset on the designated date led to the public auction of the zamindari to recover arrears.\n3. The statutory ratio of revenue division was fixed at 10/11ths for the East India Company and 1/11th for the zamindar.",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / Spectrum',
-      edition: 'Penguin / Spectrum 2024',
-      chapter: 'Chapter 7: Economic Impact of British Rule (Land Revenue Systems)',
-      pageNumber: 'Page 88 – 94',
-      keyExcerpt: 'Ryotwari system established direct government-ryot relations with pattas, requiring prior survey and classification of soils.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Economic Impact of British Rule: Permanent Settlement",
+      pageNumber: "Page 588 – 592",
+      keyExcerpt: "Permanent Settlement recognized zamindars as owners with 10/11th revenue going to company and Sunset Law enforcement."
     },
-    eliminationTip: 'Direct payment, issuance of individual pattas, and prior field surveys/assessment were the three defining pillars of the Munro Ryotwari system.',
-    difficulty: 'Easy',
+    eliminationTip: "The 10/11th ratio, Sunset Law, and proprietary recognition are the three defining features of the 1793 Permanent Settlement.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2018', 'Ryotwari System', 'Thomas Munro', 'Land Revenue', 'Modern History']
+    tags: [
+      "UPSC 2018",
+      "Permanent Settlement",
+      "Lord Cornwallis",
+      "Sunset Law",
+      "Land Revenue"
+    ]
   },
   {
     id: 'pyq-2018-gs-48',

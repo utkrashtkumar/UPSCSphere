@@ -1,34 +1,40 @@
 import { Question } from '@/lib/types';
 
 export const pyq2021_gs_1: Question[] = [
-  {
-    id: 'pyq-2021-gs-01',
-    subject: 'polity',
-    topic: 'Fundamental Rights & Judicial Pronouncements',
-    subTopic: 'Right to Privacy & Article 21 (Puttaswamy Judgment)',
-    question: 'Which Article of the Constitution of India safeguards one’s right to marry the person of one’s choice? (UPSC CSE Prelims 2021/2019)',
+    {
+    id: "pyq-2021-gs-01",
+    subject: "polity",
+    topic: "Fundamental Rights & Constitutional Limitations",
+    subTopic: "Grounds of Reasonable Restrictions under Article 19(2)",
+    question: "Under Article 19(2) of the Constitution of India, which of the following is NOT an enumerated ground on which the State can impose reasonable restrictions on the Freedom of Speech and Expression?\n\n(UPSC CSE Prelims 2021)",
     options: [
-      'Article 19',
-      'Article 21',
-      'Article 25',
-      'Article 29'
+      "Sovereignty and integrity of India",
+      "Public order, decency or morality",
+      "Economic well-being of the nation",
+      "Defamation or incitement to an offence"
     ],
-    correctAnswer: 1,
-    explanation: 'In the landmark 9-judge constitution bench ruling in Justice K.S. Puttaswamy (Retd.) v. Union of India (2017), the Supreme Court held that the Right to Privacy is protected as an intrinsic part of the right to life and personal liberty under ARTICLE 21 and as part of the freedoms guaranteed by Part III of the Constitution.\nSimilarly, in Shafin Jahan v. Asokan K.M. (Hadiya case, 2018), the Supreme Court ruled that the right to marry a person of one\'s choice is an integral aspect of the Right to Life and Personal Liberty under Article 21.',
+    correctAnswer: 2,
+    explanation: "Article 19(2) lists exactly 8 exhaustive grounds for restricting Freedom of Speech and Expression (Article 19(1)(a)):\n1. Sovereignty and integrity of India\n2. Security of the State\n3. Friendly relations with foreign States\n4. Public order\n5. Decency or morality\n6. Contempt of court\n7. Defamation\n8. Incitement to an offence.\n\"Economic well-being of the nation\" is NOT a ground under Article 19(2) (though it appears under Article 8 of the European Convention on Human Rights).",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 7: Fundamental Rights (Article 21: Protection of Life and Personal Liberty)',
-      pageNumber: 'Page 7.22 – 7.26',
-      keyExcerpt: 'Rights derived from Article 21 include: Right to privacy, right to marry a person of one\'s choice, right to health, right to free legal aid, and right to dignified life.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 7: Fundamental Rights (Article 19)",
+      pageNumber: "Page 7.12 – 7.15",
+      keyExcerpt: "The grounds under Article 19(2) are strictly limited to the eight specified heads."
     },
-    eliminationTip: 'Any personal autonomy right (privacy, choice of partner, dignity, clean water) has been consistently read into the expansive umbrella of Article 21 by the Supreme Court.',
-    difficulty: 'Easy',
+    eliminationTip: "Economic well-being or financial interests of the State cannot be used to censor speech under Article 19(2).",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2021', 'Article 21', 'Right to Privacy', 'Hadiya Case', 'Fundamental Rights']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2021",
+      "Article 19(2)",
+      "Freedom of Speech",
+      "Reasonable Restrictions",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2021-gs-02',
@@ -1103,34 +1109,40 @@ export const pyq2021_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'FDI', 'Non-debt Capital', 'Balance of Payments', 'Foreign Investment']
   },
-  {
-    id: 'pyq-2021-gs-39',
-    subject: 'polity',
-    topic: 'System of Government: Parliamentary Democracy',
-    subTopic: 'Parliamentary System Defined by Executive Accountability',
-    question: 'A parliamentary system of government is one in which: (UPSC CSE Prelims 2021/2020)',
+    {
+    id: "pyq-2021-gs-39",
+    subject: "polity",
+    topic: "Basic Structure & Constitutional Concepts",
+    subTopic: "Core Essential Characteristics of Federalism",
+    question: "Which one of the following is the most essential characteristic feature that distinguishes a \"Federal State\" from a \"Unitary State\"?\n\n(UPSC CSE Prelims 2021)",
     options: [
-      'All political parties in the Parliament are represented in the Government',
-      'The Government is responsible to the Parliament and can be removed by it',
-      'The Government is elected by the people and can be removed by them',
-      'The Government is chosen by the Parliament but cannot be removed by it before completion of a fixed term'
+      "The division of constitutional powers between the Union government and regional governments by a written constitution.",
+      "The supremacy of the national legislature over the judicial branch of government.",
+      "The existence of a single integrated judicial hierarchy administering both central and state laws.",
+      "The election of the head of state directly by universal adult franchise."
     ],
-    correctAnswer: 1,
-    explanation: 'The defining institutional characteristic of a parliamentary system of government (such as India and the United Kingdom) is the COLLECTIVE RESPONSIBILITY of the executive to the legislature.\nUnder Article 75(3) of the Indian Constitution, the Council of Ministers is collectively responsible to the Lok Sabha. The government stays in office only as long as it commands the confidence of the lower house of Parliament and can be removed at any time through a vote of No-Confidence.',
+    correctAnswer: 0,
+    explanation: "The defining hallmark of federalism (as formulated by K.C. Wheare and classical constitutional jurisprudence) is the constitutional division of sovereign powers between two levels of government (Central/Federal and State/Regional), both deriving their authority directly from the written Constitution and neither being subordinate to the other in their respective designated spheres.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 12: Parliamentary System',
-      pageNumber: 'Page 12.1 – 12.4',
-      keyExcerpt: 'In a parliamentary system, the executive is drawn from and directly responsible to the legislature (Article 75).'
+      bookName: "Indian Polity by M. Laxmikanth / Introduction to the Constitution of India by D.D. Basu",
+      edition: "7th Edition / 26th Edition",
+      chapter: "Chapter 13: Federal System",
+      pageNumber: "Page 13.1 – 13.4",
+      keyExcerpt: "Division of powers between the centre and states by the Constitution is the paramount feature of federalism."
     },
-    eliminationTip: 'Executive responsibility to the legislature (and removal via no-confidence motion) is the core definition of a parliamentary government. Option B.',
-    difficulty: 'Easy',
+    eliminationTip: "Federalism inherently means dual polity with constitutionally entrenched division of powers.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'Parliamentary System', 'Executive Responsibility', 'Article 75', 'Polity']
+    tags: [
+      "UPSC 2021",
+      "Federalism",
+      "Division of Powers",
+      "Constitutional Law",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2021-gs-40',

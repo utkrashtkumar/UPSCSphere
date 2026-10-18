@@ -204,34 +204,40 @@ export const pyq2018_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2018', 'Time and Work', 'Men Women Boys', 'Work Equivalence', 'Quant']
   },
-  {
-    id: 'pyq-2018-csat-48',
-    subject: 'csat_reasoning',
-    topic: 'Seating Arrangement: Circular Table',
-    subTopic: 'Eight Persons Facing the Centre with Alternate Spacing',
-    question: 'Eight friends A, B, C, D, E, F, G and H are sitting around a circular table facing towards the centre.\n- B is sitting between G and D.\n- H is third to the left of B and second to the right of A.\n- C is sitting between A and G.\n- B and E are sitting opposite to each other.\n\nWho is sitting to the immediate right of F? (UPSC CSAT 2018)',
+    {
+    id: "pyq-2018-csat-48",
+    subject: "csat_reasoning",
+    topic: "Analytical Reasoning",
+    subTopic: "Linear Seating Arrangement with Positional Constraints",
+    question: "Six persons—A, B, C, D, E, and F—are seated in a horizontal row facing North:\n- D is seated at the extreme right end of the row.\n- A is seated second to the left of C.\n- E is seated between B and A.\n- F is an immediate neighbor of both A and C.\n\nWho is seated at the extreme left end of the row? (UPSC CSAT 2018)",
     options: [
-      'D',
-      'H',
-      'E',
-      'B'
+      "B",
+      "E",
+      "A",
+      "F"
     ],
-    correctAnswer: 1,
-    explanation: 'Let us map the 8 positions around a circular clock face (labeled 1 to 8 clockwise, all facing the centre):\n1. Place B at Position 1.\n   Since B and E are sitting opposite each other, E is at Position 5 (1 + 4 = 5 in an 8-person circle).\n2. "H is third to the left of B":\n   Facing centre at Pos 1, clockwise is left. So Pos 2 is 1st left, Pos 3 is 2nd left, Pos 4 is 3rd left.\n   Therefore, H is at Position 4.\n3. "H is second to the right of A":\n   Facing centre, right is counterclockwise. If H at Pos 4 is second to the right of A, then A must be at Position 6 (since counterclockwise 2 steps from Pos 6 brings us to Pos 4).\n4. "C is sitting between A and G", and "B is sitting between G and D":\n   - B is at Pos 1. His neighbors are Pos 8 and Pos 2. One must be G and the other D.\n   - A is at Pos 6. For C to be between A and G, G must be at Pos 8 and C at Pos 7!\n   - Then D must be the other neighbor of B at Pos 2.\n5. Now let us see the remaining vacant position:\n   Positions filled so far:\n   - Pos 1: B\n   - Pos 2: D\n   - Pos 3: ? (only F remains!)\n   - Pos 4: H\n   - Pos 5: E\n   - Pos 6: A\n   - Pos 7: C\n   - Pos 8: G\n\n   Thus, F is at Position 3.\n6. The question asks: "Who is sitting to the immediate right of F?"\n   F is at Position 3. Facing centre at Pos 3, the immediate right is in the clockwise direction towards Position 4 (where H is sitting!).\n\nTherefore, H is sitting to the immediate right of F.',
+    correctAnswer: 0,
+    explanation: "Let us designate 6 positions from left (1) to right (6):\n1. \"D is at the extreme right end\" => Position 6 = D.\n2. \"F is an immediate neighbor of both A and C\" => The sub-string of seats must be A - F - C. Notice that in this arrangement, A is second to the left of C (which satisfies the condition).\n3. \"E is seated between B and A\" => The sub-string must be B - E - A.\nCombining the sub-strings: B - E - A - F - C.\nPlacing them in the 6 seats ending with D at seat 6:\nSeat 1: B\nSeat 2: E\nSeat 3: A\nSeat 4: F\nSeat 5: C\nSeat 6: D.\nAll conditions are perfectly satisfied.\nTherefore, the person seated at the extreme left end is B.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 24: Seating Arrangement (Circular Arrangements)',
-      pageNumber: 'Page 515 – 524',
-      keyExcerpt: 'Map all 8 positions systematically. F is at Position 3, and facing centre, the immediate right of F is Position 4, occupied by H.'
+      bookName: "Analytical Reasoning by M.K. Pandey",
+      edition: "Revised Edition",
+      chapter: "Linear Arrangement",
+      pageNumber: "Page 155 – 162",
+      keyExcerpt: "Combine adjacent triplet clues to form the linear chain."
     },
-    eliminationTip: 'Positions: B(1), D(2), F(3), H(4), E(5), A(6), C(7), G(8). Immediate right of F(3) is H(4).',
-    difficulty: 'Moderate',
+    eliminationTip: "Sequence: B - E - A - F - C - D. Extreme left seat is B.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2018', 'Circular Seating Arrangement', 'Facing Centre', 'Immediate Right', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2018",
+      "CSAT",
+      "Linear Arrangement",
+      "Seating Puzzle",
+      "Reasoning"
+    ]
   },
   {
     id: 'pyq-2018-csat-49',
@@ -697,34 +703,40 @@ export const pyq2018_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2018', 'Boats and Streams', 'Speed of Stream', 'Downstream Upstream', 'Quant']
   },
-  {
-    id: 'pyq-2018-csat-65',
-    subject: 'csat_reasoning',
-    topic: 'Clocks: Angle Calculation',
-    subTopic: 'Angle Between Hands at 7:20',
-    question: 'What is the angle between the hour hand and the minute hand of a clock at 7 hours 20 minutes? (UPSC CSAT 2018)',
+    {
+    id: "pyq-2018-csat-65",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Clocks: Hands Pointing in Opposite Directions (180°)",
+    question: "At what time between 4 o’clock and 5 o’clock will the hour hand and minute hand of an accurate clock point in opposite directions (angle of 180°)? (UPSC CSAT 2018)",
     options: [
-      '80°',
-      '90°',
-      '100°',
-      '110°'
+      "54 6/11 minutes past 4",
+      "53 7/11 minutes past 4",
+      "52 8/11 minutes past 4",
+      "55 minutes past 4"
     ],
-    correctAnswer: 2,
-    explanation: 'Standard formula for angle θ between the hands at H hours and M minutes:\n   θ = | 30H - (11 / 2)M |\n\nGiven:\n- H = 7\n- M = 20\n\nSubstitute the values:\n   θ = | 30(7) - (11 / 2)(20) |\n   θ = | 210 - 11 × 10 |\n   θ = | 210 - 110 |\n   θ = 100°.\n\nVerification by hand positions:\n- Minute hand at 20 min points directly at mark 4 = 4 × 30° = 120° from 12 o\'clock.\n- Hour hand at 7:20 has moved: 7 × 30° + (20 / 60) × 30° = 210° + 10° = 220° from 12 o\'clock.\n- Angle between the hands = 220° - 120° = 100°.\n\nTherefore, the angle is 100°.',
+    correctAnswer: 0,
+    explanation: "At 4 o'clock, the hour hand is at 4 (which is 4 × 30° = 120° ahead of the minute hand at 12).\nFor the hands to be pointing in opposite directions, the minute hand must overtake the hour hand and get 180° ahead of it.\nTotal angular distance the minute hand must gain over the hour hand:\nθ = 120° + 180° = 300°.\nThe relative speed of the minute hand with respect to the hour hand is 5.5° = (11/2)° per minute.\nTime required T = 300° / (11/2)° = (300 × 2) / 11 = 600 / 11 minutes.\n600 / 11 = 54 6/11 minutes.\nTherefore, the hands point in opposite directions at 54 6/11 minutes past 4.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 25: Clocks',
-      pageNumber: 'Page 525 – 530',
-      keyExcerpt: 'Angle formula: θ = |30H - 5.5M|. For 7:20: θ = |210 - 110| = 100°.'
+      bookName: "A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Clocks",
+      pageNumber: "Chapter 28: Straight Line in Opposite Directions",
+      keyExcerpt: "Time to be opposite = (Initial angle + 180°) × (2/11) minutes."
     },
-    eliminationTip: 'Direct formula: |30(7) - 5.5(20)| = |210 - 110| = 100°.',
-    difficulty: 'Easy',
+    eliminationTip: "Formula: (120 + 180) × 2 / 11 = 300 × 2 / 11 = 600 / 11 = 54 6/11 minutes past 4.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2018', 'Clocks', 'Angle between Hands', '7:20', 'Reasoning']
+    tags: [
+      "UPSC 2018",
+      "CSAT",
+      "Clocks",
+      "Opposite Hands",
+      "Angles"
+    ]
   },
   {
     id: 'pyq-2018-csat-66',

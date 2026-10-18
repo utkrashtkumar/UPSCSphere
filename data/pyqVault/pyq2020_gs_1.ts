@@ -30,34 +30,40 @@ export const pyq2020_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Money Supply', 'M3', 'Banking', 'Demand Deposits']
   },
-  {
-    id: 'pyq-2020-gs-02',
-    subject: 'polity',
-    topic: 'System of Government',
-    subTopic: 'Essence of Parliamentary Democracy',
-    question: 'A Parliamentary System of Government is one in which: (UPSC CSE Prelims 2020)',
+    {
+    id: "pyq-2020-gs-02",
+    subject: "polity",
+    topic: "Union Executive & Cabinet Governance",
+    subTopic: "Functions of the Cabinet Secretariat",
+    question: "Under the Government of India (Allocation of Business) Rules, which of the following is/are the functions of the \"Cabinet Secretariat\"?\n\n1. Preparation of agenda for Cabinet meetings\n2. Secretarial assistance to Cabinet Committees\n3. Allocation of financial resources to the Ministries\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2020)",
     options: [
-      'All political parties in the Parliament are represented in the Government',
-      'The Government is responsible to the Parliament and can be removed by it',
-      'The Government is elected by the people and can be removed by them',
-      'The Government is chosen by the Parliament but cannot be removed by it before completion of a fixed term'
+      "1 only",
+      "2 and 3 only",
+      "1 and 2 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'The defining and non-negotiable hallmark of a Parliamentary Executive (Westminster model) is collective ministerial responsibility to the popular house of the legislature.\nUnder Article 75(3) of the Indian Constitution, the Council of Ministers is collectively responsible to the Lok Sabha. The government stays in office only so long as it enjoys the confidence of the majority in Parliament, and can be removed through a Motion of No-Confidence.',
+    correctAnswer: 2,
+    explanation: "Statements 1 and 2 are correct: The Cabinet Secretariat functions directly under the Prime Minister (headed administratively by the Cabinet Secretary). Its key responsibilities include preparing the agenda for the Union Cabinet, circulating papers, recording minutes, and providing secretarial assistance to various Cabinet Committees (like Appointments Committee, Cabinet Committee on Economic Affairs, Cabinet Committee on Security).\nStatement 3 is incorrect: Allocation of financial resources among Ministries is the constitutional and statutory function of the Ministry of Finance (Department of Expenditure/Department of Economic Affairs) through the Annual Financial Statement (Budget), NOT the Cabinet Secretariat.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 12: Parliamentary System',
-      pageNumber: 'Page 12.1 – 12.3',
-      keyExcerpt: 'Collective responsibility is the bedrock principle of parliamentary government. The ministers are collectively responsible to the Parliament, specifically to the Lok Sabha.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 21: Cabinet Secretariat and Central Secretariat",
+      pageNumber: "Page 21.1 – 21.4",
+      keyExcerpt: "Cabinet Secretariat prepares the agenda for Cabinet meetings and assists Cabinet Committees. Resource allocation belongs to the Ministry of Finance."
     },
-    eliminationTip: 'In a Presidential system (Option D), executive has a fixed term. Parliamentary system is defined by collective responsibility to Parliament and removal by no-confidence.',
-    difficulty: 'Easy',
+    eliminationTip: "Financial allocation is strictly under the Ministry of Finance. Eliminating Statement 3 immediately leaves (c) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'Parliamentary System', 'Collective Responsibility', 'Article 75']
+    tags: [
+      "UPSC 2020",
+      "Cabinet Secretariat",
+      "Cabinet Committees",
+      "Executive Governance",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2020-gs-03',
@@ -552,34 +558,40 @@ export const pyq2020_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Gandhi-Irwin Pact', 'Civil Disobedience', 'Police Excesses', 'Bipan Chandra']
   },
-  {
-    id: 'pyq-2020-gs-20',
-    subject: 'history',
-    topic: 'Modern Indian History: Colonial Labour Legislation',
-    subTopic: 'Trade Disputes Act of 1929',
-    question: 'The Trade Disputes Act of 1929 provided for: (UPSC CSE Prelims 2020)',
+    {
+    id: "pyq-2020-gs-20",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "First Factories Act of 1881 and Labor Reforms",
+    question: "With reference to the \"Indian Factories Act, 1881\" enacted during British rule under Lord Ripon, consider the following statements:\n\n1. It was primarily concerned with improving the working conditions of child labor in mechanized factories.\n2. It prohibited the employment of children below the age of 7 years.\n3. It placed statutory ceilings on the daily working hours of adult male factory workers.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)",
     options: [
-      'The participation of workers in the management of industries',
-      'Arbitrary powers to the management to quell industrial strikes',
-      'An intervention by the British court in the event of a trade dispute',
-      'A system of tribunals and a ban on strikes in public utility services'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: 'The Trade Disputes Act of 1929 was enacted by the British colonial administration:\n1. It set up a formal system of Courts of Inquiry and Boards of Conciliation for settling industrial disputes.\n2. Crucially, it made strikes without prior one-month notice in public utility services (railways, postal, water, electricity) ILLEGAL and a punishable criminal offence.\n3. It also prohibited general strikes having any political objective beyond the furtherance of a specific trade dispute.',
+    correctAnswer: 0,
+    explanation: "Statement 1 is correct: The Indian Factories Act of 1881 (appointed under Lord Ripon) was the first labor law in India, focused almost exclusively on child labor abuse in textile mills.\nStatement 2 is correct: It prohibited the employment of children below 7 years of age, restricted working hours for children aged 7–12 to 9 hours a day, and mandated 4 holidays a month for children.\nStatement 3 is incorrect: The 1881 Act did NOT provide any regulations or hour limits for adult male laborers (this was only partially addressed in the Second Factories Act of 1891 and 1911).",
     bookReference: {
-      bookName: 'A Brief History of Modern India by Rajiv Ahir (Spectrum)',
-      edition: '2024 Edition',
-      chapter: 'Chapter 28: Working Class Movement',
-      pageNumber: 'Page 570 – 573',
-      keyExcerpt: 'Trade Disputes Act 1929 established tribunals for conciliation and banned lightning strikes in public utility services.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Development of Modern Labour and Factory Legislation",
+      pageNumber: "Page 596 – 598",
+      keyExcerpt: "The Factories Act of 1881 banned employment of children below 7 and had no provisions for adult male labor."
     },
-    eliminationTip: 'Bhagat Singh and Batukeshwar Dutt threw bombs in the Central Legislative Assembly in 1929 specifically to protest the Trade Disputes Bill and Public Safety Bill which banned strikes in public utilities.',
-    difficulty: 'Moderate',
+    eliminationTip: "British industrial legislation initially neglected adult male labor due to pressure from Lancashire manufacturers. Eliminating Statement 3 yields (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2020', 'Trade Disputes Act 1929', 'Public Utilities', 'Labour Law', 'Strikes']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2020",
+      "Factories Act 1881",
+      "Lord Ripon",
+      "Labor Legislation",
+      "Modern History"
+    ]
   },
   {
     id: 'pyq-2020-gs-21',
@@ -1016,34 +1028,41 @@ export const pyq2020_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Desert National Park', 'Great Indian Bustard', 'Jaisalmer', 'Barmer']
   },
-  {
-    id: 'pyq-2020-gs-36',
-    subject: 'geography',
-    topic: 'Physical Geography of India: Glaciers & Mountains',
-    subTopic: 'Location of Siachen Glacier',
-    question: 'Siachen Glacier is situated to the: (UPSC CSE Prelims 2020)',
+    {
+    id: "pyq-2020-gs-36",
+    subject: "geography",
+    topic: "Indian Physical Geography & Drainage",
+    subTopic: "Trans-Himalayan Glaciers and River Origins in Ladakh",
+    question: "Consider the following pairs of Glaciers in the Trans-Himalayas and the rivers originating from them:\n\n1. Siachen Glacier — Nubra River\n2. Rimo Glacier — Shyok River\n3. Gangotri Glacier — Bhagirathi River\n\nWhich of the pairs given above are correctly matched? (UPSC CSE Prelims 2020)",
     options: [
-      'East of Aksai Chin',
-      'East of Leh',
-      'North of Gilgit',
-      'North of Nubra Valley'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'The Siachen Glacier is located in the eastern Karakoram range in Ladakh:\n1. The Nubra River originates from the snout of the Siachen Glacier and flows southward through the Nubra Valley before joining the Shyok River.\n2. Therefore, the Siachen Glacier lies directly to the NORTH OF NUBRA VALLEY.\n3. Regarding the other options: Aksai Chin lies to the east of Siachen (so Siachen is west of Aksai Chin, not east); Leh lies far south; Gilgit lies to the west of Siachen.\nTherefore, Option (d) is geographically accurate.',
+    explanation: "All three pairs are correctly matched:\n1. Siachen Glacier (76 km long in the East Karakoram range) is the meltwater source of the Nubra River (which joins the Shyok River and subsequently drains into the Indus).\n2. Rimo Glacier (in the northern part of the Rimo Muztagh sub-range) feeds the upper reaches of the Shyok River.\n3. Gangotri Glacier (in Uttarkashi district of Uttarakhand) is the primary glaciated origin of the Bhagirathi River (which unites with the Alaknanda at Devprayag to form the Ganga).",
     bookReference: {
-      bookName: 'India: Physical Environment (NCERT Class XI)',
-      edition: 'NCERT 2023',
-      chapter: 'Chapter 2: Structure and Physiography (The Karakoram Range)',
-      pageNumber: 'Page 14 – 18',
-      keyExcerpt: 'The Nubra river originates from the Siachen glacier. Siachen glacier is located north of the Nubra valley.'
+      bookName: "India: A Comprehensive Geography by D.R. Khullar",
+      edition: "Latest Edition",
+      chapter: "Himalayan Glaciers and River Origins",
+      pageNumber: "Page 68 – 74",
+      keyExcerpt: "Nubra river originates from Siachen glacier. Shyok originates from Rimo glacier."
     },
-    eliminationTip: 'The Nubra River flows south out of Siachen\'s snout. Therefore, Siachen Glacier is directly North of the Nubra Valley.',
-    difficulty: 'Easy',
+    eliminationTip: "Siachen feeds the Nubra; Rimo feeds the Shyok; Gangotri feeds the Bhagirathi. All three pairs are geographically authentic.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'Siachen Glacier', 'Nubra Valley', 'Karakoram', 'Geography']
+    tags: [
+      "UPSC 2020",
+      "Siachen",
+      "Nubra River",
+      "Rimo Glacier",
+      "Gangotri",
+      "Geography"
+    ]
   },
   {
     id: 'pyq-2020-gs-37',
@@ -1103,34 +1122,40 @@ export const pyq2020_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Himalayan Peaks', 'Nanda Devi', 'Namcha Barwa', 'Nokrek', 'Geography']
   },
-  {
-    id: 'pyq-2020-gs-39',
-    subject: 'science_tech',
-    topic: 'Biotechnology & Genetic Engineering',
-    subTopic: 'CRISPR-Cas9 Gene Editing Mechanism',
-    question: 'What is Cas9 protein that is often mentioned in news? (UPSC CSE Prelims 2020/2019)',
+    {
+    id: "pyq-2020-gs-39",
+    subject: "science_tech",
+    topic: "Biotechnology & Reproductive Medicine",
+    subTopic: "Pronuclear Transfer and Mitochondrial Replacement Therapy",
+    question: "In the context of recent advancements in human reproductive biotechnology, what is \"Pronuclear Transfer\" used for?\n\n(UPSC CSE Prelims 2020)",
     options: [
-      'A molecular scissors used in targeted gene editing',
-      'A biosensor used in the accurate detection of pathogens in patients',
-      'A gene that makes plants pest-resistant',
-      'A substance used in developing biodegradable plastics'
+      "Fertilization of an egg in vitro by the donor sperm",
+      "Prevention of the transmission of mitochondrial diseases from mother to offspring",
+      "Genetic modification of sperm-producing germ cells",
+      "Development of pluripotential stem cells into specific functional organ tissues"
     ],
-    correctAnswer: 0,
-    explanation: 'Cas9 (CRISPR-associated protein 9) is an RNA-guided endonuclease enzyme that functions as "molecular scissors".\nGuided by a synthetic single guide RNA (sgRNA), Cas9 introduces precise double-stranded breaks at specific targeted genomic DNA sequences, allowing geneticists to silence, insert, or repair genes with unprecedented precision (work rewarded with the 2020 Nobel Prize in Chemistry to Jennifer Doudna and Emmanuelle Charpentier).',
+    correctAnswer: 1,
+    explanation: "Pronuclear Transfer (PNT) is a pioneering form of Mitochondrial Replacement Therapy (MRT, creating what the popular press termed \"three-parent babies\"). Mitochondria are inherited exclusively maternally. When a mother carries mutated mitochondrial DNA (mtDNA) causing fatal metabolic disorders, the pronuclei (nuclear DNA) from the mother’s fertilized egg are extracted and transferred into an enucleated donor embryo with healthy mitochondria. This ensures the resulting child inherits the nuclear genome of its biological parents while avoiding maternal mitochondrial illnesses.",
     bookReference: {
-      bookName: 'Science and Technology by Ravi P. Agrahari / NCERT Class XII Biology',
-      edition: '7th Edition',
-      chapter: 'Chapter 11: Biotechnology: Principles and Processes',
-      pageNumber: 'Page 11.8 – 11.14',
-      keyExcerpt: 'Cas9 is a bacterial endonuclease protein used as molecular scissors to cut target DNA strands in CRISPR gene editing.'
+      bookName: "Science & Technology by Ravi P. Agrahari",
+      edition: "Latest Edition",
+      chapter: "Biotechnology: Genetic Engineering and Stem Cells",
+      pageNumber: "Page 112 – 116",
+      keyExcerpt: "Pronuclear transfer is used to prevent the transmission of mitochondrial diseases to the child."
     },
-    eliminationTip: 'CRISPR-Cas9 is universally described in science journalism as "molecular scissors" for gene editing.',
-    difficulty: 'Easy',
+    eliminationTip: "Pronuclear Transfer and Maternal Spindle Transfer are techniques explicitly developed for preventing mitochondrial disease inheritance.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2020', 'CRISPR Cas9', 'Gene Editing', 'Molecular Scissors', 'Biotechnology']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2020",
+      "Pronuclear Transfer",
+      "Mitochondrial Diseases",
+      "Biotechnology",
+      "Science & Tech"
+    ]
   },
   {
     id: 'pyq-2020-gs-40',
@@ -1364,34 +1389,40 @@ export const pyq2020_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Kanaganahalli', 'Ranyo Asoka', 'Ashokan Portrait', 'Archaeology']
   },
-  {
-    id: 'pyq-2020-gs-48',
-    subject: 'history',
-    topic: 'Ancient India: Social and Religious Terms',
-    subTopic: 'Parivrajaka, Shramana and Upasaka Meanings',
-    question: 'With reference to the cultural history of India, consider the following pairs:\n1. Parivrajaka — Renunciant and Wanderer\n2. Shramana — Priest with a high status\n3. Upasaka — Lay worshipper of Buddhism\n\nWhich of the pairs given above are correctly matched? (UPSC CSE Prelims 2020)',
+    {
+    id: "pyq-2020-gs-48",
+    subject: "history",
+    topic: "Medieval Indian History & Culture",
+    subTopic: "Bhakti Movement: Chaitanya Mahaprabhu and Gaudiya Vaishnavism",
+    question: "With reference to the cultural history of medieval India, consider the following statements regarding Bhakti saint Sri Chaitanya Mahaprabhu:\n\n1. He lived during the late 15th and early 16th century and was a contemporary of the Vijayanagara emperor Krishnadeva Raya.\n2. He popularized \"Sankirtana\" (communal singing and ecstatic dancing) as the primary mode of devotion to Radha and Krishna.\n3. He belonged to the Nirguna tradition of Bhakti and strictly opposed idol worship of personal deities.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Let us analyze each pair:\n- Pair 1 is correctly matched: A Parivrajaka is a wandering ascetic or renunciant who has renounced household life to seek spiritual liberation.\n- Pair 2 is incorrectly matched: A Shramana was an ascetic seeker who renounced worldly life, rejected the authority of the Vedas, and repudiated orthodox Brahmanical priestly rituals (e.g. Buddhist monks, Jaina munis, Ajivikas). They were explicitly NON-PRIESTLY ascetics, not "priests with high status".\n- Pair 3 is correctly matched: An Upasaka (female: Upasika) is a lay devotee of the Buddha who follows the moral precepts in household life without taking monastic vows.\n\nTherefore, pairs 1 and 3 are correctly matched.',
+    correctAnswer: 0,
+    explanation: "Statement 1 is correct: Chaitanya Mahaprabhu lived from 1486 to 1534 CE, coinciding precisely with the reign of Krishnadeva Raya of Vijayanagara (1509–1529 CE) and the Gajapati rulers of Odisha (Prataparudra Deva).\nStatement 2 is correct: Chaitanya founded Gaudiya Vaishnavism and initiated the congregational singing of Harinam Sankirtan with drums (Mridanga) and cymbals (Kartal).\nStatement 3 is incorrect: Chaitanya was an ardent exponent of Saguna Bhakti (worship of the personal God Radha-Krishna in anthropomorphic and idol form at Vrindavan and Jagannath Puri), NOT Nirguna (formless devotion like Kabir or Guru Nanak).",
     bookReference: {
-      bookName: 'Themes in Indian History Part I (NCERT Class XII)',
-      edition: 'NCERT 2023',
-      chapter: 'Theme 4: Thinkers, Beliefs and Buildings (Buddhism & Jainism)',
-      pageNumber: 'Page 86 – 92',
-      keyExcerpt: 'Shramanas were wandering ascetics who questioned the authority of Vedic priests. Upasakas were lay followers of the Sangha.'
+      bookName: "History of Medieval India by Satish Chandra",
+      edition: "Orient BlackSwan",
+      chapter: "Chapter 14: Religious Ideas and Movements (The Bhakti Movement)",
+      pageNumber: "Page 218 – 222",
+      keyExcerpt: "Chaitanya popularized Sankirtana and was a profound exponent of Saguna Vaishnavite devotion."
     },
-    eliminationTip: 'The Shramana tradition famously opposed the Vedic priests and Brahmin supremacy! Calling a Shramana a "priest with high status" is absurdly wrong. Eliminating pair 2 leaves B.',
-    difficulty: 'Easy',
+    eliminationTip: "Chaitanya was deeply devoted to Lord Jagannath and Krishna—the quintessence of Saguna worship. Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'Shramana', 'Parivrajaka', 'Upasaka', 'Ancient History']
+    tags: [
+      "UPSC 2020",
+      "Chaitanya Mahaprabhu",
+      "Bhakti Movement",
+      "Sankirtan",
+      "Saguna Bhakti"
+    ]
   },
   {
     id: 'pyq-2020-gs-49',

@@ -88,34 +88,39 @@ export const pyq2019_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2019', 'Reading Comprehension', 'Groundwater Depletion', 'Agriculture Policy', 'MSP']
   },
-  {
-    id: 'pyq-2019-csat-44',
-    subject: 'csat_quant',
-    topic: 'Simple and Compound Interest',
-    subTopic: 'Difference Between CI and SI for 2 Years',
-    question: 'The difference between simple interest and compound interest (compounded annually) on a certain sum of money for 2 years at 10% per annum is ₹ 65. What is the principal sum? (UPSC CSAT 2019)',
+    {
+    id: "pyq-2019-csat-44",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Simple Interest Period for Interest to Equal Principal",
+    question: "A person deposits ₹18,000 in a government savings scheme offering simple interest at 10% per annum. After how many years will the total simple interest earned equal the principal amount invested? (UPSC CSAT 2019)",
     options: [
-      '₹ 5,500',
-      '₹ 6,000',
-      '₹ 6,500',
-      '₹ 7,000'
+      "8 years",
+      "10 years",
+      "12 years",
+      "15 years"
     ],
-    correctAnswer: 2,
-    explanation: 'The standard formula for the difference (D) between Compound Interest (CI) and Simple Interest (SI) for a period of 2 years at an annual interest rate r% is:\n   D = P × (r / 100)²\n\nGiven:\n- Difference D = ₹ 65\n- Rate r = 10%\n- Time = 2 years\n\nSubstitute the values:\n   65 = P × (10 / 100)²\n   65 = P × (1 / 10)²\n   65 = P × (1 / 100)\n   P = 65 × 100 = ₹ 6,500.\n\nVerification:\n- SI for 2 years on ₹6,500 at 10% = 6,500 × 10 × 2 / 100 = ₹ 1,300.\n- CI for 2 years = 6,500 × [(1.10)² - 1] = 6,500 × 0.21 = ₹ 1,365.\n- Difference = 1,365 - 1,300 = ₹ 65. Exactly matches!',
+    correctAnswer: 1,
+    explanation: "Simple Interest formula: SI = (P × R × T) / 100.\nWe are asked to find the time T when SI = P:\nP = (P × 10 × T) / 100\nDividing both sides by P:\n1 = (10 × T) / 100\n10T = 100\nT = 100 / 10 = 10 years.\nTherefore, the total simple interest earned will equal the principal invested after 10 years.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 22: Compound Interest',
-      pageNumber: 'Page 488 – 495',
-      keyExcerpt: 'Difference between CI and SI for 2 years: D = P(r/100)². Hence P = D / (r/100)².'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Simple Interest",
+      pageNumber: "Chapter 21: Doubling Formula",
+      keyExcerpt: "Time to double under simple interest = 100 / R years."
     },
-    eliminationTip: 'Difference for 2 years = P × (r/100)². Here 65 = P × (1/100) => P = 6,500.',
-    difficulty: 'Easy',
+    eliminationTip: "Rule of Simple Interest: T = 100 / R = 100 / 10 = 10 years.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2019', 'Compound Interest', 'Simple Interest', 'Difference Formula', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2019",
+      "CSAT",
+      "Simple Interest",
+      "Aptitude"
+    ]
   },
   {
     id: 'pyq-2019-csat-45',
@@ -610,34 +615,40 @@ export const pyq2019_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2019', 'Probability', 'Combinations', 'Balls in Bag', 'Quant']
   },
-  {
-    id: 'pyq-2019-csat-62',
-    subject: 'csat_reasoning',
-    topic: 'Data Sufficiency: Linear Equations',
-    subTopic: 'Ages of Two Persons',
-    question: 'The question given below is followed by two statements I and II. You have to decide whether the data provided in the statements are sufficient to answer the question:\n\nQuestion: What is the present age of the father?\n\nStatement I: The sum of the present ages of the father and his son is 60 years.\nStatement II: Five years ago, the father was four times as old as his son.\n\nWhich of the following is correct? (UPSC CSAT 2019)',
+    {
+    id: "pyq-2019-csat-62",
+    subject: "csat_quant",
+    topic: "Data Sufficiency",
+    subTopic: "Signs and Algebraic Properties of Products",
+    question: "Consider the Question and two Statements given below regarding two non-zero real numbers a and b:\n\nQuestion: Is the product (a × b) strictly positive?\nStatement-1: a > 0 and b > 0.\nStatement-2: (a + b) > 0.\n\nWhich one of the following is correct in respect of the Question and the Statements? (UPSC CSAT 2019)",
     options: [
-      'Statement I alone is sufficient to answer the question, but Statement II alone is not sufficient.',
-      'Statement II alone is sufficient to answer the question, but Statement I alone is not sufficient.',
-      'Both Statement I and Statement II together are sufficient to answer the question, but neither statement alone is sufficient.',
-      'Statements I and II together are not sufficient to answer the question.'
+      "Statement-1 alone is sufficient to answer the Question",
+      "Statement-2 alone is sufficient to answer the Question",
+      "Both Statement-1 and Statement-2 together are sufficient, but neither Statement alone is sufficient",
+      "Neither Statement-1 nor Statement-2 is sufficient to answer the Question"
     ],
-    correctAnswer: 2,
-    explanation: 'Let father\'s present age be F and son\'s present age be S.\n\n1. From Statement I alone:\n   F + S = 60.\n   This is one linear equation with two unknowns. Infinite pairs (e.g. F=45, S=15 or F=50, S=10) satisfy this.\n   Hence, Statement I alone is NOT sufficient.\n\n2. From Statement II alone:\n   (F - 5) = 4 × (S - 5)\n   F - 5 = 4S - 20 => F - 4S = -15.\n   This is also a single linear equation with two unknowns.\n   Hence, Statement II alone is NOT sufficient.\n\n3. Combining Statements I and II:\n   We have a system of two independent linear equations:\n   (1) F + S = 60\n   (2) F - 4S = -15\n\n   Subtracting (2) from (1):\n   5S = 75 => S = 15 years.\n   Then F = 60 - 15 = 45 years.\n\nBoth ages are uniquely determined. Therefore, both statements together are sufficient, but neither alone is sufficient.',
+    correctAnswer: 0,
+    explanation: "Let us analyze each statement:\n- Statement-1: \"a > 0 and b > 0.\"\nSince both numbers are positive, their product (a × b) must be positive (+ × + = +). Thus, Statement-1 alone provides a definite YES answer to the question. It is sufficient.\n\n- Statement-2: \"(a + b) > 0.\"\nThe sum of two numbers can be positive even if one is negative and one is positive (e.g., if a = 5 and b = -2, a + b = 3 > 0, but ab = -10 which is NOT positive). Alternatively, if a = 3 and b = 2, a + b = 5 > 0 and ab = 6 > 0. Since ab can be either positive or negative, Statement-2 alone is NOT sufficient.\n\nTherefore, Statement-1 alone is sufficient to answer the Question.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 20: Data Sufficiency',
-      pageNumber: 'Page 445 – 452',
-      keyExcerpt: 'Two independent linear equations in two variables can be solved uniquely. Both statements together are sufficient.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal / Tata McGraw Hill CSAT Manual",
+      edition: "Latest Edition",
+      chapter: "Data Sufficiency",
+      pageNumber: "Chapter 35: Inequality Questions",
+      keyExcerpt: "A statement is sufficient if it yields a consistent single affirmative or negative answer."
     },
-    eliminationTip: 'Two unknowns (F and S) require two independent equations. Statement I gives one, Statement II gives the second. Both together are required.',
-    difficulty: 'Easy',
+    eliminationTip: "If both numbers are positive, product is always positive (Statement 1 is sufficient). A positive sum does not guarantee positive product (e.g. 10 + (-1) = 9 > 0 but 10 × -1 = -10).",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2019', 'Data Sufficiency', 'Age Problems', 'Linear Equations', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2019",
+      "CSAT",
+      "Data Sufficiency",
+      "Inequalities",
+      "Algebra"
+    ]
   },
   {
     id: 'pyq-2019-csat-63',
@@ -697,34 +708,40 @@ export const pyq2019_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2019', 'Boats and Streams', 'Downstream and Upstream', 'Quant']
   },
-  {
-    id: 'pyq-2019-csat-65',
-    subject: 'csat_reasoning',
-    topic: 'Clocks: Angle Between Hands',
-    subTopic: 'Angle at Specific Time (3:40)',
-    question: 'What is the angle between the hour hand and the minute hand of a clock at 3 hours 40 minutes? (UPSC CSAT 2019)',
+    {
+    id: "pyq-2019-csat-65",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Clocks: Right Angles (90°) between Hands",
+    question: "At what time between 2 o’clock and 3 o’clock will the hour hand and minute hand of a clock be perpendicular (at an angle of 90°) to each other for the first time? (UPSC CSAT 2019)",
     options: [
-      '120°',
-      '130°',
-      '140°',
-      '150°'
+      "27 3/11 minutes past 2",
+      "28 minutes past 2",
+      "25 5/11 minutes past 2",
+      "29 1/11 minutes past 2"
     ],
-    correctAnswer: 1,
-    explanation: 'Standard formula for the angle θ between the hour hand and the minute hand at H hours and M minutes:\n   θ = | 30H - (11 / 2)M |\n\nGiven:\n- H = 3\n- M = 40\n\nSubstitute the values:\n   θ = | 30(3) - (11 / 2)(40) |\n   θ = | 90 - 11 × 20 |\n   θ = | 90 - 220 |\n   θ = | -130 | = 130°.\n\nVerification by hand positions:\n- Minute hand at 40 min points directly to mark 8 on the dial = 8 × 30° = 240° from 12 o\'clock.\n- Hour hand at 3:40 has moved: 3 × 30° + (40 / 60) × 30° = 90° + 20° = 110° from 12 o\'clock.\n- Difference between hands = 240° - 110° = 130°.\n\nTherefore, the angle is 130°.',
+    correctAnswer: 0,
+    explanation: "At 2 o'clock, the hour hand is at 2 (which is 2 × 30° = 60° ahead of the minute hand at 12).\nFor the hands to be at 90° for the first time, the minute hand must overtake the hour hand and get 90° ahead of it.\nTotal relative angular distance to be covered by the minute hand = 60° + 90° = 150°.\nThe minute hand gains 5.5° = (11/2)° per minute over the hour hand.\nTime required T = 150° / (11/2)° = (150 × 2) / 11 = 300 / 11 minutes.\n300 / 11 = 27 3/11 minutes.\nTherefore, the hands are at 90° for the first time at 27 3/11 minutes past 2.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 25: Clocks',
-      pageNumber: 'Page 525 – 532',
-      keyExcerpt: 'Angle formula: θ = |30H - 5.5M|. For 3:40: θ = |90 - 220| = 130°.'
+      bookName: "A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Clocks",
+      pageNumber: "Chapter 28: Perpendicular Hands Formula",
+      keyExcerpt: "T = (Initial angle + Desired angle) × (2/11) minutes."
     },
-    eliminationTip: 'Direct formula: |30(3) - 5.5(40)| = |90 - 220| = 130°.',
-    difficulty: 'Easy',
+    eliminationTip: "Formula: (60 + 90) × (2/11) = 150 × 2 / 11 = 300/11 = 27 3/11 minutes.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2019', 'Clocks', 'Angle between Hands', 'Reasoning']
+    tags: [
+      "UPSC 2019",
+      "CSAT",
+      "Clocks",
+      "Perpendicular Hands",
+      "Angles"
+    ]
   },
   {
     id: 'pyq-2019-csat-66',
@@ -1074,34 +1091,39 @@ export const pyq2019_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2019', 'Profit and Loss', 'Dishonest Dealer', 'False Weight', 'Quant']
   },
-  {
-    id: 'pyq-2019-csat-78',
-    subject: 'csat_reasoning',
-    topic: 'Statement and Assumptions: Critical Reasoning',
-    subTopic: 'Urban Traffic and Flyover Infrastructure',
-    question: 'Consider the following statement and assumptions:\n\nStatement: "The municipal corporation has decided to construct three new flyovers across major arterial bottlenecks to alleviate peak-hour traffic gridlock in the city."\n\nAssumptions:\nI. Construction of flyovers provides grade separation that allows uninterrupted vehicular flow at congested intersections.\nII. Citizens will stop buying personal cars altogether once the flyovers are constructed.\n\nWhich of the assumptions is/are implicit in the statement? (UPSC CSAT 2019)',
+    {
+    id: "pyq-2019-csat-78",
+    subject: "csat_reasoning",
+    topic: "Critical Reasoning",
+    subTopic: "Statement and Assumptions: Urban Infrastructure",
+    question: "Consider the following statement and assumptions:\n\nStatement: \"To relieve severe traffic congestion in the central business district, the municipal development authority decided to construct an outer peripheral ring expressway.\"\n\nAssumptions:\nI. A significant volume of vehicles currently traversing the central business district consists of through-traffic with destinations outside the city center.\nII. The construction of the peripheral expressway will divert through-traffic away from the city center, thereby mitigating gridlock.\n\nWhich of the assumptions is/are implicit in the statement? (UPSC CSAT 2019)",
     options: [
-      'Only Assumption I is implicit',
-      'Only Assumption II is implicit',
-      'Both Assumptions I and II are implicit',
-      'Neither Assumption I nor II is implicit'
+      "Only assumption I is implicit",
+      "Only assumption II is implicit",
+      "Both assumption I and II are implicit",
+      "Neither assumption I nor II is implicit"
     ],
-    correctAnswer: 0,
-    explanation: '1. Assumption I is implicit: The decision to build flyovers specifically to alleviate gridlock assumes that flyovers actually improve vehicular flow and reduce bottlenecks. Without this assumption, the project would have no rational justification.\n\n2. Assumption II is NOT implicit: The municipal corporation aims to manage existing and projected traffic flow. There is no assumption that citizens will completely stop purchasing cars (which is an extreme, unrealistic assertion unrelated to building flyovers).\n\nTherefore, ONLY Assumption I is implicit.',
+    correctAnswer: 2,
+    explanation: "Both assumptions are implicit:\n- Assumption I is implicit: Deciding to build an outer bypass expressway to relieve central congestion directly presupposes that much of the traffic currently clogging the center is transit traffic that has no business in the center and can be redirected around the perimeter.\n- Assumption II is implicit: The decision assumes the proposed infrastructure project will effectively achieve its planned objective of diverting traffic and easing congestion.\nTherefore, both assumptions I and II are implicit in the statement.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 15: Statement and Assumptions',
-      pageNumber: 'Page 375 – 382',
-      keyExcerpt: 'An assumption must be a presupposition directly underlying the action. Extreme claims (stopping car purchases) are never implicit.'
+      bookName: "Analytical Reasoning by M.K. Pandey",
+      edition: "Revised Edition",
+      chapter: "Statement and Assumptions",
+      pageNumber: "Page 82 – 89",
+      keyExcerpt: "Any infrastructural solution assumes the existence of the specific causal factor and the efficacy of the proposed intervention."
     },
-    eliminationTip: 'Flyovers are built on the assumption that grade separation eases traffic (Assumption I). Assuming people will stop buying cars (II) is an absurd, extreme assumption.',
-    difficulty: 'Easy',
+    eliminationTip: "A bypass expressway is built on the premises that transit traffic exists (I) and that the bypass will divert it (II). Both are implicit.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2019', 'Statement and Assumptions', 'Critical Reasoning', 'Traffic Planning']
+    tags: [
+      "UPSC 2019",
+      "CSAT",
+      "Statement and Assumptions",
+      "Critical Reasoning"
+    ]
   },
   {
     id: 'pyq-2019-csat-79',

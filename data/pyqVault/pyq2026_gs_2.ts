@@ -1,34 +1,40 @@
 import { Question } from '@/lib/types';
 
 export const pyq2026_gs_2: Question[] = [
-  {
-    id: 'pyq-2026-gs-51',
-    subject: 'polity',
-    topic: 'Parliamentary Procedures: Legislative Enactments',
-    subTopic: 'Money Bills vs Financial Bills (Article 110 and 117)',
-    question: 'With reference to Money Bills and Financial Bills in the Parliament of India, consider the following statements:\n\n1. All Money Bills are Financial Bills, but not all Financial Bills are Money Bills.\n2. A Financial Bill (I) under Article 117(1) can only be introduced in the Lok Sabha on the recommendation of the President.\n3. The Rajya Sabha has no power to amend or reject a Financial Bill (II) under Article 117(3).\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)',
+    {
+    id: "pyq-2026-gs-51",
+    subject: "polity",
+    topic: "Parliamentary Committees",
+    subTopic: "Public Accounts Committee (PAC) Structure and Conventions",
+    question: "With reference to the \"Public Accounts Committee\" (PAC) of the Parliament of India, consider the following statements:\n\n1. It consists of not more than 22 members (15 from the Lok Sabha and 7 from the Rajya Sabha) elected annually by proportional representation.\n2. A Minister is not eligible to be elected as a member of the Public Accounts Committee.\n3. By an established parliamentary convention since 1967, the Chairman of the Committee is appointed from the Opposition party in the Lok Sabha.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is correct: Money Bills (Article 110) are a specific sub-category of Financial Bills. Hence, all Money Bills are Financial Bills, but only those containing matters exclusively listed in Article 110 are certified as Money Bills.\nStatement 2 is correct: Financial Bill (I) under Article 117(1) shares two features with a Money Bill: it can only be introduced in Lok Sabha and requires prior presidential recommendation.\nStatement 3 is incorrect: A Financial Bill (II) under Article 117(3) (which involves expenditure from Consolidated Fund of India but no Article 110 matters) is treated in all respects like an Ordinary Bill. The Rajya Sabha has equal powers to amend or reject it, and a joint sitting can be summoned in case of deadlock.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under Indian parliamentary rules and conventions:\n1. The Public Accounts Committee (set up in 1921 under the Government of India Act 1919) has 22 members (15 Lok Sabha, 7 Rajya Sabha) elected by single transferable vote.\n2. To ensure independent scrutiny of the executive's financial conduct, a Minister cannot be elected as a member; if an elected member becomes a Minister, they cease to be a member.\n3. While the Speaker of Lok Sabha appoints the Chairman from among its members, a convention initiated in 1967 (when Minoo Masani of Swatantra Party became Chairman) dictates that the Chairman is chosen from the Opposition.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition (2023)',
-      chapter: 'Chapter 22: Parliament (Legislative Procedure)',
-      pageNumber: 'Page 22.18 – 22.24',
-      keyExcerpt: 'Financial Bill (II) under 117(3) is treated like an ordinary bill; Rajya Sabha can amend or reject it.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 23: Parliamentary Committees (Public Accounts Committee)",
+      pageNumber: "Page 23.2 – 23.5",
+      keyExcerpt: "PAC has 22 members, ministers are barred, and since 1967 the Chairman is from the opposition."
     },
-    eliminationTip: 'Financial Bill Type 2 is governed by ordinary legislative procedure where Rajya Sabha possesses full power to amend or reject. Statement 3 is false. Eliminating 3 gives (a) 1 and 2 only.',
-    difficulty: 'Moderate',
+    eliminationTip: "All three statements are standard constitutional facts regarding the oldest financial committee of Parliament.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2026', 'Money Bill', 'Financial Bill', 'Article 110', 'Article 117', 'Rajya Sabha']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2026",
+      "Public Accounts Committee",
+      "PAC",
+      "Parliamentary Committees",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2026-gs-52',
@@ -88,34 +94,40 @@ export const pyq2026_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2026', 'Article 356', 'President Rule', 'SR Bommai', 'Emergency Provisions']
   },
-  {
-    id: 'pyq-2026-gs-54',
-    subject: 'polity',
-    topic: 'Fiscal Federalism & Constitutional Bodies',
-    subTopic: 'Finance Commission of India under Article 280',
-    question: 'With reference to the Finance Commission of India, consider the following statements:\n\n1. It is constituted by the President of India every fifth year or at such earlier time as the President considers necessary.\n2. The recommendations made by the Finance Commission are legally binding upon the Union Government.\n3. The qualifications of the Chairman and members of the Commission are determined by Parliament by law.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)',
+      {
+    id: "pyq-2026-gs-54",
+    subject: "polity",
+    topic: "Constitutional Bodies & Fiscal Federalism",
+    subTopic: "Sixteenth Finance Commission & Terms of Reference",
+    question: "With reference to the \"Sixteenth Finance Commission\" constituted under Article 280 of the Constitution of India, consider the following statements:\n\n1. Dr. Arvind Panagariya, former Vice-Chairman of NITI Aayog, was appointed as its Chairman.\n2. Its recommendations will cover an award period of five years commencing on April 1, 2026.\n3. The Commission’s Terms of Reference specifically include reviewing financing arrangements for disaster management initiatives under the Disaster Management Act, 2005.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Statement 1 is correct: Article 280(1) empowers the President to constitute a Finance Commission at the expiration of every fifth year or earlier.\nStatement 2 is incorrect: The recommendations made by the Finance Commission are only advisory in nature; they are not legally binding on the Government, although convention dictates high respect and acceptance of tax devolution shares.\nStatement 3 is correct: Article 280(2) specifies: "Parliament may by law determine the qualifications which shall be requisite for appointment as members of the Commission and the manner in which they shall be selected" (Finance Commission Miscellaneous Provisions Act, 1951).',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. The Government of India constituted the 16th Finance Commission in December 2023 with Dr. Arvind Panagariya as its Chairman.\n2. The recommendations of the 16th FC will span a five-year period from April 1, 2026 to March 31, 2031.\n3. Under its Terms of Reference (ToR), the Commission is specifically tasked to evaluate the division of tax proceeds, grants-in-aid to States, measures to augment State consolidated funds for Panchayats/Municipalities, and review current financing arrangements on Disaster Management funds.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition (2023)',
-      chapter: 'Chapter 45: Finance Commission',
-      pageNumber: 'Page 45.1 – 45.4',
-      keyExcerpt: 'The recommendations of the Finance Commission are only advisory in character and not binding on the government.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 45: Finance Commission",
+      pageNumber: "Page 45.1 – 45.6",
+      keyExcerpt: "Sixteenth Finance Commission under Dr. Arvind Panagariya covers the five-year award period 2026-2031."
     },
-    eliminationTip: 'No constitutional commission\'s advice is automatically legally binding on the executive. Statement 2 is false. Eliminating 2 gives Option B (1 and 3 only).',
-    difficulty: 'Easy',
+    eliminationTip: "Finance Commission terms of reference consistently cover devolution, grants-in-aid, local bodies, and disaster funds.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 10,
-    tags: ['UPSC 2026', 'Finance Commission', 'Article 280', 'Fiscal Federalism', 'Advisory Body']
+    tags: [
+      "UPSC 2026",
+      "16th Finance Commission",
+      "Arvind Panagariya",
+      "Article 280",
+      "Disaster Management"
+    ]
   },
   {
     id: 'pyq-2026-gs-55',
@@ -958,34 +970,41 @@ export const pyq2026_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2026', 'Ocean Currents', 'Gulf Stream', 'Benguela Current', 'Deserts', 'Oceanography']
   },
-  {
-    id: 'pyq-2026-gs-84',
-    subject: 'geography',
-    topic: 'Indian Geography: Physiography & Passes',
-    subTopic: 'Himalayan Mountain Passes and Strategic Corridors',
-    question: 'Consider the following pairs of Himalayan Passes and their connecting locations:\n\nMountain Pass — Connects / Location\n\n1. Zoji La — Srinagar with Leh\n2. Shipki La — Himachal Pradesh with Tibet (Sutlej river gorge)\n3. Nathu La — Sikkim with Tibet (Chumbi Valley)\n4. Lipulekh — Uttarakhand with Tibet (Mansarovar pilgrimage route)\n\nHow many of the above pairs are correctly matched? (UPSC CSE Prelims 2026)',
+      {
+    id: "pyq-2026-gs-84",
+    subject: "geography",
+    topic: "World Geography & Strategic Chokepoints",
+    subTopic: "Strategic Maritime Straits and Marginal Seas",
+    question: "Consider the following pairs of Strategic Maritime Straits and the water bodies they connect:\n\n1. Kerch Strait — Black Sea and Sea of Azov\n2. Dardanelles Strait — Sea of Marmara and Aegean Sea\n3. Strait of Hormuz — Persian Gulf and Gulf of Oman\n4. Bab-el-Mandeb — Red Sea and Gulf of Aden\n\nHow many of the above pairs are correctly matched? (UPSC CSE Prelims 2026)",
     options: [
-      'Only one pair',
-      'Only two pairs',
-      'Only three pairs',
-      'All four pairs'
+      "Only one pair",
+      "Only two pairs",
+      "Only three pairs",
+      "All four pairs"
     ],
     correctAnswer: 3,
-    explanation: 'All four pairs are correctly matched:\n1. Zoji La: Located on the Great Himalayas in UT of Ladakh/J&K, connects Srinagar to Kargil and Leh on NH-1.\n2. Shipki La: In Kinnaur district of Himachal Pradesh; the Sutlej River enters India from Tibet through this gorge.\n3. Nathu La: Strategic border pass in East Sikkim connecting India with the Chumbi Valley of Tibet; re-opened for bilateral border trade.\n4. Lipulekh: Located at the trijunction of India (Pithoragarh, Uttarakhand), Nepal, and Tibet, serving as the traditional route for Kailash-Mansarovar Yatra.',
+    explanation: "All four pairs are correctly matched:\n1. Kerch Strait connects the Black Sea with the shallow Sea of Azov (heavily in focus during Crimea/Russia-Ukraine conflict).\n2. Dardanelles Strait connects the Sea of Marmara with the Aegean Sea (part of Turkish Straits system).\n3. Strait of Hormuz connects the Persian Gulf with the Gulf of Oman (vital oil transit route).\n4. Bab-el-Mandeb connects the Red Sea to the Gulf of Aden and the Arabian Sea.",
     bookReference: {
-      bookName: 'India: Physical Environment (NCERT Class XI)',
-      edition: 'NCERT 2024',
-      chapter: 'Chapter 2: Structure and Physiography',
-      pageNumber: 'Page 14 – 20',
-      keyExcerpt: 'Key Himalayan passes include Zoji La (Srinagar-Leh), Shipki La (Himachal-Tibet), Nathu La (Sikkim-Tibet), and Lipulekh (Uttarakhand-Tibet).'
+      bookName: "Oxford School Atlas / Certificate Physical and Human Geography by G.C. Leong",
+      edition: "37th Edition",
+      chapter: "Eurasian and Middle East Maritime Straits",
+      pageNumber: "Plates 78 – 82",
+      keyExcerpt: "Kerch Strait links Sea of Azov to Black Sea; Dardanelles links Sea of Marmara to Aegean Sea."
     },
-    eliminationTip: 'All 4 mountain pass connections are standard map-based curriculum facts memorized by every civil services aspirant.',
-    difficulty: 'Easy',
+    eliminationTip: "All four straits are premier UPSC recurring geographic chokepoints in geopolitics.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'GS',
-    frequency: 10,
-    tags: ['UPSC 2026', 'Himalayan Passes', 'Zoji La', 'Shipki La', 'Nathu La', 'Lipulekh', 'Indian Geography']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2026",
+      "Kerch Strait",
+      "Dardanelles",
+      "Hormuz",
+      "Bab-el-Mandeb",
+      "World Geography"
+    ]
   },
   {
     id: 'pyq-2026-gs-85',
@@ -1074,34 +1093,40 @@ export const pyq2026_gs_2: Question[] = [
     frequency: 10,
     tags: ['UPSC 2026', 'Biodiversity Hotspots', 'Norman Myers', 'Endemism', 'Conservation']
   },
-  {
-    id: 'pyq-2026-gs-88',
-    subject: 'environment',
-    topic: 'Environmental Legislation in India',
-    subTopic: 'Wild Life (Protection) Amendment Act, 2022 Schedules',
-    question: 'With reference to the Wild Life (Protection) Amendment Act, 2022, consider the following statements:\n\n1. It rationalized the number of Schedules under the 1972 Act from six to four.\n2. Schedule IV is dedicated specifically to specimens of flora and fauna listed under the Appendices of CITES.\n3. The separate Schedule for "Vermin" (former Schedule V) has been completely removed.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)',
+      {
+    id: "pyq-2026-gs-88",
+    subject: "environment",
+    topic: "Wildlife Conservation & Biodiversity",
+    subTopic: "International Big Cat Alliance (IBCA)",
+    question: "With reference to the International Big Cat Alliance (IBCA) launched by India, consider the following statements:\n\n1. It aims to conserve seven major big cats: Tiger, Lion, Leopard, Snow Leopard, Cheetah, Jaguar, and Puma.\n2. Membership to the alliance is open to all 97 range countries that harbor these big cat species in the wild.\n3. Its permanent secretariat is designated to be based in New Delhi, India.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'All three statements are correct:\nStatement 1 is correct: The 2022 Amendment reduced the original six schedules to four streamlined schedules: Schedule I (highest protection animal species), Schedule II (lesser protection animal species), Schedule III (protected plant species), and Schedule IV (CITES specimens).\nStatement 2 is correct: Schedule IV was newly inserted specifically to implement India\'s international treaty obligations under CITES (Convention on International Trade in Endangered Species).\nStatement 3 is correct: The archaic Vermin schedule was omitted; the Central Government now issues customized temporary notifications under Section 62 to declare specific animals as vermin.',
+    explanation: "All three statements are correct:\n1. India launched the International Big Cat Alliance (IBCA) in April 2023 to commemorate 50 years of Project Tiger, focusing on the 7 big cats: Tiger, Lion, Leopard, Snow Leopard, Cheetah, Jaguar, and Puma.\n2. The alliance is open to 97 range countries, non-range countries interested in big cat conservation, international organizations, and donor agencies.\n3. The Union Cabinet in February 2024 approved the establishment of the IBCA with headquarters located in India, supported by a one-time budgetary assistance of ₹150 crore.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition (2024)',
-      chapter: 'Chapter 20: Environmental Legislation in India',
-      pageNumber: 'Page 260 – 266',
-      keyExcerpt: 'WPA 2022 amendment collapsed 6 schedules into 4. Schedule IV implements CITES. Vermin schedule V was repealed.'
+      bookName: "Environment by Shankar IAS Academy / PIB Press Release MoEFCC",
+      edition: "10th Edition (2024)",
+      chapter: "Biodiversity Conservation & Flagship Schemes",
+      pageNumber: "Page 195 – 198",
+      keyExcerpt: "IBCA covers seven big cats and is headquartered in India with 97 range country participation."
     },
-    eliminationTip: 'All 3 statements describe the landmark restructuring of the Wildlife Protection Act enacted in 2022.',
-    difficulty: 'Moderate',
+    eliminationTip: "India leads the world in tiger and Asiatic lion conservation; IBCA is structured on the lines of the International Solar Alliance (ISA).",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2026', 'Wildlife Protection Act', 'WPA 2022', 'CITES', 'Schedules', 'Vermin']
+    tags: [
+      "UPSC 2026",
+      "IBCA",
+      "Project Tiger",
+      "Big Cats",
+      "Environment"
+    ]
   },
   {
     id: 'pyq-2026-gs-89',

@@ -175,34 +175,41 @@ export const pyq2017_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2017', 'Swadeshi Movement', 'Boycott', 'Partition of Bengal 1905', 'Lord Curzon', 'Modern History']
   },
-  {
-    id: 'pyq-2017-gs-57',
-    subject: 'environment',
-    topic: 'Protected Areas & Wetland Ecosystems',
-    subTopic: 'Keibul Lamjao National Park and Loktak Lake',
-    question: 'Which of the following National Parks is unique in being a swamp with floating vegetation that supports a rich biodiversity? (UPSC CSE Prelims 2017)',
+    {
+    id: "pyq-2017-gs-57",
+    subject: "environment",
+    topic: "Protected Areas & Endangered Species",
+    subTopic: "Kaziranga National Park and Greater One-Horned Rhinoceros",
+    question: "Which of the following National Parks in India is designated as a UNESCO World Heritage Site and harbors the world's largest population of the Greater One-Horned Rhinoceros (Rhinoceros unicornis)?\n\n(UPSC CSE Prelims 2017)",
     options: [
-      'Bhitarkanika National Park',
-      'Keibul Lamjao National Park',
-      'Keoladeo Ghana National Park',
-      'Sultanpur National Park'
+      "Kaziranga National Park",
+      "Manas National Park",
+      "Orang National Park",
+      "Dibru-Saikhowa National Park"
     ],
-    correctAnswer: 1,
-    explanation: 'KEIBUL LAMJAO NATIONAL PARK, situated on LOKTAK LAKE in the Bishnupur district of Manipur, is the WORLD\'S ONLY FLOATING NATIONAL PARK.\nUnique ecological features:\n- The park is characterized by contiguous masses of floating decomposed biomass, peat, and soil covered with thick reeds and tall grasses, known locally as "PHUMDIS".\n- It is the sole natural wild refuge and habitat for the critically endangered SANGAI (Rucervus eldii eldii), also known as the "dancing deer of Manipur", which has specially adapted splayed hooves to walk effortlessly across the buoyant, springy phumdi islands.',
+    correctAnswer: 0,
+    explanation: "Kaziranga National Park (located in the Golaghat and Nagaon districts of Assam along the Brahmaputra River) is a UNESCO World Heritage Site inscribed in 1985. It hosts over 2,600 Greater One-Horned Rhinoceroses—representing more than two-thirds of the total global population. Kaziranga also holds high densities of tigers, Asian elephants, wild water buffalo, and swamp deer.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 15: Protected Area Network (National Parks - Manipur)',
-      pageNumber: 'Page 198 – 204',
-      keyExcerpt: 'Keibul Lamjao National Park on Loktak Lake is the only floating park in the world, famous for floating phumdis and the Sangai deer.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Protected Area Network: Assam Parks",
+      pageNumber: "Page 172 – 175",
+      keyExcerpt: "Kaziranga holds two-thirds of the world’s one-horned rhinos and is a UNESCO World Heritage Site."
     },
-    eliminationTip: 'Floating swamp vegetation (phumdis) that hosts the endangered Sangai dancing deer is the unique world-famous hallmark of Keibul Lamjao National Park in Manipur.',
-    difficulty: 'Easy',
+    eliminationTip: "World's primary stronghold for the Great Indian One-Horned Rhino is Kaziranga.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2017', 'Keibul Lamjao', 'Loktak Lake', 'Phumdis', 'Sangai Deer', 'Floating National Park', 'Environment']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2017",
+      "Kaziranga",
+      "One-Horned Rhino",
+      "UNESCO Heritage",
+      "Assam",
+      "Environment"
+    ]
   },
   {
     id: 'pyq-2017-gs-58',
@@ -552,34 +559,41 @@ export const pyq2017_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2017', 'LED vs CFL', 'Energy Efficiency', 'Mercury Toxicity', 'Solid State Lighting', 'Science & Tech']
   },
-  {
-    id: 'pyq-2017-gs-70',
-    subject: 'polity',
-    topic: 'Union Judiciary & State High Courts',
-    subTopic: 'Writ Jurisdiction Comparison (Article 32 vs Article 226)',
-    question: 'With reference to the writ jurisdiction of the Supreme Court and High Courts in India, consider the following statements:\n\n1. The Supreme Court can issue writs only for the enforcement of Fundamental Rights, whereas High Courts can issue writs for the enforcement of Fundamental Rights as well as for any other legal purpose.\n2. The jurisdiction of the Supreme Court to issue writs under Article 32 is wider than that of the High Court under Article 226.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2017)',
+    {
+    id: "pyq-2017-gs-70",
+    subject: "polity",
+    topic: "Judiciary & Constitutional Remedies",
+    subTopic: "Writ of Mandamus Scope and Limitations",
+    question: "With reference to the writ of \"Mandamus\" in India, consider the following statements:\n\n1. It is a judicial command issued to a public official, public corporation, or inferior tribunal to perform a mandatory statutory public duty.\n2. A writ of Mandamus cannot be issued against a purely private individual or private commercial entity.\n3. A writ of Mandamus cannot be issued against the President of India or the Governor of a State for the exercise and performance of the powers and duties of their office.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2017)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is CORRECT: Under Article 32(2), the Supreme Court is empowered to issue prerogative writs (Habeas Corpus, Mandamus, Prohibition, Quo-Warranto, Certiorari) ONLY for the enforcement of Fundamental Rights conferred by Part III. In contrast, under Article 226(1), a High Court can issue these writs "for the enforcement of any of the rights conferred by Part III and for any other purpose" (i.e. enforcement of ordinary legal rights and statutory duties).\nStatement 2 is INCORRECT: Because a High Court can issue writs for both Fundamental Rights AND ordinary legal rights, the writ jurisdiction of the HIGH COURT IS WIDER than that of the Supreme Court (not vice versa).\nTherefore, only Statement 1 is correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under Indian constitutional jurisprudence on Article 32 and Article 226:\n1. Mandamus (\"we command\") is issued by the Supreme Court or High Courts to compel a public authority to perform an act falling under its legal/statutory duty.\n2. Mandamus does not lie against a private individual, private company, or to enforce a private contract.\n3. Under Article 361 of the Constitution, the President and State Governors enjoy constitutional immunity and cannot be subjected to a writ of Mandamus for the exercise and performance of their official powers and duties.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 26 & 34: Supreme Court & High Court (Writ Jurisdiction Comparison)',
-      pageNumber: 'Page 26.6 – 26.10, 34.6 – 34.10',
-      keyExcerpt: 'High Court\'s writ jurisdiction under Article 226 is wider than the Supreme Court\'s under Article 32 because High Courts can issue writs for non-fundamental legal rights as well.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 7: Fundamental Rights (Writs: Mandamus)",
+      pageNumber: "Page 7.22 – 7.24",
+      keyExcerpt: "Mandamus cannot be granted against private individuals, or against the President or Governors."
     },
-    eliminationTip: 'Article 226 of High Courts is broader than Article 32 of Supreme Court because High Courts can issue writs for ordinary legal rights ("for any other purpose"). Statement 2 is inverted and false.',
-    difficulty: 'Easy',
+    eliminationTip: "Article 361 explicitly shields President and Governors from writs. Mandamus requires a public duty.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2017', 'Writ Jurisdiction', 'Article 32', 'Article 226', 'Supreme Court', 'High Court', 'Polity']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2017",
+      "Mandamus",
+      "Article 32",
+      "Article 361",
+      "Writs",
+      "Judiciary"
+    ]
   },
   {
     id: 'pyq-2017-gs-71',

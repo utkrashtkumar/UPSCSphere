@@ -494,34 +494,41 @@ export const pyq2018_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2018', 'Public Accounts Committee', 'PAC', 'Parliamentary Committees', 'Financial Oversight', 'Polity']
   },
-  {
-    id: 'pyq-2018-gs-68',
-    subject: 'economy',
-    topic: 'Monetary Policy & Central Banking',
-    subTopic: 'Monetary Policy Committee (MPC) Framework',
-    question: 'With reference to the Monetary Policy Committee (MPC), consider the following statements:\n\n1. It decides the RBI\'s benchmark policy interest rates (Repo Rate).\n2. It is a 12-member body including the Governor of RBI and is reconstituted every year.\n3. It functions under the chairmanship of the Union Finance Minister.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2018)',
+    {
+    id: "pyq-2018-gs-68",
+    subject: "economy",
+    topic: "Monetary Policy & Banking Operations",
+    subTopic: "Marginal Standing Facility (MSF) Mechanism",
+    question: "With reference to the \"Marginal Standing Facility\" (MSF) operated by the Reserve Bank of India, consider the following statements:\n\n1. It is an emergency overnight borrowing window created for scheduled commercial banks to meet unanticipated liquidity crunches.\n2. Commercial banks can borrow funds under MSF by dipping into their Statutory Liquidity Ratio (SLR) securities up to a prescribed threshold.\n3. The interest rate charged under MSF is pegged at a lower level than the benchmark Repo rate to support bank profitability.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)",
     options: [
-      '1 only',
-      '1 and 2 only',
-      '3 only',
-      '2 and 3 only'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 0,
-    explanation: 'Statement 1 is correct: Under Section 45ZB of the amended Reserve Bank of India Act, 1934, the Monetary Policy Committee (MPC) is entrusted with determining the policy interest rate (Repo Rate) required to achieve the statutory inflation target (4% +/- 2% CPI headline inflation).\nStatement 2 is incorrect: The MPC is a SIX-MEMBER body (not 12-member body). It consists of 3 internal members from the RBI (the Governor, the Deputy Governor in charge of monetary policy, and one officer nominated by the Central Board) and 3 external independent experts appointed by the Central Government for a non-renewable four-year term (not reconstituted every year).\nStatement 3 is incorrect: The MPC functions under the chairmanship of the GOVERNOR OF THE RESERVE BANK OF INDIA (who also holds a casting vote in the event of a tie), NOT the Union Finance Minister.\nTherefore, only Statement 1 is correct.',
+    explanation: "Statements 1 and 2 are correct: MSF was introduced by RBI in 2011–12 as an emergency window allowing scheduled commercial banks to borrow overnight funds against approved government securities, specifically permitting them to dip into their mandatory SLR quota up to a capped percentage of their Net Demand and Time Liabilities (NDTL).\nStatement 3 is incorrect: Because MSF is a penal borrowing facility intended as a last resort, the MSF rate is deliberately set HIGHER than the policy Repo rate (typically aligned with the Bank Rate as the ceiling of the policy corridor), NOT lower.",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition',
-      chapter: 'Chapter 11: Monetary Policy and Liquidity Management (MPC Framework)',
-      pageNumber: 'Page 11.12 – 11.18',
-      keyExcerpt: 'MPC has 6 members headed by the RBI Governor (not Finance Minister). It decides the repo rate to maintain price stability.'
+      bookName: "Indian Economy by Ramesh Singh",
+      edition: "15th Edition (2024)",
+      chapter: "Chapter 12: Monetary Management and RBI Instruments",
+      pageNumber: "Page 12.20 – 12.24",
+      keyExcerpt: "MSF rate is a penal rate set above the Repo rate. Banks can dip into SLR portfolio to borrow."
     },
-    eliminationTip: 'The MPC is headed by the RBI Governor, NOT the Finance Minister. It has 6 members, not 12. Statements 2 and 3 are blatantly false, leaving 1 only (Option A).',
-    difficulty: 'Easy',
+    eliminationTip: "Penal emergency windows charge a higher interest rate (above repo). Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2018', 'Monetary Policy Committee', 'MPC', 'Repo Rate', 'RBI Governor', 'Economy']
+    tags: [
+      "UPSC 2018",
+      "Marginal Standing Facility",
+      "MSF",
+      "Repo Rate",
+      "SLR",
+      "Monetary Policy"
+    ]
   },
   {
     id: 'pyq-2018-gs-69',
@@ -1219,34 +1226,41 @@ export const pyq2018_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2018', 'Hunter Commission 1882', 'Lord Ripon', 'Primary Education', 'Modern History']
   },
-  {
-    id: 'pyq-2018-gs-93',
-    subject: 'environment',
-    topic: 'Global Environmental Conventions',
-    subTopic: 'Stockholm Convention on Persistent Organic Pollutants (POPs)',
-    question: 'The \'Stockholm Convention\' is an international environmental treaty aimed to: (UPSC CSE Prelims 2018)',
+    {
+    id: "pyq-2018-gs-93",
+    subject: "environment",
+    topic: "International Environmental Conventions",
+    subTopic: "Minamata Convention on Mercury",
+    question: "With reference to the \"Minamata Convention on Mercury\", consider the following statements:\n\n1. It is a legally binding global treaty negotiated under the auspices of the United Nations Environment Programme (UNEP).\n2. It aims to protect human health and the environment from anthropogenic emissions and releases of mercury and mercury compounds.\n3. It imposes phased phase-outs on the manufacture, import, and export of mercury-added products such as medical devices and dental amalgam.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)",
     options: [
-      'Eliminate or restrict the production and use of Persistent Organic Pollutants (POPs)',
-      'Regulate the transboundary movement of hazardous chemical wastes',
-      'Promote the conservation and sustainable use of peatlands and wetlands',
-      'Control the emissions of greenhouse gases from maritime shipping'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'The Stockholm Convention on Persistent Organic Pollutants, adopted in 2001 and entering into force in 2004, is a legally binding global treaty administered by UNEP.\nIt aims to protect human health and the environment from PERSISTENT ORGANIC POLLUTANTS (POPs)—organic chemical substances (such as DDT, aldrin, dieldrin, PCBs, dioxins, and furans) that possess four dangerous properties:\n1. High environmental persistence (resist chemical and biological degradation)\n2. Bioaccumulation in human and animal fatty tissues\n3. Biomagnification across food webs\n4. Long-range atmospheric and oceanic transport far from emission sources.\nThe convention originally targeted the "Dirty Dozen" chemicals for elimination and phase-out.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. The Minamata Convention on Mercury (adopted in 2013 and entering into force in 2017) is a legally binding international environmental agreement administered by UNEP.\n2. Named after Minamata Bay in Japan (where severe industrial methylmercury poisoning caused Minamata disease in the 1950s), it controls mercury emissions from coal-fired power plants, artisanal gold mining, and industrial waste.\n3. The treaty sets timetables to phase out the production, import, and export of mercury-added products (like mercury thermometers, blood pressure monitors, cosmetics, and lamps) and mandates safe storage and disposal.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 24: International Environmental Conventions (Stockholm Convention)',
-      pageNumber: 'Page 326 – 330',
-      keyExcerpt: 'Stockholm Convention aims to eliminate or restrict the production of Persistent Organic Pollutants (POPs) including the Dirty Dozen.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "International Conventions: Minamata Convention",
+      pageNumber: "Page 340 – 344",
+      keyExcerpt: "Minamata convention is a legally binding UNEP treaty targeting anthropogenic mercury emissions."
     },
-    eliminationTip: 'Stockholm = Persistent Organic Pollutants (POPs); Basel = Transboundary Hazardous Waste; Rotterdam = Prior Informed Consent for chemicals; Minamata = Mercury.',
-    difficulty: 'Easy',
+    eliminationTip: "Minamata is universally linked with mercury toxic pollution and UNEP-led global phaseouts.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2018', 'Stockholm Convention', 'POPs', 'Persistent Organic Pollutants', 'UNEP', 'Environment']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2018",
+      "Minamata Convention",
+      "Mercury",
+      "UNEP",
+      "Pollution",
+      "Environment"
+    ]
   },
   {
     id: 'pyq-2018-gs-94',

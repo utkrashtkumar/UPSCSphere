@@ -291,34 +291,40 @@ export const pyq2024_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2024', 'Lithium Triangle', 'Argentina', 'Bolivia', 'Chile', 'Critical Minerals']
   },
-  {
-    id: 'pyq-2024-gs-11',
-    subject: 'polity',
-    topic: 'Sixth Schedule & Tribal Administration',
-    subTopic: 'Autonomous District Councils',
-    question: 'Which of the following States are covered under the Sixth Schedule of the Constitution of India regarding the administration of tribal areas? (UPSC CSE Prelims 2024)',
+    {
+    id: "pyq-2024-gs-11",
+    subject: "polity",
+    topic: "Panchayati Raj & Tribal Governance",
+    subTopic: "Panchayats (Extension to the Scheduled Areas) Act (PESA) 1996",
+    question: "With reference to the Provisions of the Panchayats (Extension to the Scheduled Areas) Act, 1996 (PESA), consider the following statements:\n\n1. It extends the provisions of Part IX of the Constitution relating to Panchayats to the Fifth Schedule areas across 10 States.\n2. Under PESA, every Gram Sabha is endowed with the ownership of minor forest produce in their traditional territories.\n3. Prior recommendation of the Gram Sabha or the Panchayats at the appropriate level is mandatory before granting prospecting licences or mining leases for minor minerals in Scheduled Areas.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2024)",
     options: [
-      'Assam, Meghalaya, Tripura, and Mizoram',
-      'Assam, Nagaland, Manipur, and Arunachal Pradesh',
-      'Meghalaya, Manipur, Tripura, and Nagaland',
-      'Arunachal Pradesh, Nagaland, Mizoram, and Tripura'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Under Article 244(2) and Article 275(1), the Sixth Schedule contains special provisions for the administration of tribal areas in four northeastern states: Assam, Meghalaya, Tripura, and Mizoram (popularly remembered as AMTM). Other tribal areas across the country are governed under the Fifth Schedule.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under PESA Act, 1996:\n1. PESA extends Part IX of the Constitution with specific tribal self-governance adaptations to Fifth Schedule areas in 10 States (Andhra Pradesh, Telangana, Chhattisgarh, Gujarat, Himachal Pradesh, Jharkhand, Madhya Pradesh, Maharashtra, Odisha, and Rajasthan).\n2. Section 4(m)(ii) specifically endows the Gram Sabha with the ownership of minor forest produce (MFP).\n3. Section 4(l) mandates that prior recommendation of the Gram Sabha or the Panchayats at the appropriate level is obligatory prior to granting prospecting licences or mining leases for minor minerals.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 41: Scheduled and Tribal Areas',
-      pageNumber: 'Page 41.1 – 41.5',
-      keyExcerpt: 'The Sixth Schedule deals with the administration of the tribal areas in the four northeastern states of Assam, Meghalaya, Tripura and Mizoram.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 38: Panchayati Raj (PESA Act of 1996)",
+      pageNumber: "Page 38.12 – 38.16",
+      keyExcerpt: "PESA empowers Gram Sabhas with ownership of minor forest produce and mandatory consent for minor mineral concessions."
     },
-    eliminationTip: 'Mnemonic: AMTM (Assam, Meghalaya, Tripura, Mizoram). Nagaland and Manipur are governed under specific constitutional articles (371A, 371C), not the Sixth Schedule.',
-    difficulty: 'Easy',
+    eliminationTip: "Gram Sabha supremacy over minor minerals and minor forest produce are the twin foundational pillars of PESA.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2024', 'Sixth Schedule', 'Tribal Areas', 'Autonomous District Councils', 'Polity']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2024",
+      "PESA 1996",
+      "Gram Sabha",
+      "Fifth Schedule",
+      "Tribal Rights"
+    ]
   },
   {
     id: 'pyq-2024-gs-12',
@@ -1335,34 +1341,40 @@ export const pyq2024_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2024', 'Silappadikaram', 'Kannagi', 'Sangam Literature', 'Ancient History']
   },
-  {
-    id: 'pyq-2024-gs-47',
-    subject: 'polity',
-    topic: 'Judicial Remedies',
-    subTopic: 'Writ of Quo-Warranto',
-    question: 'With reference to the writ of "Quo-Warranto" issued under Article 32 and Article 226 of the Constitution of India, consider the following statements:\n\n1. It is issued to prevent illegal usurpation of a public office by a person.\n2. It can be sought by any interested person, even if the petitioner is not personally aggrieved.\n3. It cannot be issued in respect of ministerial offices or private bodies.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2024)',
+    {
+    id: "pyq-2024-gs-47",
+    subject: "polity",
+    topic: "Fundamental Rights & Judicial Review",
+    subTopic: "Writ of Certiorari under Articles 32 and 226",
+    question: "With reference to the writ of \"Certiorari\" in India, consider the following statements:\n\n1. It is issued by a superior court to an inferior court or tribunal to quash an order passed without jurisdiction or in excess of jurisdiction.\n2. Unlike the writ of Prohibition which is only preventive, Certiorari is both preventive and curative.\n3. The Supreme Court of India has held that Certiorari can also be issued against administrative authorities affecting the rights of individuals.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2024)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'All three statements are correct:\n1. Quo-Warranto ("by what authority") is issued by courts to inquire into the legality of a claim which a person asserts to a public office.\n2. Unlike other writs where locus standi is strictly applied, Quo-Warranto can be moved by any public-spirited citizen; personal grievance is not required.\n3. It applies solely to substantive public offices created by the Constitution or statute; it cannot be issued against private offices or political ministerial offices.',
+    explanation: "All three statements are correct:\n1. Certiorari literally means \"to be certified\"; it is issued to quash the order of an inferior court, tribunal, or quasi-judicial body on grounds of excess of jurisdiction, lack of jurisdiction, or error of law apparent on the face of the record.\n2. Prohibition is issued while proceedings are pending (preventive), whereas Certiorari is issued after an order has been made to squash it (curative) or remove the case (preventive).\n3. In 1991, the Supreme Court ruled that Certiorari can be issued even against purely administrative bodies affecting the rights of persons, expanding its scope beyond judicial/quasi-judicial bodies.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 7: Fundamental Rights (Writs)',
-      pageNumber: 'Page 7.32 – 7.36',
-      keyExcerpt: 'Quo-Warranto challenges illegal occupation of public office and can be sought by any citizen without locus standi.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 7: Fundamental Rights (Writs Jurisdiction)",
+      pageNumber: "Page 7.23 – 7.25",
+      keyExcerpt: "Certiorari is both preventive and curative and since 1991 lies against administrative bodies as well."
     },
-    eliminationTip: 'Quo-Warranto is famously known as the writ where any citizen can challenge an imposter in public office without personal injury.',
-    difficulty: 'Moderate',
+    eliminationTip: "Contrast Prohibition (preventive only) with Certiorari (both preventive and curative).",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2024', 'Quo-Warranto', 'Writs', 'Article 32', 'Polity']
+    tags: [
+      "UPSC 2024",
+      "Certiorari",
+      "Article 32",
+      "Article 226",
+      "Judicial Review"
+    ]
   },
   {
     id: 'pyq-2024-gs-48',

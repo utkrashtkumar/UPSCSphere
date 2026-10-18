@@ -465,34 +465,39 @@ export const pyq2018_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2018', 'Reading Comprehension', 'TRIPS Agreement', 'Vaccine Equity', 'Global Health']
   },
-  {
-    id: 'pyq-2018-csat-17',
-    subject: 'csat_quant',
-    topic: 'Time and Work: Leaving Work in Between',
-    subTopic: 'One Person Leaves After a Few Days of Joint Work',
-    question: 'A can complete a piece of work in 12 days, and B can complete the same work in 18 days. They begin working together, but after 4 days A leaves the work. In how many more days will B alone complete the remaining work? (UPSC CSAT 2018)',
+    {
+    id: "pyq-2018-csat-17",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Time and Work: Joint and Individual Work Rates",
+    question: "A and B working together can complete a project in 8 days. If A working alone can complete the same project in 12 days, in how many days can B working alone complete the project? (UPSC CSAT 2018)",
     options: [
-      '6 days',
-      '8 days',
-      '10 days',
-      '12 days'
+      "16 days",
+      "20 days",
+      "24 days",
+      "28 days"
     ],
-    correctAnswer: 1,
-    explanation: '1. Let the total work be the LCM of 12 and 18:\n   LCM(12, 18) = 36 units of work.\n\n2. Calculate individual daily efficiencies:\n   - A\'s efficiency = 36 / 12 = 3 units/day\n   - B\'s efficiency = 36 / 18 = 2 units/day\n   - Combined efficiency (A + B) = 3 + 2 = 5 units/day.\n\n3. Work completed together in the first 4 days:\n   Work done = 4 days × 5 units/day = 20 units.\n\n4. Remaining work to be completed by B alone:\n   Remaining work = 36 - 20 = 16 units.\n\n5. Time taken by B alone to finish 16 units:\n   Time = Remaining work / B\'s efficiency\n   Time = 16 / 2 = 8 days.\n\nTherefore, B alone will complete the remaining work in 8 more days.',
+    correctAnswer: 2,
+    explanation: "Let the total work be the LCM of 8 and 12 = 24 units.\nCombined work efficiency of (A + B) = 24 / 8 = 3 units/day.\nIndividual work efficiency of A = 24 / 12 = 2 units/day.\nTherefore, the work efficiency of B = (A + B) - A = 3 - 2 = 1 unit/day.\nTime taken by B alone to complete the total work of 24 units:\nTime = Total work / Efficiency of B = 24 / 1 = 24 days.\nAlternatively, using the fraction method:\n1/B = 1/8 - 1/12 = (3 - 2) / 24 = 1 / 24 => B = 24 days.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 15: Time and Work',
-      pageNumber: 'Page 352 – 358',
-      keyExcerpt: 'Total work = 36 units. In 4 days, A and B do 4 × 5 = 20 units. Remaining = 16 units. B takes 16 / 2 = 8 days.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Time and Work",
+      pageNumber: "Chapter 15: Individual Efficiency Formula",
+      keyExcerpt: "1/B = 1/(A+B) - 1/A."
     },
-    eliminationTip: 'Total work = 36. Joint rate = 3 + 2 = 5. In 4 days they do 20 units, leaving 16 units. B takes 16 / 2 = 8 days.',
-    difficulty: 'Easy',
+    eliminationTip: "Unit method: Total = 24 units. A+B do 3 units/day, A does 2 units/day. B does 1 unit/day => 24 days.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2018', 'Time and Work', 'Work Efficiency', 'Leaving Work', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2018",
+      "CSAT",
+      "Time and Work",
+      "Unit Method"
+    ]
   },
   {
     id: 'pyq-2018-csat-18',
@@ -1016,34 +1021,40 @@ export const pyq2018_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2018', 'Pipes and Cisterns', 'Leak in Tank', 'Emptying Time', 'Quant']
   },
-  {
-    id: 'pyq-2018-csat-36',
-    subject: 'csat_reasoning',
-    topic: 'Statement and Assumptions: Critical Reasoning',
-    subTopic: 'Public Bus Fare Reduction and Commuter Mode Shift',
-    question: 'Consider the following statement and assumptions:\n\nStatement: "The city transport corporation has slashed bus fares by fifty percent to encourage private car owners to shift to public mass transit."\n\nAssumptions:\nI. Fare affordability is an important factor influencing commuters\' choice of travel mode.\nII. The reduction in fares will cause all private car owners in the city to sell their cars immediately.\n\nWhich of the assumptions is/are implicit in the statement? (UPSC CSAT 2018)',
+    {
+    id: "pyq-2018-csat-36",
+    subject: "csat_reasoning",
+    topic: "Critical Reasoning",
+    subTopic: "Statement and Assumptions: Rural Energy & Agriculture",
+    question: "Consider the following statement and assumptions:\n\nStatement: \"The government announced a scheme to install solar-powered agricultural pumps across rural farming belts to provide assured daytime irrigation to farmers.\"\n\nAssumptions:\nI. Farmers in these rural areas currently face hardship in irrigating crops due to erratic and night-time electric grid supply.\nII. Solar radiation is adequately available during daytime hours to power water pumps effectively during cropping seasons.\n\nWhich of the assumptions is/are implicit in the statement? (UPSC CSAT 2018)",
     options: [
-      'Only Assumption I is implicit',
-      'Only Assumption II is implicit',
-      'Both Assumptions I and II are implicit',
-      'Neither Assumption I nor II is implicit'
+      "Only assumption I is implicit",
+      "Only assumption II is implicit",
+      "Both assumption I and II are implicit",
+      "Neither assumption I nor II is implicit"
     ],
-    correctAnswer: 0,
-    explanation: '1. Assumption I is implicit: The transport corporation decided to reduce fares specifically to induce a mode shift from private cars to buses. This action rests directly on the premise that travel cost/fare affordability affects commuter choices. If fare had no influence on commuter choices, slashing fares would be pointless.\n\n2. Assumption II is NOT implicit: The policy aims to encourage people to use public transit; it does not assume that private car owners will instantly sell off their vehicles (which is an extreme, absurd exaggeration).\n\nTherefore, ONLY Assumption I is implicit.',
+    correctAnswer: 2,
+    explanation: "Both assumptions are implicit:\n- Assumption I is implicit: Proposing solar pumps specifically to ensure \"daytime irrigation\" addresses an existing deficit—farmers currently receive erratic power, often at night, causing distress.\n- Assumption II is implicit: Launching solar agricultural pumps relies on the fundamental technological presupposition that sufficient sunlight is available during daylight hours to operate the pumps.\nTherefore, both assumption I and assumption II are implicit in the statement.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 15: Statement and Assumptions',
-      pageNumber: 'Page 376 – 384',
-      keyExcerpt: 'An assumption must be logically presupposed by the policymaker. Extreme assumptions (selling all cars) are invalid.'
+      bookName: "Analytical Reasoning by M.K. Pandey",
+      edition: "Revised Edition",
+      chapter: "Statement and Assumptions",
+      pageNumber: "Page 80 – 86",
+      keyExcerpt: "A policy announcement assumes the feasibility of the technical input and the existence of the problem being solved."
     },
-    eliminationTip: 'Cutting fares assumes price influences transport choice (Assumption I). Assuming people will sell their cars (II) is an absurd, extreme distortion.',
-    difficulty: 'Easy',
+    eliminationTip: "Providing solar pumps for daytime irrigation assumes an electricity problem (I) and daylight feasibility (II). Both are implicit.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2018', 'Statement and Assumptions', 'Critical Reasoning', 'Public Transit']
+    tags: [
+      "UPSC 2018",
+      "CSAT",
+      "Statement and Assumptions",
+      "Solar Energy",
+      "Reasoning"
+    ]
   },
   {
     id: 'pyq-2018-csat-37',

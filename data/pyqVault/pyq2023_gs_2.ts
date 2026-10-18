@@ -1,34 +1,41 @@
 import { Question } from '@/lib/types';
 
 export const pyq2023_gs_2: Question[] = [
-  {
-    id: 'pyq-2023-gs-51',
-    subject: 'polity',
-    topic: 'Parliament & Presiding Officers',
-    subTopic: 'Election of Deputy Speaker of Lok Sabha (Article 93)',
-    question: 'With reference to the election of the Deputy Speaker of the Lok Sabha, consider the following statements:\n\n1. As per the Rules of Procedure and Conduct of Business in Lok Sabha, the election of Deputy Speaker shall be held on such date as the Speaker may fix.\n2. There is a mandatory constitutional provision that the candidate for Deputy Speaker of Lok Sabha must be from the main opposition party.\n3. The Deputy Speaker has the same power as the Speaker when presiding over the sitting of the House and no appeal lies against his ruling.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2023)',
+    {
+    id: "pyq-2023-gs-51",
+    subject: "polity",
+    topic: "Parliamentary Procedures & Financial Legislation",
+    subTopic: "Money Bills vs Financial Bills under Articles 110 and 117",
+    question: "With reference to legislative procedure regarding Money Bills and Financial Bills in the Parliament of India, consider the following statements:\n\n1. All Money Bills are Financial Bills, but not all Financial Bills are Money Bills.\n2. A Financial Bill (I) under Article 117(1) cannot be introduced in the Rajya Sabha and requires the prior recommendation of the President.\n3. In case of a deadlock between the two Houses on a Financial Bill (II) under Article 117(3), the President can summon a joint sitting of both Houses.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2023)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Statement 1 is correct: Rule 8 of the Rules of Procedure and Conduct of Business in Lok Sabha stipulates that the election of the Deputy Speaker is held on such date as the Speaker may fix.\nStatement 2 is incorrect: The Constitution does not specify political party affiliations; Article 93 merely requires the House to choose two members to be Speaker and Deputy Speaker. While parliamentary convention since the 11th Lok Sabha offered the post to the opposition, it is NOT a mandatory constitutional provision.\nStatement 3 is correct: When presiding in the absence of the Speaker, the Deputy Speaker exercises all presiding powers and privileges of the Speaker, and no appeal lies against his ruling to the Speaker.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under Indian constitutional law:\n1. Money Bills (Article 110) contain exclusively matters listed in Article 110, whereas Financial Bills (Article 117) contain fiscal provisions along with other legislative matters. Hence, every Money Bill is a Financial Bill, but not vice versa.\n2. Financial Bill (I) under Article 117(1) contains matters specified in Article 110 plus general legislation; like a Money Bill, it can only be introduced in the Lok Sabha with the recommendation of the President.\n3. Financial Bill (II) under Article 117(3) contains provisions involving expenditure from the Consolidated Fund of India but does not touch upon Article 110 matters; it is treated as an ordinary bill in all respects, and deadlocks are resolved via a joint sitting under Article 108.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 22: Parliament (Deputy Speaker of Lok Sabha)',
-      pageNumber: 'Page 22.8 – 22.12',
-      keyExcerpt: 'Speaker fixes date of Deputy Speaker election. Giving the post to opposition is a convention, not a constitutional mandate.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 22: Parliament (Financial Bills)",
+      pageNumber: "Page 22.28 – 22.32",
+      keyExcerpt: "All Money Bills are Financial Bills. Financial Bills (II) are governed by the ordinary legislative process including joint sittings."
     },
-    eliminationTip: 'Convention is not a mandatory constitutional provision! Statement 2 is false. Eliminating 2 leaves (b) 1 and 3 only.',
-    difficulty: 'Moderate',
+    eliminationTip: "All three statements correctly synthesize the classical constitutional distinctions between Money Bills, Financial Bills (I), and Financial Bills (II).",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2023', 'Deputy Speaker', 'Article 93', 'Lok Sabha Rules', 'Parliament', 'Polity']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2023",
+      "Money Bill",
+      "Financial Bill",
+      "Article 110",
+      "Article 117",
+      "Joint Sitting"
+    ]
   },
   {
     id: 'pyq-2023-gs-52',
@@ -726,63 +733,75 @@ export const pyq2023_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2023', 'Perovskite', 'Solar Cells', 'Renewable Energy', 'Science and Tech']
   },
-  {
-    id: 'pyq-2023-gs-76',
-    subject: 'history',
-    topic: 'Modern Indian History: Transfer of Power',
-    subTopic: 'Cabinet Mission Plan (1946)',
-    question: 'With reference to the Cabinet Mission Plan of 1946, which of the following recommendations did it make? (UPSC CSE Prelims 2023)',
+    {
+    id: "pyq-2023-gs-76",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Wavell Plan and Shimla Conference (1945)",
+    question: "With reference to the Wavell Plan and the Shimla Conference of 1945, consider the following statements:\n\n1. It proposed that all members of the Viceroy’s Executive Council, with the exception of the Viceroy and the Commander-in-Chief, would be Indians.\n2. In the proposed Executive Council, Caste Hindus and Muslims were to be given equal representation.\n3. The conference broke down because the Muslim League insisted that it possessed the sole right to nominate all Muslim members to the Council.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2023)",
     options: [
-      'Rejection of the demand for a separate sovereign Pakistan and proposal of a three-tier union structure.',
-      'Immediate partition of British India into two independent dominions.',
-      'Continuation of the British Viceroy as the permanent head of state.',
-      'Abolition of all princely states and their immediate annexation by Britain.'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'The Cabinet Mission (consisting of Lord Pethick-Lawrence, Sir Stafford Cripps, and A.V. Alexander) firmly rejected the Muslim League\'s demand for a separate Pakistan as unviable. Instead, it proposed an undivided Indian Union with a weak centre (controlling only defense, foreign affairs, and communications) and a three-tier grouping of provinces (Section A, B, and C) alongside an elected Constituent Assembly.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. The Wavell Plan (June 1945) proposed an interim government where the Viceroy’s Executive Council would be completely Indianized, except for the Viceroy himself and the Commander-in-Chief.\n2. The Plan provided for balanced representation between Caste Hindus and Muslims (giving Muslims parity despite representing only ~25% of India's population).\n3. Lord Wavell convened the Shimla Conference in June–July 1945. Muhammad Ali Jinnah demanded that all Muslim members must be chosen solely by the Muslim League (opposing the Congress nominating Maulana Abul Kalam Azad). Wavell conceded a veto to Jinnah, leading to the collapse of the conference.",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 38: The Cabinet Mission and the Constituent Assembly',
-      pageNumber: 'Page 494 – 500',
-      keyExcerpt: 'The Cabinet Mission rejected Pakistan and recommended a three-tiered union structure.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Post-War National Scenario: Wavell Plan",
+      pageNumber: "Page 478 – 482",
+      keyExcerpt: "Wavell Plan proposed parity for Caste Hindus and Muslims. Breakdown occurred over Muslim League’s claim to exclusive Muslim representation."
     },
-    eliminationTip: 'Cabinet Mission rejected Pakistan! Mountbatten Plan (June 3 Plan) accepted partition.',
-    difficulty: 'Easy',
+    eliminationTip: "The Wavell Plan famously conceded communal parity between Caste Hindus and Muslims; its breakdown was caused by Jinnah’s demand for exclusive Muslim nomination.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2023', 'Cabinet Mission', 'Transfer of Power', '1946', 'Modern History']
+    tags: [
+      "UPSC 2023",
+      "Wavell Plan",
+      "Shimla Conference",
+      "Freedom Struggle",
+      "Modern History"
+    ]
   },
-  {
-    id: 'pyq-2023-gs-77',
-    subject: 'economy',
-    topic: 'External Commercial Borrowings & Foreign Capital',
-    subTopic: 'External Commercial Borrowings (ECB)',
-    question: 'With reference to External Commercial Borrowings (ECBs) in India, consider the following statements:\n\n1. ECBs are commercial loans raised by eligible resident Indian entities from recognized non-resident entities.\n2. ECBs can be denominated in either freely convertible foreign currencies or Indian Rupees.\n3. Borrowers are legally permitted to use ECB proceeds for real estate activities and equity speculation.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2023)',
+    {
+    id: "pyq-2023-gs-77",
+    subject: "economy",
+    topic: "Sustainable Finance & Public Debt",
+    subTopic: "Sovereign Green Bonds (SGrBs) Framework in India",
+    question: "With reference to Sovereign Green Bonds (SGrBs) issued by the Government of India, consider the following statements:\n\n1. The proceeds from SGrBs are deposited into the Consolidated Fund of India and allocated to eligible public sector green projects.\n2. Nuclear power generation, large hydropower projects exceeding 25 MW, and biomass derived from protected forest timber are strictly excluded from eligible green expenditures.\n3. Sovereign Green Bonds issued in India carry a sovereign guarantee and qualify for Statutory Liquidity Ratio (SLR) requirements of scheduled commercial banks.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2023)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is correct: ECBs are commercial loans (bank loans, trade credits, bonds) raised by Indian corporate entities from overseas lenders.\nStatement 2 is correct: ECBs can be foreign currency-denominated (e.g. USD, EUR) or INR-denominated (popularly known as Masala Bonds).\nStatement 3 is incorrect: Under RBI\'s negative end-use list, ECB proceeds are explicitly BANNED from being deployed in real estate activities, investment in the stock market (equity speculation), or working capital for general retail trading.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under the Sovereign Green Bond Framework issued by the Ministry of Finance:\n1. SGrB proceeds are deposited in the Consolidated Fund of India in line with public accounting procedure and tracked via a green register managed by the Green Finance Working Committee (GFWC).\n2. The negative/exclusion list strictly excludes fossil fuels, nuclear power, large hydro plants over 25 MW, and extractive activities that undermine natural biodiversity.\n3. Being issued by the RBI on behalf of the Government of India, they carry the sovereign credit rating, zero default risk, and qualify as eligible SLR securities for commercial banks.",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition',
-      chapter: 'Chapter 16: External Sector of India (External Commercial Borrowings)',
-      pageNumber: 'Page 16.24 – 16.28',
-      keyExcerpt: 'ECB proceeds cannot be utilized for real estate or stock market equity speculation.'
+      bookName: "Indian Economy by Ramesh Singh / Ministry of Finance SGrB Framework",
+      edition: "15th Edition (2024)",
+      chapter: "Capital Markets and Sustainable Finance",
+      pageNumber: "Page 14.48 – 14.52",
+      keyExcerpt: "Sovereign Green Bonds qualify as SLR securities and exclude nuclear power and hydro projects above 25 MW."
     },
-    eliminationTip: 'Real estate and stock speculation are strictly on the negative exclusion list of ECB regulations. Eliminating Statement 3 gives (a) 1 and 2 only.',
-    difficulty: 'Easy',
+    eliminationTip: "Exclusion lists in sovereign green bond frameworks worldwide routinely bar nuclear, large hydro (>25 MW), and fossil fuels.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2023', 'ECB', 'External Commercial Borrowings', 'RBI', 'Economy']
+    tags: [
+      "UPSC 2023",
+      "Sovereign Green Bonds",
+      "SLR",
+      "Sustainable Finance",
+      "Economy"
+    ]
   },
   {
     id: 'pyq-2023-gs-78',
@@ -1016,34 +1035,41 @@ export const pyq2023_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2023', 'MRT', 'Mitochondrial Therapy', 'Three-Parent Baby', 'Biotechnology', 'Science and Tech']
   },
-  {
-    id: 'pyq-2023-gs-86',
-    subject: 'polity',
-    topic: 'Panchayati Raj Institutions',
-    subTopic: 'PESA Act, 1996 (Extension to Scheduled Areas)',
-    question: 'With reference to the Provisions of the Panchayats (Extension to the Scheduled Areas) Act, 1996 (PESA), consider the following statements:\n\n1. It extends Part IX of the Constitution relating to Panchayats to the Fifth Schedule areas.\n2. The Gram Sabha has the mandatory power of prior recommendation before granting prospecting licenses or mining leases for minor minerals.\n3. The Gram Sabha is endowed with the ownership of minor forest produce.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2023)',
+    {
+    id: "pyq-2023-gs-86",
+    subject: "polity",
+    topic: "Urban Local Bodies & Decentralization",
+    subTopic: "74th Constitutional Amendment Act: Wards and Planning Committees",
+    question: "With reference to the 74th Constitutional Amendment Act, 1992 relating to Municipalities, consider the following statements:\n\n1. It mandates the constitution of Ward Committees in all municipalities having a population of 3 lakhs or more.\n2. It provides for the constitution of a District Planning Committee (DPC) under Article 243ZD in every district to consolidate developmental plans prepared by Panchayats and Municipalities.\n3. It requires the mandatory constitution of a Metropolitan Planning Committee under Article 243ZE in every metropolitan area with a population of 10 lakhs or more.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2023)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'All three statements are fundamental provisions of the PESA Act, 1996:\n1. PESA extends the Panchayati Raj framework to the Fifth Schedule tribal areas across 10 States with safeguards for tribal autonomy.\n2. Section 4(k) mandates that the prior recommendation of the Gram Sabha or the Panchayats at the appropriate level shall be mandatory before granting prospecting licenses or mining leases for minor minerals in Scheduled Areas.\n3. Section 4(m)(ii) explicitly endows the Gram Sabha with the ownership of minor forest produce (MFP).',
+    explanation: "All three statements are correct under Part IXA of the Constitution:\n1. Article 243S mandates the constitution of Wards Committees, consisting of one or more wards, within the territorial area of a Municipality having a population of three lakhs or more.\n2. Article 243ZD mandates that every State shall constitute at the district level a District Planning Committee (DPC) to consolidate the plans prepared by the Panchayats and the Municipalities in the district and to prepare a draft development plan for the district as a whole.\n3. Article 243ZE provides for the constitution of a Metropolitan Planning Committee in every Metropolitan area (defined as an area having a population of 10 lakhs/1 million or more) to prepare a draft development plan.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 38: Panchayati Raj (PESA Act 1996)',
-      pageNumber: 'Page 38.12 – 38.16',
-      keyExcerpt: 'PESA grants Gram Sabha ownership of minor forest produce and mandatory consent for minor mineral mining.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 39: Municipalities (74th Amendment Act)",
+      pageNumber: "Page 39.5 – 39.9",
+      keyExcerpt: "Ward committees for population >= 3 lakhs; DPC under Article 243ZD; MPC under Article 243ZE for 10 lakhs+."
     },
-    eliminationTip: 'All three clauses represent the core statutory rights guaranteed to tribal Gram Sabhas under PESA 1996.',
-    difficulty: 'Easy',
+    eliminationTip: "Thresholds to remember: Ward Committees = 3 lakhs; Metropolitan area = 10 lakhs; Articles 243ZD and 243ZE govern planning committees.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2023', 'PESA Act 1996', 'Fifth Schedule', 'Gram Sabha', 'Minor Forest Produce', 'Polity']
+    tags: [
+      "UPSC 2023",
+      "74th Amendment",
+      "Municipalities",
+      "Ward Committees",
+      "DPC",
+      "Article 243ZD"
+    ]
   },
   {
     id: 'pyq-2023-gs-87',

@@ -320,34 +320,40 @@ export const pyq2022_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2022', 'Reading Comprehension', 'Microplastics', 'Ocean Pollution', 'Marine Life']
   },
-  {
-    id: 'pyq-2022-csat-52',
-    subject: 'csat_quant',
-    topic: 'Simple & Compound Interest: Difference Formula',
-    subTopic: 'Two-Year Difference Formula',
-    question: 'The difference between simple interest and compound interest (compounded annually) on a certain sum of money for 2 years at 10% per annum is ₹65. What is the principal sum of money? (UPSC CSAT 2022)',
+    {
+    id: "pyq-2022-csat-52",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Difference Between Compound and Simple Interest for 2 Years",
+    question: "A sum of ₹15,000 is invested for 2 years at an annual interest rate of 8%. What is the difference between the compound interest (compounded annually) and the simple interest earned over this two-year period? (UPSC CSAT 2022)",
     options: [
-      '₹5,500',
-      '₹6,000',
-      '₹6,500',
-      '₹7,000'
+      "₹96",
+      "₹104",
+      "₹112",
+      "₹120"
     ],
-    correctAnswer: 2,
-    explanation: 'We use the standard 2-Year CI and SI Difference Formula:\nDifference D = P × (R / 100)²\n\nHere:\n- D = ₹65\n- R = 10%\n- P = ?\n\nSubstitute the values:\n65 = P × (10 / 100)²\n65 = P × (1 / 10)²\n65 = P × (1 / 100)\nP = 65 × 100 = ₹6,500.\n\nVerification:\n- SI for 2 years at 10% on 6500 = 6500 × 0.20 = ₹1,300.\n- CI for 2 years at 10% on 6500 = 6500 × (1.21 - 1) = 6500 × 0.21 = ₹1,365.\n- Difference = 1365 - 1300 = ₹65. Matches perfectly!\n\nTherefore, the principal sum is ₹6,500.',
+    correctAnswer: 0,
+    explanation: "The difference (D) between Compound Interest and Simple Interest for 2 years is given by the formula:\nD = P × (r / 100)²\nHere, Principal P = ₹15,000 and Rate r = 8%:\nD = 15,000 × (8 / 100)²\nD = 15,000 × (64 / 10,000)\nD = 1.5 × 64 = ₹96.\nTherefore, the difference between compound interest and simple interest is ₹96.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 22: Compound Interest (Difference between CI and SI for 2 Years)',
-      pageNumber: 'Page 485 – 490',
-      keyExcerpt: 'Difference for 2 years: D = P(R/100)^2. 65 = P(1/100) -> P = ₹6,500.'
+      bookName: "Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Compound Interest",
+      pageNumber: "Chapter 22: Difference Formulas",
+      keyExcerpt: "Difference for 2 years = P(R/100)²."
     },
-    eliminationTip: 'Direct formula: P = D × (100 / R)² = 65 × 100 = ₹6,500. Takes 3 seconds.',
-    difficulty: 'Easy',
+    eliminationTip: "Formula shortcut: D = 15,000 × 0.0064 = ₹96.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2022', 'Simple and Compound Interest', 'Difference Formula', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2022",
+      "CSAT",
+      "Compound Interest",
+      "Simple Interest",
+      "Difference Formula"
+    ]
   },
   {
     id: 'pyq-2022-csat-53',
@@ -552,34 +558,40 @@ export const pyq2022_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2022', 'Reading Comprehension', 'Algorithmic Bias', 'Predictive Policing', 'AI Ethics']
   },
-  {
-    id: 'pyq-2022-csat-60',
-    subject: 'csat_quant',
-    topic: 'Percentages: Area Changes with Dimensions',
-    subTopic: 'Percentage Change in Rectangle Area',
-    question: 'If the length of a rectangle is increased by 20% and its breadth is decreased by 10%, what is the net percentage change in its area? (UPSC CSAT 2022)',
+    {
+    id: "pyq-2022-csat-60",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Successive Percentage Increase in Geometric Area",
+    question: "If the radius of a circle is increased by 30%, what is the resulting percentage increase in the area of the circle? (UPSC CSAT 2022)",
     options: [
-      '8% decrease',
-      '8% increase',
-      '10% increase',
-      '12% increase'
+      "60%",
+      "69%",
+      "72%",
+      "75%"
     ],
     correctAnswer: 1,
-    explanation: 'Area of rectangle A = Length (L) × Breadth (B).\n\nLet initial length = L and initial breadth = B.\nInitial Area A = L × B.\n\nNew Dimensions:\n- New Length L\' = L × (1 + 0.20) = 1.20 L\n- New Breadth B\' = B × (1 - 0.10) = 0.90 B\n\nNew Area A\':\nA\' = L\' × B\' = (1.20 L) × (0.90 B) = 1.08 (L × B) = 1.08 A.\n\nPercentage change:\nChange % = [(A\' - A) / A] × 100% = [1.08 - 1] × 100% = +8% (an 8% increase).\n\nUsing standard successive percentage formula:\nNet Change = a + b + (a × b)/100\n= +20 + (-10) + [20 × (-10)]/100\n= 10 - 2 = +8% increase.\n\nTherefore, the area increases by 8%.',
+    explanation: "Area of a circle A = π × r².\nWhen radius r increases by 30%, new radius r' = 1.30r.\nNew area A' = π × (1.30r)² = π × 1.69r² = 1.69A.\nPercentage increase in area = [(1.69A - A) / A] × 100 = 0.69 × 100 = 69%.\nAlternatively, using the successive percentage change formula:\nNet Change = a + b + (ab / 100) = 30 + 30 + (30 × 30 / 100) = 60 + 9 = 69%.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 10: Percentage (Successive Percentage Change in Area)',
-      pageNumber: 'Page 208 – 212',
-      keyExcerpt: 'Net change = x + y + xy/100 = 20 - 10 - 200/100 = 8% increase.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Area",
+      pageNumber: "Chapter 24: Circle Area Percentage Formulae",
+      keyExcerpt: "Percentage increase in area = 2r + r²/100."
     },
-    eliminationTip: 'Successive change: 20 - 10 - (20×10)/100 = 8% increase. Option B.',
-    difficulty: 'Easy',
+    eliminationTip: "Shortcut: 30 + 30 + (30 × 30 / 100) = 60 + 9 = 69%.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2022', 'Percentages', 'Rectangle Area', 'Successive Change', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2022",
+      "CSAT",
+      "Circle Area",
+      "Percentages",
+      "Geometry"
+    ]
   },
   {
     id: 'pyq-2022-csat-61',
@@ -610,34 +622,40 @@ export const pyq2022_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2022', 'Reading Comprehension', 'Groundwater', 'Transboundary Aquifers', 'Water Governance']
   },
-  {
-    id: 'pyq-2022-csat-62',
-    subject: 'csat_quant',
-    topic: 'Probability: Rolling Two Dice',
-    subTopic: 'Sum of Two Dice Faces',
-    question: 'Two fair six-sided dice are thrown simultaneously. What is the probability that the sum of the numbers appearing on the two dice is a prime number? (UPSC CSAT 2022)',
+    {
+    id: "pyq-2022-csat-62",
+    subject: "csat_quant",
+    topic: "Probability & Permutations",
+    subTopic: "Probability of Prime Sum with Two Dice",
+    question: "In a simultaneous throw of two fair six-sided dice, what is the probability that the sum of the numbers appearing on the top faces of the two dice is a prime number? (UPSC CSAT 2022)",
     options: [
-      '5/12',
-      '7/18',
-      '15/36 (5/12)',
-      '17/36'
+      "5/12",
+      "7/18",
+      "1/2",
+      "5/9"
     ],
     correctAnswer: 0,
-    explanation: 'Total possible outcomes when two dice are rolled = 6 × 6 = 36 outcomes.\n\nThe possible sums of two dice range from 2 to 12.\nThe prime numbers in this range are: {2, 3, 5, 7, 11}.\n\nLet us count favorable outcomes for each prime sum:\n- Sum = 2: (1, 1) -> 1 outcome\n- Sum = 3: (1, 2), (2, 1) -> 2 outcomes\n- Sum = 5: (1, 4), (2, 3), (3, 2), (4, 1) -> 4 outcomes\n- Sum = 7: (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1) -> 6 outcomes\n- Sum = 11: (5, 6), (6, 5) -> 2 outcomes\n\nTotal favorable outcomes:\nSum = 1 + 2 + 4 + 6 + 2 = 15 outcomes.\n\nProbability P = Favorable / Total = 15 / 36 = 5 / 12.\n\nTherefore, the probability is 5/12.',
+    explanation: "When two fair six-sided dice are thrown, the total number of possible outcomes = 6 × 6 = 36.\nThe possible sums of two dice range from 2 to 12.\nThe prime numbers in this range are {2, 3, 5, 7, 11}.\nLet us count favorable outcomes for each prime sum:\n- Sum = 2: (1, 1) => 1 outcome\n- Sum = 3: (1, 2), (2, 1) => 2 outcomes\n- Sum = 5: (1, 4), (2, 3), (3, 2), (4, 1) => 4 outcomes\n- Sum = 7: (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1) => 6 outcomes\n- Sum = 11: (5, 6), (6, 5) => 2 outcomes\nTotal favorable outcomes = 1 + 2 + 4 + 6 + 2 = 15 outcomes.\nProbability P = Favorable Outcomes / Total Outcomes = 15 / 36 = 5 / 12.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 31: Probability (Two Dice Problems)',
-      pageNumber: 'Page 628 – 632',
-      keyExcerpt: 'Prime sums: 2, 3, 5, 7, 11. Total pairs = 1 + 2 + 4 + 6 + 2 = 15. Probability = 15/36 = 5/12.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Probability",
+      pageNumber: "Chapter 31: Throw of Dice",
+      keyExcerpt: "P(Event) = n(E) / n(S)."
     },
-    eliminationTip: 'Primes sums = 2 (1), 3 (2), 5 (4), 7 (6), 11 (2). Sum = 15 pairs. P = 15/36 = 5/12. Option A.',
-    difficulty: 'Easy',
+    eliminationTip: "Count prime sums: 2(1) + 3(2) + 5(4) + 7(6) + 11(2) = 15. Probability = 15/36 = 5/12.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2022', 'Probability', 'Two Dice', 'Prime Numbers Sum', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2022",
+      "CSAT",
+      "Probability",
+      "Dice",
+      "Prime Numbers"
+    ]
   },
   {
     id: 'pyq-2022-csat-63',
@@ -1016,34 +1034,40 @@ export const pyq2022_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2022', 'Dictionary Order', 'Alphabet Test', 'Reasoning']
   },
-  {
-    id: 'pyq-2022-csat-76',
-    subject: 'csat_quant',
-    topic: 'Percentages: Votes in Election',
-    subTopic: 'Two-Candidate Majority Calculation',
-    question: 'In an election between two candidates, the winning candidate polled 58% of the total valid votes and won by a majority of 1,600 votes. What was the total number of valid votes polled? (UPSC CSAT 2022)',
+    {
+    id: "pyq-2022-csat-76",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Elections with Non-Voting and Invalid Votes",
+    question: "In an election between two candidates, 10% of the enrolled voters did not cast their vote, and 60 votes cast were declared invalid. The winning candidate secured 47% of all the enrolled voters on the electoral roll and won the election by a margin of 308 votes over his opponent. What was the total number of enrolled voters on the electoral roll? (UPSC CSAT 2022)",
     options: [
-      '8,000',
-      '9,000',
-      '10,000',
-      '12,000'
+      "5,600",
+      "6,200",
+      "6,400",
+      "7,000"
     ],
-    correctAnswer: 2,
-    explanation: 'Let total valid votes polled be V.\n- Winning candidate got 58% of V.\n- Losing candidate got: 100% - 58% = 42% of V.\n\nMajority (difference in votes) = Winning votes - Losing votes\nMajority = 58% - 42% = 16% of V.\n\nWe are given majority = 1,600 votes:\n0.16 V = 1,600\nV = 1,600 / 0.16\nV = 160,000 / 16 = 10,000 votes.\n\nTherefore, the total number of valid votes polled was 10,000.',
+    correctAnswer: 1,
+    explanation: "Let the total number of enrolled voters be V.\n- Voters who did not vote = 0.10V\n- Total votes cast = V - 0.10V = 0.90V\n- Invalid votes = 60\n- Total valid votes = 0.90V - 60\nVotes obtained by winning candidate = 47% of total enrolled voters = 0.47V.\nVotes obtained by losing candidate = Total valid votes - Winner's votes\n= (0.90V - 60) - 0.47V = 0.43V - 60.\nWinning margin = Winner's votes - Loser's votes = 308:\n0.47V - (0.43V - 60) = 308\n0.04V + 60 = 308\n0.04V = 308 - 60 = 248\nV = 248 / 0.04 = 24,800 / 4 = 6,200.\nTherefore, the total number of enrolled voters was 6,200.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 10: Percentage (Election Problems)',
-      pageNumber: 'Page 218 – 222',
-      keyExcerpt: 'Majority % = 58% - 42% = 16%. Total votes = 1600 / 0.16 = 10,000.'
+      bookName: "Fast Track Objective Arithmetic by Rajesh Verma",
+      edition: "Latest Edition",
+      chapter: "Percentage: Election Problems",
+      pageNumber: "Page 112 – 118",
+      keyExcerpt: "Margin = Winner Votes - Loser Votes. Pay careful attention to whether percentages are based on total enrolled voters or valid votes."
     },
-    eliminationTip: 'Difference = 58% - 42% = 16%. 16% = 1,600 -> 100% = 10,000. Option C in 2 seconds.',
-    difficulty: 'Easy',
+    eliminationTip: "Difference between winner and loser = 0.47V - (0.43V - 60) = 0.04V + 60 = 308 => 0.04V = 248 => V = 6,200.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 9,
-    tags: ['UPSC CSAT 2022', 'Percentages', 'Election Votes', 'Majority', 'Quant']
+    tags: [
+      "UPSC 2022",
+      "CSAT",
+      "Elections",
+      "Percentages",
+      "Aptitude"
+    ]
   },
   {
     id: 'pyq-2022-csat-77',

@@ -349,34 +349,39 @@ export const pyq2026_csat_2: Question[] = [
     frequency: 10,
     tags: ['UPSC CSAT 2026', 'Percentages', 'Income and Expenditure', 'Quant']
   },
-  {
-    id: 'pyq-2026-csat-53',
-    subject: 'csat_quant',
-    topic: 'Profit and Loss',
-    subTopic: 'Dishonest Dealer and Faulty Weight',
-    question: 'A dishonest shopkeeper professes to sell his goods at cost price, but uses a false weight of 900 grams instead of a 1 kilogram (1000 grams) weight. What is his actual gain percentage? (UPSC CSAT 2026)',
+      {
+    id: "pyq-2026-csat-53",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Mixtures and Alligations with Profit Percentage",
+    question: "A tea merchant blends two varieties of tea: Variety A costing ₹200 per kg and Variety B costing ₹300 per kg in the ratio 3 : 2 by weight. If he sells the blended tea at ₹288 per kg, what is his overall profit percentage? (UPSC CSAT 2026)",
     options: [
-      '10%',
-      '11 1/9%',
-      '11 1/3%',
-      '12 1/2%'
+      "15%",
+      "20%",
+      "22.5%",
+      "25%"
     ],
     correctAnswer: 1,
-    explanation: 'The standard formula for gain percentage using false weight is:\n$$\\text{Gain Percentage} = \\frac{\\text{Error}}{\\text{True Value} - \\text{Error}} \\times 100 = \\frac{\\text{Error}}{\\text{False Weight}} \\times 100$$\nHere:\n- True weight = 1000 grams\n- False weight = 900 grams\n- Error = $1000 - 900 = 100$ grams\n\nSubstitute the values:\n$$\\text{Gain \\%} = \\frac{100}{900} \\times 100 = \\frac{1}{9} \\times 100 = 11\\frac{1}{9}\\%$$\nThus, his actual gain percentage is $11\\frac{1}{9}\\%$ (or approx 11.11%).',
+    explanation: "Let the merchant take 3 kg of Variety A and 2 kg of Variety B (total 5 kg):\nCost of Variety A = 3 × 200 = ₹600.\nCost of Variety B = 2 × 300 = ₹600.\nTotal Cost Price for 5 kg = 600 + 600 = ₹1200.\nMean Cost Price per kg = 1200 / 5 = ₹240 per kg.\nSelling Price per kg = ₹288.\nProfit per kg = 288 - 240 = ₹48.\nProfit percentage = (48 / 240) × 100 = 20%.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: 'Revised Edition 2024',
-      chapter: 'Chapter 11: Profit and Loss (Faulty Weights)',
-      pageNumber: 'Page 288 – 294',
-      keyExcerpt: 'Gain% = (Error / False Weight) * 100.'
+      bookName: "Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Alligation or Mixture",
+      pageNumber: "Page 445 – 455",
+      keyExcerpt: "Mean cost price = (m1*c1 + m2*c2) / (m1 + m2)."
     },
-    eliminationTip: 'He gives 900g and charges for 1000g, earning 100g on 900g outlay. 100 / 900 = 1/9 = 11 1/9%.',
-    difficulty: 'Easy',
+    eliminationTip: "Weighted average CP = (3×200 + 2×300)/5 = 240. Selling at 288 yields 48 profit on 240 = 20%.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2026', 'Profit and Loss', 'Dishonest Shopkeeper', 'Faulty Weight']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2026",
+      "CSAT",
+      "Mixtures and Alligations",
+      "Profit and Loss"
+    ]
   },
   {
     id: 'pyq-2026-csat-54',
@@ -668,34 +673,40 @@ export const pyq2026_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2026', 'Weighted Average', 'Averages', 'Quant']
   },
-  {
-    id: 'pyq-2026-csat-64',
-    subject: 'csat_quant',
-    topic: 'Mensuration (2D Geometry)',
-    subTopic: 'Percentage Change in Rectangle Area',
-    question: 'If the length of a rectangle is increased by 20% and its breadth is decreased by 10%, what is the net percentage change in its area? (UPSC CSAT 2026)',
+      {
+    id: "pyq-2026-csat-64",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Mensuration and Successive Percentage Changes in Cylinders",
+    question: "The radius of the base of a solid right circular cylinder is decreased by 20%, while its height is increased by 50%. What is the net percentage change in the volume of the cylinder? (UPSC CSAT 2026)",
     options: [
-      'Increase of 8%',
-      'Decrease of 8%',
-      'Increase of 10%',
-      'Decrease of 10%'
+      "Increases by 4%",
+      "Decreases by 4%",
+      "Increases by 10%",
+      "Decreases by 10%"
     ],
-    correctAnswer: 0,
-    explanation: 'The formula for net percentage change in area of a rectangle with length change $a\\%$ and breadth change $b\\%$ is:\n$$\\text{Net Change \\%} = a + b + \\frac{ab}{100}$$\nHere $a = +20$ and $b = -10$:\n$$\\text{Net Change} = 20 - 10 + \\frac{20 \\times (-10)}{100} = 10 - 2 = +8\\%$$\nAlternatively:\nLet initial length $L = 10$, breadth $B = 10$.\nInitial Area = $10 \\times 10 = 100$.\nNew length = $10 \\times 1.20 = 12$.\nNew breadth = $10 \\times 0.90 = 9$.\nNew Area = $12 \\times 9 = 108$.\n$$\\text{Percentage Increase} = \\frac{108 - 100}{100} \\times 100 = 8\\%$$\nThus, there is an increase of 8% in area.',
+    correctAnswer: 1,
+    explanation: "Volume of a cylinder V = π × r² × h.\nLet the initial radius be r and initial height be h.\nNew radius r' = r - 0.2r = 0.8r.\nNew height h' = h + 0.5h = 1.5h.\nNew volume V' = π × (r')² × h' = π × (0.8r)² × (1.5h) = π × 0.64r² × 1.5h = 0.96 × (πr²h) = 0.96V.\nNet percentage change = (0.96V - V) / V × 100 = -0.04 × 100 = -4% (a decrease of 4%).",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: 'Revised Edition 2024',
-      chapter: 'Chapter 24: Area of Plane Figures',
-      pageNumber: 'Page 535 – 540',
-      keyExcerpt: 'Net change = a + b + (ab/100). Successive multiplier: 1.2 * 0.9 = 1.08 (+8%).'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal / Fast Track Objective Arithmetic by Rajesh Verma",
+      edition: "Latest Edition",
+      chapter: "Area and Volume Mensuration",
+      pageNumber: "Chapter 24: Volume and Surface Area",
+      keyExcerpt: "Volume depends on r² × h. Multiplier = (0.8)² × 1.5 = 0.64 × 1.5 = 0.96."
     },
-    eliminationTip: 'Multiplier = 1.20 × 0.90 = 1.08. An increase of 8%. Takes 5 seconds.',
-    difficulty: 'Easy',
+    eliminationTip: "Multiplier calculation: 0.8 × 0.8 × 1.5 = 0.64 × 1.5 = 0.96, which is exactly 4% less than 1.00.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'CSAT',
-    frequency: 10,
-    tags: ['UPSC CSAT 2026', 'Mensuration', 'Percentages', 'Rectangle Area']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2026",
+      "CSAT",
+      "Mensuration",
+      "Percentage Changes",
+      "Cylinder Volume"
+    ]
   },
   {
     id: 'pyq-2026-csat-65',

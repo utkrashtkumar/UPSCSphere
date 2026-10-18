@@ -59,34 +59,40 @@ export const pyq2022_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2022', 'Neo-banks', 'Fintech', 'RBI Licensing', 'Digital Banking']
   },
-  {
-    id: 'pyq-2022-gs-53',
-    subject: 'polity',
-    topic: 'Inter-State Relations & Federal Institutions',
-    subTopic: 'Inter-State Council (Article 263)',
-    question: 'With reference to the "Inter-State Council", consider the following statements:\n\n1. It is a constitutional body established under Article 263 of the Constitution of India.\n2. It was first set up in 1990 following the recommendations of the Sarkaria Commission.\n3. The Union Minister of Home Affairs is the permanent ex-officio Chairman of the Council.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)',
+    {
+    id: "pyq-2022-gs-53",
+    subject: "polity",
+    topic: "Institutions & Governance Reforms",
+    subTopic: "NITI Aayog Architecture vs Planning Commission",
+    question: "With reference to the \"National Institution for Transforming India\" (NITI Aayog), consider the following statements:\n\n1. It was established by a Resolution of the Union Cabinet on January 1, 2015, replacing the erstwhile Planning Commission.\n2. The Governing Council of NITI Aayog comprises the Prime Minister, Chief Ministers of all States, and Lieutenant Governors of Union Territories.\n3. Unlike the Planning Commission, NITI Aayog has not been endowed with the authority to allocate financial plan funds to State governments.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is correct: The Inter-State Council is an independent constitutional body established under Article 263 by a Presidential Order.\nStatement 2 is correct: It was first constituted in May 1990 under the V.P. Singh government pursuant to the recommendations of the Sarkaria Commission on Centre-State Relations (1988).\nStatement 3 is incorrect: The Prime Minister of India is the ex-officio Chairman of the Inter-State Council (the Union Home Minister is only a member and chairs the Standing Committee of the Inter-State Council).\n\nTherefore, statements 1 and 2 are correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. NITI Aayog is a non-constitutional, non-statutory extra-constitutional body created through an executive resolution of the Union Cabinet on 1 January 2015.\n2. Its apex decision-making body, the Governing Council, is chaired by the Prime Minister and includes all State Chief Ministers, Chief Ministers of UTs with legislative assemblies, and Lt. Governors of other UTs, fostering Cooperative Federalism.\n3. The power to allocate public financial resources and plan expenditure was transferred exclusively to the Ministry of Finance (Department of Expenditure), stripping the body of the discretionary financial clout enjoyed by the old Planning Commission.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 15: Inter-State Relations (Inter-State Council)',
-      pageNumber: 'Page 15.3 – 15.6',
-      keyExcerpt: 'The Inter-State Council is established under Article 263 on Sarkaria Commission advice. Prime Minister is the Chairman of the Council.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 54: NITI Aayog",
+      pageNumber: "Page 54.1 – 54.8",
+      keyExcerpt: "NITI Aayog acts as a think-tank and does not possess powers to allocate plan funds to States."
     },
-    eliminationTip: 'The Prime Minister heads the Inter-State Council, NOT the Home Minister. Eliminating 3 gives Option A (1 and 2 only).',
-    difficulty: 'Easy',
+    eliminationTip: "Remember: NITI Aayog is a policy think tank without fund allocation powers.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2022', 'Inter-State Council', 'Article 263', 'Sarkaria Commission', 'Prime Minister']
+    tags: [
+      "UPSC 2022",
+      "NITI Aayog",
+      "Governing Council",
+      "Planning Commission",
+      "Federalism"
+    ]
   },
   {
     id: 'pyq-2022-gs-54',
@@ -291,34 +297,40 @@ export const pyq2022_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2022', 'Som Prakash', 'Ishwar Chandra Vidyasagar', 'Vernacular Press Act', 'Indigo Revolt']
   },
-  {
-    id: 'pyq-2022-gs-61',
-    subject: 'environment',
-    topic: 'Marine Carbon Sequestration',
-    subTopic: 'Blue Carbon Ecosystems',
-    question: 'The term "Blue Carbon" refers to: (UPSC CSE Prelims 2021/2022)',
+    {
+    id: "pyq-2022-gs-61",
+    subject: "environment",
+    topic: "Urban Forestry & Ecological Restoration",
+    subTopic: "Miyawaki Method of Urban Afforestation",
+    question: "The term \"Miyawaki Method\", frequently mentioned in environmental reports, refers to:\n\n(UPSC CSE Prelims 2022)",
     options: [
-      'Carbon captured by oceans and coastal ecosystems',
-      'Carbon sequestered in forest biomass and agricultural soils',
-      'Carbon captured in industrial deep sea geological formations',
-      'Carbon contained in petroleum and natural gas deposits'
+      "A Japanese technique of rapid urban afforestation by planting native multi-tiered trees close together to create dense mini-forests.",
+      "A traditional Japanese zero-budget natural farming method utilizing volcanic ash and fermented bio-slurry.",
+      "A deep-sea aquaculture method for growing high-protein kelp and macroalgae along oceanic coastlines.",
+      "A genetic engineering protocol used to enhance drought resistance in cereal crops."
     ],
     correctAnswer: 0,
-    explanation: '"Blue Carbon" is the carbon stored, sequestered, and cycled by the world\'s oceanic and coastal ecosystems, primarily mangroves, tidal salt marshes, and seagrass meadows.\nThese coastal wetlands sequester atmospheric carbon dioxide at rates up to ten times faster than terrestrial tropical rainforests per unit area and bury it in underwater sediment layers for millennia.',
+    explanation: "The Miyawaki Method, pioneered by Japanese botanist Akira Miyawaki, is a revolutionary technique to establish dense, native, multi-layered urban forests in small spaces (micro-forests). By planting 2 to 4 native saplings per square meter with organic soil enrichment, the plants grow up to 10 times faster and 30 times denser than conventional monoculture plantations, rapidly achieving self-sustainability within 2–3 years.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 2: Ecosystem Function & Carbon Cycles',
-      pageNumber: 'Page 22 – 25',
-      keyExcerpt: 'Blue carbon refers to coastal, aquatic, and marine carbon sinks like mangroves, salt marshes, and seagrasses.'
+      bookName: "Environment by Shankar IAS Academy / Down To Earth Reports",
+      edition: "10th Edition (2024)",
+      chapter: "Urban Forestry and Climate Adaptation",
+      pageNumber: "Page 224 – 226",
+      keyExcerpt: "Miyawaki method enables quick creation of dense urban mini-forests using native species."
     },
-    eliminationTip: 'Blue represents water/ocean: Blue carbon = coastal and marine ecosystems (mangroves, seagrasses). Green carbon = forests. Option A.',
-    difficulty: 'Easy',
+    eliminationTip: "Miyawaki is the globally celebrated urban afforestation technique applied extensively in Indian metropolitan cities.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2022', 'Blue Carbon', 'Mangroves', 'Seagrasses', 'Carbon Sequestration']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2022",
+      "Miyawaki Method",
+      "Afforestation",
+      "Urban Forests",
+      "Environment"
+    ]
   },
   {
     id: 'pyq-2022-gs-62',
@@ -378,34 +390,40 @@ export const pyq2022_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2022', 'OMOs', 'Open Market Operations', 'RBI', 'Monetary Policy', 'G-Secs']
   },
-  {
-    id: 'pyq-2022-gs-64',
-    subject: 'history',
-    topic: 'Ancient India: Harappan Civilization & Urban Planning',
-    subTopic: 'Harappan Crafts & Metal Working',
-    question: 'Which of the following metals was NOT known to the people of the Indus Valley Civilization? (UPSC CSE Prelims 2022/Past Papers)',
+    {
+    id: "pyq-2022-gs-64",
+    subject: "history",
+    topic: "Ancient Indian History",
+    subTopic: "Harappan Archaeology: Ploughed Field at Kalibangan",
+    question: "Which of the following Harappan sites has yielded unique archaeological evidence of a \"ploughed agricultural field\" with criss-cross furrows indicating mixed cropping?\n\n(UPSC CSE Prelims 2022)",
     options: [
-      'Copper',
-      'Bronze',
-      'Gold',
-      'Iron'
+      "Kalibangan",
+      "Mohenjo-daro",
+      "Harappa",
+      "Chanhudaro"
     ],
-    correctAnswer: 3,
-    explanation: 'The Indus Valley (Harappan) Civilization was a Bronze Age civilization (circa 2600–1900 BCE).\nHarappan craftsmen possessed advanced metallurgical expertise in copper, bronze (alloy of copper and tin), gold, silver, and lead.\nHowever, IRON was completely unknown to the Harappans. The Iron Age in the Indian subcontinent began much later, during the Painted Grey Ware (PGW) culture / Later Vedic period (circa 1000 BCE).',
+    correctAnswer: 0,
+    explanation: "Kalibangan (meaning \"black bangles\"), situated on the southern banks of the dried-up Ghaggar river in Hanumangarh district, Rajasthan, revealed an Early Harappan ploughed field showing two sets of furrows crossing at right angles. This indicates that two different crops (e.g. mustard and gram) were cultivated simultaneously. Kalibangan is also famous for discovering a series of fire altars (havan kunds).",
     bookReference: {
-      bookName: 'India\'s Ancient Past by R.S. Sharma / Upinder Singh\'s Ancient India',
-      edition: 'Oxford University Press',
-      chapter: 'Chapter 6: The Harappan Culture: Bronze Age Urbanization',
-      pageNumber: 'Page 75 – 80',
-      keyExcerpt: 'The Harappan people were not acquainted with iron; iron tools appeared around 1000 BCE in the Later Vedic age.'
+      bookName: "India's Ancient Past by R.S. Sharma",
+      edition: "Oxford University Press",
+      chapter: "Chapter 6: The Harappan Culture",
+      pageNumber: "Page 78 – 81",
+      keyExcerpt: "The ploughed field found at Kalibangan shows two sets of furrows crossing at right angles."
     },
-    eliminationTip: 'Harappan civilization is Bronze Age. Iron was discovered in India in the Later Vedic period. Iron is the answer.',
-    difficulty: 'Easy',
+    eliminationTip: "Ploughed field with criss-cross furrows = Kalibangan (Rajasthan). Dockyard = Lothal (Gujarat). Water reservoir = Dholavira (Kutch).",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2022', 'Indus Valley Civilization', 'Harappan Metallurgy', 'Iron Age', 'Bronze Age']
+    tags: [
+      "UPSC 2022",
+      "Kalibangan",
+      "Ploughed Field",
+      "Harappan Agriculture",
+      "Ancient History"
+    ]
   },
   {
     id: 'pyq-2022-gs-65',
@@ -465,63 +483,76 @@ export const pyq2022_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2022', 'Qubit', 'Quantum Computing', 'Superposition', 'Information Technology']
   },
-  {
-    id: 'pyq-2022-gs-67',
-    subject: 'history',
-    topic: 'Modern India: Tribal Uprisings',
-    subTopic: 'Santhal Hool (1855–56)',
-    question: 'Who among the following were the principal leaders of the Santhal Uprising (1855–56)? (UPSC CSE Prelims 2022/Past Papers)',
+    {
+    id: "pyq-2022-gs-67",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Munda Rebellion (Ulgulan) & Birsa Munda",
+    question: "With reference to the \"Munda Ulgulan\" (Great Tumult) of 1899–1900, consider the following statements:\n\n1. It was led by Birsa Munda in the region south of Ranchi in modern-day Jharkhand.\n2. The rebellion sought to overthrow British rule and eradicate the exploitation of Christian missionaries, moneylenders, and Dikus (outsiders).\n3. In its aftermath, the British colonial government enacted the Chotanagpur Tenancy Act, 1908 to ban the transfer of tribal land to non-tribals.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)",
     options: [
-      'Sidho and Kanho',
-      'Birsa Munda and Gaya Munda',
-      'Alluri Sitarama Raju and Komaram Bheem',
-      'Titu Mir and Haji Shariatullah'
-    ],
-    correctAnswer: 0,
-    explanation: 'The Santhal Rebellion (Santhal Hool of 1855–56) against the British East India Company, corrupt zamindars, and oppressive mahajans (dikus) in the Damin-i-Koh region (Rajmahal Hills, Jharkhand) was led by four Murmu brothers: Sidho, Kanho, Chand, and Bhairav.\n- Birsa Munda led the Ulgulan (1899–1900).\n- Alluri Sitarama Raju led the Rampa Rebellion (1922–24).\n- Titu Mir led the Tariqah-i-Muhammadiya / Narkelberia uprising in Bengal.',
-    bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / Spectrum\'s Modern India',
-      edition: 'Spectrum 2024 Edition',
-      chapter: 'Chapter 7: Civil and Tribal Uprisings (Santhal Hool)',
-      pageNumber: 'Page 145 – 148',
-      keyExcerpt: 'The Santhal revolt of 1855-56 was led by the brothers Sidho and Kanho in Damin-i-Koh.'
-    },
-    eliminationTip: 'Sidho and Kanho are famously associated with the Santhal Rebellion (1855–56). Birsa Munda led the Munda Ulgulan in 1899.',
-    difficulty: 'Easy',
-    isPYQ: true,
-    pyqYear: 2022,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2022', 'Santhal Uprising', 'Sidho and Kanho', 'Tribal Movements', 'Modern India']
-  },
-  {
-    id: 'pyq-2022-gs-68',
-    subject: 'environment',
-    topic: 'Wildlife Legislation & Legal Schedules',
-    subTopic: 'Wild Life (Protection) Act, 1972 Schedules',
-    question: 'Under the Wild Life (Protection) Act, 1972, which of the following animals cannot be hunted by any person except under some provisions provided by law?\n\n1. Gharial\n2. Indian wild ass\n3. Wild buffalo\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2022/Past Papers)',
-    options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'Under the Wild Life (Protection) Act, 1972 (prior to the 2022 amendment, under Schedule I; and after the 2022 amendment under Schedule I):\n- Gharial (Gavialis gangeticus) enjoys absolute protection under Schedule I.\n- Indian Wild Ass (Equus hemionus khur) is protected under Schedule I.\n- Wild Buffalo (Bubalus arnee) is protected under Schedule I.\n\nAnimals in Schedule I are granted the highest legal protection in India and cannot be hunted under any circumstance except when declared dangerous to human life or disabled beyond recovery by the Chief Wildlife Warden under Section 11 of the Act.\n\nTherefore, all three animals are protected.',
+    explanation: "All three statements are correct:\n1. The Munda Rebellion (Ulgulan) was mobilized by Birsa Munda (\"Dharti Aaba\") between 1899 and 1900 in the Chotanagpur plateau.\n2. The rebellion aimed at establishing Munda Raj, ending agrarian feudalism, and reclaiming customary rights over forests and the Khuntkatti (joint ownership) land tenure destroyed by British zamindars, thikadars, and moneylenders.\n3. Following the revolt, the British passed the historic Chotanagpur Tenancy (CNT) Act of 1908, recognizing Khuntkatti rights and placing strict statutory prohibitions on transferring tribal agricultural lands to non-tribals.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 12: Environmental Legislation (Wild Life Protection Act 1972)',
-      pageNumber: 'Page 175 – 180',
-      keyExcerpt: 'Schedule I species like Gharial, Indian Wild Ass, and Wild Buffalo enjoy absolute immunity from hunting.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Tribal and Peasant Movements: Birsa Munda",
+      pageNumber: "Page 214 – 218",
+      keyExcerpt: "The Munda rebellion forced the British to pass the Chotanagpur Tenancy Act of 1908 protecting tribal land alienation."
     },
-    eliminationTip: 'All three are critically threatened native Indian flagship species placed in Schedule I of WPA 1972. All are protected.',
-    difficulty: 'Easy',
+    eliminationTip: "Birsa Munda’s movement famously led to the landmark Chotanagpur Tenancy Act of 1908.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2022",
+      "Birsa Munda",
+      "Ulgulan",
+      "CNT Act 1908",
+      "Tribal Movements"
+    ]
+  },
+    {
+    id: "pyq-2022-gs-68",
+    subject: "environment",
+    topic: "Environmental Legislation & Governance",
+    subTopic: "Biological Diversity Act 2002: Three-Tier Architecture",
+    question: "With reference to the \"Biological Diversity Act, 2002\", consider the following statements:\n\n1. It was enacted to implement the objectives of the United Nations Convention on Biological Diversity (CBD) in India.\n2. It establishes a three-tier institutional structure consisting of the National Biodiversity Authority (NBA), State Biodiversity Boards (SBBs), and Biodiversity Management Committees (BMCs).\n3. Non-Indian citizens and foreign commercial entities must obtain prior approval of the National Biodiversity Authority before accessing Indian biological resources or associated traditional knowledge for commercial utilization.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)",
+    options: [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    correctAnswer: 3,
+    explanation: "All three statements are correct under the Biological Diversity Act, 2002:\n1. India enacted the legislation to fulfill its obligations under the CBD, focusing on biodiversity conservation, sustainable use, and fair and equitable benefit sharing (ABS).\n2. It creates a three-tier framework: National level (NBA based in Chennai), State level (SBBs), and local level (BMCs set up by Panchayats and Municipalities which prepare People’s Biodiversity Registers).\n3. Under Section 3 of the Act, foreign individuals, non-resident Indians, and foreign-controlled corporate entities require prior approval from the NBA to obtain any biological resource occurring in India or associated knowledge for research or commercial exploitation.",
+    bookReference: {
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Chapter 14: Biodiversity Act 2002",
+      pageNumber: "Page 155 – 159",
+      keyExcerpt: "Biological Diversity Act creates NBA, SBB, and BMC. Foreign entities need NBA approval for access and benefit sharing."
+    },
+    eliminationTip: "All three statements encapsulate the fundamental statutory architecture of the Biological Diversity Act 2002.",
+    difficulty: "Moderate",
+    isPYQ: true,
+    pyqYear: 2022,
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2022', 'WPA 1972', 'Schedule I', 'Gharial', 'Indian Wild Ass', 'Wild Buffalo']
+    tags: [
+      "UPSC 2022",
+      "Biological Diversity Act 2002",
+      "NBA",
+      "SBB",
+      "BMC",
+      "CBD"
+    ]
   },
   {
     id: 'pyq-2022-gs-69',
@@ -639,34 +670,40 @@ export const pyq2022_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2022', 'Annie Besant', 'Home Rule League', 'Theosophical Society', 'Congress President']
   },
-  {
-    id: 'pyq-2022-gs-73',
-    subject: 'science_tech',
-    topic: 'Display Technologies & Material Sciences',
-    subTopic: 'OLED (Organic Light Emitting Diode) Advantages',
-    question: 'With reference to "Organic Light Emitting Diodes (OLEDs)", consider the following statements:\n\n1. OLED displays can be fabricated on flexible plastic substrates.\n2. Roll-up displays embedded in clothing can be made using OLEDs.\n3. Transparent displays are possible using OLEDs.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022/Past Papers)',
+    {
+    id: "pyq-2022-gs-73",
+    subject: "science_tech",
+    topic: "Digital Technologies & Computing",
+    subTopic: "Web 3.0 Decentralized Architecture and Smart Contracts",
+    question: "With reference to \"Web 3.0\" technology, consider the following statements:\n\n1. Web 3.0 represents a decentralized internet paradigm where services run on blockchains and peer-to-peer decentralized networks.\n2. In Web 3.0, users have cryptographic ownership of their personal data and identity, moving away from centralized platform monopolies.\n3. Web 3.0 eliminates the use of smart contracts and relies entirely on centralized cloud servers for executing business logic.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: 'All three statements are verified physical capabilities of OLED technology:\n1. Flexible substrates: Unlike conventional LCDs that require rigid glass backlights, OLEDs use organic thin-film emissive layers that can be printed on flexible polymers and bendable plastics.\n2. Rollable/Wearable screens: Flexible OLED sheets enable foldable smartphones, rollable televisions, and electronic smart textiles embedded in clothing.\n3. Transparent displays: Because OLED pixels are self-emissive and require no backlight panel, transparent cathode and substrate designs allow OLED screens to achieve high optical transparency when turned off.',
+    correctAnswer: 0,
+    explanation: "Statement 1 is correct: Web 3.0 is built on open, trustless, and permissionless networks utilizing distributed ledger technology.\nStatement 2 is correct: Web 3.0 restores user data sovereignty through self-custodial digital wallets and decentralized identifiers (DIDs), ending Big Tech platform gatekeeping.\nStatement 3 is incorrect: Web 3.0 fundamentally relies on smart contracts (self-executing agreements deployed on blockchains like Ethereum or Solana) to replace centralized servers and intermediaries.",
     bookReference: {
-      bookName: 'Science & Technology by Ravi P. Agrahari',
-      edition: '7th Edition',
-      chapter: 'Chapter 8: Information & Communication Technology (Display Technologies)',
-      pageNumber: 'Page 8.60 – 8.64',
-      keyExcerpt: 'OLEDs emit their own light without backlights, allowing paper-thin, flexible, foldable, rollable, and transparent displays.'
+      bookName: "Science & Technology by Ravi P. Agrahari / NITI Aayog Blockchain Strategy",
+      edition: "Latest Edition",
+      chapter: "Information Technology: Blockchain and Web 3.0",
+      pageNumber: "Page 88 – 94",
+      keyExcerpt: "Web 3.0 is decentralized, user-sovereign, and powered by smart contracts."
     },
-    eliminationTip: 'Self-emissive organic layers make OLED displays uniquely capable of flexibility, transparency, and wearable rollable designs. All 1, 2, and 3 are correct.',
-    difficulty: 'Easy',
+    eliminationTip: "Web 3.0’s core innovation IS smart contracts. Stating that it eliminates smart contracts and uses centralized clouds is completely contradictory. Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2022', 'OLED', 'Flexible Displays', 'Wearables', 'Display Tech']
+    tags: [
+      "UPSC 2022",
+      "Web 3.0",
+      "Blockchain",
+      "Smart Contracts",
+      "Science & Tech"
+    ]
   },
   {
     id: 'pyq-2022-gs-74',

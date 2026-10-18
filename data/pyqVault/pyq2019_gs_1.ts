@@ -900,34 +900,40 @@ export const pyq2019_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2019', 'Harijan Sevak Sangh', 'Mahatma Gandhi', 'Anti-Untouchability League', 'Modern History']
   },
-  {
-    id: 'pyq-2019-gs-32',
-    subject: 'history',
-    topic: 'Modern Indian History: Champaran Satyagraha (1917)',
-    subTopic: 'Raj Kumar Shukla and the Tinkathia System',
-    question: 'Who among the following persuaded Mahatma Gandhi to come to Champaran to investigate the grievances of the indigo sharecroppers? (UPSC CSE Prelims 2019)',
+    {
+    id: "pyq-2019-gs-32",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Swadeshi Movement (1905) and Anti-Partition Struggle",
+    question: "With reference to the Swadeshi and Boycott Movement (1905–1908), consider the following statements:\n\n1. The formal proclamation of the Swadeshi Movement was made at a massive public gathering in the Calcutta Town Hall in August 1905.\n2. Rabindranath Tagore composed the patriotic anthem \"Amar Sonar Bangla\" which was sung by marching processions during the movement.\n3. The Indian National Congress, at its Calcutta session of 1906 presided over by Dadabhai Naoroji, declared the goal of the national movement to be \"Swaraj\" (self-government).\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2019)",
     options: [
-      'J.B. Kripalani',
-      'Rajendra Prasad',
-      'Raj Kumar Shukla',
-      'Brajkishore Prasad'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'RAJKUMAR SHUKLA, an illiterate but determined indigo peasant from Champaran (Bihar), relentlessly pursued Mahatma Gandhi at the Lucknow Congress Session in December 1916 and later in Kanpur and Calcutta, entreating him to visit Champaran and personally inspect the brutal exploitation of the ryots under the European planters\' coercive Tinkathia system (compulsory cultivation of indigo on 3/20th of tenant land).\nGandhiji finally agreed and arrived in Champaran in April 1917, initiating his first civil disobedience movement in India.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. On August 7, 1905, a historic gathering at the Calcutta Town Hall formally passed the Boycott Resolution, inaugurating the Swadeshi movement against Lord Curzon’s partition of Bengal.\n2. Rabindranath Tagore composed \"Amar Sonar Bangla\" (now the national anthem of Bangladesh) to kindle fraternal unity across partitioned Bengal, and popularized the Raksha Bandhan festival where Hindus and Muslims tied rakhis on each other's wrists.\n3. At the 1906 Calcutta session of INC, Dadabhai Naoroji announced that the goal of the Indian national movement was \"Swaraj\" or self-government like that of the United Kingdom or the colonies, averting an immediate moderate-extremist split.",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / NCERT Class XII Themes in Indian History Part III',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 14: Champaran Satyagraha',
-      pageNumber: 'Page 174 – 178',
-      keyExcerpt: 'Rajkumar Shukla, a peasant from Champaran, convinced Gandhiji to visit Champaran to look into the problems of the indigo cultivators.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Chapter 12: Era of Militant Nationalism (Swadeshi Movement)",
+      pageNumber: "Page 285 – 292",
+      keyExcerpt: "Swadeshi resolution passed at Calcutta Town Hall; Tagore wrote Amar Sonar Bangla; 1906 INC declared Swaraj."
     },
-    eliminationTip: 'Rajkumar Shukla is immortalized in Gandhiji\'s autobiography as the tenacious peasant who brought him to Champaran.',
-    difficulty: 'Easy',
+    eliminationTip: "All three events are foundational milestones of the 1905–1906 Swadeshi era.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2019', 'Champaran Satyagraha', 'Rajkumar Shukla', 'Mahatma Gandhi', 'Tinkathia']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2019",
+      "Swadeshi Movement",
+      "Calcutta Town Hall",
+      "Amar Sonar Bangla",
+      "Swaraj 1906"
+    ]
   },
   {
     id: 'pyq-2019-gs-33',

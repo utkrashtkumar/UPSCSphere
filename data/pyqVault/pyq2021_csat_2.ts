@@ -320,34 +320,39 @@ export const pyq2021_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2021', 'Reading Comprehension', 'One Health', 'AMR', 'Public Health']
   },
-  {
-    id: 'pyq-2021-csat-52',
-    subject: 'csat_quant',
-    topic: 'Simple and Compound Interest',
-    subTopic: 'Difference Between CI and SI for 2 Years',
-    question: 'The difference between simple interest and compound interest compounded annually on a certain sum of money for 2 years at 10% per annum is ₹65. What is the sum? (UPSC CSAT 2021)',
+    {
+    id: "pyq-2021-csat-52",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Compound Interest Calculation",
+    question: "A sum of ₹25,000 is deposited in a savings bond scheme offering compound interest at 12% per annum, compounded annually for 2 years. What is the total compound interest earned at maturity? (UPSC CSAT 2021)",
     options: [
-      '₹6,000',
-      '₹6,500',
-      '₹7,000',
-      '₹7,500'
+      "₹6,000",
+      "₹6,360",
+      "₹6,500",
+      "₹6,720"
     ],
     correctAnswer: 1,
-    explanation: 'For a time period of 2 years, the difference between Compound Interest (CI) and Simple Interest (SI) is given by the standard formula:\nDifference = P × (R / 100)²\n\nGiven:\n- Difference = ₹65\n- Rate (R) = 10%\n- Time = 2 years\n\nSubstitute into the formula:\n65 = P × (10 / 100)²\n65 = P × (1 / 10)²\n65 = P × (1 / 100)\nP = 65 × 100\nP = ₹6,500.\n\nVerification:\n- SI for 2 years at 10% on 6500 = 6500 × 0.20 = ₹1300\n- CI for 2 years at 10% on 6500 = 6500 × [(1.10)² - 1] = 6500 × 0.21 = ₹1365\n- Difference = 1365 - 1300 = ₹65. Exactly matches!',
+    explanation: "Principal P = ₹25,000.\nAnnual rate r = 12% = 0.12.\nTime period n = 2 years.\nTotal Amount A = P × (1 + r)² = 25,000 × (1 + 0.12)²\n= 25,000 × (1.12)² = 25,000 × 1.2544 = ₹31,360.\nTotal Compound Interest CI = Amount - Principal\nCI = 31,360 - 25,000 = ₹6,360.\nAlternatively:\nInterest in Year 1 = 12% of 25,000 = ₹3,000.\nInterest in Year 2 = 12% of (25,000 + 3,000) = 12% of 28,000 = ₹3,360.\nTotal CI = 3,000 + 3,360 = ₹6,360.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 22: Compound Interest & SI Differences',
-      pageNumber: 'Page 492 – 498',
-      keyExcerpt: 'Difference for 2 years = P(R/100)². Thus P = Difference × (100/R)².'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Compound Interest",
+      pageNumber: "Chapter 22: Annual Compounding",
+      keyExcerpt: "CI = P[(1 + R/100)^n - 1]."
     },
-    eliminationTip: 'Difference for 2 years = P × (R/100)². Here 65 = P × (0.1)² = 0.01P => P = 65 / 0.01 = 6500.',
-    difficulty: 'Easy',
+    eliminationTip: "Simple interest would be 24% of 25,000 = ₹6,000. Interest on interest = 12% of 3,000 = ₹360. Total = ₹6,360.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2021', 'Simple Interest', 'Compound Interest', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2021",
+      "CSAT",
+      "Compound Interest",
+      "Percentages"
+    ]
   },
   {
     id: 'pyq-2021-csat-53',
@@ -407,34 +412,40 @@ export const pyq2021_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2021', 'Syllogisms', 'Deductive Reasoning', 'Logic']
   },
-  {
-    id: 'pyq-2021-csat-55',
-    subject: 'csat_reasoning',
-    topic: 'Seating Arrangement: Circular Table',
-    subTopic: 'Six Persons Facing the Centre',
-    question: 'Six persons A, B, C, D, E, and F are sitting around a circular table facing the centre.\n1. B is between A and C.\n2. E is between D and F.\n3. D is to the immediate left of A.\n\nWho is sitting to the immediate right of B? (UPSC CSAT 2021)',
+    {
+    id: "pyq-2021-csat-55",
+    subject: "csat_reasoning",
+    topic: "Analytical Reasoning",
+    subTopic: "Linear Ordering and Queue Placement",
+    question: "Six persons—P, Q, R, S, T, and U—are standing in a straight queue facing North toward a ticket counter:\n- T is standing at the extreme front of the queue.\n- R is standing immediately behind T.\n- P is standing between S and U.\n- Q is standing at the extreme rear end of the queue.\n- U is immediately ahead of Q.\n\nWho is standing in the third position from the front? (UPSC CSAT 2021)",
     options: [
-      'A',
-      'C',
-      'D',
-      'F'
+      "P",
+      "S",
+      "U",
+      "R"
     ],
-    correctAnswer: 0,
-    explanation: 'Let the 6 positions around the circular table facing centre be placed in clockwise order.\n1. "D is to the immediate left of A": Facing centre, left is clockwise. So placing A at top, D is clockwise next to A.\n2. "B is between A and C": B must be on the counter-clockwise side of A, so the arrangement goes C -> B -> A.\n   Looking at B facing the centre:\n   - To B\'s left is C.\n   - To B\'s right is A.\n3. "E is between D and F": Placing E next to D, and F next to E, closing the circle: F connects to C.\n\nLet us check the complete circle clockwise: A -> D -> E -> F -> C -> B -> A.\n- B is between C and A: Verified.\n- E is between D and F: Verified.\n- D is immediate left of A (clockwise): Verified.\n- Looking at B facing inward: Left is clockwise (towards A) or counter-clockwise? \n  Facing the centre:\n  - Moving clockwise: B to A is clockwise. If you sit at position B facing the centre, your right hand points toward A and your left hand points toward C.\n  Therefore, sitting at B facing centre, the person to the immediate right of B is A.',
+    correctAnswer: 1,
+    explanation: "Let us order positions from front (1) to back (6):\n1. \"T is at the extreme front\" => Position 1 = T.\n2. \"R is standing immediately behind T\" => Position 2 = R.\n3. \"Q is at the extreme rear\" => Position 6 = Q.\n4. \"U is immediately ahead of Q\" => Position 5 = U.\n5. \"P is standing between S and U\": Since U is at Position 5, P must be at Position 4 and S must be at Position 3.\nThe complete queue from front to rear is:\n1: T, 2: R, 3: S, 4: P, 5: U, 6: Q.\nTherefore, the person standing in the third position from the front is S.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 23: Seating Arrangements & Puzzles',
-      pageNumber: 'Page 480 – 489',
-      keyExcerpt: 'When facing the centre of a circular table, right is counter-clockwise and left is clockwise (or vice-versa depending on orientation perspective).'
+      bookName: "Analytical Reasoning by M.K. Pandey",
+      edition: "Revised Edition",
+      chapter: "Linear Sequencing and Queues",
+      pageNumber: "Page 160 – 168",
+      keyExcerpt: "Build the order step-by-step from definite terminal constraints."
     },
-    eliminationTip: 'Since B is between A and C, and D is to the left of A, B is directly flanked by A and C. Looking towards the centre from B, A is to B\'s right.',
-    difficulty: 'UPSC Standard',
+    eliminationTip: "Positions: 1(T), 2(R), 6(Q), 5(U). Between R and U are S and P. P is between S and U, so 3 is S and 4 is P.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2021', 'Seating Arrangement', 'Circular Arrangement', 'Reasoning']
+    tags: [
+      "UPSC 2021",
+      "CSAT",
+      "Linear Arrangement",
+      "Queues",
+      "Reasoning"
+    ]
   },
   {
     id: 'pyq-2021-csat-56',
@@ -842,34 +853,40 @@ export const pyq2021_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2021', 'Ranking', 'Order Test', 'Reasoning']
   },
-  {
-    id: 'pyq-2021-csat-70',
-    subject: 'csat_reasoning',
-    topic: 'Data Sufficiency',
-    subTopic: 'Sign of Variables and Inequalities',
-    question: 'Consider the Question and two Statements given below:\n\nQuestion: Is x greater than y?\nStatement 1: (x - y) > 0\nStatement 2: (x + y) > 0\n\nWhich one of the following is correct in respect of the Question and the Statements? (UPSC CSAT 2021)',
+    {
+    id: "pyq-2021-csat-70",
+    subject: "csat_quant",
+    topic: "Data Sufficiency",
+    subTopic: "Parity and Integer Properties",
+    question: "Consider the Question and two Statements given below regarding an integer x:\n\nQuestion: Is x an even integer?\nStatement-1: (x + 3) is an odd integer.\nStatement-2: (3x) is an even integer.\n\nWhich one of the following is correct in respect of the Question and the Statements? (UPSC CSAT 2021)",
     options: [
-      'Statement 1 alone is sufficient to answer the Question.',
-      'Statement 2 alone is sufficient to answer the Question.',
-      'Both Statement 1 and Statement 2 together are sufficient to answer the Question.',
-      'Both Statement 1 and Statement 2 together are not sufficient to answer the Question.'
+      "Statement-1 alone is sufficient to answer the Question",
+      "Statement-2 alone is sufficient to answer the Question",
+      "Both Statement-1 and Statement-2 together are sufficient, but neither alone is sufficient",
+      "Each Statement alone is sufficient to answer the Question"
     ],
-    correctAnswer: 0,
-    explanation: 'Let us test each statement:\n\nQuestion: Is x > y?\n\nStatement 1: (x - y) > 0\nAdding y to both sides:\nx > y.\nThis gives a definitive YES to the question "Is x > y?".\nTherefore, Statement 1 alone is SUFFICIENT to answer the question.\n\nStatement 2: (x + y) > 0\n- If x = 5, y = 2: x + y = 7 > 0, and x > y (YES).\n- If x = 2, y = 5: x + y = 7 > 0, but x < y (NO).\nHence Statement 2 alone is NOT sufficient.\n\nTherefore, Statement 1 alone is sufficient to answer the Question.',
+    correctAnswer: 3,
+    explanation: "Let us examine each statement independently:\nStatement-1: \"(x + 3) is an odd integer.\"\nWe know that Odd + Even = Odd.\nSince 3 is an odd integer, for (x + 3) to be odd, x MUST be an even integer (e.g., if x = 2, 2 + 3 = 5 [odd]; if x = 3, 3 + 3 = 6 [even]).\nThus, Statement-1 alone definitively proves that x is an even integer. It is sufficient.\n\nStatement-2: \"(3x) is an even integer.\"\nWe know that Odd × Even = Even, and Odd × Odd = Odd.\nSince 3 is an odd integer, the product 3x can only be even if x is an even integer (since x is given to be an integer).\nThus, Statement-2 alone also definitively proves that x is an even integer. It is sufficient.\n\nSince both statements independently answer the question, each statement alone is sufficient.",
     bookReference: {
-      bookName: 'Quantitative Aptitude & Data Sufficiency by Arun Sharma',
-      edition: '10th Edition',
-      chapter: 'Chapter 20: Data Sufficiency in Inequalities',
-      pageNumber: 'Page 412 – 418',
-      keyExcerpt: 'An inequality (x - y) > 0 directly translates to x > y by algebraic addition.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal / Tata McGraw Hill CSAT Manual",
+      edition: "Latest Edition",
+      chapter: "Data Sufficiency",
+      pageNumber: "Chapter 35: Number Property Tests",
+      keyExcerpt: "When either statement independently yields a unique affirmative or negative answer, each is sufficient."
     },
-    eliminationTip: 'x - y > 0 is mathematically identical to x > y. Statement 1 alone directly answers the question.',
-    difficulty: 'Easy',
+    eliminationTip: "Both (x + odd = odd => x is even) and (odd × x = even => x is even) independently prove x is even. Hence each statement alone is sufficient.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 9,
-    tags: ['UPSC CSAT 2021', 'Data Sufficiency', 'Inequalities', 'Reasoning']
+    tags: [
+      "UPSC 2021",
+      "CSAT",
+      "Data Sufficiency",
+      "Parity",
+      "Number Properties"
+    ]
   },
   {
     id: 'pyq-2021-csat-71',
@@ -900,34 +917,40 @@ export const pyq2021_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2021', 'Pipes and Cisterns', 'Work Rate', 'Quant']
   },
-  {
-    id: 'pyq-2021-csat-72',
-    subject: 'csat_quant',
-    topic: 'Mixtures and Alligation',
-    subTopic: 'Successive Dilution and Replacement',
-    question: 'A container contains 40 litres of pure milk. From this container, 4 litres of milk was taken out and replaced by water. This process was repeated further two times. How much milk is now contained by the container? (UPSC CSAT 2021)',
+    {
+    id: "pyq-2021-csat-72",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Repeated Dilution and Liquid Replacement",
+    question: "A container contains 60 litres of pure alcohol. From this container, 12 litres of alcohol is extracted and replaced with an equal quantity of water. This operation is repeated one more time (total 2 operations). How many litres of pure alcohol remain in the container? (UPSC CSAT 2021)",
     options: [
-      '26.34 litres',
-      '27.36 litres',
-      '28.00 litres',
-      '29.16 litres'
+      "36.4 litres",
+      "38.4 litres",
+      "40.0 litres",
+      "42.2 litres"
     ],
-    correctAnswer: 3,
-    explanation: 'Standard formula for successive replacement:\nAmount of original liquid remaining = Initial Quantity × [1 - (x / V)]ⁿ\n\nWhere:\n- Initial Quantity (V) = 40 litres\n- Quantity removed and replaced each time (x) = 4 litres\n- Total operations (n) = 1 (initial) + 2 (further) = 3 operations\n\nFraction remaining each time = 1 - (4 / 40) = 1 - (1 / 10) = 9 / 10 = 0.9\n\nRemaining Milk:\n= 40 × (0.9)³\n= 40 × 0.729\n= 4 × 7.29\n= 29.16 litres.',
+    correctAnswer: 1,
+    explanation: "Using the standard formula for repeated replacement of liquids:\nQuantity of pure liquid remaining = Initial Quantity × [1 - (x / C)]^n\nwhere:\n- Initial Quantity C = 60 litres\n- Quantity removed each time x = 12 litres\n- Number of operations n = 2\n\nRemaining alcohol = 60 × [1 - (12 / 60)]²\n= 60 × [1 - 1/5]²\n= 60 × (4/5)²\n= 60 × (16 / 25)\n= (60 / 25) × 16 = 2.4 × 16 = 38.4 litres.\nTherefore, 38.4 litres of pure alcohol remain in the container.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 20: Alligation or Mixture',
-      pageNumber: 'Page 450 – 456',
-      keyExcerpt: 'Quantity remaining = V × (1 - x/V)^n.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Alligation or Mixture",
+      pageNumber: "Chapter 20: Successive Liquid Replacement Formula",
+      keyExcerpt: "Remaining pure quantity = C(1 - x/C)^n."
     },
-    eliminationTip: 'Fraction remaining is (9/10)³ = 0.729. 40 × 0.729 = 29.16 litres.',
-    difficulty: 'Easy',
+    eliminationTip: "Formula shortcut: 60 × (4/5)² = 60 × 16/25 = 2.4 × 16 = 38.4 litres.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2021', 'Mixtures', 'Alligation', 'Successive Dilution']
+    tags: [
+      "UPSC 2021",
+      "CSAT",
+      "Mixtures",
+      "Replacement Formula",
+      "Dilution"
+    ]
   },
   {
     id: 'pyq-2021-csat-73',

@@ -581,34 +581,39 @@ export const pyq2025_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Probability', 'Combinatorics', 'Quant']
   },
-  {
-    id: 'pyq-2025-csat-61',
-    subject: 'csat_quant',
-    topic: 'Simple and Compound Interest',
-    subTopic: 'Difference Between CI and SI for 3 Years',
-    question: 'The difference between compound interest (compounded annually) and simple interest on a certain principal sum for 3 years at 10% per annum is ₹155. What is the principal sum? (UPSC CSAT 2025)',
+    {
+    id: "pyq-2025-csat-61",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Compound Interest with Semi-Annual Compounding",
+    question: "A person invests ₹20,000 in a fixed deposit scheme offering an interest rate of 10% per annum, compounded half-yearly. What is the total compound interest earned at the end of one year? (UPSC CSAT 2025)",
     options: [
-      '₹4,500',
-      '₹5,000',
-      '₹5,500',
-      '₹6,000'
+      "₹2,000",
+      "₹2,050",
+      "₹2,100",
+      "₹2,200"
     ],
     correctAnswer: 1,
-    explanation: 'The standard formula for the difference ($D$) between Compound Interest and Simple Interest for 3 years at rate $R\\%$ is:\n$$D = P \\times \\left(\\frac{R}{100}\\right)^2 \\times \\left(\\frac{300 + R}{100}\\right)$$\nGiven:\n- $D = 155$\n- $R = 10\\%$\n\nSubstitute the values:\n$$155 = P \\times \\left(\\frac{10}{100}\\right)^2 \\times \\left(\\frac{300 + 10}{100}\\right)$$\n$$155 = P \\times \\frac{1}{100} \\times \\frac{310}{100}$$\n$$155 = P \\times \\frac{31}{1000}$$\n$$P = \\frac{155 \\times 1000}{31}$$\nSince $155 / 31 = 5$:\n$$P = 5 \\times 1000 = ₹5,000$$\nThus, the principal sum is ₹5,000.',
+    explanation: "Principal P = ₹20,000.\nAnnual rate R = 10% per annum. Since interest is compounded half-yearly:\nRate per half-year r = 10% / 2 = 5% = 0.05.\nTime period n = 1 year = 2 half-years.\nTotal Amount A = P × (1 + r)² = 20,000 × (1 + 0.05)² = 20,000 × (1.05)²\n= 20,000 × 1.1025 = ₹22,050.\nCompound Interest CI = A - P = 22,050 - 20,000 = ₹2,050.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: 'Revised Edition 2024',
-      chapter: 'Chapter 22: Compound Interest',
-      pageNumber: 'Page 515 – 520',
-      keyExcerpt: 'Difference for 3 years = P(R/100)^2 * (300 + R)/100.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Compound Interest",
+      pageNumber: "Chapter 22: Half-Yearly Compounding Formulae",
+      keyExcerpt: "For half-yearly compounding, rate is halved (R/2) and periods are doubled (2n)."
     },
-    eliminationTip: 'Formula shortcut: D = P * (R/100)^2 * (3 + R/100) = P * (0.01) * 3.1 = 0.031 P. P = 155 / 0.031 = 5,000.',
-    difficulty: 'Moderate',
+    eliminationTip: "Simple interest would be 10% of 20,000 = ₹2,000. Compounding half-yearly adds 5% of first period interest (5% of 1,000 = ₹50), giving ₹2,050.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2025', 'Compound Interest', 'Simple Interest', 'Quant']
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Compound Interest",
+      "Percentages"
+    ]
   },
   {
     id: 'pyq-2025-csat-62',

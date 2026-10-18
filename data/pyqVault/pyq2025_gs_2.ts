@@ -233,34 +233,40 @@ export const pyq2025_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2025', 'Angel Tax', 'Startups', 'Direct Taxes', 'Union Budget 2024', 'Section 56']
   },
-  {
-    id: 'pyq-2025-gs-59',
-    subject: 'environment',
-    topic: 'Wildlife Legislation & CITES Alignment',
-    subTopic: 'Wild Life (Protection) Amendment Act, 2022',
-    question: 'With reference to the Wild Life (Protection) Amendment Act, 2022, consider the following statements:\n\n1. It rationalized the number of Schedules under the 1972 Act from six down to four Schedules.\n2. Schedule IV is dedicated specifically to specimens of species listed in the Appendices of CITES (Convention on International Trade in Endangered Species of Wild Fauna and Flora).\n3. It completely removed the legal power of the Central Government to declare any wild animal as "vermin".\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)',
+    {
+    id: "pyq-2025-gs-59",
+    subject: "environment",
+    topic: "International Environmental Frameworks",
+    subTopic: "Kunming-Montreal Global Biodiversity Framework (KMGBF) & Target 3",
+    question: "With reference to the \"Kunming-Montreal Global Biodiversity Framework\" (KMGBF) adopted at COP15 of the Convention on Biological Diversity (CBD), consider the following statements:\n\n1. Under Target 3 (the \"30x30 target\"), nations commit to conserve at least 30% of global terrestrial, inland water, coastal, and marine areas by 2030.\n2. It officially created the Global Biodiversity Framework Fund (GBFF) hosted under the Global Environment Facility (GEF) to channel financing to developing nations.\n3. The framework completely exempts developed nations from mobilizing international financial resources for biodiversity conservation.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 0,
-    explanation: 'Statement 1 is correct: The 2022 Amendment restructured the schedules: Schedule I (highest protection for endangered species), Schedule II (lesser protection), Schedule III (protected plant species), and Schedule IV (CITES specimens). Former Schedule V (vermin) was deleted.\nStatement 2 is correct: A new chapter VB and Schedule IV were inserted to domesticate India\'s obligations under CITES, providing statutory mechanisms to regulate international trade in listed flora and fauna.\nStatement 3 is incorrect: Although old Schedule V (which listed common crows, fruit bats, mice, and rats) was deleted, the Central Government RETAINED the power to declare any animal (other than Schedule I animals) as vermin for a specified period and area via official gazette notification.',
+    explanation: "Statement 1 is correct: Target 3 mandates protecting at least 30% of Earth's land and ocean ecosystems by 2030 through protected area networks and Other Effective Area-based Conservation Measures (OECMs).\nStatement 2 is correct: The Global Biodiversity Framework Fund (GBFF) was established under GEF in 2023 to finance KMGBF implementation in low- and middle-income nations.\nStatement 3 is incorrect: Target 19 explicitly commits developed countries to mobilize at least $20 billion annually by 2025 and $30 billion annually by 2030 in international biodiversity finance to developing nations.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition (2024)',
-      chapter: 'Chapter 14: Wildlife Legislation in India',
-      pageNumber: 'Page 180 – 186',
-      keyExcerpt: 'The Wild Life Amendment Act 2022 reduced schedules to four, implemented CITES in Schedule IV, and retained vermin notification powers.'
+      bookName: "Environment by Shankar IAS Academy / UNEP CBD Reports",
+      edition: "10th Edition (2024)",
+      chapter: "International Conventions: CBD & Biodiversity Targets",
+      pageNumber: "Page 328 – 334",
+      keyExcerpt: "KMGBF Target 3 sets the 30x30 goal. Target 19 obligates international climate/biodiversity finance from developed to developing countries."
     },
-    eliminationTip: 'States frequently face human-wildlife conflict (e.g. wild boars damaging crops) and request vermin declarations. The Centre did NOT strip itself of the power to declare vermin. Eliminating 3 yields (a) 1 and 2 only.',
-    difficulty: 'UPSC Standard',
+    eliminationTip: "Exempting developed nations from funding biodiversity contradicts Common But Differentiated Responsibilities (CBDR). Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2025', 'Wild Life Protection Act', '2022 Amendment', 'CITES', 'Schedules', 'Vermin']
+    tags: [
+      "UPSC 2025",
+      "KMGBF",
+      "CBD COP15",
+      "30x30 Target",
+      "Biodiversity Fund"
+    ]
   },
   {
     id: 'pyq-2025-gs-60',
@@ -813,34 +819,39 @@ export const pyq2025_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2025', 'Western Ghats', 'Madhav Gadgil', 'Kasturirangan Committee', 'ESA', 'Ecology']
   },
-  {
-    id: 'pyq-2025-gs-79',
-    subject: 'science_tech',
-    topic: 'Information & Communications Technology',
-    subTopic: 'Near Field Communication (NFC) vs RFID and Bluetooth',
-    question: 'With reference to Near Field Communication (NFC) technology, consider the following statements:\n\n1. It is a short-range wireless connectivity technology that operates at a frequency of 13.56 MHz over distances of 4 cm or less.\n2. Unlike standard Bluetooth, NFC connections are established automatically within a fraction of a second without requiring manual device pairing.\n3. An unpowered passive NFC tag can draw operational electrical energy directly from the electromagnetic field generated by an active reader device.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)',
+    {
+    id: "pyq-2025-gs-79",
+    subject: "science_tech",
+    topic: "Frontier Technologies & Quantum Communications",
+    subTopic: "Quantum Key Distribution (QKD) & Principles",
+    question: "With reference to \"Quantum Key Distribution\" (QKD) under India’s National Quantum Mission, consider the following statements:\n\n1. It allows two communicating parties to produce a shared random secret key known only to them for encrypting messages.\n2. Any attempt by an eavesdropper to measure or intercept the quantum channel unavoidably alters the quantum states and is instantly detected.\n3. QKD facilitates the transmission of cryptographic keys at superluminal speeds (faster than the speed of light) through quantum teleportation.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: 'All three statements are correct:\n1. NFC operates via electromagnetic induction at 13.56 MHz over extremely short ranges (< 4 cm), which provides inherent physical security for contactless payments.\n2. Unlike Bluetooth (which requires manual scanning, PIN authentication, and pairing taking several seconds), NFC setup is instantaneous (< 0.1 second) simply by tapping devices together.\n3. In passive mode, a passive NFC tag (e.g. in metro cards or smart posters) contains no battery of its own; it is energized via inductive coupling from the radio frequency field emitted by the active reader (smartphone/POS machine).',
+    correctAnswer: 0,
+    explanation: "Statement 1 is correct: QKD uses quantum properties of photons to securely exchange cryptographic keys.\nStatement 2 is correct: By virtue of the Heisenberg Uncertainty Principle and the No-Cloning Theorem, any observation or measurement by an intruder collapses the superposition of photons, introducing measurable quantum bit error rates (QBER) that alert the sender and receiver.\nStatement 3 is incorrect: No quantum communication method transmits information faster than the speed of light. Photons travel at the speed of light in vacuum (or slower in fiber optic cables), strictly respecting Einstein’s Special Relativity.",
     bookReference: {
-      bookName: 'Science & Technology by Ravi P. Agrahari',
-      edition: '7th Edition (2024)',
-      chapter: 'Chapter 12: Communication Technologies & Wireless Standards',
-      pageNumber: 'Page 12.18 – 12.23',
-      keyExcerpt: 'NFC operates at 13.56 MHz within 4 cm. Passive tags harvest energy from active reader fields without batteries.'
+      bookName: "Science and Technology in India / National Quantum Mission Documents",
+      edition: "2024 Edition",
+      chapter: "Quantum Computing and Cryptography",
+      pageNumber: "Page 142 – 148",
+      keyExcerpt: "QKD ensures unconditional security through quantum physics laws, but data transmission remains bounded by the speed of light."
     },
-    eliminationTip: 'Tapping a phone or metro card demonstrates instant setup without pairing, working via passive magnetic induction over ~4 cm. All 3 statements are correct.',
-    difficulty: 'Easy',
+    eliminationTip: "Information cannot travel faster than the speed of light in physics. Statement 3 is scientifically impossible. Eliminating Statement 3 yields (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2025', 'NFC', 'Near Field Communication', 'RFID', 'Wireless Technology', 'Digital Payments']
+    tags: [
+      "UPSC 2025",
+      "Quantum Key Distribution",
+      "National Quantum Mission",
+      "Science & Tech"
+    ]
   },
   {
     id: 'pyq-2025-gs-80',

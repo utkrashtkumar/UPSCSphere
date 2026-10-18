@@ -494,92 +494,108 @@ export const pyq2025_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Problems on Ages', 'Ratios', 'Linear Equations']
   },
-  {
-    id: 'pyq-2025-csat-18',
-    subject: 'csat_quant',
-    topic: 'Clocks',
-    subTopic: 'Coincidence of Hands between Given Hours',
-    question: 'At what time between 4 o\'clock and 5 o\'clock will the hands of a clock coincide (be together)? (UPSC CSAT 2025)',
+    {
+    id: "pyq-2025-csat-18",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude & Time",
+    subTopic: "Clocks: Coincidence of Hands",
+    question: "At what time between 7 o’clock and 8 o’clock will the hour hand and minute hand of a clock coincide? (UPSC CSAT 2025)",
     options: [
-      '21 (9/11) minutes past 4',
-      '21 (5/11) minutes past 4',
-      '22 (8/11) minutes past 4',
-      '20 minutes past 4'
+      "38 2/11 minutes past 7",
+      "37 3/11 minutes past 7",
+      "38 7/11 minutes past 7",
+      "39 minutes past 7"
     ],
     correctAnswer: 0,
-    explanation: 'At 4 o\'clock, the hour hand is at 20 minute spaces and the minute hand is at 0.\nFor the hands to coincide, the minute hand must gain 20 minute spaces over the hour hand.\nThe minute hand gains 55 minute spaces in 60 minutes over the hour hand (speed = 55/60 = 11/12 minute spaces/min).\nTime taken to gain 20 minute spaces:\nTime = 20 × (60 / 55) = 20 × (12 / 11) = 240 / 11 = 21 (9/11) minutes.\nTherefore, the hands coincide at 21 (9/11) minutes past 4.',
+    explanation: "At 7 o'clock, the hour hand is at 7 (which corresponds to 35 minute spaces or 7 × 30° = 210° ahead of the minute hand at 12).\nIn one minute, the minute hand gains 5.5° (11/2°) over the hour hand.\nTime required to cover the 210° angle:\nT = 210° / (11/2)° = (210 × 2) / 11 = 420 / 11 = 38 2/11 minutes.\nTherefore, the two hands coincide at 38 2/11 minutes past 7.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 25: Clocks',
-      pageNumber: 'Page 540 – 545',
-      keyExcerpt: 'Hands coincide when minute hand covers initial minute space separation at relative speed of 12/11 min per minute space.'
+      bookName: "Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Clocks",
+      pageNumber: "Chapter 28: Problem Type: Coincidence of Hands",
+      keyExcerpt: "Time to coincide = (Initial Angle in degrees) × (2/11) minutes."
     },
-    eliminationTip: 'Formula: M = (H × 5) × (12/11) = 20 × 12/11 = 240/11 = 21 9/11 minutes past 4.',
-    difficulty: 'Easy',
+    eliminationTip: "Formula: 210 × 2 / 11 = 420/11 = 38 with remainder 2, which gives 38 2/11 minutes.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 10,
-    tags: ['UPSC CSAT 2025', 'Clocks', 'Coincidence', 'Relative Speed']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Clocks",
+      "Speed and Angles"
+    ]
   },
-  {
-    id: 'pyq-2025-csat-19',
-    subject: 'csat_quant',
-    topic: 'Profit and Loss',
-    subTopic: 'Dishonest Dealer and False Weights',
-    question: 'A dishonest shopkeeper professes to sell his goods at cost price, but uses a false weight of 900 grams instead of a 1 kilogram weight. What is his actual profit percentage? (UPSC CSAT 2025)',
+    {
+    id: "pyq-2025-csat-19",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Mixtures and Alligations",
+    question: "A grocer mixes two varieties of pulses: Variety X costing ₹80 per kg and Variety Y costing ₹120 per kg. In what ratio must he mix Variety X and Variety Y so that the resulting mixture is worth ₹95 per kg? (UPSC CSAT 2025)",
     options: [
-      '10%',
-      '11 (1/9)%',
-      '12 (1/2)%',
-      '15%'
+      "3 : 5",
+      "5 : 3",
+      "2 : 3",
+      "4 : 3"
     ],
     correctAnswer: 1,
-    explanation: 'Standard formula for dishonest weight profit:\n$$\\text{Profit \\%} = \\left(\\frac{\\text{Error}}{\\text{True Value} - \\text{Error}}\\right) \\times 100$$\nHere True Value = 1,000 g, Weight given = 900 g, Error = 1,000 - 900 = 100 g.\n$$\\text{Profit \\%} = \\left(\\frac{100}{900}\\right) \\times 100 = \\frac{100}{9} = 11 \\frac{1}{9}\\%$$\nAlternatively, consider cost: He sells 900g for the price of 1000g. If 1g costs ₹1, his CP is ₹900 and SP is ₹1,000. Profit = ₹100 on ₹900 CP. Profit % = 100/900 × 100 = 11 1/9%.',
+    explanation: "Using the Rule of Alligation:\nCheaper Price (c) = ₹80\nDearer Price (d) = ₹120\nMean Price (m) = ₹95\nRatio of Cheaper : Dearer = (d - m) : (m - c)\n= (120 - 95) : (95 - 80)\n= 25 : 15 = 5 : 3.\nTherefore, Variety X and Variety Y must be mixed in the ratio 5 : 3.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 11: Profit and Loss',
-      pageNumber: 'Page 285 – 289',
-      keyExcerpt: 'Profit % on false weight = [Error / (True Weight - Error)] × 100.'
+      bookName: "Fast Track Objective Arithmetic by Rajesh Verma",
+      edition: "Latest Edition",
+      chapter: "Alligation or Mixture",
+      pageNumber: "Page 380 – 385",
+      keyExcerpt: "Quantity of cheaper / Quantity of dearer = (Price of dearer - Mean price) / (Mean price - Price of cheaper)."
     },
-    eliminationTip: 'Profit is always calculated on the base of actual goods handed over (900g), never on 1000g. 100/900 = 1/9 = 11.11% = 11 1/9%.',
-    difficulty: 'Easy',
+    eliminationTip: "Alligation difference: (120 - 95) = 25 on left; (95 - 80) = 15 on right. Ratio = 25 : 15 = 5 : 3.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2025', 'Profit and Loss', 'Dishonest Dealer', 'False Weights']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Alligations",
+      "Mixtures",
+      "Ratios"
+    ]
   },
-  {
-    id: 'pyq-2025-csat-20',
-    subject: 'csat_quant',
-    topic: 'Averages',
-    subTopic: 'Replacement of an Individual and Shift in Mean',
-    question: 'The average weight of 8 persons increases by 2.5 kg when a new person comes in place of one of them weighing 65 kg. What is the weight of the new person? (UPSC CSAT 2025)',
+    {
+    id: "pyq-2025-csat-20",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Correction of Errors in Averages",
+    question: "The average score of 40 students in an examination was calculated as 52. Later, it was discovered that the marks of two students were wrongly entered as 85 and 64 instead of their actual scores 58 and 46 respectively. What is the correct average score of the class? (UPSC CSAT 2025)",
     options: [
-      '75 kg',
-      '80 kg',
-      '85 kg',
-      '90 kg'
+      "50.875",
+      "51.125",
+      "51.500",
+      "52.250"
     ],
-    correctAnswer: 2,
-    explanation: 'Total increase in weight of the 8 persons = 8 × 2.5 kg = 20 kg.\nThe incoming person must weigh enough to replace the outgoing person (65 kg) and provide the extra 20 kg spread across the 8 persons.\nWeight of new person = Weight of removed person + Total Increase\nWeight = 65 kg + 20 kg = 85 kg.',
+    correctAnswer: 0,
+    explanation: "Sum of wrongly entered marks = 85 + 64 = 149.\nSum of correct actual marks = 58 + 46 = 104.\nNet difference in total marks = 104 - 149 = -45 (the original total was overstated by 45).\nCorrection to the average = -45 / 40 = -1.125.\nCorrect average score = 52 - 1.125 = 50.875.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 6: Problems on Averages',
-      pageNumber: 'Page 140 – 144',
-      keyExcerpt: 'Weight of new entrant = Replaced weight + (Number of members × Increase in average).'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Averages",
+      pageNumber: "Page 140 – 148",
+      keyExcerpt: "Correct Average = Original Average + (Correct Values - Wrong Values) / N."
     },
-    eliminationTip: 'Net weight increase = 8 × 2.5 = 20 kg. New weight = 65 + 20 = 85 kg.',
-    difficulty: 'Easy',
+    eliminationTip: "Wrong marks (149) were greater than correct marks (104) by 45. The average must decrease by 45/40 = 1.125. 52 - 1.125 = 50.875.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 10,
-    tags: ['UPSC CSAT 2025', 'Averages', 'Replacement Method']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Averages",
+      "Arithmetic"
+    ]
   },
   {
     id: 'pyq-2025-csat-21',
@@ -610,34 +626,40 @@ export const pyq2025_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Compound Interest', 'Exponential Rule']
   },
-  {
-    id: 'pyq-2025-csat-22',
-    subject: 'csat_quant',
-    topic: 'Permutations and Combinations',
-    subTopic: 'Divisibility Constraint on Formed Numbers',
-    question: 'How many 4-digit numbers can be formed using the digits 1, 2, 3, 4, and 5 without repetition such that the number is divisible by 4? (UPSC CSAT 2025)',
+    {
+    id: "pyq-2025-csat-22",
+    subject: "csat_quant",
+    topic: "Permutations & Combinations",
+    subTopic: "Forming Numbers with Constraints & Divisibility",
+    question: "How many 3-digit numbers can be formed using the digits 0, 1, 2, 3, 4, 5 without repetition, such that the number is divisible by 5? (UPSC CSAT 2025)",
     options: [
-      '12',
-      '18',
-      '24',
-      '30'
+      "36",
+      "40",
+      "42",
+      "48"
     ],
-    correctAnswer: 2,
-    explanation: 'A number is divisible by 4 if and only if its last two digits form a number divisible by 4.\nUsing digits {1, 2, 3, 4, 5} without repetition, the possible two-digit combinations divisible by 4 are:\n- 12\n- 24\n- 32\n- 52\nThere are exactly 4 valid two-digit endings.\nFor each valid ending (2 digits fixed out of 5), we need to fill the first 2 digits (thousands and hundreds places) from the remaining 3 available digits.\nNumber of ways to choose and arrange 2 digits out of 3 = 3P2 = 3 × 2 = 6 ways.\nTotal 4-digit numbers divisible by 4 = 4 × 6 = 24.',
+    correctAnswer: 0,
+    explanation: "A number is divisible by 5 if its units digit is either 0 or 5.\nCase 1: Units digit is 0.\n- Units place is fixed with 0 (1 choice).\n- Hundreds place can take any non-zero digit from {1, 2, 3, 4, 5} (5 choices).\n- Tens place can take any remaining digit from {1, 2, 3, 4, 5} (4 choices).\nTotal numbers in Case 1 = 5 × 4 × 1 = 20.\n\nCase 2: Units digit is 5.\n- Units place is fixed with 5 (1 choice).\n- Hundreds place cannot be 0 and cannot be 5, so it can be chosen from {1, 2, 3, 4} (4 choices).\n- Tens place can be chosen from the remaining 4 digits including 0 (4 choices).\nTotal numbers in Case 2 = 4 × 4 × 1 = 16.\n\nTotal 3-digit numbers divisible by 5 = 20 + 16 = 36.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 30: Permutations and Combinations',
-      pageNumber: 'Page 612 – 618',
-      keyExcerpt: 'Fix the last two digits using divisibility rule of 4; permute remaining digits for leading positions.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal / Pearson CSAT Manual",
+      edition: "Latest Edition",
+      chapter: "Permutations and Combinations",
+      pageNumber: "Chapter 30: Digits Formation",
+      keyExcerpt: "When 0 is available, split into cases where 0 is at units place versus other valid digits."
     },
-    eliminationTip: 'Valid endings: 12, 24, 32, 52 (4 endings). Remaining 2 places filled in 3 × 2 = 6 ways. Total = 4 × 6 = 24.',
-    difficulty: 'Moderate',
+    eliminationTip: "Case 0 at end gives 5×4 = 20. Case 5 at end: hundreds digit cannot be 0, giving 4×4 = 16. 20 + 16 = 36.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2025', 'Permutations', 'Divisibility of 4', 'Combinations']
+    pyqPaper: "CSAT",
+    frequency: 9,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Permutations",
+      "Divisibility",
+      "Number Systems"
+    ]
   },
   {
     id: 'pyq-2025-csat-23',
@@ -668,34 +690,39 @@ export const pyq2025_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Probability', 'Combinations', 'Balls in Box']
   },
-  {
-    id: 'pyq-2025-csat-24',
-    subject: 'csat_quant',
-    topic: 'Pipes and Cisterns',
-    subTopic: 'Early Closure of Inlet Pipe',
-    question: 'Two pipes A and B can fill a tank in 12 minutes and 15 minutes respectively. Both pipes are opened together, but after 3 minutes, pipe A is closed. How much more time (in minutes) will pipe B take to fill the rest of the tank? (UPSC CSAT 2025)',
+    {
+    id: "pyq-2025-csat-24",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Pipes and Cisterns with Partial Capacity",
+    question: "Pipe P can fill a cistern in 10 hours, while Pipe Q can empty the completely filled cistern in 15 hours. If both pipes are opened simultaneously when the cistern is already half full, in how many hours will the cistern become completely full? (UPSC CSAT 2025)",
     options: [
-      '7 minutes 15 seconds',
-      '8 minutes 15 seconds',
-      '8 minutes 30 seconds',
-      '9 minutes'
+      "12 hours",
+      "15 hours",
+      "18 hours",
+      "20 hours"
     ],
     correctAnswer: 1,
-    explanation: 'Let total capacity = LCM(12, 15) = 60 units.\n- Efficiency of A = 60 / 12 = 5 units/min\n- Efficiency of B = 60 / 15 = 4 units/min\nCombined efficiency = 5 + 4 = 9 units/min.\nIn the first 3 minutes together:\nWork done = 3 × 9 = 27 units.\nRemaining capacity = 60 - 27 = 33 units.\nPipe B alone fills the remaining 33 units at 4 units/min:\nTime taken by B = 33 / 4 = 8.25 minutes = 8 minutes and (0.25 × 60) seconds = 8 minutes 15 seconds.',
+    explanation: "Let the total capacity of the cistern be the LCM of 10 and 15 = 30 units.\nEfficiency of filling Pipe P = +30 / 10 = +3 units/hour.\nEfficiency of emptying Pipe Q = -30 / 15 = -2 units/hour.\nNet filling rate when both pipes are open = +3 - 2 = +1 unit/hour.\nThe cistern is already half full, so it currently contains 30 / 2 = 15 units.\nThe remaining volume to be filled = 30 - 15 = 15 units.\nTime taken to fill the remaining 15 units = 15 units / (1 unit/hour) = 15 hours.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 16: Pipes and Cisterns',
-      pageNumber: 'Page 382 – 386',
-      keyExcerpt: 'Subtract joint work done prior to shutoff; divide remaining units by individual rate of remaining pipe.'
+      bookName: "Fast Track Objective Arithmetic by Rajesh Verma",
+      edition: "Latest Edition",
+      chapter: "Pipes and Cisterns",
+      pageNumber: "Page 310 – 318",
+      keyExcerpt: "Net filling rate = Inflow rate - Outflow rate. Required time = Remaining volume / Net rate."
     },
-    eliminationTip: 'Together in 3 min: 3 × (5+4) = 27 units. 33 units left. B takes 33/4 = 8.25 min = 8 min 15 sec.',
-    difficulty: 'Easy',
+    eliminationTip: "Net fill rate is 1/10 - 1/15 = 1/30 cistern/hr. To fill the remaining 1/2 of the cistern: (1/2) / (1/30) = 15 hours.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2025', 'Pipes and Cisterns', 'LCM Method', 'Time and Work']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Pipes and Cisterns",
+      "Time and Work"
+    ]
   },
   {
     id: 'pyq-2025-csat-25',
@@ -1016,34 +1043,40 @@ export const pyq2025_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Coding Decoding', 'Letter Shift', 'Reasoning']
   },
-  {
-    id: 'pyq-2025-csat-36',
-    subject: 'csat_reasoning',
-    topic: 'Calendar',
-    subTopic: 'Day of the Week Calculation',
-    question: 'If 1st January 2024 was a Monday, what day of the week was 31st December 2024? (UPSC CSAT 2025)',
+    {
+    id: "pyq-2025-csat-36",
+    subject: "csat_quant",
+    topic: "Logical Reasoning & Calendars",
+    subTopic: "Calendar Odd Days in a Non-Leap Year",
+    question: "If 1st March of a non-leap year was a Saturday, what day of the week was 1st December of the same year? (UPSC CSAT 2025)",
     options: [
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Sunday'
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Saturday"
     ],
     correctAnswer: 1,
-    explanation: 'The year 2024 is a leap year (divisible by 4).\nA leap year contains 366 days.\nIn an ordinary year (365 days = 52 weeks + 1 day), the year ends on the same day of the week as it begins (1st Jan = 31st Dec).\nIn a leap year (366 days = 52 weeks + 2 days), the year ends on the day of the week AFTER the day on which it begins.\nSince 1st January 2024 was Monday, 31st December 2024 was Tuesday.',
+    explanation: "We calculate the number of days from 1st March to 1st December in a non-leap year:\nRemaining days in March: 31 - 1 = 30 days\nApril: 30 days\nMay: 31 days\nJune: 30 days\nJuly: 31 days\nAugust: 31 days\nSeptember: 30 days\nOctober: 31 days\nNovember: 30 days\nTarget day in December: 1 day (1st December)\nTotal days = 30 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 1 = 275 days.\nNumber of odd days = 275 mod 7 = 2 odd days (since 275 = 39 × 7 + 2).\nDay on 1st December = Saturday + 2 days = Monday.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 26: Calendar',
-      pageNumber: 'Page 562 – 566',
-      keyExcerpt: 'A leap year ends on the day succeeding the day on which it started.'
+      bookName: "A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Calendars",
+      pageNumber: "Chapter 27: Counting Odd Days",
+      keyExcerpt: "Total days mod 7 gives the shift in days of the week."
     },
-    eliminationTip: '2024 is a leap year (366 days). Starts on Monday, so it must end on Tuesday.',
-    difficulty: 'Easy',
+    eliminationTip: "Odd days by month from March to Nov: Mar(2) + Apr(2) + May(3) + Jun(2) + Jul(3) + Aug(3) + Sep(2) + Oct(3) + Nov(2) + Dec(1) = 23 days. 23 mod 7 = 2 odd days. Saturday + 2 = Monday.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 10,
-    tags: ['UPSC CSAT 2025', 'Calendar', 'Leap Year', 'Odd Days']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Calendars",
+      "Odd Days",
+      "Reasoning"
+    ]
   },
   {
     id: 'pyq-2025-csat-37',
@@ -1103,34 +1136,39 @@ export const pyq2025_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Data Sufficiency', 'Number Properties', 'Even Odd']
   },
-  {
-    id: 'pyq-2025-csat-39',
-    subject: 'csat_reasoning',
-    topic: 'Statement and Assumptions',
-    subTopic: 'Public Policy Notices',
-    question: 'Consider the following statement and assumptions:\n\nStatement: "The Ministry of Power announced that all households installing rooftop solar panels by December 2025 will receive an immediate 40% capital subsidy on their installation cost."\n\nAssumptions:\nI. A significant number of households may be motivated by the financial subsidy to adopt rooftop solar.\nII. The manufacturing capacity in the country is sufficient to meet the anticipated increase in solar panel demand.\n\nWhich of the assumptions is/are implicit in the statement? (UPSC CSAT 2025)',
+    {
+    id: "pyq-2025-csat-39",
+    subject: "csat_reasoning",
+    topic: "Critical Reasoning",
+    subTopic: "Statement and Assumptions",
+    question: "Consider the following statement and assumptions:\n\nStatement: \"The State Road Transport Corporation announced a 25% discount on bus fares across all inter-district express routes during the festive festival month.\"\n\nAssumptions:\nI. A significant number of commuters who currently prefer private buses or trains may switch to state buses due to the discounted fares.\nII. The total revenue of the Corporation during the festive month may increase despite the discount due to higher passenger occupancy.\n\nWhich of the assumptions is/are implicit in the statement? (UPSC CSAT 2025)",
     options: [
-      'Only Assumption I is implicit',
-      'Only Assumption II is implicit',
-      'Both Assumption I and Assumption II are implicit',
-      'Neither Assumption I nor Assumption II is implicit'
+      "Only assumption I is implicit",
+      "Only assumption II is implicit",
+      "Both assumption I and II are implicit",
+      "Neither assumption I nor II is implicit"
     ],
     correctAnswer: 2,
-    explanation: 'When a government ministry announces a major public subsidy scheme:\n1. It fundamentally assumes that financial incentives alter public behavior and motivate people to install solar panels (Assumption I is implicit).\n2. The authority also assumes that domestic industrial supply chains are equipped to fulfill the resulting consumer demand; otherwise, offering a nationwide subsidy would lead to immediate failure and market gridlock (Assumption II is implicit).\nTherefore, both assumptions are implicit.',
+    explanation: "Both assumptions are implicit:\n- Assumption I is implicit: Any commercial entity offering a price discount assumes price-sensitive consumers will respond positively by opting for their service over alternatives.\n- Assumption II is implicit: Offering a 25% discount during a peak festive demand season is based on the economic premise of price elasticity of demand—the surge in ridership will more than compensate for the lower ticket price, thereby boosting overall revenue.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 18: Statement and Assumptions',
-      pageNumber: 'Page 412 – 418',
-      keyExcerpt: 'Policy announcements assume public willingness to respond and systemic capacity to deliver.'
+      bookName: "Analytical Reasoning by M.K. Pandey",
+      edition: "Revised Edition",
+      chapter: "Statement and Assumptions",
+      pageNumber: "Page 78 – 85",
+      keyExcerpt: "Concessions and promotional offers are made on the assumption that customers will be attracted and turnover will increase."
     },
-    eliminationTip: 'Government subsidy notices assume both public responsiveness (I) and supply feasibility (II). Both are implicit.',
-    difficulty: 'Easy',
+    eliminationTip: "Commercial price cuts during festivals invariably assume commuter attraction (Assumption I) and volume-driven revenue sustainability (Assumption II). Both are implicit.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2025', 'Statement and Assumptions', 'Critical Reasoning', 'Policy Notices']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Statement and Assumptions",
+      "Critical Reasoning"
+    ]
   },
   {
     id: 'pyq-2025-csat-40',

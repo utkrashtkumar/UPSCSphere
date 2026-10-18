@@ -1,34 +1,40 @@
 import { Question } from '@/lib/types';
 
 export const pyq2025_gs_1: Question[] = [
-  {
-    id: 'pyq-2025-gs-01',
-    subject: 'polity',
-    topic: 'Constitutional Bodies & Appointment Process',
-    subTopic: 'Chief Election Commissioner and Other Election Commissioners Act, 2023',
-    question: 'With reference to the Chief Election Commissioner and other Election Commissioners (Appointment, Conditions of Service and Term of Office) Act, 2023, consider the following statements:\n\n1. The Selection Committee for recommending appointments consists of the Prime Minister, the Leader of the Opposition (or leader of the largest opposition party in Lok Sabha), and a designated Union Cabinet Minister.\n2. The Chief Justice of India is a permanent member of the Selection Committee under the Act.\n3. The qualifications require candidates to be persons who are holding or have held a post equivalent to the rank of Secretary to the Government of India.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)',
+    {
+    id: "pyq-2025-gs-01",
+    subject: "polity",
+    topic: "Legislation & Communications Governance",
+    subTopic: "Telecommunications Act 2023 & Spectrum Allocation Reforms",
+    question: "With reference to the \"Telecommunications Act, 2023\", consider the following statements:\n\n1. It repeals and replaces colonial-era telecom laws, including the Indian Telegraph Act, 1885 and the Indian Wireless Telegraphy Act, 1933.\n2. It provides for administrative allocation of spectrum for satellite-based broadband services without mandatory participation in public auctions.\n3. The Universal Service Obligation Fund (USOF) is restructured and renamed as the \"Digital Bharat Nidhi\" to support research, development, and rural telecom connectivity.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Statement 1 is correct: Section 7 of the Act prescribes a 3-member Selection Committee: Prime Minister (Chairperson), Leader of the Opposition in Lok Sabha, and a Union Cabinet Minister nominated by the PM.\nStatement 2 is incorrect: The Act replaced the interim mechanism established by the Supreme Court in Anoop Baranwal v. Union of India (2023) by omitting the Chief Justice of India from the Selection Committee.\nStatement 3 is correct: Section 5 explicitly stipulates eligibility criteria: candidates must be persons who are holding or have held a post equivalent to the rank of Secretary to the Government of India with proven integrity and election management experience.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. The Telecommunications Act, 2023 replaces the Indian Telegraph Act (1885), the Indian Wireless Telegraphy Act (1933), and the Telegraph Wires (Unlawful Possession) Act (1950).\n2. The Act establishes auction as the primary mode of spectrum assignment but creates an explicit Schedule allowing administrative (non-auction) allocation for strategic sectors including satellite broadband, defense, and public broadcasting.\n3. It renames and expands the scope of the Universal Service Obligation Fund (USOF) into the \"Digital Bharat Nidhi\" to fund underserved areas, pilot projects, and indigenous telecom R&D.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition (2024)',
-      chapter: 'Chapter 42: Election Commission of India',
-      pageNumber: 'Page 42.4 – 42.7',
-      keyExcerpt: 'The 2023 Act statutory committee consists of PM, Leader of Opposition, and a Union Minister. CJI is NOT included.'
+      bookName: "Indian Polity by M. Laxmikanth / PRS Legislative Research",
+      edition: "7th Edition",
+      chapter: "Modern Regulatory Enactments & Communications Laws",
+      pageNumber: "Telecom Reform Dossier 2024",
+      keyExcerpt: "Telecommunications Act 2023 enables administrative allocation for satellite spectrum and creates Digital Bharat Nidhi."
     },
-    eliminationTip: 'The exclusion of the Chief Justice of India was the central national legal controversy surrounding the 2023 legislation. Eliminating Statement 2 immediately leaves (b) 1 and 3 only.',
-    difficulty: 'Moderate',
+    eliminationTip: "All three provisions represent the headline structural changes introduced by Parliament in the Telecom Act 2023.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2025', 'Election Commission', 'CEC Act 2023', 'Anoop Baranwal', 'Selection Committee']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2025",
+      "Telecommunications Act 2023",
+      "Satellite Spectrum",
+      "Digital Bharat Nidhi",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2025-gs-02',

@@ -233,34 +233,39 @@ export const pyq2024_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2024', 'Syllogism', 'Conversion', 'Logical Reasoning']
   },
-  {
-    id: 'pyq-2024-csat-09',
-    subject: 'csat_quant',
-    topic: 'Percentages and Successive Changes',
-    subTopic: 'Price and Consumption Adjustment',
-    question: 'If the price of petrol increases by 25%, by what percentage must a car owner reduce fuel consumption so that the total monthly expenditure on petrol remains unchanged? (UPSC CSAT 2024)',
+    {
+    id: "pyq-2024-csat-09",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Price-Consumption-Expenditure Percentage Relations",
+    question: "If the price of sugar falls by 20%, by what percentage can a household increase its sugar consumption so that its overall monthly expenditure on sugar remains unchanged? (UPSC CSAT 2024)",
     options: [
-      '15%',
-      '20%',
-      '25%',
-      '30%'
+      "20%",
+      "25%",
+      "30%",
+      "33 1/3%"
     ],
     correctAnswer: 1,
-    explanation: 'Formula for percentage reduction in consumption to keep expenditure constant:\nReduction % = [r / (100 + r)] × 100\nHere r = 25:\nReduction % = [25 / (100 + 25)] × 100 = [25 / 125] × 100 = (1/5) × 100 = 20%.\n\nAlternatively:\nLet initial price = 100, initial consumption = 100 → Expenditure = 10,000.\nNew price = 125.\nNew consumption required = 10,000 / 125 = 80.\nReduction = 100 - 80 = 20%.',
+    explanation: "Let initial price = ₹100 per kg and initial consumption = 100 kg.\nInitial expenditure = 100 × 100 = ₹10,000.\nNew price = 100 - 20 = ₹80 per kg.\nTo keep expenditure at ₹10,000, new consumption = 10,000 / 80 = 125 kg.\nIncrease in consumption = 125 - 100 = 25 kg.\nPercentage increase in consumption = (25 / 100) × 100 = 25%.\nAlternatively, using the formula: Percentage increase = [r / (100 - r)] × 100 = [20 / (100 - 20)] × 100 = (20 / 80) × 100 = 25%.",
     bookReference: {
-      bookName: 'Quantitative Aptitude by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 10: Percentage (Expenditure and Consumption)',
-      pageNumber: 'Page 208 – 214',
-      keyExcerpt: 'When price rises by r%, consumption must fall by [r/(100+r)]*100 to maintain constant expenditure.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Percentage",
+      pageNumber: "Chapter 10: Rule of Price-Consumption Inversion",
+      keyExcerpt: "If price decreases by r%, consumption increases by [r / (100 - r)] × 100%."
     },
-    eliminationTip: 'If price goes up from 4 to 5 (+25%), consumption must drop from 5 to 4 (-1/5 = -20%). Standard arithmetic reciprocal.',
-    difficulty: 'Easy',
+    eliminationTip: "Formula: 20 / (100 - 20) = 20/80 = 1/4 = 25%.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2024', 'Percentages', 'Consumption', 'Expenditure', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2024",
+      "CSAT",
+      "Percentages",
+      "Consumption and Expenditure"
+    ]
   },
   {
     id: 'pyq-2024-csat-10',
@@ -349,34 +354,39 @@ export const pyq2024_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2024', 'Blood Relations', 'Family Tree', 'Logical Reasoning']
   },
-  {
-    id: 'pyq-2024-csat-13',
-    subject: 'csat_quant',
-    topic: 'Averages & Replacements',
-    subTopic: 'Weight Change on Member Substitution',
-    question: 'The average weight of 8 persons increases by 2.5 kg when a new person replaces one of them whose weight is 65 kg. What is the weight of the new person? (UPSC CSAT 2024)',
+    {
+    id: "pyq-2024-csat-13",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Replacement of Members and Effect on Averages",
+    question: "The average age of a committee of 7 members is 35 years. If one member aged 42 years resigns and is replaced by a new member aged 28 years, what is the new average age of the committee? (UPSC CSAT 2024)",
     options: [
-      '75 kg',
-      '80 kg',
-      '85 kg',
-      '90 kg'
+      "31 years",
+      "32 years",
+      "33 years",
+      "34 years"
     ],
     correctAnswer: 2,
-    explanation: 'When a person is replaced, Total change in weight = Number of persons × Change in average weight.\nTotal increase in weight = 8 × 2.5 kg = 20 kg.\nWeight of new person = Weight of replaced person + Total increase = 65 kg + 20 kg = 85 kg.',
+    explanation: "Initial number of members = 7.\nInitial total age = 7 × 35 = 245 years.\nAge of leaving member = 42 years.\nAge of incoming member = 28 years.\nNet change in total age = 28 - 42 = -14 years.\nNew total age = 245 - 14 = 231 years.\nNew average age = 231 / 7 = 33 years.\nDirect Shortcut: Net change in average = (Age of newcomer - Age of leaving member) / Total members = (28 - 42) / 7 = -14 / 7 = -2 years.\nNew average = 35 - 2 = 33 years.",
     bookReference: {
-      bookName: 'Quantitative Aptitude by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 6: Problems on Averages',
-      pageNumber: 'Page 140 – 146',
-      keyExcerpt: 'New weight = Replaced weight + (Count * Average increase).'
+      bookName: "Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Averages",
+      pageNumber: "Chapter 6: Replacement of Items",
+      keyExcerpt: "Change in average = (New Value - Old Value) / Count."
     },
-    eliminationTip: '8 × 2.5 = 20 kg net increase. Replaced person was 65 kg. New person = 65 + 20 = 85 kg.',
-    difficulty: 'Easy',
+    eliminationTip: "Shortcut: Change = (28 - 42) / 7 = -14 / 7 = -2 years. 35 - 2 = 33 years.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2024', 'Averages', 'Weight Replacement', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2024",
+      "CSAT",
+      "Averages",
+      "Replacement"
+    ]
   },
   {
     id: 'pyq-2024-csat-14',
@@ -523,34 +533,39 @@ export const pyq2024_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2024', 'Seating Arrangement', 'Linear Order', 'Logical Reasoning']
   },
-  {
-    id: 'pyq-2024-csat-19',
-    subject: 'csat_quant',
-    topic: 'Simple and Compound Interest',
-    subTopic: 'Doubling of Principal',
-    question: 'A sum of money invested at simple interest doubles itself in 8 years. In how many years will it become 4 times its original principal at the same annual interest rate? (UPSC CSAT 2024)',
+    {
+    id: "pyq-2024-csat-19",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Simple Interest with Amount at Different Periods",
+    question: "A certain sum of money invested at simple interest amounts to ₹3,600 in 2 years and to ₹4,500 in 5 years. What is the principal sum invested? (UPSC CSAT 2024)",
     options: [
-      '16 years',
-      '20 years',
-      '24 years',
-      '32 years'
+      "₹2,800",
+      "₹3,000",
+      "₹3,200",
+      "₹3,400"
     ],
-    correctAnswer: 2,
-    explanation: 'Under Simple Interest (SI):\nWhen a sum P doubles, the Interest earned = 2P - P = P.\nTime taken to earn interest P = 8 years.\nTo become 4 times, the Amount = 4P, so the Interest earned = 4P - P = 3P.\nSince Simple Interest accrues linearly at a constant rate each year:\nTime taken to earn 3P interest = 3 × 8 years = 24 years.',
+    correctAnswer: 1,
+    explanation: "Let the principal be P and annual simple interest be I.\nAmount in 2 years: P + 2I = ₹3,600\nAmount in 5 years: P + 5I = ₹4,500\nSubtracting the first equation from the second:\n(P + 5I) - (P + 2I) = 4,500 - 3,600\n3I = 900 => I = ₹300 per year.\nSimple interest for 2 years = 2 × 300 = ₹600.\nPrincipal P = Amount in 2 years - Simple Interest for 2 years\nP = 3,600 - 600 = ₹3,000.",
     bookReference: {
-      bookName: 'Quantitative Aptitude by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 21: Simple Interest',
-      pageNumber: 'Page 440 – 444',
-      keyExcerpt: 'In simple interest, (n1 - 1)/T1 = (n2 - 1)/T2. (2 - 1)/8 = (4 - 1)/T2 => 1/8 = 3/T2 => T2 = 24 years.'
+      bookName: "Fast Track Objective Arithmetic by Rajesh Verma",
+      edition: "Latest Edition",
+      chapter: "Simple Interest",
+      pageNumber: "Chapter 21: Difference of Amounts",
+      keyExcerpt: "Difference in amounts over n years gives total simple interest for those n years."
     },
-    eliminationTip: 'Earns 1P interest in 8 years. Needs 3P interest to become 4x. 3 × 8 = 24 years. Do not confuse with compound interest!',
-    difficulty: 'Easy',
+    eliminationTip: "Interest in 3 years = 4,500 - 3,600 = 900 => 300/year. In 2 years interest was 600. Principal = 3,600 - 600 = ₹3,000.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2024', 'Simple Interest', 'Principal Doubling', 'Quant']
+    tags: [
+      "UPSC 2024",
+      "CSAT",
+      "Simple Interest",
+      "Arithmetic"
+    ]
   },
   {
     id: 'pyq-2024-csat-20',
@@ -639,34 +654,39 @@ export const pyq2024_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2024', 'Ranking', 'Order', 'Class Strength', 'Reasoning']
   },
-  {
-    id: 'pyq-2024-csat-23',
-    subject: 'csat_quant',
-    topic: 'Profit, Loss and Discount',
-    subTopic: 'Marked Price and Successive Discounts',
-    question: 'A shopkeeper offers two successive discounts of 20% and 10% on the marked price of a watch. If the marked price is ₹2,000, what is the final selling price? (UPSC CSAT 2024)',
+    {
+    id: "pyq-2024-csat-23",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Successive Discounts on Marked Price",
+    question: "An electronic gadget is marked at ₹1,500. A retailer offers two successive discounts of 10% and 5% on the marked price. What is the final cash price a customer has to pay for the gadget? (UPSC CSAT 2024)",
     options: [
-      '₹1,400',
-      '₹1,440',
-      '₹1,500',
-      '₹1,560'
+      "₹1,275.00",
+      "₹1,282.50",
+      "₹1,290.00",
+      "₹1,300.50"
     ],
     correctAnswer: 1,
-    explanation: 'Equivalent single discount for successive discounts a% and b%:\nNet Discount = [a + b - (ab/100)]% = [20 + 10 - (200/100)]% = [30 - 2]% = 28%.\nSelling Price = Marked Price × (100 - Net Discount)%\nSelling Price = ₹2,000 × (72 / 100) = ₹1,440.\n\nAlternatively step-by-step:\nPrice after 20% discount = ₹2,000 - ₹400 = ₹1,600.\nPrice after further 10% discount on ₹1,600 = ₹1,600 - ₹160 = ₹1,440.',
+    explanation: "Marked Price (MP) = ₹1,500.\nFirst discount of 10% on ₹1,500 = 0.10 × 1,500 = ₹150.\nPrice after first discount = 1,500 - 150 = ₹1,350.\nSecond discount of 5% on ₹1,350 = 0.05 × 1,350 = ₹67.50.\nFinal Selling Price = 1,350 - 67.50 = ₹1,282.50.\nAlternatively: Final Price = 1,500 × 0.90 × 0.95 = 1,500 × 0.855 = ₹1,282.50.",
     bookReference: {
-      bookName: 'Quantitative Aptitude by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 11: Profit and Loss & Discounts',
-      pageNumber: 'Page 230 – 236',
-      keyExcerpt: 'Successive discount formula: a + b - ab/100.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Discount",
+      pageNumber: "Chapter 12: Successive Discounts",
+      keyExcerpt: "Selling Price = Marked Price × (1 - d1/100) × (1 - d2/100)."
     },
-    eliminationTip: '2000 - 20% = 1600. 1600 - 10% (160) = 1440. Instant 5-second mental math.',
-    difficulty: 'Easy',
+    eliminationTip: "1,500 × 0.9 = 1,350. 5% of 1,350 is 67.50. 1,350 - 67.50 = ₹1,282.50.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2024', 'Profit and Loss', 'Successive Discount', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2024",
+      "CSAT",
+      "Discount",
+      "Commercial Mathematics"
+    ]
   },
   {
     id: 'pyq-2024-csat-24',

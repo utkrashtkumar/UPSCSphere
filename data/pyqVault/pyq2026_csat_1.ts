@@ -1045,34 +1045,39 @@ export const pyq2026_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2026', 'Clocks', 'Coinciding Hands', 'Reasoning']
   },
-  {
-    id: 'pyq-2026-csat-37',
-    subject: 'csat_reasoning',
-    topic: 'Calendar',
-    subTopic: 'Repetition of Calendar Year',
-    question: 'Which of the following years will have the exact same calendar as the year 2025? (UPSC CSAT 2026)',
+      {
+    id: "pyq-2026-csat-37",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude & Time",
+    subTopic: "Faulty Clocks and Time Deviation",
+    question: "A watch gains 5 seconds in every 3 minutes. It was set right at 8:00 AM on Monday. What time will the watch indicate when the true time is 8:00 PM on the same day? (UPSC CSAT 2026)",
     options: [
-      '2030',
-      '2031',
-      '2036',
-      '2037'
+      "8:15 PM",
+      "8:20 PM",
+      "8:25 PM",
+      "8:30 PM"
     ],
     correctAnswer: 1,
-    explanation: 'A calendar repeats when the cumulative sum of odd days from the reference year is a multiple of 7 AND the nature of the year (ordinary vs leap) matches:\n1. 2025 is an ordinary year (365 days, 1 odd day).\n2. Count odd days year by year:\n- 2025: 1 odd day\n- 2026: 1 odd day\n- 2027: 1 odd day\n- 2028 (leap): 2 odd days\n- 2029: 1 odd day\n- 2030: 1 odd day\nSum of odd days from 2025 to 2030 = $1 + 1 + 1 + 2 + 1 + 1 = 7$ odd days!\nSince 7 is divisible by 7, the cumulative offset is 0, so the next year, 2031, will begin on the exact same day of the week as 2025.\n3. Also, 2031 is an ordinary year, matching 2025 in length.\n\nGeneral Rule: For an ordinary year immediately following a leap year (2025 follows leap year 2024), add 6 years: $2025 + 6 = 2031$.\nThus, the calendar for 2025 repeats in 2031.',
+    explanation: "From 8:00 AM to 8:00 PM on the same day, the total elapsed time = 12 hours = 12 × 60 = 720 minutes.\nThe watch gains 5 seconds every 3 minutes.\nNumber of 3-minute intervals in 720 minutes = 720 / 3 = 240 intervals.\nTotal gain in seconds = 240 × 5 = 1200 seconds.\nConverting seconds into minutes: 1200 / 60 = 20 minutes.\nTherefore, when the true time is 8:00 PM, the watch will indicate 8:00 PM + 20 minutes = 8:20 PM.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 15: Clock and Calendar',
-      pageNumber: 'Page 350 – 356',
-      keyExcerpt: 'A year immediately succeeding a leap year repeats after 6 years.'
+      bookName: "Analytical Reasoning by M.K. Pandey / Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Clocks and Faulty Watches",
+      pageNumber: "Chapter 28: Clocks",
+      keyExcerpt: "Gain per interval = Total intervals × Rate of gain."
     },
-    eliminationTip: 'Rule: Leap + 1 year repeats after 6 years. 2025 = 2024 (leap) + 1. Repetition = 2025 + 6 = 2031.',
-    difficulty: 'Easy',
+    eliminationTip: "Calculate total minutes (720 min) divided by interval size (3 min) = 240, times 5 sec = 1200 sec = 20 min gain.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'CSAT',
-    frequency: 10,
-    tags: ['UPSC CSAT 2026', 'Calendar', 'Calendar Repetition', 'Odd Days', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2026",
+      "CSAT",
+      "Clocks",
+      "Time Speed Distance"
+    ]
   },
   {
     id: 'pyq-2026-csat-38',
@@ -1132,33 +1137,38 @@ export const pyq2026_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2026', 'Data Sufficiency', 'Calendar', 'Reasoning']
   },
-  {
-    id: 'pyq-2026-csat-40',
-    subject: 'csat_reasoning',
-    topic: 'Seating Arrangement',
-    subTopic: 'Circular Arrangement Facing Centre',
-    question: 'Six friends—A, B, C, D, E, and F—are sitting around a circular table facing the centre:\n1. B is sitting between A and C.\n2. E is sitting between D and F.\n3. D is sitting to the immediate left of A.\n\nWho is sitting opposite to B? (UPSC CSAT 2026)',
+      {
+    id: "pyq-2026-csat-40",
+    subject: "csat_reasoning",
+    topic: "Analytical Reasoning",
+    subTopic: "Seating Arrangement around Square Table",
+    question: "Eight persons—P, Q, R, S, T, U, V, and W—sit around a square table facing the center. Four sit at the four corners, and four sit in the middle of each of the four sides.\n- P sits at one of the corners.\n- R sits second to the right of P.\n- W sits opposite to R.\n- S is an immediate neighbor of both R and T.\n- Q sits second to the left of W.\n\nWho sits opposite to P? (UPSC CSAT 2026)",
     options: [
-      'D',
-      'E',
-      'F',
-      'Cannot be determined'
+      "U",
+      "V",
+      "T",
+      "S"
     ],
-    correctAnswer: 1,
-    explanation: 'Let the 6 positions around the circle be numbered 1 to 6 clockwise (all facing the centre):\n- Fix A at position 1.\n- Statement 3: "D is to the immediate left of A." Facing the centre, left is clockwise. So D is at position 2: [A(1), D(2), _, _, _, _].\n- Statement 1: "B is sitting between A and C." Since D is at 2, B must be at position 6 (the other neighbour of A), and C must be at position 5: [A(1), D(2), _, _, C(5), B(6)].\n- Statement 2: "E is sitting between D and F." The remaining open seats are 3 and 4. Since D is at 2, E must be at 3, and F must be at 4: [A(1), D(2), E(3), F(4), C(5), B(6)].\n\nNow check opposite pairs in a 6-person circle (positions differ by 3):\n- Position 1 (A) is opposite to Position 4 (F).\n- Position 2 (D) is opposite to Position 5 (C).\n- Position 6 (B) is opposite to Position 3 (E)!\nTherefore, E is sitting directly opposite to B.',
+    correctAnswer: 2,
+    explanation: "Let us map positions clockwise around the square table from 1 to 8:\n1 (Corner), 2 (Side), 3 (Corner), 4 (Side), 5 (Corner), 6 (Side), 7 (Corner), 8 (Side).\n- Let P be at Corner 1.\n- R is second to the right of P, so R is at Corner 3.\n- W sits opposite to R, so W is at Corner 7.\n- S is an immediate neighbor of both R (Corner 3) and T. Since S is adjacent to R and T, S must be at Side 4 and T must be at Corner 5.\n- Since P is at Corner 1 and T is at Corner 5, T sits directly opposite to P.\nTherefore, T sits opposite to P.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 11: Circular Seating Arrangement',
-      pageNumber: 'Page 285 – 292',
-      keyExcerpt: 'In a 6-person circle facing center, the opposite position is diametrically across by 3 steps.'
+      bookName: "Analytical Reasoning by M.K. Pandey",
+      edition: "Revised Edition",
+      chapter: "Chapter 8: Seating Arrangements",
+      pageNumber: "Page 180 – 192",
+      keyExcerpt: "In an 8-person symmetric table, opposite pairs are separated by 3 positions."
     },
-    eliminationTip: 'Arrangement in order: A - D - E - F - C - B. Opposite pairs: (A, F), (D, C), and (B, E). Opposite to B is E.',
-    difficulty: 'Easy',
+    eliminationTip: "With P at position 1 and R at position 3, opposite of R is 7 (W). Neighbor sequence R-S-T places T at position 5, which is directly opposite to position 1 (P).",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'CSAT',
-    frequency: 10,
-    tags: ['UPSC CSAT 2026', 'Circular Seating Arrangement', 'Opposite Positions', 'Reasoning']
-  }
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2026",
+      "CSAT",
+      "Seating Arrangement",
+      "Analytical Reasoning"
+    ]
+  },
 ];

@@ -233,34 +233,40 @@ export const pyq2023_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2023', 'Percentages', 'Consumption and Expenditure', 'Quant']
   },
-  {
-    id: 'pyq-2023-csat-49',
-    subject: 'csat_reasoning',
-    topic: 'Clocks: Angle Between Hands',
-    subTopic: 'Angle at Specific Time',
-    question: 'What is the angle between the hour hand and the minute hand of a clock at 3:40? (UPSC CSAT 2023)',
+    {
+    id: "pyq-2023-csat-49",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Clock Hand Angles at Given Time",
+    question: "What is the angle between the hour hand and the minute hand of an accurate clock at 3:40? (UPSC CSAT 2023)",
     options: [
-      '120°',
-      '130°',
-      '140°',
-      '150°'
+      "120°",
+      "125°",
+      "130°",
+      "135°"
     ],
-    correctAnswer: 1,
-    explanation: 'The angle θ between the hour hand and minute hand at H hours and M minutes is given by:\nθ = |30H - (11/2)M|\n\nHere, H = 3 and M = 40:\nθ = |30(3) - (11/2)(40)|\nθ = |90 - 11 × 20|\nθ = |90 - 220|\nθ = |-130°| = 130°.\n\nTherefore, the angle between the hands is 130°.',
+    correctAnswer: 2,
+    explanation: "The angle θ between the hour hand and the minute hand at H hours and M minutes is given by:\nθ = |30H - (11/2)M|\nHere H = 3 and M = 40:\nθ = |30(3) - (11/2)(40)|\nθ = |90 - 11 × 20|\nθ = |90 - 220| = |-130| = 130°.\nTherefore, the angle between the hour hand and minute hand at 3:40 is 130°.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 17: Clocks & Angles',
-      pageNumber: 'Page 380 – 385',
-      keyExcerpt: 'Angle θ = |30H - 5.5M|. For 3:40: |30(3) - 5.5(40)| = |90 - 220| = 130 degrees.'
+      bookName: "A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Clocks",
+      pageNumber: "Chapter 28: Angle between Clock Hands",
+      keyExcerpt: "Angle = |30H - 5.5M| degrees."
     },
-    eliminationTip: 'Use standard clock angle formula: |30 × 3 - 5.5 × 40| = |90 - 220| = 130°. Option B.',
-    difficulty: 'Easy',
+    eliminationTip: "Apply the standard clock formula: |30 × 3 - 5.5 × 40| = |90 - 220| = 130°.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Clocks', 'Angles', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2023",
+      "CSAT",
+      "Clocks",
+      "Angles",
+      "Aptitude"
+    ]
   },
   {
     id: 'pyq-2023-csat-50',
@@ -320,34 +326,39 @@ export const pyq2023_csat_2: Question[] = [
     frequency: 7,
     tags: ['UPSC CSAT 2023', 'Reading Comprehension', 'Forest Governance', 'Tribal Rights']
   },
-  {
-    id: 'pyq-2023-csat-52',
-    subject: 'csat_quant',
-    topic: 'Simple & Compound Interest: Doubling Period',
-    subTopic: 'Compound Interest Doubling Rule',
-    question: 'A sum of money invested at compound interest doubles itself in 5 years. In how many years will it become 8 times of itself at the same annual interest rate? (UPSC CSAT 2023)',
+    {
+    id: "pyq-2023-csat-52",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Compound Interest Doubling Time and Geometric Growth",
+    question: "A sum of money invested at compound interest doubles itself in 5 years. In how many years will the sum become 8 times its original value at the same annual rate of interest? (UPSC CSAT 2023)",
     options: [
-      '10 years',
-      '12 years',
-      '15 years',
-      '20 years'
+      "10 years",
+      "15 years",
+      "20 years",
+      "25 years"
     ],
-    correctAnswer: 2,
-    explanation: 'Under compound interest, a sum multiplies by the same constant factor in equal intervals of time.\n- Let principal be P.\n- In 5 years, amount becomes 2P (2¹ times).\n- In another 5 years (total 10 years), amount becomes 2 × 2P = 4P (2² times).\n- In another 5 years (total 15 years), amount becomes 2 × 4P = 8P (2³ times).\n\nMathematical formula:\nIf a sum becomes 2 times in T years, it becomes 2ⁿ times in (n × T) years.\nHere, 8 = 2³, so n = 3.\nTotal time = 3 × 5 = 15 years.\n\nTherefore, the sum will become 8 times in 15 years.',
+    correctAnswer: 1,
+    explanation: "Under compound interest, a sum grows geometrically by the same factor over equal time intervals.\nIf a principal P becomes 2P in 5 years (a factor of 2 in 5 years):\n- In the next 5 years (total 10 years), 2P will double to 4P.\n- In the next 5 years (total 15 years), 4P will double to 8P.\nAlgebraically:\nAmount A = P(1 + r)^t\n(1 + r)^5 = 2\nTo become 8 times: P(1 + r)^T = 8P  =>  (1 + r)^T = 8 = 2³\nSubstituting (1 + r)^5 = 2:\n((1 + r)^5)³ = (1 + r)^15 = 2³ = 8.\nTherefore, T = 15 years.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 22: Compound Interest (Geometric Growth of Principal)',
-      pageNumber: 'Page 480 – 485',
-      keyExcerpt: 'Under CI: 2^1 in T years ==> 2^n in n×T years. 8 = 2^3, so 3 × 5 = 15 years.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Compound Interest",
+      pageNumber: "Chapter 22: Exponential Growth Rule",
+      keyExcerpt: "If a sum doubles in T years, it becomes 2^n times in n × T years."
     },
-    eliminationTip: 'Doubles (2^1) in 5 years. 8 = 2^3. Time = 3 × 5 = 15 years.',
-    difficulty: 'Easy',
+    eliminationTip: "Shortcut: 8 = 2³, so time = 3 × 5 years = 15 years.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Compound Interest', 'Geometric Growth', 'Quant']
+    tags: [
+      "UPSC 2023",
+      "CSAT",
+      "Compound Interest",
+      "Doubling Period"
+    ]
   },
   {
     id: 'pyq-2023-csat-53',
@@ -755,34 +766,40 @@ export const pyq2023_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2023', 'Coding Decoding', 'Opposite Letters', 'Reasoning']
   },
-  {
-    id: 'pyq-2023-csat-67',
-    subject: 'csat_quant',
-    topic: 'Probability: Drawing Balls from an Urn',
-    subTopic: 'Drawing Two Balls of Same Color',
-    question: 'A bag contains 5 red balls, 4 green balls, and 3 blue balls. If two balls are drawn at random without replacement, what is the probability that both balls are of the same color? (UPSC CSAT 2023)',
+    {
+    id: "pyq-2023-csat-67",
+    subject: "csat_quant",
+    topic: "Probability & Permutations",
+    subTopic: "Union of Events: Card Drawn from Deck",
+    question: "A card is drawn at random from a standard, well-shuffled deck of 52 playing cards. What is the probability that the card drawn is either a King or a Heart? (UPSC CSAT 2023)",
     options: [
-      '19/66',
-      '23/66',
-      '25/66',
-      '29/66'
+      "1/13",
+      "4/13",
+      "17/52",
+      "9/26"
     ],
-    correctAnswer: 0,
-    explanation: 'Total number of balls = 5 + 4 + 3 = 12 balls.\nTotal ways to draw 2 balls from 12 = ¹²C₂ = (12 × 11) / 2 = 66.\n\nFavorable outcomes (both balls of the same color):\n- Case 1: Both balls are Red:\n  Ways = ⁵C₂ = (5 × 4) / 2 = 10\n- Case 2: Both balls are Green:\n  Ways = ⁴C₂ = (4 × 3) / 2 = 6\n- Case 3: Both balls are Blue:\n  Ways = ³C₂ = (3 × 2) / 2 = 3\n\nTotal favorable ways = 10 + 6 + 3 = 19 ways.\n\nProbability P = Favorable / Total = 19 / 66.\n\nTherefore, the probability is 19/66.',
+    correctAnswer: 1,
+    explanation: "In a standard deck of 52 cards:\n- Total number of cards n(S) = 52.\n- Number of Kings n(K) = 4.\n- Number of Hearts n(H) = 13.\n- The card that is both a King and a Heart (King of Hearts) n(K ∩ H) = 1.\nUsing the addition rule of probability for non-mutually exclusive events:\nP(K ∪ H) = P(K) + P(H) - P(K ∩ H)\n= (4 / 52) + (13 / 52) - (1 / 52)\n= (4 + 13 - 1) / 52 = 16 / 52.\nSimplifying by dividing numerator and denominator by 4:\n16 / 52 = 4 / 13.\nTherefore, the probability is 4/13.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 31: Probability (Balls Drawn from Bag)',
-      pageNumber: 'Page 630 – 636',
-      keyExcerpt: 'P(same color) = [5C2 + 4C2 + 3C2] / 12C2 = [10 + 6 + 3] / 66 = 19/66.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Probability",
+      pageNumber: "Chapter 31: Pack of Cards Formulae",
+      keyExcerpt: "P(A or B) = P(A) + P(B) - P(A and B)."
     },
-    eliminationTip: '12C2 = 66. Red pairs = 10, Green pairs = 6, Blue pairs = 3. Sum = 19. P = 19/66.',
-    difficulty: 'Easy',
+    eliminationTip: "Count: 13 hearts + 3 remaining kings = 16 cards. 16/52 = 4/13.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Probability', 'Combinations', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2023",
+      "CSAT",
+      "Probability",
+      "Cards",
+      "Addition Rule"
+    ]
   },
   {
     id: 'pyq-2023-csat-68',

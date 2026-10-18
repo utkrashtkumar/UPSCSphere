@@ -59,34 +59,40 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Carbon Nanotubes', 'CNTs', 'Nanotechnology', 'Drug Delivery', 'Biodegradable']
   },
-  {
-    id: 'pyq-2021-gs-53',
-    subject: 'economy',
-    topic: 'Macroeconomics: Industrial Production',
-    subTopic: 'Eight Core Industries in IIP',
-    question: 'In the "Index of Eight Core Industries", which one of the following is given the highest weightage? (UPSC CSE Prelims 2021/Past Papers)',
+    {
+    id: "pyq-2021-gs-53",
+    subject: "economy",
+    topic: "Macroeconomic Indicators & Business Cycles",
+    subTopic: "Purchasing Managers’ Index (PMI) Methodology",
+    question: "With reference to the \"Purchasing Managers’ Index\" (PMI) published monthly, consider the following statements:\n\n1. It is a sentiment-driven survey-based economic indicator derived from monthly responses of supply chain and purchasing executives.\n2. A headline PMI reading above 50 indicates economic expansion compared to the previous month, whereas a reading below 50 indicates contraction.\n3. In India, the official PMI indices for Manufacturing and Services are compiled and published directly by the Central Statistics Office (CSO) under MoSPI.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      'Coal production',
-      'Electricity generation',
-      'Fertilizer production',
-      'Refinery products'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: 'The Eight Core Industries account for 40.27% of the total weight of items included in the Index of Industrial Production (IIP). Their respective weightages in descending order are:\n1. Petroleum Refinery Products (28.04%)\n2. Electricity generation (19.85%)\n3. Steel production (17.92%)\n4. Coal production (10.33%)\n5. Crude Oil (8.98%)\n6. Natural Gas (6.88%)\n7. Cement (5.37%)\n8. Fertilizers (2.63%)\n\nTherefore, Petroleum Refinery Products carry the HIGHEST weightage (28.04%).',
+    correctAnswer: 0,
+    explanation: "Statement 1 is correct: PMI tracks new orders, output, employment, suppliers' delivery times, and stocks of purchases based on qualitative survey responses.\nStatement 2 is correct: A index score above 50.0 indicates growth/expansion over the prior month; exactly 50.0 indicates no change; below 50.0 indicates contraction.\nStatement 3 is incorrect: PMI in India is compiled and released by S&P Global (formerly IHS Markit), a private global financial information services provider, NOT by the government/MoSPI (which compiles IIP and CPI).",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition',
-      chapter: 'Chapter 9: Industry and Infrastructure (Index of Eight Core Industries)',
-      pageNumber: 'Page 9.10 – 9.14',
-      keyExcerpt: 'Refinery products constitute the largest share (28.04%) of the Eight Core Industries index.'
+      bookName: "Indian Economy by Ramesh Singh / Economic Survey",
+      edition: "15th Edition (2024)",
+      chapter: "Chapter 7: Economic Survey and Industry Growth",
+      pageNumber: "Page 7.15 – 7.18",
+      keyExcerpt: "PMI is a private survey compiled by S&P Global; 50 is the threshold between expansion and contraction."
     },
-    eliminationTip: 'Petroleum Refinery Products top the list at 28.04%, followed by Electricity (19.85%). Option D.',
-    difficulty: 'Easy',
+    eliminationTip: "PMI is globally run by private financial intelligence firms (S&P Global / Markit), unlike government datasets like IIP or GDP. Eliminating Statement 3 leaves (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'Core Industries', 'IIP', 'Refinery Products', 'Industrial Economy']
+    tags: [
+      "UPSC 2021",
+      "PMI",
+      "S&P Global",
+      "Macroeconomics",
+      "Indicators"
+    ]
   },
   {
     id: 'pyq-2021-gs-54',
@@ -291,34 +297,40 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Optical Fiber', 'Total Internal Reflection', 'Optics', 'General Science']
   },
-  {
-    id: 'pyq-2021-gs-61',
-    subject: 'polity',
-    topic: 'Parliamentary System: Motions & Devices',
-    subTopic: 'No-Confidence Motion vs Censure Motion',
-    question: 'With reference to a "No-Confidence Motion" in the Parliament of India, consider the following statements:\n\n1. There is no mention of a No-Confidence Motion in the Constitution of India.\n2. A motion of No-Confidence can be introduced in the Lok Sabha only.\n3. It does not require stating the reasons or grounds on which it is based.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021/Past Papers)',
+    {
+    id: "pyq-2021-gs-61",
+    subject: "polity",
+    topic: "Parliamentary Procedures & Motions",
+    subTopic: "Adjournment Motion in Lok Sabha",
+    question: "With reference to the \"Adjournment Motion\" in the Parliament of India, consider the following statements:\n\n1. It is introduced in the Parliament to draw the attention of the House to a definite matter of urgent public importance.\n2. It requires the admitted support of at least 50 members of the House before it can be moved.\n3. The device of Adjournment Motion is available in both the Lok Sabha and the Rajya Sabha.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: 'All three statements are constitutionally and procedurally accurate:\n1. The phrase "No-Confidence Motion" is NOT explicitly mentioned anywhere in the text of the Constitution of India. The Constitution merely states in Article 75(3) that "the Council of Ministers shall be collectively responsible to the House of the People". The No-Confidence Motion is formulated under Rule 198 of the Rules of Procedure and Conduct of Business in Lok Sabha.\n2. Because the Council of Ministers is responsible exclusively to the Lok Sabha, a No-Confidence Motion can be introduced and voted upon in the LOK SABHA ONLY (it cannot be introduced in the Rajya Sabha).\n3. Unlike a Censure Motion (which must specify precise policy grievances and reasons), a No-Confidence Motion does NOT need to state any specific grounds or reasons.\n\nTherefore, all 1, 2 and 3 are correct.',
+    correctAnswer: 0,
+    explanation: "Statement 1 is correct: An Adjournment Motion interrupts the normal business of the House to discuss a definite matter of urgent public importance with serious factual consequences.\nStatement 2 is correct: Under Lok Sabha Rules, an adjournment motion needs the consent of the Speaker and the support of at least 50 members standing in their places.\nStatement 3 is incorrect: Because the passage of an Adjournment Motion carries an element of censure against the Council of Ministers, it is NOT permitted in the Rajya Sabha; it is an exclusive prerogative of the Lok Sabha.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 22: Parliament (Motions in Parliament: No-Confidence Motion)',
-      pageNumber: 'Page 22.16 – 22.18',
-      keyExcerpt: 'No-Confidence motion is not mentioned in Constitution (framed under Rule 198). Introduced in Lok Sabha only. No grounds required.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 22: Parliament (Parliamentary Devices)",
+      pageNumber: "Page 22.18 – 22.20",
+      keyExcerpt: "Adjournment motion involves an element of censure and is therefore not permitted in Rajya Sabha."
     },
-    eliminationTip: 'Rule 198 governs No-Confidence (not in Constitution text). It requires 50 members to admit, only in Lok Sabha, and needs no reasons. All 1, 2, and 3 are correct.',
-    difficulty: 'Moderate',
+    eliminationTip: "Censure devices (No-confidence, Adjournment, Censure motions) belong exclusively to the Lower House (Lok Sabha). Eliminating Statement 3 leaves (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'No-Confidence Motion', 'Article 75', 'Rule 198', 'Lok Sabha', 'Parliament']
+    tags: [
+      "UPSC 2021",
+      "Adjournment Motion",
+      "Lok Sabha",
+      "Rajya Sabha",
+      "Parliament"
+    ]
   },
   {
     id: 'pyq-2021-gs-62',

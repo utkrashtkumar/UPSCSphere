@@ -30,34 +30,40 @@ export const pyq2019_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2019', 'Attorney General', 'Article 76', 'Article 88', 'Parliamentary Rights', 'Right to Vote']
   },
-  {
-    id: 'pyq-2019-gs-52',
-    subject: 'history',
-    topic: 'Modern Indian History: Nationalist Uprisings',
-    subTopic: 'Rowlatt Satyagraha and Jallianwala Bagh (1919)',
-    question: 'With reference to the Rowlatt Satyagraha, which of the following statements is/are correct?\n1. The Rowlatt Act was based on the recommendations of the ‘Sedition Committee’.\n2. In Rowlatt Satyagraha, Gandhiji tried to utilize the Home Rule League.\n3. Demonstrations against the arrival of Simon Commission coincided with Rowlatt Satyagraha.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2019/2015)',
+    {
+    id: "pyq-2019-gs-52",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Hunter Committee of Inquiry into Jallianwala Bagh (1919)",
+    question: "With reference to the \"Hunter Committee\" (Disorders Inquiry Committee) appointed by the British Government in 1919, consider the following statements:\n\n1. It was constituted under Lord William Hunter to investigate the violent disturbances in Bombay, Delhi, and Punjab following the Rowlatt Act protests.\n2. Three prominent Indian members—Sir Chimanlal Setalvad, Pandit Jagat Narayan, and Sardar Sultan Ahmed Khan—were appointed to the Committee.\n3. The Committee unanimously found General Dyer guilty of treason and recommended his criminal prosecution in a court of law.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2019)",
     options: [
-      '1 only',
-      '1 and 2 only',
-      '2 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Evaluating the Rowlatt Act and Satyagraha of 1919:\n- Statement 1 is correct: The Anarchical and Revolutionary Crimes Act of 1919 (Rowlatt Act) was framed strictly on the recommendations of the Sedition Committee chaired by British judge Sir Sidney Rowlatt (1918), authorizing indefinite detention without trial.\n- Statement 2 is correct: To organize a nationwide hartal and mobilization against the "Black Act", Gandhiji established the Satyagraha Sabha and actively mobilized the organized grassroots cadres of Annie Besant\'s and Tilak\'s Home Rule Leagues.\n- Statement 3 is INCORRECT: The Simon Commission arrived in Bombay in FEBRUARY 1928—nearly a full decade AFTER the Rowlatt Satyagraha of 1919! The two events did not coincide.\n\nSince statement 3 is incorrect, options C and D are eliminated. Statements 1 and 2 are correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct: In October 1919, the British administration appointed the Disorders Inquiry Committee under Lord Hunter. The 8-member committee included three eminent Indians: Sir Chimanlal Setalvad (Vice-Chancellor, Bombay University), Pandit Jagat Narayan (Member, UP Legislative Council), and Sardar Sultan Ahmed Khan.\nStatement 3 is incorrect: The Hunter Committee did NOT recommend criminal prosecution or find Dyer guilty of treason; it merely censured Dyer for a \"grave error of judgment\" and excessive force. Furthermore, the British majority and Indian minority split along racial lines, with the Indian members submitting a separate, more scathing Minority Report.",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / Spectrum',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 15: Non-Cooperation and Khilafat Movements',
-      pageNumber: 'Page 180 – 186',
-      keyExcerpt: 'The Rowlatt Act was based on the Sedition Committee report. Gandhiji tapped into the Home Rule League networks. Simon Commission arrived in 1928.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Chapter 15: Emergence of Gandhi: Hunter Committee",
+      pageNumber: "Page 328 – 332",
+      keyExcerpt: "Hunter Committee included three Indians; it censured Dyer but did not initiate criminal prosecution."
     },
-    eliminationTip: 'Rowlatt Satyagraha was in 1919; Simon Commission arrived in 1928! Claiming they coincided (Statement 3) is a huge chronological error. Eliminating 3 leaves B.',
-    difficulty: 'Easy',
+    eliminationTip: "The British colonial government never criminally prosecuted General Dyer (the House of Lords praised him and raised a public fund for him). Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2019', 'Rowlatt Act', 'Sedition Committee', 'Home Rule League', 'Simon Commission', 'Modern History']
+    tags: [
+      "UPSC 2019",
+      "Hunter Committee",
+      "Jallianwala Bagh",
+      "General Dyer",
+      "Modern History"
+    ]
   },
   {
     id: 'pyq-2019-gs-53',
@@ -233,34 +239,41 @@ export const pyq2019_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2019', 'Ashoka', 'Major Rock Edicts', 'Dhauli', 'Erragudi', 'Jaugada', 'Kalsi', 'Ancient Epigraphy']
   },
-  {
-    id: 'pyq-2019-gs-59',
-    subject: 'history',
-    topic: 'Vedic Culture vs Harappan Civilization',
-    subTopic: 'Comparative Metallurgy and Domestic Animals',
-    question: 'With reference to the difference between the culture of Rigvedic Aryans and Indus Valley people, which of the following statements is/are correct?\n1. Rigvedic Aryans used the coat of mail and helmet in warfare whereas the people of Indus Valley Civilisation did not leave any evidence of using them.\n2. Rigvedic Aryans knew gold, silver and copper whereas Indus Valley people knew only copper and iron.\n3. Rigvedic Aryans had domesticated the horse whereas there is no evidence of Indus Valley people having been aware of this animal.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2019/2017)',
+    {
+    id: "pyq-2019-gs-59",
+    subject: "history",
+    topic: "Ancient Indian History",
+    subTopic: "Later Vedic Society & Institutions",
+    question: "With reference to the \"Later Vedic Period\" (c. 1000 BCE – c. 600 BCE) in ancient India, consider the following statements:\n\n1. The popular tribal assemblies—Sabha and Samiti—lost their egalitarian character and became dominated by kings and the nobility.\n2. The painted grey ware (PGW) archaeological culture coincides stratigraphically with the Later Vedic settlements in the western Gangetic plain.\n3. The social institution of \"Gotra\" (exogamous patrilineal clan lineage) emerged for the first time during this period.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2019)",
     options: [
-      '1 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Evaluating the statements comparing Rigvedic and Harappan cultures:\n- Statement 1 is correct: Rigvedic hymns frequently mention military armor, including varman (coat of mail/cuirass) and sipra (helmet) worn by warrior-charioteers. By contrast, excavations across Harappan cities revealed virtually no defensive metallic armor or helmets.\n- Statement 2 is INCORRECT: Harappans knew gold, silver, copper, and bronze—but IRON was completely UNKNOWN to them. The claim that Indus people knew "iron" is an absolute historical falsehood!\n- Statement 3 is INCORRECT: The claim that there is "no evidence of Indus Valley people having been aware of this animal" is disputed/false; horse teeth and skeletal remains were recovered from the late levels of Surkotada in Gujarat, and terracotta horse figurines were found at Lothal.\n\nTherefore, only statement 1 is unambiguously correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. In the Later Vedic period, the Vidatha (folk assembly) completely disappeared, and the Sabha and Samiti were stripped of popular tribal control, becoming instruments of monarchical statecraft dominated by royal kinsmen and Brahmans.\n2. Archaeological excavations across Hastinapur, Atranjikhera, Noh, and Bhagwanpura demonstrate that the Painted Grey Ware (PGW) horizon aligns precisely with Later Vedic settlements with iron implements (Syama Ayas).\n3. The concept of \"Gotra\" (literally \"cow-pen\", the place where cattle belonging to the clan were kept) evolved during the Later Vedic era to denote descent from a common ancestral seer (rishi), leading to the practice of Gotra exogamy.",
     bookReference: {
-      bookName: 'Themes in Indian History Part I (NCERT Class XII) / R.S. Sharma Ancient India',
-      edition: 'NCERT 2023',
-      chapter: 'Theme 1 & Theme 2: Harappan Civilisation vs Vedic Age',
-      pageNumber: 'Page 14 – 18, 42 – 46',
-      keyExcerpt: 'Indus Valley people did not know iron. Rigvedic Aryans were martial pastoralists using armor and chariots.'
+      bookName: "India's Ancient Past by R.S. Sharma",
+      edition: "Oxford University Press",
+      chapter: "Chapter 11: The Later Vedic Phase: Transition to State and Social Formation",
+      pageNumber: "Page 120 – 128",
+      keyExcerpt: "Sabha and Samiti lost their popular character; PGW culture represents Later Vedic material life; Gotra emerged."
     },
-    eliminationTip: 'Indus Valley people did NOT know iron! Statement 2 claims they knew iron, which is completely false. Eliminating 2 knocks out B and D. Statement 1 is historically proven.',
-    difficulty: 'Moderate',
+    eliminationTip: "All three statements accurately summarize the standard NCERT socio-political changes from Early to Later Vedic India.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2019', 'Rigvedic Aryans', 'Indus Valley Civilization', 'Iron', 'Armor', 'Ancient History']
+    tags: [
+      "UPSC 2019",
+      "Later Vedic Period",
+      "Gotra",
+      "PGW",
+      "Sabha and Samiti",
+      "Ancient History"
+    ]
   },
   {
     id: 'pyq-2019-gs-60',
@@ -1393,34 +1406,41 @@ export const pyq2019_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2019', 'CACP', 'MSP', 'Agriculture', 'CCEA', 'Minimum Support Price']
   },
-  {
-    id: 'pyq-2019-gs-99',
-    subject: 'environment',
-    topic: 'Endangered Reptiles of India',
-    subTopic: 'Gharial Habitat and Conservation',
-    question: 'If you want to see gharials in their natural habitat, which one of the following is the best place to visit? (UPSC CSE Prelims 2019/2017)',
+    {
+    id: "pyq-2019-gs-99",
+    subject: "environment",
+    topic: "Protected Areas & Endemic Wildlife",
+    subTopic: "Keibul Lamjao and Sangai Deer",
+    question: "Which of the following Protected Areas is the world's only floating national park and the exclusive natural habitat of the endangered \"Sangai\" (Brow-antlered deer), also known as the Dancing Deer of India?\n\n(UPSC CSE Prelims 2019)",
     options: [
-      'Bhitarkanika Mangroves',
-      'Chambal River',
-      'Pulicat Lake',
-      'Deepor Beel'
+      "Keibul Lamjao National Park (Manipur)",
+      "Kaziranga National Park (Assam)",
+      "Namdapha National Park (Arunachal Pradesh)",
+      "Nokrek National Park (Meghalaya)"
     ],
-    correctAnswer: 1,
-    explanation: 'The Gharial (Gavialis gangeticus) is a critically endangered fish-eating crocodilian characterized by an elongated, narrow snout with a bulbous growth (ghara) at the tip in mature males:\n- The CHAMBAL RIVER (National Chambal Sanctuary spanning Rajasthan, Madhya Pradesh, and Uttar Pradesh) is the primary global sanctuary and holds the largest, healthiest breeding wild population of gharials in the world (>80% of surviving wild adults).\n- Bhitarkanika is famous for Saltwater Crocodiles (Crocodylus porosus).\nTherefore, the Chambal River is the best place to see gharials in their natural habitat.',
+    correctAnswer: 0,
+    explanation: "Keibul Lamjao National Park (covering 40 sq km on the southeastern fringes of Loktak Lake in Bishnupur district, Manipur) is the world's only floating wildlife sanctuary. It is characterized by floating biomass islands known locally as \"Phumdis\" (a heterogeneous mass of vegetation, soil, and organic matter). It is the sole natural home of the critically endangered Manipur brow-antlered deer or Sangai (Rucervus eldii eldii), the state animal of Manipur, celebrated as the \"Dancing Deer\" because it walks with a delicate balancing step on the undulating phumdis.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '10th Edition',
-      chapter: 'Chapter 14: Animal Diversity of India (Reptiles)',
-      pageNumber: 'Page 162 – 166',
-      keyExcerpt: 'National Chambal Sanctuary is the premier breeding ground for the critically endangered Gharial.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Protected Area Network: Manipur Floating Park",
+      pageNumber: "Page 176 – 179",
+      keyExcerpt: "Keibul Lamjao is the only floating park in the world and home to the Sangai deer."
     },
-    eliminationTip: 'Chambal River is the globally famous natural habitat of the critically endangered Gharial. (Bhitarkanika is famous for Saltwater Crocodiles).',
-    difficulty: 'Easy',
+    eliminationTip: "World’s only floating national park on Loktak Lake = Keibul Lamjao National Park (home of Sangai).",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2019', 'Gharial', 'Chambal River', 'National Chambal Sanctuary', 'Endangered Species']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2019",
+      "Keibul Lamjao",
+      "Sangai",
+      "Loktak Lake",
+      "Phumdis",
+      "Biodiversity"
+    ]
   },
   {
     id: 'pyq-2019-gs-100',

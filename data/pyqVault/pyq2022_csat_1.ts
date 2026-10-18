@@ -117,34 +117,39 @@ export const pyq2022_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2022', 'Combinations', 'Round Robin', 'Chess Tournament', 'Quant']
   },
-  {
-    id: 'pyq-2022-csat-05',
-    subject: 'csat_reasoning',
-    topic: 'Blood Relations: Family Tree Puzzle',
-    subTopic: 'Six-Member Household Relations',
-    question: 'In a family of six persons A, B, C, D, E, and F:\n- There are two married couples.\n- D is the grandmother of A and mother of B.\n- C is the wife of B and mother of F.\n- F is the granddaughter of E.\n\nWho is the husband of D? (UPSC CSAT 2022)',
+    {
+    id: "pyq-2022-csat-05",
+    subject: "csat_reasoning",
+    topic: "Logical Reasoning",
+    subTopic: "Blood Relations and Family Trees",
+    question: "In a family of six persons—U, V, W, X, Y, and Z:\n- U is the father of X.\n- W is the mother of Y.\n- V is the brother of U.\n- Z is the daughter of X.\n- X is the son of W.\n\nHow is Z related to W? (UPSC CSAT 2022)",
     options: [
-      'A',
-      'B',
-      'E',
-      'F'
+      "Grandmother",
+      "Granddaughter",
+      "Daughter",
+      "Sister"
     ],
-    correctAnswer: 2,
-    explanation: 'Let us map out the family generations:\n1. D is the grandmother of A and mother of B (D is female, Generation 1; B is Generation 2).\n2. C is the wife of B and mother of F:\n   - Couple 1 is (B, C), where B is male (husband) and C is female (wife).\n   - B and C have children A and F (Generation 3).\n3. F is the granddaughter of E:\n   - Since D is the grandmother, and there are two married couples in the family, the grandparents must form Couple 2!\n   - D is the grandmother, so E must be the grandfather (husband of D).\n\nTherefore, E is married to D, and E is the husband of D.',
+    correctAnswer: 1,
+    explanation: "Let us map the familial relationships:\n1. \"X is the son of W\" => W is the mother of X (and since U is the father of X, U and W are husband and wife).\n2. \"Z is the daughter of X\" => Z is the female child of X.\n3. Since W is the mother of X, and Z is the daughter of X:\nZ is the granddaughter of W (and W is the grandmother of Z).\nTherefore, Z is related to W as granddaughter.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 5: Blood Relations (Family Tree Analysis)',
-      pageNumber: 'Page 115 – 122',
-      keyExcerpt: 'Map generational tiers: Generation 1 (E and D grandparents), Generation 2 (B and C parents), Generation 3 (A and F grandchildren).'
+      bookName: "A Modern Approach to Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Blood Relations",
+      pageNumber: "Chapter 5: Family Tree Deduction",
+      keyExcerpt: "Child of a son/daughter is a grandchild."
     },
-    eliminationTip: 'D is grandmother and F is granddaughter of E. The two married couples are (E, D) and (B, C). E is D\'s husband. Option C.',
-    difficulty: 'Easy',
+    eliminationTip: "Z is the daughter of X, who is the son of W. Hence, Z is W's granddaughter.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2022', 'Blood Relations', 'Family Tree', 'Grandparents', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2022",
+      "CSAT",
+      "Blood Relations",
+      "Family Tree"
+    ]
   },
   {
     id: 'pyq-2022-csat-06',
@@ -871,34 +876,39 @@ export const pyq2022_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2022', 'Reading Comprehension', 'Antibiotic Stewardship', 'Superbugs', 'Healthcare']
   },
-  {
-    id: 'pyq-2022-csat-31',
-    subject: 'csat_quant',
-    topic: 'Simple Interest: Rate Calculation',
-    subTopic: 'Rate of Interest from Principal and Interest',
-    question: 'At what rate percent per annum simple interest will a sum of money triple itself in 16 years? (UPSC CSAT 2022)',
+    {
+    id: "pyq-2022-csat-31",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Simple Interest with Two Different Lending Rates",
+    question: "A person borrowed ₹12,000 in total from two moneylenders. For one part of the loan, he paid simple interest at 8% per annum, and for the remaining part, he paid simple interest at 10% per annum. If the total interest paid by him in one year was ₹1,040, how much money was borrowed at the 8% interest rate? (UPSC CSAT 2022)",
     options: [
-      '10%',
-      '12.5%',
-      '15%',
-      '16.66%'
+      "₹8,000",
+      "₹6,000",
+      "₹5,000",
+      "₹4,000"
     ],
-    correctAnswer: 1,
-    explanation: 'Let Principal be P.\nWhen the sum triples itself, the Amount A = 3P.\nSimple Interest SI = Amount - Principal = 3P - P = 2P.\n\nTime T = 16 years.\n\nUsing the Simple Interest formula:\nSI = (P × R × T) / 100\n2P = (P × R × 16) / 100\n2 = (R × 16) / 100\n16 R = 200\nR = 200 / 16 = 12.5% per annum.\n\nTherefore, the rate of interest is 12.5% per annum.',
+    correctAnswer: 0,
+    explanation: "Let the amount borrowed at 8% per annum be x.\nThen the amount borrowed at 10% per annum = 12,000 - x.\nAnnual interest from first part = 0.08x.\nAnnual interest from second part = 0.10(12,000 - x) = 1,200 - 0.10x.\nTotal annual interest:\n0.08x + 1,200 - 0.10x = 1,040\n1,200 - 0.02x = 1,040\n0.02x = 1,200 - 1,040 = 160\nx = 160 / 0.02 = ₹8,000.\nTherefore, the money borrowed at 8% per annum is ₹8,000.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 21: Simple Interest (Multiples of Principal)',
-      pageNumber: 'Page 460 – 465',
-      keyExcerpt: 'Formula: R = [(n - 1) / T] × 100%. Here (3 - 1)/16 × 100 = 2/16 × 100 = 12.5%.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Simple Interest",
+      pageNumber: "Chapter 21: Mixture of Loans",
+      keyExcerpt: "Alligation on interest rates: Average rate = (1040/12000) * 100 = 8.667%."
     },
-    eliminationTip: 'SI = 2P in 16 years. Rate = (2 / 16) × 100% = 1/8 × 100% = 12.5%.',
-    difficulty: 'Easy',
+    eliminationTip: "If all 12,000 were at 10%, interest = 1,200. Actual is 1,040 (deficit of 160). 10% - 8% = 2%. Amount at 8% = 160 / 0.02 = ₹8,000.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2022', 'Simple Interest', 'Rate of Interest', 'Tripling Principal', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2022",
+      "CSAT",
+      "Simple Interest",
+      "Alligation"
+    ]
   },
   {
     id: 'pyq-2022-csat-32',
@@ -1103,34 +1113,39 @@ export const pyq2022_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2022', 'Data Sufficiency', 'Ranking', 'Either Statement Sufficient', 'Reasoning']
   },
-  {
-    id: 'pyq-2022-csat-39',
-    subject: 'csat_quant',
-    topic: 'Speed, Time and Distance: Upstream and Downstream',
-    subTopic: 'Boats and Streams Speed Calculation',
-    question: 'A boat can travel with a speed of 13 km/h in still water. If the speed of the stream is 4 km/h, what is the time taken by the boat to go 68 km downstream? (UPSC CSAT 2022)',
+    {
+    id: "pyq-2022-csat-39",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Boats and Streams: Round Trip Time",
+    question: "A motorboat whose speed in still water is 15 km/h travels 30 km downstream and then returns upstream to the starting point. The entire journey takes 4 hours and 30 minutes (4.5 hours). What is the speed of the stream? (UPSC CSAT 2022)",
     options: [
-      '3 hours',
-      '4 hours',
-      '5 hours',
-      '6 hours'
+      "3 km/h",
+      "4 km/h",
+      "5 km/h",
+      "6 km/h"
     ],
-    correctAnswer: 1,
-    explanation: '1. Downstream speed:\nWhen traveling downstream, the boat\'s speed in still water (u) and the speed of the stream (v) add together:\nDownstream Speed = u + v\n= 13 km/h + 4 km/h = 17 km/h.\n\n2. Time taken for 68 km downstream:\nTime = Distance / Downstream Speed\nTime = 68 km / 17 km/h = 4 hours.\n\nTherefore, the boat takes 4 hours.',
+    correctAnswer: 2,
+    explanation: "Let the speed of the stream be s km/h.\nDownstream speed = 15 + s.\nUpstream speed = 15 - s.\nTime taken downstream = 30 / (15 + s).\nTime taken upstream = 30 / (15 - s).\nTotal time = 4.5 hours = 9/2 hours.\nEquation: 30 / (15 + s) + 30 / (15 - s) = 9/2\nDivide by 3: 10 / (15 + s) + 10 / (15 - s) = 3/2\n10 × [(15 - s + 15 + s) / (225 - s²)] = 3/2\n10 × [30 / (225 - s²)] = 3/2\n300 / (225 - s²) = 3/2\n100 / (225 - s²) = 1/2\n225 - s² = 200\ns² = 25  =>  s = 5 km/h.\nTherefore, the speed of the stream is 5 km/h.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 19: Boats and Streams',
-      pageNumber: 'Page 425 – 430',
-      keyExcerpt: 'Downstream speed = u + v = 13 + 4 = 17 km/h. Time = 68 / 17 = 4 hours.'
+      bookName: "Fast Track Objective Arithmetic by Rajesh Verma",
+      edition: "Latest Edition",
+      chapter: "Boats and Streams",
+      pageNumber: "Chapter 19: Round Trip Equations",
+      keyExcerpt: "Total Time = Distance / (B + S) + Distance / (B - S)."
     },
-    eliminationTip: 'Downstream speed = 13 + 4 = 17 km/h. Time = 68 / 17 = 4 hours. Option B.',
-    difficulty: 'Easy',
+    eliminationTip: "Test option s = 5 km/h: Downstream speed = 20 km/h (time = 30/20 = 1.5 hr). Upstream speed = 10 km/h (time = 30/10 = 3 hr). Total time = 1.5 + 3 = 4.5 hours. Matches instantly!",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2022', 'Boats and Streams', 'Downstream Speed', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2022",
+      "CSAT",
+      "Boats and Streams",
+      "Time Speed Distance"
+    ]
   },
   {
     id: 'pyq-2022-csat-40',

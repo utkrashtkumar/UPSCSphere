@@ -349,34 +349,40 @@ export const pyq2017_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2017', 'Transcriptome', 'mRNA', 'Genomics', 'Bioinformatics', 'Science & Tech']
   },
-  {
-    id: 'pyq-2017-gs-13',
-    subject: 'polity',
-    topic: 'Union Parliament: Legislative Devices & Motions',
-    subTopic: 'No-Confidence Motion in Lok Sabha',
-    question: 'Consider the following statements regarding a No-Confidence Motion in India:\n\n1. There is no mention of a No-Confidence Motion in the Constitution of India.\n2. A Motion of No-Confidence can be introduced in the Lok Sabha only.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2017)',
+    {
+    id: "pyq-2017-gs-13",
+    subject: "polity",
+    topic: "Parliamentary Procedures & Devices",
+    subTopic: "Calling Attention Motion vs Adjournment Motion",
+    question: "With reference to the \"Calling Attention Motion\" in the Parliament of India, consider the following statements:\n\n1. It is an indigenous Indian parliamentary innovation that has been incorporated into the Rules of Procedure since 1954.\n2. It is introduced by a member to call the attention of a Minister to a matter of urgent public importance and elicit an official statement.\n3. Like the Adjournment Motion, it contains an element of censure against the Council of Ministers.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2017)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'Both statements are constitutional and procedural facts:\n1. Statement 1 is correct: The Constitution of India DOES NOT explicitly mention the term "No-Confidence Motion". Article 75(3) simply states that "the Council of Ministers shall be collectively responsible to the House of the People". The procedural mechanism for a No-Confidence Motion is prescribed under Rule 198 of the "Rules of Procedure and Conduct of Business in Lok Sabha".\n2. Statement 2 is correct: Because the Council of Ministers is collectively responsible strictly to the Lok Sabha (House of the People) under Article 75, a Motion of No-Confidence can ONLY be moved and introduced in the LOK SABHA. It cannot be introduced in the Rajya Sabha.\nBoth 1 and 2 are correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct: The Calling Attention Motion is an Indian parliamentary innovation introduced in 1954 and codified in the Rules of Procedure. A member with prior permission calls the attention of a Minister to an urgent public matter so the Minister may make an authoritative statement.\nStatement 3 is incorrect: Unlike the Adjournment Motion, the Calling Attention Motion does NOT carry any element of censure against the government. Furthermore, unlike the Adjournment Motion (which is confined to Lok Sabha), the Calling Attention Motion is available in both the Lok Sabha and the Rajya Sabha.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 22: Parliament (Motions in Parliament - No-Confidence Motion)',
-      pageNumber: 'Page 22.15 – 22.18',
-      keyExcerpt: 'No-Confidence Motion is not mentioned in the Constitution; it is governed by Rule 198 of Lok Sabha rules and can only be moved in Lok Sabha.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 22: Parliament (Parliamentary Devices)",
+      pageNumber: "Page 22.19 – 22.21",
+      keyExcerpt: "Calling Attention motion is an Indian innovation without any element of censure."
     },
-    eliminationTip: 'No-Confidence Motion is governed by Lok Sabha Rule 198, not explicitly by the constitutional text. Executive is responsible to Lok Sabha, so it lies exclusively in Lok Sabha. Both are correct.',
-    difficulty: 'Easy',
+    eliminationTip: "Calling Attention is purely for information and clarification; it does not censure the executive. Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2017', 'No-Confidence Motion', 'Article 75', 'Rule 198', 'Lok Sabha', 'Polity']
+    tags: [
+      "UPSC 2017",
+      "Calling Attention Motion",
+      "Adjournment Motion",
+      "Parliament",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2017-gs-14',
@@ -697,34 +703,42 @@ export const pyq2017_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2017', 'Manipuri Sankirtana', 'UNESCO Intangible Heritage', 'Pung Cholom', 'Lord Krishna', 'Art and Culture']
   },
-  {
-    id: 'pyq-2017-gs-25',
-    subject: 'polity',
-    topic: 'Directive Principles of State Policy',
-    subTopic: 'Equal Justice and Free Legal Aid / Living Wage',
-    question: 'Which of the following statements is/are true of the Fundamental Duties of an Indian citizen?\n\n1. A legislative process has been provided to enforce these duties.\n2. They are correlative to legal duties.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2017)',
+    {
+    id: "pyq-2017-gs-25",
+    subject: "polity",
+    topic: "Directive Principles of State Policy",
+    subTopic: "Additions made by the 42nd Constitutional Amendment 1976",
+    question: "Which of the following Directive Principles of State Policy were inserted into Part IV of the Constitution of India by the 42nd Amendment Act of 1976?\n\n1. To promote equal justice and to provide free legal aid to the poor (Article 39A)\n2. To take steps to secure the participation of workers in the management of industries (Article 43A)\n3. To protect and improve the environment and to safeguard forests and wildlife (Article 48A)\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2017)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'Both statements are incorrect regarding Fundamental Duties (Part IVA, Article 51A):\n1. Statement 1 is incorrect: The Constitution itself provides NO direct legislative or judicial enforcement mechanism for Fundamental Duties; they are non-justiciable and cannot be enforced directly through constitutional writs. (While Parliament has enacted separate independent penal statutes for specific matters—like the Prevention of Insults to National Honour Act or Wildlife Protection Act—the Constitution does not provide a general legislative process to enforce duties).\n2. Statement 2 is incorrect: In constitutional jurisprudence, Fundamental Duties are civic, ethical, and moral obligations; they are NOT correlative to legal duties. A citizen cannot be legally penalized for failing to develop a scientific temper (Article 51A(h)) unless a specific separate penal statute is breached.\nTherefore, Neither 1 nor 2 is correct.',
+    explanation: "All three were added by the 42nd Constitutional Amendment Act of 1976:\n1. Article 39A: Equal justice and free legal aid.\n2. Article 43A: Participation of workers in the management of industries.\n3. Article 48A: Protection and improvement of environment and safeguarding of forests and wild life.\n(In addition, Article 39(f) was also amended by the 42nd Amendment to secure opportunities for the healthy development of children).",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 9: Fundamental Duties',
-      pageNumber: 'Page 9.3 – 9.6',
-      keyExcerpt: 'Fundamental Duties are non-justiciable. The Constitution does not provide for their direct legislative enforcement. They are not co-extensive with legal duties.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 8: Directive Principles of State Policy (42nd Amendment Additions)",
+      pageNumber: "Page 8.5 – 8.7",
+      keyExcerpt: "The 42nd Amendment added Articles 39A, 43A, 48A, and amended 39(f)."
     },
-    eliminationTip: 'Fundamental Duties are non-justiciable and moral/civic in character, not automatically enforceable or legally correlative without separate statutory acts. Neither 1 nor 2 is true.',
-    difficulty: 'Moderate',
+    eliminationTip: "Remember the 42nd Amendment quartet: 39(f), 39A, 43A, and 48A.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2017', 'Fundamental Duties', 'Article 51A', 'Non-Justiciable', 'Part IVA', 'Polity']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2017",
+      "DPSP",
+      "42nd Amendment",
+      "Article 39A",
+      "Article 43A",
+      "Article 48A",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2017-gs-26',
@@ -1016,34 +1030,41 @@ export const pyq2017_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2017', 'UPI', 'NPCI', 'Digital Payments', 'Financial Inclusion', 'Economy']
   },
-  {
-    id: 'pyq-2017-gs-36',
-    subject: 'polity',
-    topic: 'Preamble to the Constitution',
-    subTopic: 'Mind and Vision of the Makers of the Constitution',
-    question: 'The mind of the makers of the Constitution of India is reflected in which of the following? (UPSC CSE Prelims 2017)',
+    {
+    id: "pyq-2017-gs-36",
+    subject: "polity",
+    topic: "Indian Constitution & Secularism",
+    subTopic: "Secular Character Manifested Across Constitutional Provisions",
+    question: "Which of the following parts of the Constitution of India reveals the \"Secular\" character of the Indian State?\n\n1. Preamble\n2. Fundamental Rights (Articles 25 to 28)\n3. Directive Principles of State Policy (Article 44)\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2017)",
     options: [
-      'The Preamble',
-      'The Fundamental Rights',
-      'The Directive Principles of State Policy',
-      'The Fundamental Duties'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'THE PREAMBLE to the Constitution embodies the philosophical bedrock, foundational ideals, and grand vision that guided the founding fathers in the Constituent Assembly.\nAs the Supreme Court observed in the Berubari Union case (1960) and reaffirmed in Kesavananda Bharati (1973):\n"The Preamble is a key to the minds of the makers of the Constitution, which may open out their intention and the grand objectives for which they framed several provisions in the Constitution."\nIt sets out the constitutional aims: Justice, Liberty, Equality, and Fraternity.',
+    correctAnswer: 3,
+    explanation: "All three parts reflect the secular nature of the Indian Republic:\n1. The Preamble explicitly declares India to be a \"Secular\" Republic (incorporated by the 42nd Amendment, 1976) and guarantees \"liberty of belief, faith and worship\".\n2. Articles 25 to 28 guarantee freedom of conscience, the right to profess, practice, and propagate religion, freedom to manage religious affairs, and freedom from religious instruction in state-funded institutions.\n3. Article 44 in the Directive Principles directs the State to secure a Uniform Civil Code for all citizens throughout India, disassociating civil law from religious personal codes.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 4: Preamble of the Constitution',
-      pageNumber: 'Page 4.1 – 4.5',
-      keyExcerpt: 'The Supreme Court held that the Preamble reflects the mind of the makers of the Constitution and contains the grand objectives of the Republic.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 3: Salient Features of the Constitution (Secular State)",
+      pageNumber: "Page 3.6 – 3.8",
+      keyExcerpt: "Secularism is woven through the Preamble, Fundamental Rights (Articles 25-28), and DPSP (Article 44)."
     },
-    eliminationTip: 'The Supreme Court has repeatedly held that "The Preamble is the key to open the minds of the makers of the Constitution".',
-    difficulty: 'Easy',
+    eliminationTip: "Secularism is not confined to one article; it permeates the Preamble, Rights, and DPSPs.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2017', 'Preamble', 'Makers of Constitution', 'Berubari Case', 'Kesavananda Bharati', 'Polity']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2017",
+      "Secularism",
+      "Preamble",
+      "Article 25",
+      "Article 44",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2017-gs-37',

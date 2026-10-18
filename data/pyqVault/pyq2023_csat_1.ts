@@ -291,34 +291,39 @@ export const pyq2023_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2023', 'Reading Comprehension', 'Monoculture', 'Agroforestry', 'Biodiversity']
   },
-  {
-    id: 'pyq-2023-csat-11',
-    subject: 'csat_quant',
-    topic: 'Averages and Cricket Scores',
-    subTopic: 'Innings Average Calculation',
-    question: 'A batsman has a certain average of runs for 11 innings. In the 12th innings, he scores 90 runs and thereby increases his batting average by 5 runs. What is his new batting average after the 12th innings? (UPSC CSAT 2023)',
+    {
+    id: "pyq-2023-csat-11",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Percentage Marks and Passing Criteria in Examinations",
+    question: "In an examination, Candidate A scored 35% marks and failed by 14 marks. In the same examination, Candidate B scored 45% marks and scored 16 marks more than the minimum marks required to pass. What are the maximum total marks of the examination? (UPSC CSAT 2023)",
     options: [
-      '30',
-      '35',
-      '40',
-      '45'
+      "250",
+      "300",
+      "350",
+      "400"
     ],
     correctAnswer: 1,
-    explanation: 'Let the average for 11 innings be A.\nTotal runs after 11 innings = 11A.\nIn the 12th innings, he scores 90 runs.\nTotal runs after 12 innings = 11A + 90.\nNew average after 12 innings = A + 5.\nSo:\n(11A + 90) / 12 = A + 5\n11A + 90 = 12(A + 5)\n11A + 90 = 12A + 60\n90 - 60 = 12A - 11A\nA = 30 runs.\nNew batting average = A + 5 = 30 + 5 = 35 runs.',
+    explanation: "Let the maximum marks of the examination be M, and let P be the passing marks.\nAccording to Candidate A: 0.35M = P - 14  =>  P = 0.35M + 14\nAccording to Candidate B: 0.45M = P + 16  =>  P = 0.45M - 16\nEquating both expressions for P:\n0.35M + 14 = 0.45M - 16\n14 + 16 = 0.45M - 0.35M\n30 = 0.10M\nM = 30 / 0.10 = 300 marks.\nTherefore, the maximum total marks of the examination are 300.",
     bookReference: {
-      bookName: 'Quantitative Aptitude by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 6: Problems on Averages (Cricket Scores)',
-      pageNumber: 'Page 144 – 148',
-      keyExcerpt: 'New average = Score in last innings - (Previous Innings * Increase) + Increase = 90 - (11 * 5) = 35.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Percentage",
+      pageNumber: "Chapter 10: Examination Problems",
+      keyExcerpt: "Difference in percentages = Sum of pass/fail margin deviations."
     },
-    eliminationTip: '11 × 5 = 55 runs were used to lift the earlier 11 innings. Old average = 90 - 55 - 5 = 30. New average = 35.',
-    difficulty: 'Easy',
+    eliminationTip: "Difference in percentage = 45% - 35% = 10%. Combined marks spread = 14 + 16 = 30 marks. If 10% = 30, then 100% = 300.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Averages', 'Cricket Innings', 'Quant']
+    tags: [
+      "UPSC 2023",
+      "CSAT",
+      "Percentages",
+      "Passing Marks"
+    ]
   },
   {
     id: 'pyq-2023-csat-12',
@@ -668,34 +673,40 @@ export const pyq2023_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2023', 'Percentages', 'Examination Marks', 'Passing Score', 'Quant']
   },
-  {
-    id: 'pyq-2023-csat-24',
-    subject: 'csat_reasoning',
-    topic: 'Direction Sense and Angles',
-    subTopic: 'Rotations in Clockwise and Counter-Clockwise',
-    question: 'A man is facing West. He turns 45° in the clockwise direction and then another 180° in the same clockwise direction, and then turns 270° in the anti-clockwise direction. Which direction is he facing now? (UPSC CSAT 2023)',
+    {
+    id: "pyq-2023-csat-24",
+    subject: "csat_reasoning",
+    topic: "Logical Reasoning",
+    subTopic: "Direction Sense and Vector Displacement",
+    question: "A person starts from point O and walks 10 km towards North. He then turns to his right and walks 6 km. Thereafter, he turns to his right again and walks 18 km to reach point P. How far and in which direction is point P with respect to the starting point O? (UPSC CSAT 2023)",
     options: [
-      'South',
-      'North-West',
-      'West',
-      'South-West'
+      "8 km South",
+      "10 km South-East",
+      "10 km South-West",
+      "14 km East"
     ],
-    correctAnswer: 3,
-    explanation: 'Let us sum the rotations:\n1. Clockwise rotations = +45° + 180° = +225°\n2. Anti-clockwise rotations = -270°\nNet rotation = +225° - 270° = -45° (i.e. 45° in the anti-clockwise direction).\nInitial direction: WEST.\nTurning 45° anti-clockwise (towards South) from West lands him facing SOUTH-WEST.\nTherefore, he is facing South-West.',
+    correctAnswer: 1,
+    explanation: "Let us track movements on Cartesian coordinates with starting point O at (0, 0):\n1. Walks 10 km North: New position = (0, +10).\n2. Turns right (facing East) and walks 6 km: New position = (0 + 6, +10) = (+6, +10).\n3. Turns right (facing South) and walks 18 km: New position = (+6, 10 - 18) = (+6, -8).\nFinal point P is at coordinates (6, -8).\n- The East coordinate is +6 (East).\n- The North-South coordinate is -8 (South).\nTherefore, the direction of P from O is South-East.\nDistance OP = √(6² + (-8)²) = √(36 + 64) = √100 = 10 km.\nThus, point P is 10 km South-East of starting point O.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 7: Direction Sense Test (Angular Rotations)',
-      pageNumber: 'Page 160 – 166',
-      keyExcerpt: 'Net angle = Clockwise - Anti-clockwise = 225 - 270 = -45° (anti-clockwise). 45° left of West is South-West.'
+      bookName: "A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Direction Sense Test",
+      pageNumber: "Chapter 7: Pythagoras Theorem Applications",
+      keyExcerpt: "Resultant distance d = √(x² + y²)."
     },
-    eliminationTip: 'Clockwise = 225°. Anti-clockwise = 270°. Net = 45° anti-clockwise. 45° south of West is South-West.',
-    difficulty: 'Easy',
+    eliminationTip: "Net East displacement = 6 km; net South displacement = 18 - 10 = 8 km. 6-8-10 forms a Pythagorean triple in the South-East quadrant.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Direction Sense', 'Angular Turns', 'South-West', 'Reasoning']
+    tags: [
+      "UPSC 2023",
+      "CSAT",
+      "Direction Sense",
+      "Displacement",
+      "Reasoning"
+    ]
   },
   {
     id: 'pyq-2023-csat-25',
@@ -958,34 +969,39 @@ export const pyq2023_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2023', 'Pipes and Cisterns', 'Net Rate', 'Quant']
   },
-  {
-    id: 'pyq-2023-csat-34',
-    subject: 'csat_reading',
-    topic: 'Reading Comprehension: Space Debris and Orbital Congestion',
-    subTopic: 'Kessler Syndrome in Low Earth Orbit',
-    question: 'Read the following passage:\n\n"The proliferation of commercial satellite megaconstellations in Low Earth Orbit (LEO) has increased collision risks exponentially. At hypervelocity orbital speeds of 7.5 kilometers per second, even a tiny 1-centimeter paint fleck or spent rocket bolt packs the explosive kinetic punch of a hand grenade. Space physicists warn of the \'Kessler Syndrome\'—a catastrophic tipping point where a cascade of orbital collisions generates self-propagating debris, rendering key orbital altitudes permanently unusable for human navigation and telecommunications."\n\nWhich of the following is the most rational and critical takeaway from the passage? (UPSC CSAT 2023)',
+    {
+    id: "pyq-2023-csat-34",
+    subject: "csat_reading",
+    topic: "Reading Comprehension",
+    subTopic: "Technological Disruption and Labor Market Automation",
+    question: "Read the following passage:\n\n\"The rapid advance of generative artificial intelligence and autonomous systems has reignited debates over technological unemployment. Historical precedents demonstrate that while technological revolutions inevitably destroy specific occupations, they concurrently generate novel industries and elevate labor productivity over the long run. However, the transition period is rarely seamless. The velocity of the current cognitive transition threatens to outpace the adaptive capacity of existing education and vocational retraining frameworks, disproportionately penalizing mid-career workers with specialized, non-transferable human capital.\"\n\nWhich of the following statements best reflects the most crucial message conveyed by the passage? (UPSC CSAT 2023)",
     options: [
-      'Unregulated satellite launches without international debris mitigation protocols threaten the long-term viability of low Earth orbit operations.',
-      'All commercial communication satellites should be brought back down to Earth immediately.',
-      'Space debris travels too slowly to cause any physical damage to spacecraft.',
-      'The Kessler Syndrome has already destroyed all human satellites in outer space.'
+      "Governments should legally halt the development of generative artificial intelligence to safeguard domestic employment.",
+      "Technological transitions inevitably destroy more total jobs in an economy than they can ever create in the long run.",
+      "The speed of technological disruption necessitates proactive, responsive reskilling systems to cushion the vulnerable transition for mid-career labor.",
+      "Mid-career workers should be prioritized for universal early retirement pensions by state institutions."
     ],
-    correctAnswer: 0,
-    explanation: 'Option (a) directly captures the central takeaway: Rapid satellite deployment without debris removal risks the Kessler Syndrome, making international mitigation rules essential for preserving orbital viability.\nOptions (b), (c), and (d) are baseless extremes.',
+    correctAnswer: 2,
+    explanation: "The passage underscores two core realities: (1) Historically, technology creates new industries in the long run, BUT (2) the current transition is unusually fast, creating a risk that institutional education and vocational retraining will lag behind, severely impacting mid-career workers with specialized capital. Hence, the central constructive message is the critical necessity of modernizing reskilling frameworks to bridge this transitional gap (Option C).\n- Option A is an extreme and unviable reaction not advocated in the text.\n- Option B directly contradicts the passage (\"historical precedents demonstrate that while revolutions destroy specific occupations, they concurrently generate novel industries\").\n- Option D proposes an unsubstantiated policy intervention not mentioned in the text.",
     bookReference: {
-      bookName: 'Analytical & Reading Comprehension for CSAT Paper II by Arihant',
-      edition: '2024 Edition',
-      chapter: 'Chapter 5: Critical Takeaways in Space Governance',
-      pageNumber: 'Page 116 – 122',
-      keyExcerpt: 'Kessler Syndrome illustrates the need for active debris removal and orbital traffic management.'
+      bookName: "The Hindu Editorial Analysis / CSAT Reading Comprehension Manual",
+      edition: "2023 Edition",
+      chapter: "Theme: Labor Economics and Technological Adaptation",
+      pageNumber: "Passage Analysis Module",
+      keyExcerpt: "The focus is on the friction of transition and the inadequacy of adaptive retraining speed."
     },
-    eliminationTip: 'Option A expresses the measured policy conclusion: space operations require debris mitigation rules to prevent orbital collapse.',
-    difficulty: 'Easy',
+    eliminationTip: "Option C captures the balanced nuance of the author—acknowledging long-term benefits while urging urgent institutional retraining to protect vulnerable transitional workers.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Reading Comprehension', 'Space Debris', 'Kessler Syndrome', 'LEO Satellites']
+    tags: [
+      "UPSC 2023",
+      "CSAT",
+      "Reading Comprehension",
+      "AI and Employment"
+    ]
   },
   {
     id: 'pyq-2023-csat-35',

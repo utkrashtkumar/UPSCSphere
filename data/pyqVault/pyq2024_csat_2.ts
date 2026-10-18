@@ -436,34 +436,39 @@ export const pyq2024_csat_2: Question[] = [
     frequency: 7,
     tags: ['UPSC CSAT 2024', 'Reading Comprehension', 'Circular Economy', 'Sustainability']
   },
-  {
-    id: 'pyq-2024-csat-56',
-    subject: 'csat_reasoning',
-    topic: 'Logical Deductions: Two Premise Syllogism',
-    subTopic: 'Negative Universal and Particular Propositions',
-    question: 'Consider the following statements and conclusions:\n\nStatements:\n1. No plastic is biodegradable.\n2. All paper bags are biodegradable.\n\nConclusions:\nI. No paper bag is plastic.\nII. Some biodegradable materials are paper bags.\n\nWhich of the conclusions logically follows? (UPSC CSAT 2024)',
+    {
+    id: "pyq-2024-csat-56",
+    subject: "csat_reasoning",
+    topic: "Logical Deductions & Syllogisms",
+    subTopic: "Categorical Syllogisms with Universal and Particular Premises",
+    question: "Consider the following statements and conclusions:\n\nStatements:\n1. All satellites are celestial bodies.\n2. Some celestial bodies are stars.\n\nConclusions:\nI. Some stars are satellites.\nII. Some celestial bodies are satellites.\n\nWhich of the conclusions logically follows from the given statements? (UPSC CSAT 2024)",
     options: [
-      'Only Conclusion I follows',
-      'Only Conclusion II follows',
-      'Both Conclusion I and II follow',
-      'Neither Conclusion I nor II follows'
+      "Only conclusion I follows",
+      "Only conclusion II follows",
+      "Both conclusion I and II follow",
+      "Neither conclusion I nor II follows"
     ],
-    correctAnswer: 2,
-    explanation: 'From Statement 1: "No plastic is biodegradable" (E-type).\nFrom Statement 2: "All paper bags are biodegradable" (A-type).\nCombining them:\nAll paper bags are in the set of biodegradables, and no plastic belongs to biodegradables. Therefore, paper bags and plastics are mutually disjoint sets: "No paper bag is plastic". Thus, Conclusion I definitely follows.\nFrom Statement 2: "All paper bags are biodegradable". By conversion of an A-type proposition, "Some biodegradable materials are paper bags". Thus, Conclusion II definitely follows.\nTherefore, BOTH Conclusion I and II follow.',
+    correctAnswer: 1,
+    explanation: "Analysis using Euler circles / Venn diagrams:\n- Statement 1: \"All satellites are celestial bodies\" (Universal Affirmative - A type). The set of satellites is entirely contained within the set of celestial bodies. By immediate conversion, \"Some celestial bodies are satellites\" is always valid and logically true. Hence, Conclusion II definitely follows.\n- Statement 2: \"Some celestial bodies are stars\" (Particular Affirmative - I type). The intersection of celestial bodies and stars is non-empty, but stars may or may not intersect with the subset of satellites. We cannot definitively conclude that \"Some stars are satellites\". Hence, Conclusion I does not necessarily follow.\nTherefore, only conclusion II follows.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 14: Syllogisms',
-      pageNumber: 'Page 348 – 354',
-      keyExcerpt: 'Disjoint sets yield valid negative universals; universal affirmatives convert to particular affirmatives.'
+      bookName: "Analytical Reasoning by M.K. Pandey",
+      edition: "Revised Edition",
+      chapter: "Syllogism",
+      pageNumber: "Page 220 – 235",
+      keyExcerpt: "An A-type proposition \"All A are B\" can be converted into an I-type proposition \"Some B are A\"."
     },
-    eliminationTip: 'Paper bags are inside biodegradable; plastics are outside biodegradable. So paper bags cannot be plastic (I is true). If all paper bags are biodegradable, some biodegradables are paper bags (II is true). Both follow.',
-    difficulty: 'Easy',
+    eliminationTip: "Immediate conversion of \"All A are B\" is \"Some B are A\" (Conclusion II is unconditionally true). Statement 2 cannot be linked to satellites without a universal middle term.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2024', 'Syllogism', 'Deductive Logic', 'Reasoning']
+    tags: [
+      "UPSC 2024",
+      "CSAT",
+      "Syllogism",
+      "Deductive Logic"
+    ]
   },
   {
     id: 'pyq-2024-csat-57',

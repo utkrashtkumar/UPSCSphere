@@ -204,34 +204,39 @@ export const pyq2020_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2020', 'Pipes and Cisterns', 'Emptying Cistern', 'Quant']
   },
-  {
-    id: 'pyq-2020-csat-08',
-    subject: 'csat_reasoning',
-    topic: 'Blood Relations & Family Tree',
-    subTopic: 'Coded Family Relations',
-    question: 'Pointing towards a photograph, a woman says: “He is the son of the only son of my grandfather.” How is the man in the photograph related to the woman? (UPSC CSAT 2020)',
+    {
+    id: "pyq-2020-csat-08",
+    subject: "csat_reasoning",
+    topic: "Logical Reasoning",
+    subTopic: "Blood Relations and Photo Identification",
+    question: "Introducing a gentleman, a woman says: \"His wife is the only daughter of my father.\" How is the gentleman related to the woman? (UPSC CSAT 2020)",
     options: [
-      'Brother',
-      'Uncle',
-      'Cousin',
-      'Father'
+      "Brother",
+      "Husband",
+      "Father-in-law",
+      "Maternal Uncle"
     ],
-    correctAnswer: 0,
-    explanation: 'Let us break down the statement from the end:\n1. "My grandfather": The woman\'s grandfather.\n2. "The only son of my grandfather": Since the grandfather has only ONE son, that only son must be the woman\'s FATHER.\n3. "He is the son of [the woman\'s father]": The son of the woman\'s father is the woman\'s BROTHER.\n\nTherefore, the man in the photograph is the woman\'s brother.',
+    correctAnswer: 1,
+    explanation: "Let us break down the statement made by the woman:\n- \"The only daughter of my father\": Since the speaker is a woman, the only daughter of her father is the woman herself.\n- \"His wife is [the only daughter of my father]\":\nSubstituting the above result: \"His wife is [myself].\"\nSince the gentleman's wife is the woman herself, the gentleman must be her husband.\nTherefore, the gentleman is related to the woman as Husband.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 5: Blood Relations',
-      pageNumber: 'Page 115 – 122',
-      keyExcerpt: 'Only son of paternal grandfather = Father. Son of father = Brother.'
+      bookName: "A Modern Approach to Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Blood Relations",
+      pageNumber: "Chapter 5: Pointing to a Person",
+      keyExcerpt: "Only daughter of a woman’s father is the woman herself."
     },
-    eliminationTip: 'Only son of grandfather = Father. Son of father = Brother. Instant 5-second deduction.',
-    difficulty: 'Easy',
+    eliminationTip: "Only daughter of my father = myself. \"His wife is myself\" => He is her husband.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2020', 'Blood Relations', 'Family Tree', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2020",
+      "CSAT",
+      "Blood Relations",
+      "Deduction"
+    ]
   },
   {
     id: 'pyq-2020-csat-09',
@@ -784,34 +789,40 @@ export const pyq2020_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2020', 'Seating Arrangement', 'Linear Arrangement', 'Reasoning']
   },
-  {
-    id: 'pyq-2020-csat-28',
-    subject: 'csat_quant',
-    topic: 'Probability: Dice Combinations',
-    subTopic: 'Sum of Two Dice',
-    question: 'Two fair six-sided dice are thrown simultaneously. What is the probability of getting a sum greater than 9? (UPSC CSAT 2020)',
+    {
+    id: "pyq-2020-csat-28",
+    subject: "csat_quant",
+    topic: "Probability & Combinations",
+    subTopic: "Drawing Balls of Same Color Without Replacement",
+    question: "A bag contains 5 red balls, 4 green balls, and 3 blue balls. If two balls are drawn at random simultaneously from the bag without replacement, what is the probability that both drawn balls are of the same color? (UPSC CSAT 2020)",
     options: [
-      '1 / 6',
-      '1 / 9',
-      '5 / 36',
-      '1 / 4'
+      "19/66",
+      "23/66",
+      "25/66",
+      "29/66"
     ],
     correctAnswer: 0,
-    explanation: 'When two six-sided dice are thrown, total possible outcomes = 6 × 6 = 36.\n\nWe need the outcomes where the sum of numbers is GREATER THAN 9 (i.e. Sum = 10, 11, or 12):\n- Sum = 10: (4, 6), (5, 5), (6, 4) -> 3 outcomes\n- Sum = 11: (5, 6), (6, 5) -> 2 outcomes\n- Sum = 12: (6, 6) -> 1 outcome\n\nTotal favourable outcomes = 3 + 2 + 1 = 6 outcomes.\n\nProbability = Favourable Outcomes / Total Outcomes\n= 6 / 36\n= 1 / 6.',
+    explanation: "Total number of balls in the bag = 5 + 4 + 3 = 12 balls.\nTotal number of ways to draw 2 balls from 12 = 12C2 = (12 × 11) / (2 × 1) = 66.\n\nNow, calculate the favorable ways of drawing two balls of the same color:\n- Both are Red: 5C2 = (5 × 4) / 2 = 10 ways.\n- Both are Green: 4C2 = (4 × 3) / 2 = 6 ways.\n- Both are Blue: 3C2 = (3 × 2) / 2 = 3 ways.\nTotal favorable outcomes = 10 + 6 + 3 = 19 ways.\n\nProbability P = Favorable Outcomes / Total Outcomes = 19 / 66.\nTherefore, the probability that both balls are of the same color is 19/66.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 31: Probability (Problems on Dice)',
-      pageNumber: 'Page 642 – 648',
-      keyExcerpt: 'Sums greater than 9 on two dice are 10, 11, and 12, yielding 6 favourable outcomes out of 36.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Probability",
+      pageNumber: "Chapter 31: Drawing Balls",
+      keyExcerpt: "P(Same color) = [n1C2 + n2C2 + n3C2] / NC2."
     },
-    eliminationTip: 'Favourable pairs: (4,6), (5,5), (6,4), (5,6), (6,5), (6,6) = 6 pairs. 6 / 36 = 1/6.',
-    difficulty: 'Easy',
+    eliminationTip: "Numerator = 5C2 + 4C2 + 3C2 = 10 + 6 + 3 = 19. Denominator = 12C2 = 66. P = 19/66.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2020', 'Probability', 'Dice', 'Quant']
+    tags: [
+      "UPSC 2020",
+      "CSAT",
+      "Probability",
+      "Combinations",
+      "Balls"
+    ]
   },
   {
     id: 'pyq-2020-csat-29',
@@ -871,34 +882,40 @@ export const pyq2020_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2020', 'Permutations', 'Letter Arrangements', 'Quant']
   },
-  {
-    id: 'pyq-2020-csat-31',
-    subject: 'csat_reasoning',
-    topic: 'Data Sufficiency: Age of Individuals',
-    subTopic: 'Two Statements to Determine Unique Age',
-    question: 'Consider the Question and two Statements given below:\n\nQuestion: What is the age of Mohan?\nStatement 1: Mohan is 4 years older than his brother Sohan.\nStatement 2: Sohan is 2 years younger than his sister Rita, who is 18 years old.\n\nWhich one of the following is correct in respect of the Question and the Statements? (UPSC CSAT 2020)',
+    {
+    id: "pyq-2020-csat-31",
+    subject: "csat_quant",
+    topic: "Data Sufficiency",
+    subTopic: "Age Determination with Linked Relations",
+    question: "Consider the Question and two Statements given below:\n\nQuestion: What is the present age of John?\nStatement-1: John is 4 years older than his sister Mary.\nStatement-2: Mary’s age is exactly half the age of her mother, who celebrated her 40th birthday today.\n\nWhich one of the following is correct in respect of the Question and the Statements? (UPSC CSAT 2020)",
     options: [
-      'Statement 1 alone is sufficient to answer the Question.',
-      'Statement 2 alone is sufficient to answer the Question.',
-      'Both Statement 1 and Statement 2 together are sufficient to answer the Question.',
-      'Both Statement 1 and Statement 2 together are not sufficient to answer the Question.'
+      "Statement-1 alone is sufficient to answer the Question",
+      "Statement-2 alone is sufficient to answer the Question",
+      "Both Statement-1 and Statement-2 together are sufficient, but neither Statement alone is sufficient",
+      "Neither Statement-1 nor Statement-2 is sufficient to answer the Question"
     ],
     correctAnswer: 2,
-    explanation: 'Let us evaluate the statements:\n\nStatement 1: Mohan = Sohan + 4\n- Here Sohan\'s age is unknown, so Statement 1 alone is NOT sufficient.\n\nStatement 2: Sohan = Rita - 2, and Rita = 18 years.\n- This gives Sohan = 18 - 2 = 16 years.\n- But Statement 2 tells us nothing about Mohan, so Statement 2 alone is NOT sufficient.\n\nCombining both Statement 1 and Statement 2:\n- From Statement 2, Sohan = 16 years.\n- From Statement 1, Mohan = Sohan + 4 = 16 + 4 = 20 years.\n\nWe obtain the unique age of Mohan (20 years) by combining both statements.\nTherefore, both Statement 1 and Statement 2 together are sufficient to answer the Question.',
+    explanation: "Let us test each statement:\n- Statement-1 alone: \"John = Mary + 4\". We do not know Mary's age, so John's age cannot be uniquely determined. Statement-1 alone is NOT sufficient.\n- Statement-2 alone: \"Mary = Mother / 2 = 40 / 2 = 20 years\". This gives Mary's age, but says nothing about John. Statement-2 alone is NOT sufficient.\n- Combining Statement-1 and Statement-2:\nFrom Statement-2, Mary is 20 years old.\nFrom Statement-1, John = Mary + 4 = 20 + 4 = 24 years.\nTogether, they uniquely determine John's age as 24 years.\nTherefore, both Statement-1 and Statement-2 together are sufficient, but neither alone is sufficient.",
     bookReference: {
-      bookName: 'Quantitative Aptitude & Data Sufficiency by Arun Sharma',
-      edition: '10th Edition',
-      chapter: 'Chapter 20: Data Sufficiency in Word Problems',
-      pageNumber: 'Page 408 – 414',
-      keyExcerpt: 'When individual statements lack link variables, combining both allows chaining values to solve.'
+      bookName: "Tata McGraw Hill CSAT Manual / R.S. Aggarwal Reasoning",
+      edition: "Latest Edition",
+      chapter: "Data Sufficiency: Age Problems",
+      pageNumber: "Page 340 – 345",
+      keyExcerpt: "Two linear variables require two independent equations to resolve."
     },
-    eliminationTip: 'Statement 1 lacks Sohan\'s age; Statement 2 lacks Mohan. Combined: Rita = 18 => Sohan = 16 => Mohan = 20. Both together are sufficient.',
-    difficulty: 'Easy',
+    eliminationTip: "Neither statement alone gives John's age, but combined they immediately give Mary = 20 and John = 24.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2020', 'Data Sufficiency', 'Age Problems', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2020",
+      "CSAT",
+      "Data Sufficiency",
+      "Ages",
+      "Reasoning"
+    ]
   },
   {
     id: 'pyq-2020-csat-32',

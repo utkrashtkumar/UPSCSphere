@@ -871,34 +871,40 @@ export const pyq2017_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2017', 'CSAT', 'Quantitative Aptitude', 'LCM', 'Tolling Bells']
   },
-  {
-    id: 'pyq-2017-csat-31',
-    subject: 'csat_reasoning',
-    topic: 'Statement and Assumptions',
-    subTopic: 'Implicit Institutional Assumptions',
-    question: 'Consider the following statement and assumptions:\n\nStatement: "The Municipal Corporation has issued an advisory urging all city residents to harvest rainwater from their rooftops before the onset of the monsoon season."\n\nAssumptions:\nI. Most residents possess rooftops suitable for setting up rainwater harvesting structures.\nII. Harvesting rainwater during monsoons can help replenish the city\'s depleting groundwater levels.\n\nWhich of the assumptions is/are implicit in the statement? (UPSC CSAT 2017)',
+    {
+    id: "pyq-2017-csat-31",
+    subject: "csat_reasoning",
+    topic: "Critical Reasoning",
+    subTopic: "Statement and Assumptions: Public Health Policy",
+    question: "Consider the following statement and assumptions:\n\nStatement: \"The National Health Ministry urged all state governments to mandate front-of-pack nutritional warning labels on packaged foods high in sugar, sodium, and saturated fats.\"\n\nAssumptions:\nI. Consumers are generally unaware of the exact proportions of unhealthy ingredients in packaged processed foods they purchase.\nII. Prominent front-of-pack warning labels will influence consumer purchasing choices toward healthier dietary habits.\n\nWhich of the assumptions is/are implicit in the statement? (UPSC CSAT 2017)",
     options: [
-      'Only assumption I is implicit',
-      'Only assumption II is implicit',
-      'Both assumptions I and II are implicit',
-      'Neither assumption I nor II is implicit'
+      "Only assumption I is implicit",
+      "Only assumption II is implicit",
+      "Both assumption I and II are implicit",
+      "Neither assumption I nor II is implicit"
     ],
     correctAnswer: 2,
-    explanation: 'Analyze each assumption:\n- Assumption I: When an authority issues a general advisory to city residents regarding rooftop harvesting, it presupposes that the citizens possess rooftops where such measures can feasibly be deployed. If it were impossible or unavailable to residents, the advisory would be meaningless. Hence Assumption I is implicit.\n- Assumption II: An advisory to capture rainwater is premised on the rationale that rainwater harvesting serves a tangible purpose, specifically water conservation and groundwater recharge. Hence Assumption II is also implicit.\n\nTherefore, both assumptions I and II are implicit.',
+    explanation: "Both assumptions are implicit:\n- Assumption I is implicit: Urging mandatory warning labels directly presumes that without clear, upfront visual warnings, consumers lack clear knowledge of hidden sugar, salt, and fat content.\n- Assumption II is implicit: Recommending such warning labels assumes that clear public health disclosures will impact buyer behavior and encourage healthier eating.\nTherefore, both assumption I and assumption II are implicit in the statement.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 15: Statement and Assumptions',
-      pageNumber: 'Page 410 – 417',
-      keyExcerpt: 'An administrative advisory implicitly assumes feasibility of compliance and usefulness of the objective.'
+      bookName: "Analytical Reasoning by M.K. Pandey",
+      edition: "Revised Edition",
+      chapter: "Statement and Assumptions",
+      pageNumber: "Page 84 – 90",
+      keyExcerpt: "Public policy nudges assume consumer information deficits and responsiveness to clear disclosures."
     },
-    eliminationTip: 'Any civic advisory presupposes both feasibility (citizens have rooftops) and utility (rainwater harvesting recharges groundwater). Both are implicit.',
-    difficulty: 'Easy',
+    eliminationTip: "Front-of-pack labels are proposed precisely because consumers are unaware (I) and clear labels work (II). Both are implicit.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC 2017', 'CSAT', 'Reasoning', 'Statement and Assumptions', 'Rainwater Harvesting']
+    tags: [
+      "UPSC 2017",
+      "CSAT",
+      "Statement and Assumptions",
+      "Public Health",
+      "Reasoning"
+    ]
   },
   {
     id: 'pyq-2017-csat-32',

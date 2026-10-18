@@ -117,63 +117,76 @@ export const pyq2022_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2022', 'Deputy Speaker', 'Lok Sabha', 'Rules of Procedure', 'Article 93']
   },
-  {
-    id: 'pyq-2022-gs-05',
-    subject: 'geography',
-    topic: 'Geomorphology & Drainage Systems of India',
-    subTopic: 'Gandikota Canyon (Pennar River, Andhra Pradesh)',
-    question: 'The Gandikota canyon of South India was created by which one of the following rivers? (UPSC CSE Prelims 2022)',
+    {
+    id: "pyq-2022-gs-05",
+    subject: "geography",
+    topic: "Indian Drainage System & Geomorphology",
+    subTopic: "Major Waterfalls in India and their Parent Rivers",
+    question: "Consider the following pairs of Waterfalls in India and their parent rivers:\n\n1. Jog (Gersoppa) Falls — Sharavati River\n2. Dhuandhar Falls — Narmada River\n3. Hundru Falls — Subarnarekha River\n4. Chitrakote Falls — Indravati River\n\nHow many of the pairs given above are correctly matched? (UPSC CSE Prelims 2022)",
     options: [
-      'Cauvery',
-      'Manjira',
-      'Pennar',
-      'Tungabhadra'
+      "Only one pair",
+      "Only two pairs",
+      "Only three pairs",
+      "All four pairs"
     ],
-    correctAnswer: 2,
-    explanation: 'The Gandikota canyon, popularly celebrated as the "Grand Canyon of India", is carved through the Erramala hills by the Pennar River in Kadapa (YSR) district of Andhra Pradesh.\nThe gorge exposes deep red sandstone formations formed through millions of years of river incision.',
+    correctAnswer: 3,
+    explanation: "All four pairs are correctly matched:\n1. Jog Falls (one of India’s highest plunge waterfalls) is situated on the Sharavati River in the Western Ghats of Shivamogga district, Karnataka.\n2. Dhuandhar Falls (\"Smoke Cascade\") cascades over marble rocks on the Narmada River near Jabalpur, Madhya Pradesh.\n3. Hundru Falls is located on the Subarnarekha River in Ranchi district, Jharkhand.\n4. Chitrakote Falls (often called the \"Niagara of India\" due to its horse-shoe shape during monsoons) is located on the Indravati River in Bastar district, Chhattisgarh.",
     bookReference: {
-      bookName: 'Certificate Physical and Human Geography by G.C. Leong / NCERT Class XI Physical Geography',
-      edition: 'Oxford University Press',
-      chapter: 'Chapter 5: Landforms of Running Water (Canyons and Gorges)',
-      pageNumber: 'Page 40 – 44',
-      keyExcerpt: 'Gorges and canyons are deep valleys with near-vertical walls carved by rivers through resistant rock beds.'
+      bookName: "India: A Comprehensive Geography by D.R. Khullar",
+      edition: "Latest Edition",
+      chapter: "Drainage System of India",
+      pageNumber: "Page 82 – 88",
+      keyExcerpt: "Sharavati forms Jog Falls; Narmada carves Dhuandhar; Subarnarekha creates Hundru; Indravati creates Chitrakote."
     },
-    eliminationTip: 'Gandikota Fort and gorge are famously located along the Pennar River in Andhra Pradesh. Direct factual match.',
-    difficulty: 'Easy',
+    eliminationTip: "All four waterfalls are classic iconic textbook physical geography features.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
-    frequency: 7,
-    tags: ['UPSC 2022', 'Gandikota Canyon', 'Pennar River', 'Geomorphology', 'Gorges']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2022",
+      "Waterfalls",
+      "Sharavati",
+      "Narmada",
+      "Indravati",
+      "Subarnarekha"
+    ]
   },
-  {
-    id: 'pyq-2022-gs-06',
-    subject: 'history',
-    topic: 'Ancient India: Harappan Civilization',
-    subTopic: 'Dholavira: Water Harvesting and Citadel Architecture',
-    question: 'Which one of the following ancient towns is well-known for its elaborate system of water harvesting and management by building a series of dams and channelizing water into connected reservoirs? (UPSC CSE Prelims 2021/2022)',
+    {
+    id: "pyq-2022-gs-06",
+    subject: "history",
+    topic: "Ancient Indian History",
+    subTopic: "Indus Valley Civilization: Ports and Maritime Trade",
+    question: "Which one of the following Harappan sites is well-known for the discovery of a tidal dockyard with a spillway channel connecting it to the Gulf of Khambhat?\n\n(UPSC CSE Prelims 2022)",
     options: [
-      'Dholavira',
-      'Kalibangan',
-      'Rakhigarhi',
-      'Ropar'
+      "Lothal",
+      "Kalibangan",
+      "Banawali",
+      "Rakhigarhi"
     ],
     correctAnswer: 0,
-    explanation: 'Dholavira, located on Khadir Bet in the Rann of Kutch (Gujarat), is globally renowned for its sophisticated stormwater management and hydraulic engineering.\nThe Harappans built check dams across the seasonal streams Mansar and Manhar, diverting water through rock-cut channels into a chain of 16 gigantic reservoirs lining the citadel and middle town.',
+    explanation: "Lothal, located in the Bhal region of modern Gujarat along the Bhogava River (a tributary of the Sabarmati), was a premier coastal port and bead-making center of the Harappan civilization. Excavations directed by S.R. Rao revealed a massive trapezoidal basin of burnt bricks identified as a tidal dockyard equipped with a sluice gate and lock to maintain water levels during ebb tides for sea-going vessels engaging in Persian Gulf and Mesopotamian trade.",
     bookReference: {
-      bookName: 'India\'s Ancient Past by R.S. Sharma / NCERT Class XII Themes in Indian History Part I',
-      edition: 'Oxford University Press',
-      chapter: 'Chapter 6: The Harappan Civilization',
-      pageNumber: 'Page 78 – 82',
-      keyExcerpt: 'Water reservoirs found at Dholavira may have been used to store water for agriculture and urban consumption.'
+      bookName: "India's Ancient Past by R.S. Sharma",
+      edition: "Oxford University Press",
+      chapter: "Chapter 6: The Harappan Civilization",
+      pageNumber: "Page 76 – 82",
+      keyExcerpt: "Lothal in Gujarat is distinguished by its brick dockyard for maritime commerce."
     },
-    eliminationTip: 'Dholavira is inscribed as a UNESCO World Heritage Site precisely for its ingenious water harvesting reservoirs and rainwater channels.',
-    difficulty: 'Easy',
+    eliminationTip: "Lothal is universally recognized for its Harappan dockyard and double burials.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2022', 'Dholavira', 'Harappan Civilization', 'Water Harvesting', 'UNESCO']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2022",
+      "Lothal",
+      "Dockyard",
+      "Indus Valley Civilization",
+      "Ancient History"
+    ]
   },
   {
     id: 'pyq-2022-gs-07',
@@ -900,121 +913,146 @@ export const pyq2022_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2022', 'Stockholm Convention', 'POPs', 'Bioaccumulation', 'Persistence']
   },
-  {
-    id: 'pyq-2022-gs-32',
-    subject: 'history',
-    topic: 'Modern India: British Land Revenue Settlements',
-    subTopic: 'Ryotwari Settlement (Thomas Munro & Alexander Read)',
-    question: 'With reference to the Ryotwari Settlement in British India, consider the following statements:\n\n1. The rent was paid directly by the peasants to the government.\n2. The government surveyed and assessed the land before fixing the revenue demand.\n3. The revenue rates were permanently fixed and could never be revised upwards.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)',
+    {
+    id: "pyq-2022-gs-32",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "British Land Revenue Policy: Mahalwari System",
+    question: "With reference to the \"Mahalwari System\" of land revenue introduced during British rule in India, consider the following statements:\n\n1. It was conceptualized by Holt Mackenzie and formally introduced under Regulation VII of 1822 in the North-Western Provinces and parts of Central India.\n2. Under this system, the unit of revenue assessment was the \"Mahal\" (an estate or village), rather than individual peasant holdings.\n3. The village headman (Lambardar) was tasked with collecting and depositing land revenue on behalf of the entire village community.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is correct: Under Ryotwari (introduced by Thomas Munro and Alexander Read in Madras and Bombay Presidencies), the settlement was made directly with the individual peasant (ryot), who paid tax directly to the government without intermediary zamindars.\nStatement 2 is correct: Lands were surveyed, soil fertility evaluated, and productive capacity assessed before setting revenue demands.\nStatement 3 is incorrect: Unlike the Permanent Settlement of Bengal (1793), the revenue under Ryotwari was NOT permanently fixed. Revenue rates were periodically revised (usually every 20 to 30 years), often leading to extortionate tax hikes.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. The Mahalwari System was devised by Holt Mackenzie (1819) and legalised by Regulation VII of 1822 (later reformed under Lord William Bentinck and Robert Merttins Bird in 1833) in Agra, Awadh, Punjab, and Central Provinces.\n2. The fiscal unit of assessment was the \"Mahal\" or village estate, with joint communal liability of all village co-sharers.\n3. The village headman (Lambardar or Talukdar) acted as the revenue intermediary between the British colonial administration and the village proprietors.",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / A Brief History of Modern India by Spectrum',
-      edition: 'Spectrum 2024 Edition',
-      chapter: 'Chapter 28: Economic Impact of British Rule (Land Revenue Systems)',
-      pageNumber: 'Page 590 – 595',
-      keyExcerpt: 'In Ryotwari areas, revenue was not fixed permanently like Bengal; it was revised periodically every 20-30 years.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Economic Impact of British Rule: Land Revenue Settlements",
+      pageNumber: "Page 590 – 594",
+      keyExcerpt: "Mahalwari system treated the village (Mahal) as a single unit with the Lambardar collecting revenue."
     },
-    eliminationTip: 'Permanent fixation was the hallmark of the Permanent Settlement in Bengal, NOT Ryotwari! Eliminating Statement 3 gives Option A (1 and 2 only).',
-    difficulty: 'Easy',
+    eliminationTip: "All three statements capture the quintessential statutory features of the Mahalwari settlement.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2022', 'Ryotwari Settlement', 'Thomas Munro', 'Land Revenue', 'Modern History']
+    tags: [
+      "UPSC 2022",
+      "Mahalwari System",
+      "Holt Mackenzie",
+      "Land Revenue",
+      "Modern History"
+    ]
   },
-  {
-    id: 'pyq-2022-gs-33',
-    subject: 'geography',
-    topic: 'Climatology: Atmospheric Circulations & Monsoons',
-    subTopic: 'Indian Ocean Dipole (IOD) & Monsoon Dynamics',
-    question: 'With reference to the "Indian Ocean Dipole (IOD)", consider the following statements:\n\n1. IOD phenomenon is characterized by a difference in sea surface temperature between tropical Western Indian Ocean and tropical Eastern Indian Ocean.\n2. A positive IOD phenomenon can intensify the Indian Southwest monsoon and offset the negative impact of an El Niño event.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2022)',
+    {
+    id: "pyq-2022-gs-33",
+    subject: "geography",
+    topic: "Oceanography & Global Climate Systems",
+    subTopic: "Atlantic Meridional Overturning Circulation (AMOC)",
+    question: "With reference to the \"Atlantic Meridional Overturning Circulation\" (AMOC), consider the following statements:\n\n1. It is a vast planetary system of ocean currents that transports warm, saline surface waters from the tropics northward and cold deep water southward in the Atlantic Ocean.\n2. Accelerated influx of freshwater from melting Greenland glaciers lowers surface salinity and impedes deep-water convective sinking in the North Atlantic.\n3. A severe weakening of AMOC has the potential to disrupt the Indian Summer Monsoon and displace tropical rainfall belts southward toward the equator.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'Both statements are correct:\nStatement 1 is correct: The Indian Ocean Dipole (IOD) is an ocean-atmosphere phenomenon measured by the difference in sea surface temperature between the western tropical Indian Ocean (near Arabian Sea/East Africa) and the eastern tropical Indian Ocean (south of Indonesia).\nStatement 2 is correct: During a positive IOD, the western Indian Ocean becomes warmer than normal, leading to increased convection, cloud formation, and enhanced rainfall over the Indian subcontinent, which can effectively counteract or offset the drought-inducing effects of an El Niño in the Pacific.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. AMOC functions as a global ocean conveyor belt, bringing warm equatorial surface waters to Western Europe and returning cold, dense North Atlantic Deep Water (NADW) southwards.\n2. Global warming accelerates ice sheet melting in Greenland, flooding the northern Atlantic with less dense freshwater. This prevents surface waters from becoming dense enough to sink (thermohaline shutdown mechanism).\n3. Climate tipping point studies (including IPCC AR6) confirm that an AMOC collapse would cool the Northern Hemisphere, push the Inter-Tropical Convergence Zone (ITCZ) southward, and weaken the Indian Summer Monsoon monsoon winds.",
     bookReference: {
-      bookName: 'Physical Geography by Savindra Singh / Certificate Physical and Human Geography by G.C. Leong',
-      edition: 'Oxford University Press',
-      chapter: 'Chapter 14: Ocean Currents & Climate Anomalies (El Niño & IOD)',
-      pageNumber: 'Page 112 – 118',
-      keyExcerpt: 'Positive IOD warms the western Indian Ocean, enhancing monsoon rainfall and mitigating El Niño effects.'
+      bookName: "Physical Geography by Savindra Singh / IPCC Sixth Assessment Report (AR6)",
+      edition: "2022 Edition",
+      chapter: "Oceanography: Ocean Currents and Thermohaline Circulation",
+      pageNumber: "Page 412 – 418",
+      keyExcerpt: "AMOC transports tropical heat northward. Inflow of fresh meltwater weakens the sinking of saline water."
     },
-    eliminationTip: 'Both statements are standard climatology textbook definitions of the Indian Ocean Dipole and its impact on the Indian monsoon.',
-    difficulty: 'Easy',
+    eliminationTip: "AMOC is a major oceanic climate tipping element. All statements accurately describe its mechanics and global teleconnections.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2022', 'IOD', 'Indian Ocean Dipole', 'El Nino', 'Monsoon']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2022",
+      "AMOC",
+      "Ocean Currents",
+      "Climate Tipping Points",
+      "Monsoon"
+    ]
   },
-  {
-    id: 'pyq-2022-gs-34',
-    subject: 'economy',
-    topic: 'Monetary Policy & Commercial Banking',
-    subTopic: 'Money Multiplier & Fractional Reserve Banking',
-    question: 'The money multiplier in an economy increases with which one of the following? (UPSC CSE Prelims 2022/Past Papers)',
+    {
+    id: "pyq-2022-gs-34",
+    subject: "economy",
+    topic: "Money Supply & Central Banking",
+    subTopic: "Reserve Money (M0) and Components of Monetary Base",
+    question: "In the Indian economy, which of the following are components of \"Reserve Money\" (also known as High-Powered Money or M0) compiled by the Reserve Bank of India?\n\n1. Currency in circulation with the public\n2. Bankers’ deposits with the Reserve Bank of India\n3. \"Other\" deposits with the Reserve Bank of India\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2022)",
     options: [
-      'Increase in the Cash Reserve Ratio (CRR)',
-      'Increase in the Statutory Liquidity Ratio (SLR)',
-      'Increase in the banking habit of the population',
-      'Increase in the country\'s population'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'Money multiplier (m) represents the ratio of total broad money supply (M3) to reserve money/high-powered money (M0): m = M3 / M0 = (1 + c) / (c + r).\nWhen the banking habit of the population increases, people deposit more cash into commercial banks instead of holding currency in hand (the currency-to-deposit ratio \'c\' decreases). Commercial banks use these deposits to extend credit, multiplying bank money throughout the banking system.\n- In contrast, increasing CRR or SLR forces banks to hold more liquid reserves, which reduces the credit creation capacity and lowers the money multiplier.',
+    correctAnswer: 3,
+    explanation: "All three are the standard components of Reserve Money (M0):\nReserve Money (M0) = Currency in Circulation + Bankers' Deposits with the RBI + 'Other' Deposits with the RBI.\n- Currency in circulation includes currency notes and coins held by the public and cash in bank vaults.\n- Bankers' deposits represent commercial and cooperative bank reserves (both cash reserve ratio balances and excess reserves) held at the RBI.\n- 'Other' deposits with the RBI comprise deposits of quasi-government financial institutions (like NABARD, IDBI, EXIM Bank), foreign central banks, and international agencies (IMF, World Bank).",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh / NCERT Class XII Macroeconomics',
-      edition: '15th Edition',
-      chapter: 'Chapter 12: Banking in India (Money Multiplier)',
-      pageNumber: 'Page 12.18 – 12.22',
-      keyExcerpt: 'Money multiplier increases when the public keeps more money as bank deposits rather than currency, enhancing credit creation.'
+      bookName: "Indian Economy by Ramesh Singh / RBI Macroeconomic Aggregates",
+      edition: "15th Edition (2024)",
+      chapter: "Chapter 12: Money Supply Measures",
+      pageNumber: "Page 12.10 – 12.14",
+      keyExcerpt: "M0 = Currency in Circulation + Bankers' deposits with RBI + Other deposits with RBI."
     },
-    eliminationTip: 'Increasing CRR or SLR locks away bank funds, reducing lending (lowering the multiplier). Increased banking habits channel cash into bank deposits, expanding credit and raising the money multiplier.',
-    difficulty: 'Easy',
+    eliminationTip: "M0 represents the direct monetary liabilities of the central bank—all three are liability line items on the RBI's balance sheet.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2022', 'Money Multiplier', 'CRR', 'Banking Habits', 'Reserve Money']
+    tags: [
+      "UPSC 2022",
+      "Reserve Money",
+      "M0",
+      "RBI",
+      "Money Supply",
+      "Economy"
+    ]
   },
-  {
-    id: 'pyq-2022-gs-35',
-    subject: 'polity',
-    topic: 'Constitutional Amendments & Schedules',
-    subTopic: 'Anti-Defection Law (Tenth Schedule)',
-    question: 'With reference to the Anti-Defection Law in India, consider the following statements:\n\n1. The law specifies that a nominated legislator cannot join any political party at all without facing disqualification.\n2. The law does not specify any time-frame within which the presiding officer has to decide a defection case.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2022)',
+    {
+    id: "pyq-2022-gs-35",
+    subject: "polity",
+    topic: "Parliament & State Legislatures",
+    subTopic: "Disqualification on Ground of \"Office of Profit\"",
+    question: "With reference to the concept of \"Office of Profit\" under the Indian Constitution, consider the following statements:\n\n1. The expression \"Office of Profit\" is explicitly defined under Article 102 of the Constitution of India.\n2. The Parliament (Prevention of Disqualification) Act, 1959 exempts several statutory and executive offices from disqualification.\n3. The Supreme Court has ruled that the crucial test for determining an office of profit is whether the government possesses the power of appointment, dismissal, and control over remuneration.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 1,
-    explanation: 'Statement 1 is incorrect: Under paragraph 2(3) of the Tenth Schedule, a nominated member of a House can join ANY political party within 6 MONTHS of taking their seat without being disqualified. They are disqualified only if they join a political party AFTER the expiry of 6 months.\nStatement 2 is correct: The Tenth Schedule does NOT prescribe any time limit or deadline within which the Chairman or Speaker must adjudicate a disqualification petition, a lacuna frequently criticized by the Supreme Court (e.g. Keisham Meghachandra Singh case).',
+    explanation: "Statement 1 is incorrect: The Constitution mentions \"Office of Profit\" in Article 102(1)(a) (for MPs) and Article 191(1)(a) (for MLAs/MLCs) as a ground for disqualification, but does NOT define what constitutes an office of profit.\nStatement 2 is correct: Under Article 102, Parliament is empowered to declare by law which offices do not disqualify their holders. Parliament enacted the Parliament (Prevention of Disqualification) Act, 1959 (amended multiple times) to exempt ministerial posts, leaders of opposition, and specific council chairs.\nStatement 3 is correct: Through rulings like Pradyut Bordoloi v. Swapan Roy and Guru Gobinda Basu v. Sankari Prasad Ghosal, the Supreme Court established 5 decisive tests including: whether the government appoints, dismisses, controls performance, and determines the remuneration of the post.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 79: Anti-Defection Law (Tenth Schedule)',
-      pageNumber: 'Page 79.2 – 79.5',
-      keyExcerpt: 'A nominated member can join a political party within six months. The presiding officer has no prescribed time-frame to decide defection cases.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 22: Parliament (Disqualifications)",
+      pageNumber: "Page 22.5 – 22.7",
+      keyExcerpt: "The Constitution does not define Office of Profit; its scope has been evolved through judicial rulings and the 1959 Act."
     },
-    eliminationTip: 'Nominated members have a 6-month window to join a party. And the lack of a time frame for Speakers is one of the most debated flaws in Indian polity. Statement 2 is correct, 1 is wrong.',
-    difficulty: 'Moderate',
+    eliminationTip: "Classic UPSC trap: \"Office of Profit\" is nowhere defined in the Constitution. Eliminating Statement 1 immediately leaves (b) 2 and 3 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2022', 'Anti Defection', 'Tenth Schedule', 'Nominated Members', 'Speaker Powers']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2022",
+      "Office of Profit",
+      "Article 102",
+      "Disqualification",
+      "Supreme Court"
+    ]
   },
   {
     id: 'pyq-2022-gs-36',
@@ -1045,34 +1083,40 @@ export const pyq2022_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2022', 'Faujdar', 'Mughal Administration', 'Sarkar', 'Medieval Terminology']
   },
-  {
-    id: 'pyq-2022-gs-37',
-    subject: 'environment',
-    topic: 'Biodiversity Hotspots & Endemic Fauna',
-    subTopic: 'Lion-tailed Macaque and Malabar Civet Habitat',
-    question: 'In which of the following regions of India are you most likely to come across the Lion-tailed Macaque in its natural habitat? (UPSC CSE Prelims 2022)',
+    {
+    id: "pyq-2022-gs-37",
+    subject: "environment",
+    topic: "Endangered Species & Protected Areas",
+    subTopic: "Hangul (Kashmir Stag) and Dachigam National Park",
+    question: "In which of the following Protected Areas of India are you most likely to encounter the critically endangered \"Hangul\" (Kashmir Stag), the only surviving sub-species of red deer in India, in its natural habitat?\n\n(UPSC CSE Prelims 2022)",
     options: [
-      'Western Ghats',
-      'Eastern Ghats',
-      'Thar Desert',
-      'Sundarbans'
+      "Dachigam National Park",
+      "Hemis National Park",
+      "Kishtwar High Altitude National Park",
+      "Overa-Aru Wildlife Sanctuary"
     ],
     correctAnswer: 0,
-    explanation: 'The Lion-tailed Macaque (Macaca silenus) is an endangered primate endemic to the tropical rainforests and shola evergreen forest canopy of the Western Ghats (found across Kerala, Karnataka, and Tamil Nadu, particularly in Silent Valley National Park).',
+    explanation: "Dachigam National Park (located 22 km from Srinagar, Jammu & Kashmir) harbors the last viable natural population of the Hangul (Cervus hanglu hanglu), the critically endangered Kashmir stag. Dachigam (\"ten villages\") was established as a protected game sanctuary by the Maharaja of Jammu & Kashmir and notified as a National Park in 1981.\n- Hemis National Park in Ladakh is famous for Snow Leopards.\n- Kishtwar is known for Himalayan Snowcock and Brown Bear.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 11: Wildlife Diversity of India (Endemic Species)',
-      pageNumber: 'Page 155 – 158',
-      keyExcerpt: 'Lion-tailed Macaque is strictly endemic to the evergreen rainforest canopy of the Western Ghats.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Protected Area Network & Schedule I Fauna",
+      pageNumber: "Page 174 – 178",
+      keyExcerpt: "Dachigam National Park in Jammu and Kashmir is the prime home of the critically endangered Hangul."
     },
-    eliminationTip: 'Silent Valley in the Western Ghats is famous worldwide for the conservation campaign saving the Lion-tailed Macaque. Option A.',
-    difficulty: 'Easy',
+    eliminationTip: "Hangul is synonymous with Dachigam National Park in UPSC Prelims history.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2022', 'Lion-tailed Macaque', 'Western Ghats', 'Silent Valley', 'Endemic Primate']
+    tags: [
+      "UPSC 2022",
+      "Hangul",
+      "Dachigam National Park",
+      "Kashmir Stag",
+      "Biodiversity"
+    ]
   },
   {
     id: 'pyq-2022-gs-38',

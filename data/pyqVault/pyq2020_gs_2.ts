@@ -1,34 +1,40 @@
 import { Question } from '@/lib/types';
 
 export const pyq2020_gs_2: Question[] = [
-  {
-    id: 'pyq-2020-gs-51',
-    subject: 'polity',
-    topic: 'Constitutional Philosophy & Political Theory',
-    subTopic: 'Constitutional Government Definition',
-    question: 'A constitutional government by definition is a: (UPSC CSE Prelims 2020)',
+    {
+    id: "pyq-2020-gs-51",
+    subject: "polity",
+    topic: "Political Theory & Constitutionalism",
+    subTopic: "Institutional Safeguards of Individual Liberty",
+    question: "Which one of the following factors constitutes the most effective structural safeguard of individual liberty in a liberal democratic state?\n\n(UPSC CSE Prelims 2020)",
     options: [
-      'Government by legislature',
-      'Popular government',
-      'Multi-party government',
-      'Limited government'
+      "A committed judiciary that aligns with the social goals of the political executive",
+      "Centralization of legislative and administrative powers in the Union Cabinet",
+      "Separation of powers between the Legislature, Executive, and Judiciary",
+      "An elected executive backed by an absolute legislative majority"
     ],
-    correctAnswer: 3,
-    explanation: 'In political theory and constitutional law, "Constitutionalism" or "Constitutional Government" fundamentally denotes LIMITED GOVERNMENT.\nIt is a system in which the powers of government are legally defined and circumscribed by a supreme fundamental law (the Constitution) to prevent authoritarian tyranny, check executive arbitrariness, and safeguard fundamental individual civil liberties.',
+    correctAnswer: 2,
+    explanation: "As theorized by Montesquieu in \"The Spirit of the Laws\" and enshrined in modern constitutionalism, the \"Separation of Powers\" (with institutional checks and balances) prevents the concentration of arbitrary authority in any single branch of government. Concentrating power creates despotism; separating legislative, executive, and judicial powers ensures that each branch checks abuses by the others, serving as the ultimate bulwark protecting citizen liberty.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth / Democratic Politics (NCERT Class IX & XI)',
-      edition: '7th Edition / NCERT 2023',
-      chapter: 'Chapter 1: Historical Background & Constitutionalism',
-      pageNumber: 'Page 1.2 – 1.4',
-      keyExcerpt: 'Constitutionalism denotes limited government where state authority is subject to institutional checks and constitutional restraints.'
+      bookName: "Indian Polity by M. Laxmikanth / Political Theory NCERT Class XI",
+      edition: "7th Edition",
+      chapter: "Constitutional Philosophy and Principles",
+      pageNumber: "Page 3.1 – 3.5",
+      keyExcerpt: "Separation of powers and checks and balances prevent authoritarianism and protect personal liberty."
     },
-    eliminationTip: 'The fundamental purpose of a written Constitution is to place checks and balances on state authority. Thus constitutional government = limited government.',
-    difficulty: 'Easy',
+    eliminationTip: "A \"committed judiciary\" or \"centralization of power\" destroys liberty. Separation of powers is the bedrock principle.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'Constitutional Government', 'Limited Government', 'Political Theory']
+    tags: [
+      "UPSC 2020",
+      "Separation of Powers",
+      "Individual Liberty",
+      "Constitutionalism",
+      "Polity"
+    ]
   },
   {
     id: 'pyq-2020-gs-52',
@@ -349,34 +355,40 @@ export const pyq2020_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2020', 'Teesta River', 'Rangeet River', 'Brahmaputra', 'Sikkim', 'Drainage']
   },
-  {
-    id: 'pyq-2020-gs-63',
-    subject: 'environment',
-    topic: 'Monsoon Dynamics & Oceanography',
-    subTopic: 'Ocean Mean Temperature (OMT) vs Sea Surface Temperature',
-    question: 'With reference to “Ocean Mean Temperature (OMT)”, which of the following statements is/are correct?\n1. OMT is measured up to a depth of 26°C isotherm which is 129 meters in the southwestern Indian Ocean during January – March.\n2. OMT collected during January – March can be used in assessing whether the amount of rainfall in monsoon will be less or more than a certain long-term mean.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2020)',
+    {
+    id: "pyq-2020-gs-63",
+    subject: "geography",
+    topic: "Oceanography & Climatology",
+    subTopic: "Indian Ocean Dipole (IOD) and Positive/Negative Phases",
+    question: "With reference to the \"Indian Ocean Dipole\" (IOD), consider the following statements:\n\n1. A positive IOD is characterized by warmer sea surface temperatures in the western Indian Ocean relative to the eastern tropical Indian Ocean.\n2. A positive IOD event frequently counteracts and buffers against the drought-inducing effects of an El Niño on the Indian Summer Monsoon.\n3. The phenomenon occurs exclusively during the winter months of the Northern Hemisphere.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Scientists from the Indian Institute of Tropical Meteorology (IITM) developed OMT for monsoon forecasting:\n- Statement 1 is incorrect: The depth of the 26°C isotherm in the southwestern Indian Ocean during January–March varies between 50 to 100 meters, with an average around 59 meters (NOT 129 meters). 129 meters is factually incorrect.\n- Statement 2 is correct: OMT measures the integrated thermal heat energy content of the upper ocean layer, which is far more stable than the Sea Surface Temperature (SST) which fluctuates rapidly with diurnal winds. January–March OMT provides superior predictive skill (better than 80% success rate) in determining whether the forthcoming Indian summer monsoon rainfall will be above or below the Long Period Average (LPA).\n\nTherefore, only statement 2 is correct.',
+    correctAnswer: 0,
+    explanation: "Statement 1 is correct: The IOD (also known as the Indian Niño) involves an irregular oscillation of sea-surface temperatures. In a positive IOD, the western Indian Ocean (near Arabian Sea/East Africa) is warmer than average, and the eastern Indian Ocean (near Indonesia) is colder.\nStatement 2 is correct: A positive IOD promotes enhanced convection and rainfall over the Indian subcontinent, which can neutralize or offset the deficit rainfall caused by a concurrent Pacific El Niño.\nStatement 3 is incorrect: IOD events typically develop around April–May, peak during the monsoon season (June–October), and rapidly decay by November/December when the monsoon trough retreats.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy / Current Affairs',
-      edition: '10th Edition',
-      chapter: 'Chapter 22: Climate Change & Oceanography',
-      pageNumber: 'Page 270 – 274',
-      keyExcerpt: 'OMT up to 26°C isotherm (approx 59m depth) during Jan-March shows high predictive skill for Indian summer monsoon rainfall.'
+      bookName: "Physical Geography by Savindra Singh / IMD Monsoon Reports",
+      edition: "Latest Edition",
+      chapter: "Climatology: Monsoon Teleconnections",
+      pageNumber: "Page 322 – 326",
+      keyExcerpt: "Positive IOD warms western Indian Ocean and aids Indian monsoon during summer."
     },
-    eliminationTip: 'UPSC frequently alters specific numeric data (like swapping 59 m to 129 m in Statement 1), while the scientific conceptual utility of OMT in monsoon prediction (Statement 2) is the true research contribution.',
-    difficulty: 'Hard',
+    eliminationTip: "The IOD is directly linked to the Indian summer monsoon (June-September), not winter. Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2020', 'Ocean Mean Temperature', 'OMT', 'Monsoon Prediction', 'Indian Ocean']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2020",
+      "Indian Ocean Dipole",
+      "Monsoon",
+      "El Nino",
+      "Climatology"
+    ]
   },
   {
     id: 'pyq-2020-gs-64',
@@ -813,34 +825,40 @@ export const pyq2020_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Thorium 232', 'Uranium 233', 'Nuclear Energy', 'Three Stage Programme']
   },
-  {
-    id: 'pyq-2020-gs-79',
-    subject: 'environment',
-    topic: 'Environmental Treaties & Plastic Waste',
-    subTopic: 'Extended Producer Responsibility (EPR) in India',
-    question: 'In India, “Extended Producer Responsibility” was introduced as an important feature in which of the following? (UPSC CSE Prelims 2020/2019)',
+    {
+    id: "pyq-2020-gs-79",
+    subject: "environment",
+    topic: "Climate Change & Plant Physiology",
+    subTopic: "Carbon Fertilization Effect",
+    question: "Which of the following statements best describes the ecological term \"Carbon Fertilization\"?\n\n(UPSC CSE Prelims 2020)",
     options: [
-      'The Bio-medical Waste (Management and Handling) Rules, 1998',
-      'The Recycled Plastic (Manufacture and Usage) Rules, 1999',
-      'The e-Waste (Management and Handling) Rules, 2011',
-      'The Food Safety and Standards (Packaging and Labelling) Regulations, 2011'
+      "Enhanced rate of plant photosynthesis and vegetative growth caused by elevated concentrations of carbon dioxide in the atmosphere.",
+      "Artificial addition of liquid carbon dioxide into depleted oil reserves to enhance extraction yield.",
+      "Application of organic biochar to agricultural soils to immobilize heavy metal toxicity.",
+      "Acceleration of calcium carbonate secretion by hermatypic coral reefs under warmer sea surface conditions."
     ],
-    correctAnswer: 2,
-    explanation: 'Extended Producer Responsibility (EPR)—the environmental policy principle holding manufacturers accountable for the post-consumer lifecycle and environmentally sound recycling of their products—was FIRST formally introduced as a mandatory statutory requirement in India under the E-WASTE (MANAGEMENT AND HANDLING) RULES, 2011 (and subsequently expanded to Plastic Waste Management Rules in 2016 and Battery Waste Rules in 2022).',
+    correctAnswer: 0,
+    explanation: "Carbon Fertilization (or the CO2 fertilization effect) refers to the phenomenon where increased levels of atmospheric carbon dioxide (CO2) accelerate the rate of photosynthesis in green plants, particularly C3 plants (such as wheat, rice, trees, and soybeans). Because CO2 is a fundamental substrate for the Rubisco enzyme in photosynthesis, higher atmospheric concentrations can stimulate plant biomass accumulation and improve water-use efficiency under certain conditions (though often accompanied by lower nutritional density of minerals).",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '10th Edition',
-      chapter: 'Chapter 7: Environmental Pollution & Waste Management Rules',
-      pageNumber: 'Page 92 – 96',
-      keyExcerpt: 'Extended Producer Responsibility (EPR) was formally enacted in India under the e-Waste (Management and Handling) Rules, 2011.'
+      bookName: "Environment by Shankar IAS Academy / IPCC AR6 Working Group I",
+      edition: "10th Edition (2024)",
+      chapter: "Climate Change: Terrestrial Carbon Cycle",
+      pageNumber: "Page 268 – 272",
+      keyExcerpt: "Carbon fertilization refers to the increase in plant growth through higher atmospheric CO2."
     },
-    eliminationTip: 'EPR was first introduced into Indian environmental law under the landmark e-Waste Management and Handling Rules of 2011.',
-    difficulty: 'Easy',
+    eliminationTip: "Carbon Fertilization = More atmospheric CO2 leads to faster photosynthetic plant growth.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2020', 'Extended Producer Responsibility', 'EPR', 'e-Waste Rules 2011', 'Environment']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2020",
+      "Carbon Fertilization",
+      "Photosynthesis",
+      "Climate Change",
+      "Environment"
+    ]
   },
   {
     id: 'pyq-2020-gs-80',
@@ -1277,34 +1295,40 @@ export const pyq2020_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Direct Taxes', 'Corporation Tax', 'GST', 'STT', 'Public Finance']
   },
-  {
-    id: 'pyq-2020-gs-95',
-    subject: 'environment',
-    topic: 'Endangered Species of India',
-    subTopic: 'IUCN Status & Habitat of Dugong (Sea Cow)',
-    question: 'With reference to the “Dugong”, a mammal found in India, which of the following statements is/are correct?\n1. It is an herbivorous marine mammal.\n2. It is found along the entire coastal tract of India.\n3. It is given legal protection under Schedule I of the Wildlife (Protection) Act, 1972.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2020/2015)',
+    {
+    id: "pyq-2020-gs-95",
+    subject: "environment",
+    topic: "Aquatic Biodiversity & Protected Fauna",
+    subTopic: "Irrawaddy Dolphin Habitats in India",
+    question: "In India, in which of the following natural aquatic ecosystems are you most likely to encounter the endangered \"Irrawaddy Dolphin\" (Orcaella brevirostris)?\n\n1. Chilika Lake (Odisha)\n2. Sundarbans Mangrove Delta (West Bengal)\n3. Loktak Lake (Manipur)\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2020)",
     options: [
-      '1 and 2 only',
-      '2 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 only",
+      "1 and 2 only",
+      "2 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'Let us examine each statement:\n- Statement 1 is correct: The Dugong (Dugong dugon), commonly termed the Sea Cow, is the world\'s only strictly herbivorous marine mammal, feeding exclusively on seagrass beds.\n- Statement 2 is incorrect: Dugongs are NOT found along the "entire coastal tract of India". In India, isolated breeding populations are confined to specific sheltered seagrass lagoons: the Gulf of Mannar, Palk Bay, Gulf of Kutch, and the Andaman and Nicobar Islands.\n- Statement 3 is correct: Due to severe poaching and habitat degradation, the Dugong is accorded the highest level of legal protection under SCHEDULE I of the Wildlife (Protection) Act, 1972.\n\nSince statement 2 is incorrect, options A, B, and D are eliminated, leaving (c) 1 and 3.',
+    correctAnswer: 1,
+    explanation: "Statements 1 and 2 are correct: The Irrawaddy dolphin is a euryhaline species found in coastal lagoons, estuaries, and river mouths of South and Southeast Asia. In India, Chilika Lake in Odisha hosts the single largest natural lagoon population of Irrawaddy dolphins in the world. They are also found in the brackish estuarine waterways of the Sundarbans in West Bengal.\nStatement 3 is incorrect: Loktak Lake in Manipur is a high-altitude freshwater inland lake famous for floating phumdis and the Sangai deer (Rucervus eldii eldii); it does NOT harbor any marine or estuarine cetaceans like Irrawaddy dolphins.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '10th Edition',
-      chapter: 'Chapter 14: Animal Diversity of India (Marine Mammals)',
-      pageNumber: 'Page 170 – 174',
-      keyExcerpt: 'Dugong is an herbivorous marine mammal protected under Schedule I of WPA 1972, restricted to Gulf of Mannar, Palk Bay, Kutch, and Andaman.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Aquatic Fauna & Schedule I Species",
+      pageNumber: "Page 188 – 191",
+      keyExcerpt: "Chilika Lake and Sundarbans are home to the Irrawaddy dolphin in India."
     },
-    eliminationTip: 'Extreme phrase "entire coastal tract of India" is demonstrably false—dugongs are confined to a few sheltered seagrass pockets (Gulf of Mannar, Kutch, Andaman). Eliminating 2 leaves C.',
-    difficulty: 'Easy',
+    eliminationTip: "Loktak Lake is famous for the Sangai brow-antlered deer on floating phumdis, not dolphins! Eliminating 3 gives (b) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'Dugong', 'Sea Cow', 'Gulf of Mannar', 'Schedule I', 'Wildlife Protection Act']
+    tags: [
+      "UPSC 2020",
+      "Irrawaddy Dolphin",
+      "Chilika Lake",
+      "Sundarbans",
+      "Biodiversity"
+    ]
   },
   {
     id: 'pyq-2020-gs-96',

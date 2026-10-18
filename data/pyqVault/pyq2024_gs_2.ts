@@ -30,34 +30,40 @@ export const pyq2024_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2024', 'Article 200', 'Governor', 'Veto Power', 'Polity']
   },
-  {
-    id: 'pyq-2024-gs-52',
-    subject: 'economy',
-    topic: 'Banking Regulation & NPA Resolution',
-    subTopic: 'Prompt Corrective Action (PCA) Framework',
-    question: 'The "Prompt Corrective Action" (PCA) framework of the Reserve Bank of India is invoked against commercial banks primarily when they breach pre-set thresholds in which of the following financial parameters? (UPSC CSE Prelims 2024)',
+    {
+    id: "pyq-2024-gs-52",
+    subject: "economy",
+    topic: "Banking & Financial Sector Regulation",
+    subTopic: "Domestic Systemically Important Banks (D-SIBs)",
+    question: "With reference to the \"Domestic Systemically Important Banks\" (D-SIBs) framework in India, consider the following statements:\n\n1. Banks whose assets exceed 2% of the national GDP are categorized as systemically important and placed under the D-SIB framework.\n2. Banks designated as D-SIBs are subjected to higher Common Equity Tier 1 (CET1) capital requirements depending on the bucket they are placed in.\n3. Currently, only the State Bank of India (SBI) and HDFC Bank are designated as D-SIBs by the Reserve Bank of India.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2024)",
     options: [
-      'Capital Adequacy Ratio (CRAR), Net NPAs, and Leverage Ratio.',
-      'Foreign currency exposure, corporate social responsibility spend, and employee attrition rate.',
-      'Number of ATM branches opened per quarter in rural areas.',
-      'Sovereign gold bond redemption ratios and microfinance lending caps.'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 0,
-    explanation: 'Under the revised RBI Prompt Corrective Action (PCA) Framework for Scheduled Commercial Banks, corrective supervisory interventions are triggered when banks breach defined threshold levels in three primary risk areas:\n1. Capital (Capital to Risk-Weighted Assets Ratio - CRAR, and Common Equity Tier 1 ratio),\n2. Asset Quality (Net Non-Performing Assets ratio - NNPA),\n3. Leverage (Tier 1 Leverage Ratio).',
+    explanation: "Statement 1 is correct: The RBI framework identifies banks with size exceeding 2% of GDP as systemically important based on size, interconnectedness, substitutability, and complexity.\nStatement 2 is correct: D-SIBs must maintain additional CET1 capital surcharge ranging from 0.20% to 0.80% of risk-weighted assets depending on their systemic bucket.\nStatement 3 is incorrect: As per RBI, three banks are currently designated as D-SIBs: State Bank of India (SBI), ICICI Bank, and HDFC Bank.",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition (2024)',
-      chapter: 'Chapter 12: Banking in India (Banking Sector Reforms)',
-      pageNumber: 'Page 12.44 – 12.48',
-      keyExcerpt: 'The PCA framework acts as an early intervention metric triggered by breaches in capital (CRAR), asset quality (NNPA), and leverage.'
+      bookName: "Indian Economy by Ramesh Singh / RBI Annual Reports",
+      edition: "15th Edition (2024)",
+      chapter: "Chapter 12: Banking and Monetary Management",
+      pageNumber: "Page 12.30 – 12.35",
+      keyExcerpt: "SBI, ICICI Bank, and HDFC Bank are classified as D-SIBs requiring additional CET1 buffers."
     },
-    eliminationTip: 'PCA is an early warning system for banking health: Capital (CRAR), bad loans (Net NPAs), and excessive leverage.',
-    difficulty: 'Easy',
+    eliminationTip: "ICICI Bank has been a D-SIB alongside SBI since 2015. HDFC joined in 2017. Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2024', 'PCA Framework', 'RBI', 'NPAs', 'Capital Adequacy']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2024",
+      "D-SIBs",
+      "RBI",
+      "Banking",
+      "CET1 Capital"
+    ]
   },
   {
     id: 'pyq-2024-gs-53',
@@ -668,34 +674,40 @@ export const pyq2024_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2024', 'INSTC', 'Iran', 'Azerbaijan', 'Russia', 'Connectivity']
   },
-  {
-    id: 'pyq-2024-gs-74',
-    subject: 'polity',
-    topic: 'Inter-State Relations',
-    subTopic: 'Inter-State Council (Article 263)',
-    question: 'With reference to the Inter-State Council in India, consider the following statements:\n\n1. It is a constitutional body established under Article 263 of the Constitution.\n2. It is chaired by the Union Home Minister.\n3. The Sarkaria Commission on Centre-State Relations recommended the establishment of a permanent Inter-State Council.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2024)',
+    {
+    id: "pyq-2024-gs-74",
+    subject: "polity",
+    topic: "Federalism & Inter-State Relations",
+    subTopic: "Zonal Councils under the States Reorganisation Act 1956",
+    question: "With reference to the \"Zonal Councils\" in India, consider the following statements:\n\n1. They are statutory bodies created under the States Reorganisation Act of 1956, not constitutional bodies.\n2. The Union Home Minister acts as the common Chairman of all five Zonal Councils.\n3. The Chief Ministers of the States in each Zone act as the Vice-Chairman of the respective Zonal Council by annual rotation.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2024)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Statement 1 is correct: Article 263 empowers the President to establish an Inter-State Council to inquire into and advise upon disputes between states.\nStatement 2 is incorrect: The Inter-State Council is chaired by the Prime Minister (not the Union Home Minister). The Home Minister chairs the Standing Committee of the Council and Zonal Councils.\nStatement 3 is correct: Following the Sarkaria Commission recommendations (1988), the Council was formally constituted in 1990 by presidential order.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. Zonal Councils are statutory bodies set up under Part III of the States Reorganisation Act, 1956 (creating 5 zones: Northern, Central, Eastern, Western, and Southern). They are NOT constitutional bodies (unlike the Inter-State Council under Article 263).\n2. The Union Home Minister serves as the Chairman of each of the five Zonal Councils.\n3. The Chief Ministers of the member States within the zone act as Vice-Chairman by rotation, holding office for one year at a time.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 15: Inter-State Relations (Article 263)',
-      pageNumber: 'Page 15.4 – 15.8',
-      keyExcerpt: 'The Inter-State Council is chaired by the Prime Minister. It was set up in 1990 upon Sarkaria Commission recommendations.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 15: Inter-State Relations (Zonal Councils)",
+      pageNumber: "Page 15.6 – 15.9",
+      keyExcerpt: "Zonal Councils are statutory bodies under the 1956 Act with the Union Home Minister as Chairman."
     },
-    eliminationTip: 'The Prime Minister chairs the Inter-State Council (Union Home Minister chairs the Zonal Councils). Statement 2 is false. Eliminating 2 leaves (b) 1 and 3 only.',
-    difficulty: 'Moderate',
+    eliminationTip: "Remember: Inter-State Council is constitutional (PM is chair); Zonal Councils are statutory (Home Minister is chair).",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2024', 'Article 263', 'Inter-State Council', 'Sarkaria Commission', 'Polity']
+    tags: [
+      "UPSC 2024",
+      "Zonal Councils",
+      "States Reorganisation Act 1956",
+      "Home Minister",
+      "Federalism"
+    ]
   },
   {
     id: 'pyq-2024-gs-75',
@@ -1422,33 +1434,39 @@ export const pyq2024_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2024', 'Wood\'s Despatch', 'Education', 'Presidency Universities', 'Modern History']
   },
-  {
-    id: 'pyq-2024-gs-100',
-    subject: 'polity',
-    topic: 'Constitutional Amendments',
-    subTopic: 'Basic Structure Doctrine and Article 368',
-    question: 'In which landmark case did the Supreme Court of India rule that the Parliament cannot expand its amending power under Article 368 so as to confer upon itself the power to destroy the basic structure of the Constitution? (UPSC CSE Prelims 2024)',
+    {
+    id: "pyq-2024-gs-100",
+    subject: "polity",
+    topic: "Constitutional Law & Supreme Court Precedents",
+    subTopic: "Right to Privacy and Right to be Forgotten",
+    question: "In which of the following landmark judgments did the Supreme Court of India unanimously hold that the \"Right to Privacy\" is protected as an intrinsic part of the Right to Life and Personal Liberty under Article 21 and as part of the freedoms guaranteed by Part III of the Constitution?\n\n(UPSC CSE Prelims 2024)",
     options: [
-      'Minerva Mills v. Union of India (1980)',
-      'Golaknath v. State of Punjab (1967)',
-      'Shankari Prasad v. Union of India (1951)',
-      'Waman Rao v. Union of India (1981)'
+      "Justice K.S. Puttaswamy (Retd.) v. Union of India (2017)",
+      "Navtej Singh Johar v. Union of India (2018)",
+      "Joseph Shine v. Union of India (2018)",
+      "Shayara Bano v. Union of India (2017)"
     ],
     correctAnswer: 0,
-    explanation: 'In Minerva Mills v. Union of India (1980), the Supreme Court struck down Section 55 of the 42nd Amendment Act (which sought to give unlimited amending power to Parliament under Article 368(4) and (5)). Chief Justice Y.V. Chandrachud famously observed: "The donee of a limited amending power cannot by the exercise of that very power convert the limited power into an absolute one. A limited amending power is one of the basic features of the Indian Constitution."',
+    explanation: "In the historic 9-judge bench ruling in Justice K.S. Puttaswamy (Retd.) v. Union of India (2017), the Supreme Court unanimously declared that the Right to Privacy is a fundamental right flowing directly from Article 21 (Life and Liberty) and the entirety of Part III. This judgment overruled previous precedents in M.P. Sharma (1954) and Kharak Singh (1962).",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 11: Basic Structure of the Constitution',
-      pageNumber: 'Page 11.2 – 11.6',
-      keyExcerpt: 'Minerva Mills (1980) invalidated unlimited amending power, reiterating limited amending power is basic structure.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 7: Fundamental Rights (Article 21)",
+      pageNumber: "Page 7.18 – 7.21",
+      keyExcerpt: "Puttaswamy judgment affirmed privacy as an inalienable fundamental right under Article 21."
     },
-    eliminationTip: 'Minerva Mills (1980) is the judgment where the court held that a "limited amending power cannot be expanded into unlimited power".',
-    difficulty: 'Easy',
+    eliminationTip: "Puttaswamy is the foundational 9-judge privacy decision. Navtej Johar dealt with Section 377; Joseph Shine with adultery (Section 497); Shayara Bano with Triple Talaq.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2024', 'Minerva Mills', 'Basic Structure', 'Article 368', 'Polity']
-  }
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2024",
+      "Puttaswamy",
+      "Article 21",
+      "Right to Privacy",
+      "Landmark Cases"
+    ]
+  },
 ];

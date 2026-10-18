@@ -175,34 +175,40 @@ export const pyq2020_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2020', 'Reading Comprehension', 'Air Pollution', 'PM2.5', 'Public Health']
   },
-  {
-    id: 'pyq-2020-csat-47',
-    subject: 'csat_quant',
-    topic: 'Permutations and Combinations: Committee Formation',
-    subTopic: 'Selecting Men and Women into a Delegation',
-    question: 'A committee of 5 persons is to be formed from a group of 6 men and 4 women. In how many ways can this be done if the committee must contain exactly 3 men and 2 women? (UPSC CSAT 2020)',
+    {
+    id: "pyq-2020-csat-47",
+    subject: "csat_quant",
+    topic: "Permutations & Combinations",
+    subTopic: "Committee Formation with \"At Least One\" Condition",
+    question: "In how many different ways can a committee of 4 members be selected from a pool of 5 men and 4 women such that the committee includes at least one woman? (UPSC CSAT 2020)",
     options: [
-      '60',
-      '90',
-      '120',
-      '150'
+      "120",
+      "121",
+      "125",
+      "126"
     ],
-    correctAnswer: 2,
-    explanation: 'We need to select:\n- 3 men out of 6 men: ⁶C₃ ways\n- 2 women out of 4 women: ⁴C₂ ways\n\nCalculating individual combinations:\n1. ⁶C₃ = (6 × 5 × 4) / (3 × 2 × 1) = 120 / 6 = 20 ways.\n2. ⁴C₂ = (4 × 3) / (2 × 1) = 12 / 2 = 6 ways.\n\nBy the Fundamental Principle of Counting (Multiplication Rule):\nTotal Ways = ⁶C₃ × ⁴C₂\n= 20 × 6\n= 120 ways.',
+    correctAnswer: 1,
+    explanation: "Total people available = 5 men + 4 women = 9 people.\nTotal number of ways to choose any 4 members from 9 = 9C4:\n9C4 = (9 × 8 × 7 × 6) / (4 × 3 × 2 × 1) = 126 ways.\n\nNow, calculate the number of ways to select a committee with NO women (i.e., all 4 members are men selected from the 5 men):\nWays with no women = 5C4 = 5 ways.\n\nNumber of ways to form a committee with at least one woman:\n= Total ways - Ways with no women\n= 126 - 5 = 121 ways.\nTherefore, the committee can be formed in 121 ways.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 30: Permutations and Combinations',
-      pageNumber: 'Page 632 – 637',
-      keyExcerpt: 'Combinations of choosing r from n and s from m simultaneously is given by nCr × mCs.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Combinations",
+      pageNumber: "Chapter 30: Committee Selection with Conditions",
+      keyExcerpt: "At least one = Total combinations - None."
     },
-    eliminationTip: '⁶C₃ = 20, ⁴C₂ = 6. Total = 20 × 6 = 120 ways.',
-    difficulty: 'Easy',
+    eliminationTip: "Complementary counting: Total ways (9C4 = 126) minus all-male committees (5C4 = 5) gives 126 - 5 = 121.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2020', 'Combinations', 'Committee Selection', 'Quant']
+    tags: [
+      "UPSC 2020",
+      "CSAT",
+      "Combinations",
+      "Committees",
+      "Permutations"
+    ]
   },
   {
     id: 'pyq-2020-csat-48',
@@ -639,34 +645,40 @@ export const pyq2020_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2020', 'Direction Sense', 'Displacement', 'Reasoning']
   },
-  {
-    id: 'pyq-2020-csat-63',
-    subject: 'csat_quant',
-    topic: 'Ratio and Proportion: Coin Bag Problem',
-    subTopic: 'Value of Mixed Coins',
-    question: 'A bag contains ₹ 1, 50 paise, and 25 paise coins in the ratio 5 : 6 : 8. If the total amount in the bag is ₹ 240, how many 50 paise coins are there in the bag? (UPSC CSAT 2020)',
+    {
+    id: "pyq-2020-csat-63",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Denomination Coins and Ratios",
+    question: "A cash box contains coins of denominations ₹1, ₹2, and ₹5 in the ratio 4 : 3 : 2. If the total monetary value of all the coins in the cash box is ₹600, what is the total number of ₹5 coins present in the box? (UPSC CSAT 2020)",
     options: [
-      '120',
-      '144',
-      '160',
-      '180'
+      "40",
+      "50",
+      "60",
+      "80"
     ],
-    correctAnswer: 1,
-    explanation: 'Let the number of coins be:\n- ₹ 1 coins = 5x\n- 50 paise coins (₹ 0.50) = 6x\n- 25 paise coins (₹ 0.25) = 8x\n\nTotal value in Rupees:\nValue = (5x × 1) + (6x × 0.50) + (8x × 0.25)\nValue = 5x + 3x + 2x = 10x.\n\nGiven that the total amount is ₹ 240:\n10x = 240 => x = 24.\n\nNumber of 50 paise coins:\n= 6x = 6 × 24 = 144 coins.\n\nVerification:\n- ₹1 coins = 5 × 24 = 120 coins (value ₹120)\n- 50p coins = 6 × 24 = 144 coins (value ₹72)\n- 25p coins = 8 × 24 = 192 coins (value ₹48)\n- Total Value = 120 + 72 + 48 = ₹240. Perfectly verified!',
+    correctAnswer: 2,
+    explanation: "Let the number of ₹1, ₹2, and ₹5 coins be 4x, 3x, and 2x respectively.\nValue contributed by ₹1 coins = 4x × ₹1 = ₹4x.\nValue contributed by ₹2 coins = 3x × ₹2 = ₹6x.\nValue contributed by ₹5 coins = 2x × ₹5 = ₹10x.\nTotal monetary value = 4x + 6x + 10x = 20x.\nAccording to the problem:\n20x = ₹600\nx = 600 / 20 = 30.\nTotal number of ₹5 coins = 2x = 2 × 30 = 60 coins.\n(Check: 4(30) = 120 ₹1 coins = ₹120; 3(30) = 90 ₹2 coins = ₹180; 2(30) = 60 ₹5 coins = ₹300. Total = 120 + 180 + 300 = ₹600).",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 12: Ratio and Proportion (Coins in a Bag)',
-      pageNumber: 'Page 292 – 298',
-      keyExcerpt: 'Convert coin ratio into monetary value: 5(1) + 6(0.5) + 8(0.25) = 10x.'
+      bookName: "Fast Track Objective Arithmetic by Rajesh Verma",
+      edition: "Latest Edition",
+      chapter: "Ratio and Proportion",
+      pageNumber: "Chapter 11: Problems on Coins",
+      keyExcerpt: "Total Value = Sum of (Number of coins of denomination × Face value)."
     },
-    eliminationTip: 'Value per ratio unit: 5×1 + 6×0.5 + 8×0.25 = 10. Multiplier x = 240 / 10 = 24. 50p coins = 6 × 24 = 144.',
-    difficulty: 'Easy',
+    eliminationTip: "Unit value: 4(1) + 3(2) + 2(5) = 20. Multiplier = 600 / 20 = 30. ₹5 coins = 2 × 30 = 60.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2020', 'Ratio and Proportion', 'Coin Problems', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2020",
+      "CSAT",
+      "Coins",
+      "Ratios",
+      "Arithmetic"
+    ]
   },
   {
     id: 'pyq-2020-csat-64',
@@ -1074,34 +1086,40 @@ export const pyq2020_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2020', 'Venn Diagrams', 'Inclusion Exclusion', 'Reasoning']
   },
-  {
-    id: 'pyq-2020-csat-78',
-    subject: 'csat_quant',
-    topic: 'Simple and Compound Interest: Doubling Time',
-    subTopic: 'Compound Interest Doubling Period',
-    question: 'A sum of money invested at compound interest doubles itself in 5 years. In how many years will it become 8 times of itself at the same annual rate of compound interest? (UPSC CSAT 2020)',
+    {
+    id: "pyq-2020-csat-78",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Determining Annual Rate of Compound Interest",
+    question: "A sum of ₹16,000 invested at compound interest (compounded annually) grows to ₹18,522 in 3 years. What is the annual rate of compound interest? (UPSC CSAT 2020)",
     options: [
-      '10 years',
-      '12 years',
-      '15 years',
-      '20 years'
+      "4%",
+      "5%",
+      "6%",
+      "7%"
     ],
-    correctAnswer: 2,
-    explanation: 'Under Compound Interest (CI), money grows geometrically by equal multiples in equal intervals of time:\n- The sum becomes 2 times (2¹) in 5 years.\n- To become 8 times: Notice that 8 = 2³.\n\nIn compound growth:\nIf an amount multiplies by 2 in T years, it multiplies by 2ⁿ in (n × T) years.\n\nHere, multiplier is 8 = 2³ (so n = 3):\nTime required = n × T = 3 × 5 = 15 years.\n\nStep-by-step:\n- In 5 years: Principal P becomes 2P.\n- In next 5 years (total 10 years): 2P doubles to 4P.\n- In next 5 years (total 15 years): 4P doubles to 8P.\nTherefore, it takes 15 years.',
+    correctAnswer: 1,
+    explanation: "Compound interest amount formula: A = P × (1 + r)³.\nGiven:\nP = ₹16,000\nA = ₹18,522\nt = 3 years.\n\n18,522 = 16,000 × (1 + r)³\n(1 + r)³ = 18,522 / 16,000.\nDividing both numerator and denominator by 2:\n18,522 / 2 = 9,261\n16,000 / 2 = 8,000\nSo, (1 + r)³ = 9,261 / 8,000.\nTaking the cube root of both sides:\nNotice that 20³ = 8,000 and 21³ = 9,261.\nTherefore:\n1 + r = 21 / 20\nr = 21/20 - 1 = 1/20 = 0.05.\nRate percentage = 0.05 × 100 = 5% per annum.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 22: Compound Interest',
-      pageNumber: 'Page 490 – 496',
-      keyExcerpt: 'Under CI, if P becomes m × P in T years, it becomes m^n × P in n × T years.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Compound Interest",
+      pageNumber: "Chapter 22: Finding Interest Rate",
+      keyExcerpt: "(1 + r)^n = A / P. Look for exact nth roots."
     },
-    eliminationTip: '8 = 2³. Under CI, power 3 multiplies the time period: 3 × 5 = 15 years. (Under SI it would be 35 years).',
-    difficulty: 'Easy',
+    eliminationTip: "Ratio = 9261 / 8000. Cube roots are 21 / 20. Rate = 1/20 = 5%.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2020', 'Compound Interest', 'Geometric Growth', 'Doubling Time', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2020",
+      "CSAT",
+      "Compound Interest",
+      "Interest Rate",
+      "Cube Roots"
+    ]
   },
   {
     id: 'pyq-2020-csat-79',

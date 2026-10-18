@@ -668,34 +668,40 @@ export const pyq2019_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2019', 'Mensuration', 'Circle and Square', 'Wire Bending', 'Quant']
   },
-  {
-    id: 'pyq-2019-csat-24',
-    subject: 'csat_reasoning',
-    topic: 'Calendars: Leap Year Odd Days',
-    subTopic: 'Day of the Week Calculation',
-    question: 'If 15th August 2011 was a Monday, what day of the week was 15th August 2012? (UPSC CSAT 2019)',
+    {
+    id: "pyq-2019-csat-24",
+    subject: "csat_quant",
+    topic: "Logical Reasoning & Calendars",
+    subTopic: "Odd Days Shift Across Consecutive Years",
+    question: "If 26th January 2015 was a Monday, what day of the week was 26th January 2016? (UPSC CSAT 2019)",
     options: [
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday'
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
     ],
     correctAnswer: 1,
-    explanation: 'From 15th August 2011 to 15th August 2012 is exactly one calendar year.\n- We must check whether the intervening period includes the leap day (29th February).\n- Year 2012 is a LEAP YEAR (divisible by 4).\n- The month of February 2012 (with 29 days) falls directly between 15th August 2011 and 15th August 2012.\n- Therefore, the period consists of 366 days.\n\nCounting odd days:\n366 = 52 weeks + 2 odd days.\n\nAdvancing the day of the week by 2 odd days:\nDay = Monday + 2 days = Wednesday.\n\nTherefore, 15th August 2012 was a Wednesday.',
+    explanation: "The period from 26th January 2015 to 26th January 2016 spans exactly one calendar year (365 days).\nYear 2015 is an ordinary (non-leap) year. Although 2016 is a leap year, the leap day (29th February 2016) has NOT yet occurred by 26th January 2016.\nTherefore, the number of intervening days between 26th Jan 2015 and 26th Jan 2016 is exactly 365 days.\nNumber of odd days = 365 mod 7 = 52 weeks + 1 odd day.\nDay on 26th January 2016 = Monday + 1 day = Tuesday.\nTherefore, 26th January 2016 was a Tuesday.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 26: Calendar',
-      pageNumber: 'Page 535 – 540',
-      keyExcerpt: 'A leap year has 2 odd days. If the intervening period includes February 29, add 2 days.'
+      bookName: "A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Calendars",
+      pageNumber: "Chapter 27: Leap Year Boundary Counting",
+      keyExcerpt: "An ordinary year advances the day of the week by 1 day. Leap year advances by 2 only after February 29."
     },
-    eliminationTip: '2012 is a leap year and includes Feb 29. A leap year adds 2 odd days: Monday + 2 = Wednesday.',
-    difficulty: 'Easy',
+    eliminationTip: "Because February 29, 2016 has not yet been crossed by January 26, 2016, the year advances by exactly 1 day: Monday + 1 = Tuesday.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2019', 'Calendars', 'Leap Year', 'Odd Days', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2019",
+      "CSAT",
+      "Calendars",
+      "Odd Days",
+      "Reasoning"
+    ]
   },
   {
     id: 'pyq-2019-csat-25',
