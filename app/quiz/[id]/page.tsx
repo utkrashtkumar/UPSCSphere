@@ -71,6 +71,7 @@ export default function LiveQuizSessionPage() {
         difficulty: activeConfig.difficulty || 'all',
         isPYQOnly: activeConfig.isPYQOnly,
         pyqYear: activeConfig.pyqYear,
+        pyqPaper: (activeConfig as any).pyqPaper || (activeConfig.paperType === 'CSAT' ? 'CSAT' : undefined),
         isDailyCA: activeConfig.isDailyCA,
         dailyCASet: activeConfig.dailyCASet,
         customQuestionIds: activeConfig.customQuestionIds,

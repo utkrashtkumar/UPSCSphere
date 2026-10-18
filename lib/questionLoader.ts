@@ -125,7 +125,11 @@ export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
 
   // If pool is smaller than requested count, duplicate or return available
   if (pool.length === 0) {
-    pool = [...standardQuestions]; // fallback
+    if (pyqPaper === 'CSAT' || paperType === 'CSAT') {
+      pool = pyqVault.filter(q => q.pyqPaper === 'CSAT');
+    } else {
+      pool = [...standardQuestions]; // fallback
+    }
   }
 
   // Shuffle array using Fisher-Yates
@@ -138,6 +142,11 @@ export function loadQuestions(options: LoadQuestionsOptions = {}): Question[] {
   // Return requested count (if count exceeds pool, cycle or slice)
   if (count <= shuffled.length) {
     return shuffled.slice(0, count);
+  }
+
+  // If this is a year-specific PYQ test, return all available unique questions rather than artificially duplicating identical questions
+  if (isPYQOnly && pyqYear) {
+    return shuffled;
   }
 
   // If more requested than unique questions, loop to fill
