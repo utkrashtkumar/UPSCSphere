@@ -94,39 +94,41 @@ export const pyq2019_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2019', 'INA Trials', 'Red Fort 1945', 'Bhulabhai Desai', 'Tej Bahadur Sapru', 'Jawaharlal Nehru']
   },
-          {
-    id: "pyq-2019-gs-54",
-    subject: "polity",
-    topic: "Statutory Bodies & Human Rights",
-    subTopic: "National Human Rights Commission (NHRC)",
-    question: "With reference to the \"National Human Rights Commission\" (NHRC) in India, consider the following statements:\n\n1. It is a statutory body established under the Protection of Human Rights Act, 1993.\n2. The Chairperson and members are appointed by the President on the recommendations of a committee headed by the Prime Minister.\n3. The recommendations made by the NHRC are legally binding on the central and state governments.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2019)",
+  {
+    id: 'pyq-2019-gs-54',
+    subject: 'polity',
+    topic: 'Judicial Review & Constitutional Validity',
+    subTopic: 'High Court & Supreme Court Powers of Judicial Review',
+    question: 'With reference to the Constitution of India, consider the following statements:\n\n1. No High Court shall have the jurisdiction to declare any central law to be constitutionally invalid.\n2. An amendment to the Constitution of India cannot be called into question by the Supreme Court of India.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2019)',
     options: [
-      "1 and 2 only",
-      "2 and 3 only",
-      "1 and 3 only",
-      "1, 2 and 3"
+      '1 only',
+      '2 only',
+      'Both 1 and 2',
+      'Neither 1 nor 2'
     ],
-    correctAnswer: 0,
-    explanation: "Statements 1 and 2 are correct:\nStatement 1 is correct: The NHRC was established on 12 October 1993 as a statutory body under the Protection of Human Rights Act (PHRA), 1993.\nStatement 2 is correct: Under Section 4 of the Act, the Chairperson and members of NHRC are appointed by the President on the recommendations of a 6-member selection committee consisting of: the Prime Minister (Chairperson), the Speaker of Lok Sabha, the Union Home Minister, the Leader of the Opposition in Lok Sabha, the Leader of the Opposition in Rajya Sabha, and the Deputy Chairman of Rajya Sabha.\nStatement 3 is incorrect: Section 18 of the Act stipulates that the recommendations of the NHRC are essentially RECOMMENDATORY (advisory) in nature. The government is not bound to accept them, though it must inform the commission within one month of the action taken or proposed to be taken.",
+    correctAnswer: 3,
+    explanation: 'Both statements are INCORRECT:\nStatement 1 is incorrect: Under Article 226 of the Constitution, High Courts have the power of judicial review to examine the constitutional validity of both central and state legislations. Though the 42nd Amendment (1976) had barred High Courts from adjudicating on the constitutional validity of central laws, this restriction was repealed by the 43rd Constitutional Amendment Act, 1977. High Courts have full power to declare central laws ultra vires if they violate the Constitution.\nStatement 2 is incorrect: Any constitutional amendment can be challenged in and declared unconstitutional and void by the Supreme Court if it violates the "basic structure" of the Constitution (Kesavananda Bharati case, 1973; Minerva Mills case, 1980; and the striking down of the 99th Constitutional Amendment / NJAC Act in 2015).\n\nTherefore, neither 1 nor 2 is correct.',
     bookReference: {
-      bookName: "Indian Polity by M. Laxmikanth",
-      edition: "7th Edition",
-      chapter: "Chapter 52: National Human Rights Commission",
-      pageNumber: "Page 52.1 – 52.5",
-      keyExcerpt: "NHRC is a statutory body established in 1993. Appointed by President via PM-headed committee. Its recommendations are purely advisory."
+      bookName: 'Indian Polity by M. Laxmikanth',
+      edition: '7th Edition',
+      chapter: 'Chapter 34: High Court & Chapter 27: Judicial Review',
+      pageNumber: 'Page 34.12 – 34.14',
+      keyExcerpt: 'High Courts have judicial review power over central as well as state laws (restored by 43rd Amendment 1977). Constitutional amendments are subject to basic structure review.'
     },
-    eliminationTip: "NHRC recommendations are advisory/recommendatory, not legally binding orders like a civil court. Eliminating 3 leaves (a) 1 and 2 only.",
-    difficulty: "Moderate",
+    eliminationTip: 'Extreme statement "No High Court shall have the jurisdiction..." is false because High Courts in India possess wide writ and judicial review powers under Article 226 over both Central and State laws. Supreme Court has basic structure doctrine to review amendments.',
+    difficulty: 'Moderate',
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: "GS",
+    pyqPaper: 'GS',
     frequency: 9,
     tags: [
-      "UPSC 2019",
-      "NHRC",
-      "Human Rights Act 1993",
-      "Statutory Bodies",
-      "Polity"
+      'UPSC 2019',
+      'Judicial Review',
+      'High Court',
+      'Article 226',
+      'Basic Structure',
+      'Supreme Court',
+      'Polity'
     ]
   },
 {
