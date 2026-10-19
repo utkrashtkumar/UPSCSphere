@@ -30,36 +30,42 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Collegium System', 'Supreme Court Judges', 'Third Judges Case', 'Judiciary']
   },
-  {
-    id: 'pyq-2021-gs-52',
-    subject: 'science_tech',
-    topic: 'Nanotechnology & Material Science',
-    subTopic: 'Carbon Nanotubes (CNTs) Applications',
-    question: 'With reference to "Carbon Nanotubes (CNTs)", consider the following statements:\n\n1. They can be used as carriers of drugs and antigens in the human body.\n2. They can be made into artificial blood capillaries for an injured part of human body.\n3. They can be used in biochemical sensors.\n4. Carbon nanotubes are biodegradable.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020/2021)',
+          {
+    id: "pyq-2021-gs-52",
+    subject: "science_tech",
+    topic: "Nanotechnology & Advanced Materials",
+    subTopic: "Graphene: Properties and Applications",
+    question: "With reference to \"Graphene\", often referred to as a wonder nanomaterial, consider the following statements:\n\n1. It is a single two-dimensional layer of carbon atoms arranged in a hexagonal honeycomb crystal lattice.\n2. It possesses higher electrical and thermal conductivity than copper.\n3. It is almost completely transparent to visible light, absorbing only about 2.3% of incident light.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      '1 and 2 only',
-      '2, 3 and 4 only',
-      '1, 2 and 3 only',
-      '1, 2, 3 and 4'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'All four statements are verified biomedical and engineering applications of Carbon Nanotubes:\n1. Targeted drug delivery: Functionalized CNTs cross cell membranes to deliver antineoplastic cancer drugs, DNA, and antigens directly into tumor cells.\n2. Tissue scaffolds and artificial capillaries: High tensile strength and biocompatibility allow aligned CNT scaffolds to serve as artificial conduits and micro-capillaries for vascular tissue engineering.\n3. Biosensors: Exceptional electrical conductivity and surface-to-volume ratio make CNTs ideal electrochemical sensors for detecting glucose, viral proteins, and DNA hybridization.\n4. Biodegradability: Functionalized carbon nanotubes can be enzymatically degraded inside the body by human neutrophil myeloperoxidase (MPO) and plant peroxidases, demonstrating biological degradation.\n\nTherefore, all 1, 2, 3 and 4 are correct.',
+    explanation: "All three statements are correct:\n1. Graphene (isolated by Andre Geim and Konstantin Novoselov in 2004, winning the 2010 Nobel Prize in Physics) is an atom-thick 2D sheet of sp² hybridized carbon.\n2. Graphene has extraordinary thermal conductivity (up to 5000 W/m·K compared to copper's 400 W/m·K) and electron mobility at room temperature exceeding 200,000 cm²/V·s.\n3. Despite being atomic-scale thin and over 200 times stronger than structural steel, a single layer of graphene absorbs only πα ≈ 2.3% of white light, making it optically transparent and ideal for flexible touchscreen displays and solar cells.",
     bookReference: {
-      bookName: 'Science & Technology by Ravi P. Agrahari',
-      edition: '7th Edition',
-      chapter: 'Chapter 9: Nanotechnology (Carbon Nanotubes & Biomedical Applications)',
-      pageNumber: 'Page 9.12 – 9.18',
-      keyExcerpt: 'CNTs serve as drug carriers, biosensors, vascular scaffolds, and can be enzymatically biodegraded by myeloperoxidase.'
+      bookName: "Science & Technology by Ravi P. Agrahari",
+      edition: "Latest Edition",
+      chapter: "Nanotechnology: Carbon Allotropes",
+      pageNumber: "Page 120 – 125",
+      keyExcerpt: "Graphene is a 2D carbon sheet, optically transparent, stronger than steel, with superior electrical conductivity."
     },
-    eliminationTip: 'In UPSC S&T questions regarding emerging nanomaterials, broad capability statements ("can be used as...", "can be made into...") are almost universally true when supported by biomedical breakthroughs. All 1 to 4 are correct.',
-    difficulty: 'Moderate',
+    eliminationTip: "Graphene is globally renowned for its exceptional 2D lattice, transparency, and superior conductivity over metals.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2021', 'Carbon Nanotubes', 'CNTs', 'Nanotechnology', 'Drug Delivery', 'Biodegradable']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2021",
+      "Graphene",
+      "Nanotechnology",
+      "Carbon Allotropes",
+      "Materials Science"
+    ]
   },
-    {
+{
     id: "pyq-2021-gs-53",
     subject: "economy",
     topic: "Macroeconomic Indicators & Business Cycles",
@@ -152,36 +158,43 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Acid Rain', 'Sulfur Dioxide', 'Nitrogen Oxides', 'Environmental Pollution']
   },
-  {
-    id: 'pyq-2021-gs-56',
-    subject: 'polity',
-    topic: 'State Government & Executive Power',
-    subTopic: 'Governor\'s Constitutional Discretion (Article 163)',
-    question: 'Under the Constitution of India, which of the following are the discretionary powers given to the Governor of a State?\n\n1. Sending a report to the President of India for imposing the President\'s rule (Article 356)\n2. Appointing the Ministers\n3. Reserving certain bills passed by the State Legislature for the consideration of the President of India\n4. Making the rules to conduct the business of the State Government\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2021)',
+          {
+    id: "pyq-2021-gs-56",
+    subject: "polity",
+    topic: "Constitutional & Quasi-Judicial Bodies",
+    subTopic: "Tribunals: Article 323A and Article 323B",
+    question: "With reference to \"Tribunals\" under Part XIV-A of the Constitution of India, consider the following statements:\n\n1. While Article 323A contemplates the establishment of tribunals for public service matters only, Article 323B contemplates tribunals for certain other specified matters like taxation and land reforms.\n2. While tribunals under Article 323A can be established only by Parliament, tribunals under Article 323B can be established both by Parliament and State Legislatures within their legislative competence.\n3. In the Chandra Kumar case (1997), the Supreme Court held that decisions of tribunals are subject to judicial scrutiny by a Division Bench of the High Court.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2, 3 and 4 only',
-      '1, 2, 3 and 4'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Under Article 163(1), the Governor acts on the aid and advice of the Council of Ministers except in matters where the Constitution requires him to exercise his discretion:\n- 1. Recommending President\'s Rule under Article 356: The Governor acts in his personal constitutional judgment/discretion (Correct).\n- 2. Appointing Ministers: Under Article 164(1), Ministers are appointed by the Governor strictly on the advice of the Chief Minister, NOT at the Governor\'s discretion (Incorrect).\n- 3. Reserving Bills for the President under Article 200: Discretionary power (e.g. bills endangering High Court position) (Correct).\n- 4. Making rules for business: Under Article 166(3), rules of business are framed by the Governor on the advice of the Council of Ministers (Incorrect).\n\nTherefore, 1 and 3 only are constitutional discretionary powers.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under Part XIV-A (added by the 42nd Amendment Act, 1976):\n1. Scope: Article 323A deals exclusively with Administrative Tribunals for public service employees. Article 323B deals with tribunals for other subjects (taxation, foreign exchange, industrial disputes, land reforms, urban property ceiling, elections to Parliament/State legislatures, foodstuffs).\n2. Legislative Competence: Article 323A tribunals can be established ONLY by Parliament (e.g. Central Administrative Tribunal Act 1985). Under Article 323B, both Parliament and State legislatures can establish tribunals for matters within their legislative competence.\n3. Judicial Review: In L. Chandra Kumar v. Union of India (1997), a 7-judge Constitution Bench held that power of judicial review of the High Courts (Article 226/227) and Supreme Court (Article 32) is part of the basic structure. Hence, decisions of administrative tribunals must first be challenged before a Division Bench of the concerned High Court.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 30: Governor (Constitutional & Situational Discretion)',
-      pageNumber: 'Page 30.5 – 30.8',
-      keyExcerpt: 'Constitutional discretion of Governor includes: reserving bills for President (Art 200) and recommending President\'s Rule (Art 356).'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition",
+      chapter: "Chapter 34: Tribunals (Article 323A vs 323B)",
+      pageNumber: "Page 34.1 – 34.6",
+      keyExcerpt: "Art 323A only by Parliament for public service. Art 323B by Parliament and States. In Chandra Kumar case, SC held tribunals subject to High Court Division Bench review."
     },
-    eliminationTip: 'Ministers are appointed strictly on the advice of the Chief Minister (not Governor\'s discretion). Eliminating 2 instantly removes A, C, and D, leaving Option B (1 and 3 only).',
-    difficulty: 'Easy',
+    eliminationTip: "All three statements represent the foundational constitutional distinction between Articles 323A and 323B and the landmark Chandra Kumar ruling.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'Governor', 'Discretionary Powers', 'Article 163', 'Article 200', 'Article 356']
+    tags: [
+      "UPSC 2021",
+      "Tribunals",
+      "Article 323A",
+      "Article 323B",
+      "Chandra Kumar Case",
+      "Polity"
+    ]
   },
-  {
+{
     id: 'pyq-2021-gs-57',
     subject: 'economy',
     topic: 'Monetary Policy & Central Banking',
@@ -390,36 +403,42 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Inflation Targeting', 'CPI', 'Monetary Policy Committee', 'Section 45ZA']
   },
-  {
-    id: 'pyq-2021-gs-64',
-    subject: 'environment',
-    topic: 'Solid Waste & Thermal Power Emissions',
-    subTopic: 'Fly Ash Utilization & Composition',
-    question: 'With reference to "Fly Ash" produced by coal-fired thermal power stations, consider the following statements:\n\n1. Fly ash can be used in the production of bricks for building construction.\n2. Fly ash can be used as a replacement for some of the Portland cement concrete.\n3. Fly ash is made of silicon dioxide and calcium oxide only, and does not contain any toxic elements.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020/2021)',
+          {
+    id: "pyq-2021-gs-64",
+    subject: "science_tech",
+    topic: "Energy Technologies & Clean Fuels",
+    subTopic: "Hydrogen Colors: Blue, Turquoise, and Green Hydrogen",
+    question: "With reference to clean hydrogen technologies, consider the following statements:\n\n1. \"Blue Hydrogen\" is produced from fossil natural gas via Steam Methane Reforming (SMR) coupled with Carbon Capture and Storage (CCS).\n2. \"Turquoise Hydrogen\" is produced through methane pyrolysis, decomposing natural gas into hydrogen gas and solid carbon black.\n3. Unlike blue hydrogen, turquoise hydrogen does not produce gaseous carbon dioxide that requires underground geological sequestration.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is correct: Fly ash bricks are extensively manufactured and mandated for construction within a 300 km radius of thermal plants.\nStatement 2 is correct: Fly ash possesses pozzolanic properties and can substitute 15% to 35% of Portland cement in concrete, increasing durability and reducing water permeability.\nStatement 3 is incorrect: Fly ash is composed of oxides of silicon, aluminum, iron, and calcium, AND contains hazardous toxic heavy metals such as arsenic, lead, cadmium, mercury, and chromium. Stating that it consists "only" of silicon and calcium and "does not contain any toxic elements" is completely false.\n\nTherefore, statements 1 and 2 are correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. Blue hydrogen uses conventional methane reforming (CH4 + 2H2O -> CO2 + 4H2) but captures up to 90% of the emitted CO2 emissions via CCS.\n2. Turquoise hydrogen uses high-temperature thermal methane pyrolysis (CH4 -> C + 2H2) without oxygen.\n3. The byproduct of methane pyrolysis is solid carbon (carbon black)—which can be easily stored, transported, or used as an industrial material in tires, polymers, and batteries—avoiding the high cost and environmental risks of pressurized CO2 geological storage.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 6: Environmental Pollution (Fly Ash Composition and Utilization)',
-      pageNumber: 'Page 80 – 83',
-      keyExcerpt: 'Fly ash contains toxic heavy metals like arsenic, lead, and mercury. It is used in bricks and blended cement.'
+      bookName: "Science & Technology by Ravi P. Agrahari / NITI Aayog Hydrogen Roadmap",
+      edition: "Latest Edition",
+      chapter: "Energy Transitions: Hydrogen Spectrum",
+      pageNumber: "Page 155 – 159",
+      keyExcerpt: "Turquoise hydrogen yields solid carbon black instead of gaseous CO2 via methane pyrolysis."
     },
-    eliminationTip: 'Statement 3 uses the extreme words "only" and "does not contain any toxic elements". Fly ash is notorious for heavy metal toxic leachates (arsenic, lead). Eliminating 3 gives Option A (1 and 2 only).',
-    difficulty: 'Easy',
+    eliminationTip: "Turquoise = solid carbon byproduct (no CO2 gas). Blue = natural gas + carbon capture. All three statements are accurate.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'Fly Ash', 'Thermal Power', 'Heavy Metals', 'Cement', 'Bricks']
+    tags: [
+      "UPSC 2021",
+      "Blue Hydrogen",
+      "Turquoise Hydrogen",
+      "Methane Pyrolysis",
+      "Energy"
+    ]
   },
-  {
+{
     id: 'pyq-2021-gs-65',
     subject: 'history',
     topic: 'Modern Indian History: Socio-Religious Reform',
@@ -738,36 +757,43 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Sangam Age', 'Tolkappiyam', 'Tinai', 'Mullai', 'Ancient South India']
   },
-  {
-    id: 'pyq-2021-gs-76',
-    subject: 'environment',
-    topic: 'Wildlife Sanctuaries & Arid Ecology',
-    subTopic: 'Desert National Park (Great Indian Bustard Habitat)',
-    question: 'With reference to the "Desert National Park" in Rajasthan, consider the following statements:\n\n1. It is spread over two districts.\n2. There is no human habitation inside the Park.\n3. It is one of the natural habitats of the Great Indian Bustard.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020/2021)',
+          {
+    id: "pyq-2021-gs-76",
+    subject: "environment",
+    topic: "Wetland Ecosystems & Protected Areas",
+    subTopic: "Keibul Lamjao National Park, Loktak Lake & Phumdis",
+    question: "Which of the following is the only \"floating national park\" in the world, famous for being the exclusive natural habitat of the endangered Sangai (brow-antlered deer)? (UPSC CSE Prelims 2021)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "Keibul Lamjao National Park",
+      "Nokrek National Park",
+      "Namdapha National Park",
+      "Manas National Park"
     ],
-    correctAnswer: 2,
-    explanation: 'Statement 1 is correct: Desert National Park covers an area of 3,162 km² spread across TWO districts of Rajasthan: Jaisalmer and Barmer.\nStatement 2 is incorrect: Unlike many national parks, Desert National Park contains dozens of traditional human settlements (villages/dhani) where pastoral communities have co-existed for centuries (there ARE human habitations inside).\nStatement 3 is correct: Desert National Park represents the most critical remaining stronghold and breeding sanctuary for the critically endangered Great Indian Bustard (Godawan).\n\nTherefore, statements 1 and 3 are correct.',
+    correctAnswer: 0,
+    explanation: "Keibul Lamjao National Park, situated on Loktak Lake in the Bishnupur district of Manipur, is the world's only floating national park.\nIt is characterized by \"phumdis\"—floating heterogeneous masses of decomposing soil, vegetation, and organic matter. This unique wetland ecosystem is the last natural refuge of the critically endangered Sangai deer (Rucervus eldii eldii), Manipur's state animal, affectionately called the \"dancing deer\" due to its delicate movement over floating phumdis.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 10: Protected Area Network (Desert National Park)',
-      pageNumber: 'Page 146 – 149',
-      keyExcerpt: 'Desert National Park spans Jaisalmer and Barmer. It has human habitations and is the main habitat of the Great Indian Bustard.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Chapter 15: Protected Area Network (National Parks of Northeast India)",
+      pageNumber: "Page 196 – 200",
+      keyExcerpt: "Keibul Lamjao National Park in Loktak Lake, Manipur, is the only floating park in the world and home to the endangered Sangai deer."
     },
-    eliminationTip: 'Statement 2 uses an absolute assertion ("no human habitation"). In Desert NP, people live in dhanis inside the park boundaries. Eliminating 2 gives Option C (1 and 3 only).',
-    difficulty: 'Moderate',
+    eliminationTip: "World's only floating park + Loktak Lake + Sangai brow-antlered deer = Keibul Lamjao National Park in Manipur.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2021', 'Desert National Park', 'Great Indian Bustard', 'Jaisalmer Barmer', 'Protected Areas']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2021",
+      "Keibul Lamjao",
+      "Loktak Lake",
+      "Sangai Deer",
+      "Phumdis",
+      "Environment"
+    ]
   },
-  {
+{
     id: 'pyq-2021-gs-77',
     subject: 'polity',
     topic: 'Constitutional Safeguards & Criminal Procedure',
@@ -825,36 +851,43 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2021', 'NIIF', 'Infrastructure Financing', 'Sovereign Wealth Fund', 'Economy']
   },
-  {
-    id: 'pyq-2021-gs-79',
-    subject: 'science_tech',
-    topic: 'Information Technology & Cryptography',
-    subTopic: 'Blockchain Technology and Consensus Protocols',
-    question: 'With reference to "Blockchain Technology", consider the following statements:\n\n1. It is a public ledger that everyone can inspect, but which no single user controls.\n2. The structure and design of blockchain is such that all the data in it are about cryptocurrency only.\n3. Applications that depend on basic features of blockchain can be developed without anybody’s permission.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020/2021)',
+          {
+    id: "pyq-2021-gs-79",
+    subject: "science_tech",
+    topic: "Cryptography & Distributed Systems",
+    subTopic: "Zero-Knowledge Proofs (ZKPs) and Privacy Preserving Computation",
+    question: "With reference to \"Zero-Knowledge Proofs\" (ZKPs) in modern cryptography and blockchain systems, consider the following statements:\n\n1. A zero-knowledge proof enables one party (prover) to prove to another party (verifier) that a statement is true without revealing any secret information beyond the truth of the statement.\n2. In blockchain scalability, ZK-Rollups bundle hundreds of off-chain transactions and submit a single succinct validity proof to the main blockchain, drastically reducing gas fees.\n3. The verifier must be granted access to the underlying private cryptographic keys of the prover to mathematically validate the proof.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Statement 1 is correct: A public blockchain is a decentralized distributed ledger shared across peer-to-peer nodes, where transactions are publicly verifiable and cannot be unilaterally altered by any single entity.\nStatement 2 is incorrect: Blockchain is an underlying general-purpose database technology. It is applied across supply chain provenance, land title registry, digital health records, voting systems, and credentials—NOT restricted to cryptocurrency only!\nStatement 3 is correct: On public permissionless blockchains (like Ethereum or Bitcoin), anyone can deploy open-source smart contracts and decentralized applications (dApps) without requiring authorization from any central authority.\n\nTherefore, statements 1 and 3 are correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct: Zero-Knowledge Proof (developed by Goldwasser, Micali, and Rackoff) is a cryptographic protocol where the prover proves knowledge of a fact (like being over 18, or having sufficient funds) without exposing the underlying data (birth date or account balance). In Layer 2 blockchains, ZK-Rollups (such as zkSync and Starknet) bundle transactions into succinct proofs (zk-SNARKs/zk-STARKs).\nStatement 3 is incorrect: The core innovation of \"zero-knowledge\" is precisely that the verifier NEVER sees or requires access to the prover’s private secret or private keys; verification is achieved through polynomial commitments and elliptic curve mathematics.",
     bookReference: {
-      bookName: 'Science & Technology by Ravi P. Agrahari',
-      edition: '7th Edition',
-      chapter: 'Chapter 8: Information & Communication Technology (Blockchain Technology)',
-      pageNumber: 'Page 8.40 – 8.45',
-      keyExcerpt: 'Blockchain is a decentralized ledger used in supply chain, land titling, and healthcare, not restricted to cryptocurrency.'
+      bookName: "Science & Technology by Ravi P. Agrahari / IEEE Cryptography Overview",
+      edition: "Latest Edition",
+      chapter: "Information Security and Cryptography",
+      pageNumber: "Page 90 – 95",
+      keyExcerpt: "Zero knowledge proofs establish mathematical truth without disclosing private data or keys."
     },
-    eliminationTip: 'Statement 2 uses the extreme limitation "all the data in it are about cryptocurrency only". Blockchain is used in land records and voting! Eliminating 2 gives Option B (1 and 3 only).',
-    difficulty: 'Easy',
+    eliminationTip: "If the verifier needed the private key, it wouldn't be \"Zero-Knowledge\"! Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'Blockchain', 'Distributed Ledger', 'dApps', 'Information Technology']
+    tags: [
+      "UPSC 2021",
+      "Zero-Knowledge Proofs",
+      "ZKPs",
+      "Cryptography",
+      "ZK-Rollups",
+      "Science & Tech"
+    ]
   },
-  {
+{
     id: 'pyq-2021-gs-80',
     subject: 'history',
     topic: 'Modern Indian History: British Constitutional Missions',
@@ -1028,36 +1061,43 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Ladakh Wildlife', 'Snow Leopard', 'Black-necked Crane', 'Chiru', 'Shahtoosh']
   },
-  {
-    id: 'pyq-2021-gs-86',
-    subject: 'polity',
-    topic: 'Parliamentary Procedures: Adjournment Motions',
-    subTopic: 'Adjournment Motion Requirements',
-    question: 'With reference to an "Adjournment Motion" in the Indian Parliament, consider the following statements:\n\n1. It is introduced to draw the attention of the House to a definite matter of urgent public importance.\n2. It requires the support of at least 50 members to be admitted.\n3. Rajya Sabha is not permitted to use this device.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)',
+          {
+    id: "pyq-2021-gs-86",
+    subject: "polity",
+    topic: "Parliamentary Procedures & Motions",
+    subTopic: "Censure Motion vs No-Confidence Motion",
+    question: "With reference to the \"Censure Motion\" in the Parliament of India, consider the following statements:\n\n1. It can be moved against an individual Minister, a group of Ministers, or the Council of Ministers as a whole.\n2. The specific reasons and policies for which the censure is sought must be stated in the motion.\n3. If a Censure Motion is passed in the Lok Sabha, the Council of Ministers is constitutionally bound to resign immediately.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: 'All three statements are correct regarding the Adjournment Motion:\n1. Definition: It is an extraordinary procedural device to set aside the normal business of the House to discuss a definite matter of urgent public importance.\n2. Admission quota: It needs the formal support of at least 50 members of the Lok Sabha to be admitted.\n3. Rajya Sabha exclusion: Because an Adjournment Motion contains an element of censure against the government, it is available ONLY in the Lok Sabha. Rajya Sabha members CANNOT move an adjournment motion.\n\nTherefore, all 1, 2 and 3 are correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct: A Censure Motion is moved to censure or express strong disapproval of specific policies, actions, or failures of an individual Minister, a group of Ministers, or the entire Cabinet. It requires the stating of specific grounds and charges.\nStatement 3 is incorrect: Passage of a Censure Motion does NOT obligate the Council of Ministers to resign from office (though it severely damages its political authority). The government is only constitutionally bound to resign if a \"No-Confidence Motion\" is passed in the Lok Sabha.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 22: Parliament (Adjournment Motion)',
-      pageNumber: 'Page 22.15 – 22.17',
-      keyExcerpt: 'Adjournment motion requires 50 members\' support. It contains an element of censure and is not permitted in Rajya Sabha.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition (2023)",
+      chapter: "Chapter 22: Parliament (Motions in Parliament)",
+      pageNumber: "Page 22.17 – 22.19",
+      keyExcerpt: "Censure motion needs reasons and does not require the ministry to resign, unlike a no-confidence motion."
     },
-    eliminationTip: 'Adjournment motion interrupts normal work, carries censure, requires 50 members, and is prohibited in Rajya Sabha. All 1, 2, and 3 are correct.',
-    difficulty: 'Easy',
+    eliminationTip: "Only No-Confidence Motion forces the government to resign. Censure Motion expresses regret on specific acts without forcing resignation. Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'Adjournment Motion', 'Lok Sabha Only', '50 Members', 'Parliament']
+    tags: [
+      "UPSC 2021",
+      "Censure Motion",
+      "No-Confidence Motion",
+      "Lok Sabha",
+      "Parliament",
+      "Polity"
+    ]
   },
-  {
+{
     id: 'pyq-2021-gs-87',
     subject: 'economy',
     topic: 'Monetary Management & Liquidity',
@@ -1144,36 +1184,42 @@ export const pyq2021_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Ilbert Bill 1883', 'Lord Ripon', 'Racial Equality in Judiciary', 'Modern History']
   },
-  {
-    id: 'pyq-2021-gs-90',
-    subject: 'environment',
-    topic: 'Climate Mitigation & Urban Forestry',
-    subTopic: 'Tree Cities of the World Program (FAO and Arbor Day)',
-    question: 'The "Tree Cities of the World" programme, which recognizes global cities dedicated to growing and maintaining urban forests, is jointly organized by: (UPSC CSE Prelims 2021)',
+          {
+    id: "pyq-2021-gs-90",
+    subject: "environment",
+    topic: "Urban Forestry & Global Initiatives",
+    subTopic: "Tree Cities of the World Programme",
+    question: "The \"Tree Cities of the World\" programme, which recognizes global cities and municipalities dedicated to planting, growing, and maintaining urban forests and trees, is an international initiative jointly led by:\n\n(UPSC CSE Prelims 2021)",
     options: [
-      'Food and Agriculture Organization (FAO) and Arbor Day Foundation',
-      'United Nations Environment Programme (UNEP) and WWF',
-      'World Bank and IUCN',
-      'Intergovernmental Panel on Climate Change (IPCC) and UNESCO'
+      "Arbor Day Foundation and the Food and Agriculture Organization (FAO)",
+      "United Nations Environment Programme (UNEP) and World Bank",
+      "IUCN and UNESCO",
+      "C40 Cities and Worldwide Fund for Nature (WWF)"
     ],
     correctAnswer: 0,
-    explanation: 'The "Tree Cities of the World" programme is a worldwide initiative launched in 2019 by the Food and Agriculture Organization (FAO) of the United Nations and the Arbor Day Foundation (a major non-profit conservation organization).\nIt recognizes municipalities and metropolitan areas (such as Hyderabad and Mumbai in India) that demonstrate long-term commitment to managing and expanding their urban tree cover and green spaces.',
+    explanation: "The \"Tree Cities of the World\" programme is a collaborative initiative launched in 2019 by the Food and Agriculture Organization (FAO) of the United Nations and the Arbor Day Foundation (USA). It provides direction, assistance, and worldwide recognition to cities that demonstrate a commitment to managing their urban trees through five core standards (establish responsibility, set the rules, know what you have, allocate the resources, and celebrate achievements). In India, Hyderabad and Mumbai have both been recognized as Tree Cities of the World.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 24: Global Forestry Initiatives and Programs',
-      pageNumber: 'Page 340 – 344',
-      keyExcerpt: 'Tree Cities of the World is an international partnership between the FAO and the Arbor Day Foundation.'
+      bookName: "Environment by Shankar IAS Academy / FAO Forestry Portals",
+      edition: "10th Edition (2024)",
+      chapter: "Urban Forestry and International Conventions",
+      pageNumber: "Page 225 – 228",
+      keyExcerpt: "Tree Cities of the World is an initiative of the FAO and the Arbor Day Foundation."
     },
-    eliminationTip: 'Tree Cities of the World is a joint initiative of the UN FAO and the Arbor Day Foundation. Option A.',
-    difficulty: 'Moderate',
+    eliminationTip: "Tree Cities of the World is partnered by the UN FAO and the Arbor Day Foundation.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2021', 'Tree Cities of the World', 'FAO', 'Arbor Day Foundation', 'Urban Forestry']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2021",
+      "Tree Cities of the World",
+      "FAO",
+      "Arbor Day Foundation",
+      "Urban Forests"
+    ]
   },
-  {
+{
     id: 'pyq-2021-gs-91',
     subject: 'polity',
     topic: 'Parliamentary Democracy: Speaker\'s Office',

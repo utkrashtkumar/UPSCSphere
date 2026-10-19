@@ -975,36 +975,42 @@ export const pyq2019_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2019', 'Reading Comprehension', 'Ocean Acidification', 'Pteropods', 'Marine Food Web']
   },
-  {
-    id: 'pyq-2019-csat-74',
-    subject: 'csat_quant',
-    topic: 'Mixtures: Successive Dilution',
-    subTopic: 'Repeated Liquid Replacement Formula',
-    question: 'A container contains 40 litres of pure milk. From this container, 4 litres of milk were taken out and replaced by water. This process was repeated further two times. How much milk is now contained by the container? (UPSC CSAT 2019)',
+          {
+    id: "pyq-2019-csat-74",
+    subject: "csat_quant",
+    topic: "Mixtures and Alligations",
+    subTopic: "Weighted Concentration of Sugar Solutions",
+    question: "In what ratio must a 20% sugar solution be mixed with a 50% sugar solution to obtain a resulting mixture having a sugar concentration of 30%? (UPSC CSAT 2019)",
     options: [
-      '26.34 litres',
-      '27.36 litres',
-      '29.16 litres',
-      '30.24 litres'
+      "2 : 1",
+      "3 : 1",
+      "1 : 2",
+      "2 : 3"
     ],
-    correctAnswer: 2,
-    explanation: '1. Standard successive dilution formula:\n   Amount of original liquid remaining = Initial Quantity × [1 - (x / C)]ⁿ\n   Where:\n   - Initial Quantity = 40 litres of pure milk\n   - Capacity C = 40 litres\n   - Quantity removed each time x = 4 litres\n   - Total operations n = 1 (initial) + 2 (further) = 3 operations.\n\n2. Fraction of milk remaining after each replacement:\n   1 - (4 / 40) = 1 - 0.1 = 0.9 = 9 / 10.\n\n3. Milk remaining after 3 replacements:\n   Remaining Milk = 40 × (9 / 10)³\n   Remaining Milk = 40 × (729 / 1000)\n   Remaining Milk = 4 × 72.9 / 10\n   Remaining Milk = 291.6 / 10 = 29.16 litres.\n\nTherefore, 29.16 litres of milk remain in the container.',
+    correctAnswer: 0,
+    explanation: "Using the Rule of Alligation:\nLet Solution 1 have concentration C1 = 20%.\nLet Solution 2 have concentration C2 = 50%.\nMean concentration desired Cm = 30%.\n\nApplying alligation cross-difference:\n(Quantity of Solution 1) / (Quantity of Solution 2) = (C2 - Cm) / (Cm - C1)\n= (50 - 30) / (30 - 20)\n= 20 / 10 = 2 / 1.\n\nThus, the solutions must be mixed in the ratio 2 : 1.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 20: Alligation or Mixture',
-      pageNumber: 'Page 445 – 452',
-      keyExcerpt: 'Quantity of milk remaining = Q(1 - x/Q)^n. For Q = 40, x = 4, n = 3: 40 × (0.9)³ = 29.16 litres.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "2024 Edition",
+      chapter: "Chapter 20: Alligation or Mixture",
+      pageNumber: "Page 450 – 456",
+      keyExcerpt: "Quantity of cheaper / Quantity of dearer = (d - m) / (m - c) = (50 - 30)/(30 - 20) = 2:1."
     },
-    eliminationTip: 'Formula: 40 × (1 - 4/40)³ = 40 × (0.9)³ = 40 × 0.729 = 29.16 litres.',
-    difficulty: 'Moderate',
+    eliminationTip: "Alligation difference: (50 - 30) : (30 - 20) = 20 : 10 = 2 : 1. Solved in 5 seconds!",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2019', 'Mixtures and Alligations', 'Successive Dilution', 'Quant']
+    tags: [
+      "UPSC CSAT 2019",
+      "Alligation",
+      "Mixtures",
+      "Percentages",
+      "Quant"
+    ]
   },
-  {
+{
     id: 'pyq-2019-csat-75',
     subject: 'csat_reasoning',
     topic: 'Continuous Pattern Series: Letter Grouping',
@@ -1125,36 +1131,42 @@ export const pyq2019_csat_2: Question[] = [
       "Critical Reasoning"
     ]
   },
-  {
-    id: 'pyq-2019-csat-79',
-    subject: 'csat_quant',
-    topic: 'Speed, Time and Distance: Relative Speed',
-    subTopic: 'Two Trains Crossing in Opposite Directions',
-    question: 'Two trains of lengths 120 metres and 180 metres are running on parallel tracks in opposite directions with speeds of 40 km/h and 32 km/h respectively. In how many seconds will they completely cross each other from the moment they meet? (UPSC CSAT 2019)',
+          {
+    id: "pyq-2019-csat-79",
+    subject: "csat_reasoning",
+    topic: "Clocks and Calendars",
+    subTopic: "Finding Day of the Week Using Odd Days",
+    question: "What day of the week was 26th January 1950, when the Constitution of India came into effect? (UPSC CSAT 2019)",
     options: [
-      '12 seconds',
-      '15 seconds',
-      '18 seconds',
-      '20 seconds'
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
     ],
-    correctAnswer: 1,
-    explanation: '1. When two trains move in opposite directions, their relative speed is the sum of their individual speeds:\n   Relative Speed = 40 km/h + 32 km/h = 72 km/h.\n\n2. Convert relative speed to metres per second (m/s):\n   Speed = 72 × (5 / 18) = 4 × 5 = 20 m/s.\n\n3. The total distance to be covered to completely cross each other is the sum of their lengths:\n   Total Distance = 120 m + 180 m = 300 metres.\n\n4. Time taken = Total Distance / Relative Speed:\n   Time = 300 / 20 = 15 seconds.\n\nTherefore, the two trains will completely cross each other in 15 seconds.',
+    correctAnswer: 2,
+    explanation: "To find the day of the week on 26th January 1950:\n1. Completed years = 1949 years:\n   - 1600 years have 0 odd days.\n   - 300 years have 1 odd day.\n   - In remaining 49 years: Leap years = 49 / 4 = 12 leap years; Ordinary years = 49 - 12 = 37.\n   - Odd days from 49 years = (12 × 2) + (37 × 1) = 24 + 37 = 61 days.\n   - 61 mod 7 = 5 odd days.\n   - Total odd days up to 31st Dec 1949 = 0 + 1 + 5 = 6 odd days.\n\n2. Days in the year 1950 up to 26th January:\n   - 26 days mod 7 = 5 odd days.\n\n3. Total odd days = 6 + 5 = 11 odd days.\n   - 11 mod 7 = 4 odd days.\n\nSince 0 = Sunday, 1 = Monday, 2 = Tuesday, 3 = Wednesday, 4 = Thursday:\n26th January 1950 was a THURSDAY.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 18: Problems on Trains (Opposite Directions)',
-      pageNumber: 'Page 412 – 418',
-      keyExcerpt: 'In opposite directions, relative speed = s1 + s2. Total distance = L1 + L2. Time = (L1 + L2) / (s1 + s2).'
+      bookName: "A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Chapter 15: Calendar",
+      pageNumber: "Page 320 – 326",
+      keyExcerpt: "1600 yrs = 0, 300 yrs = 1, 49 yrs = 5 odd days, Jan 26 = 5 odd days. Total = 11 = 4 odd days (Thursday)."
     },
-    eliminationTip: 'Relative speed = 40 + 32 = 72 km/h = 20 m/s. Total distance = 120 + 180 = 300 m. Time = 300 / 20 = 15 seconds.',
-    difficulty: 'Easy',
+    eliminationTip: "1949 years produce 6 odd days. 26 days of January give 5 odd days. 6 + 5 = 11 = 4 odd days -> Thursday.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2019', 'Trains', 'Relative Speed', 'Opposite Directions', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC CSAT 2019",
+      "Calendar",
+      "Odd Days",
+      "Day of Week",
+      "Reasoning"
+    ]
   },
-  {
+{
     id: 'pyq-2019-csat-80',
     subject: 'csat_reading',
     topic: 'Reading Comprehension: Global Food Loss & Cold Chain Logistics',

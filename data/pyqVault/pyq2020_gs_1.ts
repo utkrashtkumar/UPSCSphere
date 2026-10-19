@@ -384,36 +384,42 @@ export const pyq2020_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2020', 'Fort William College', 'Wellesley', 'Civil Services', 'Colonial Administration']
   },
-  {
-    id: 'pyq-2020-gs-14',
-    subject: 'history',
-    topic: 'Social Reform Movements: Anti-Caste Consciousness',
-    subTopic: 'Gopal Baba Walangkar and Vital-Vidhvansak',
-    question: 'With reference to the history of India, “Ulgulan” or the Great Tumult is the description of which of the following events? (UPSC CSE Prelims 2020)',
+          {
+    id: "pyq-2020-gs-14",
+    subject: "history",
+    topic: "Tribal Movements & Peasant Resistance",
+    subTopic: "Birsa Munda and the Ulgulan (Great Tumult)",
+    question: "With reference to the history of India, “Ulgulan” or the Great Tumult is the description of which of the following events? (UPSC CSE Prelims 2020)",
     options: [
-      'The Revolt of 1857',
-      'The Mappila Rebellion of 1921',
-      'The Indigo Revolt of 1859-60',
-      'Birsa Munda’s Revolt of 1899-1900'
+      "The Revolt of 1857",
+      "The Mappila Rebellion of 1921",
+      "The Indigo Revolt of 1859-60",
+      "Birsa Munda’s Revolt of 1899-1900"
     ],
     correctAnswer: 3,
-    explanation: 'The famous tribal uprising led by Birsa Munda in the Chotanagpur region (south of Ranchi) during 1899–1900 is historically termed the "Ulgulan" (meaning the Great Tumult).\nThe uprising was directed against the erosion of traditional tribal land systems (Khuntkatti joint landholding) by British colonial revenue policies, Christian missionaries, and dikus (non-tribal moneylenders and contractors).',
+    explanation: "The famous tribal uprising led by Birsa Munda in the Chotanagpur region (south of Ranchi) during 1899–1900 is historically termed the \"Ulgulan\" (meaning the Great Tumult).\nThe uprising was directed against the erosion of traditional tribal land systems (Khuntkatti joint landholding) by British colonial revenue policies, Christian missionaries, and dikus (non-tribal moneylenders and contractors).",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / NCERT Class VIII Our Pasts III',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 3: Tribal and Peasant Movements',
-      pageNumber: 'Page 48 – 52',
-      keyExcerpt: 'The movement of the Mundas led by Birsa Munda (1899-1900) was known as the Ulgulan (the Great Tumult).'
+      bookName: "India's Struggle for Independence by Bipan Chandra / NCERT Class VIII Our Pasts III",
+      edition: "Revised Edition",
+      chapter: "Chapter 3: Tribal and Peasant Movements",
+      pageNumber: "Page 48 – 52",
+      keyExcerpt: "The movement of the Mundas led by Birsa Munda (1899-1900) was known as the Ulgulan (the Great Tumult)."
     },
-    eliminationTip: 'Birsa Munda and Munda rebellion in Chotanagpur are inextricably synonymous with the term "Ulgulan" (Great Tumult).',
-    difficulty: 'Easy',
+    eliminationTip: "Birsa Munda and Munda rebellion in Chotanagpur are inextricably synonymous with the term \"Ulgulan\" (Great Tumult).",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'Ulgulan', 'Birsa Munda', 'Tribal Revolt', 'Chotanagpur']
+    tags: [
+      "UPSC 2020",
+      "Ulgulan",
+      "Birsa Munda",
+      "Tribal Revolt",
+      "Chotanagpur"
+    ]
   },
-  {
+{
     id: 'pyq-2020-gs-15',
     subject: 'history',
     topic: 'Modern Indian History: Socio-Religious Reform & Women\'s Rights',
@@ -1215,36 +1221,43 @@ export const pyq2020_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Blockchain', 'Distributed Ledger', 'Cryptocurrency', 'Smart Contracts']
   },
-  {
-    id: 'pyq-2020-gs-42',
-    subject: 'science_tech',
-    topic: 'Reproductive Biotechnology & Genetics',
-    subTopic: 'Pronuclear Transfer (Mitochondrial Replacement Therapy)',
-    question: 'In the context of recent advances in human genetics, “Pronuclear Transfer” is used for: (UPSC CSE Prelims 2020)',
+          {
+    id: "pyq-2020-gs-42",
+    subject: "science_tech",
+    topic: "Biotechnology & Genetic Engineering",
+    subTopic: "Somatic Cell Nuclear Transfer (SCNT) and Mammalian Cloning",
+    question: "With reference to \"Somatic Cell Nuclear Transfer\" (SCNT) technology, consider the following statements:\n\n1. It involves transferring the nucleus from an adult somatic body cell into an enucleated unfertilized egg cell.\n2. It was the scientific technique utilized to produce Dolly the sheep, the first cloned mammal.\n3. Therapeutic cloning using SCNT can be applied to generate patient-specific pluripotent stem cells for regenerative medicine.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)",
     options: [
-      'Fertilization of egg in vitro by the donor sperm',
-      'Genetic modification of sperm producing cells',
-      'Development of stem cells into functional embryos',
-      'Prevention of mitochondrial diseases in offspring'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'Pronuclear Transfer (PNT) is an advanced assisted reproductive technology (Mitochondrial Replacement Therapy / Three-parent baby technique):\n1. It is designed to prevent mothers affected by fatal inherited mitochondrial DNA mutations from transmitting incurable neurometabolic and cardiac disorders to their children.\n2. The pronuclei (nuclear DNA) of both parents are removed from the patient\'s fertilized embryo and transferred into an enucleated donor embryo carrying healthy mitochondrial DNA.\n3. The resulting offspring inherits nuclear genes from biological parents and healthy mitochondria from the donor.',
+    explanation: "All three statements are correct:\n1. SCNT is a cloning technique where the genetic material (nucleus) from a somatic body cell (e.g. skin or mammary cell) is injected into an ovum whose own nucleus has been removed.\n2. In 1996, Ian Wilmut and Keith Campbell at the Roslin Institute successfully used SCNT to clone Dolly the sheep from an adult mammary gland cell.\n3. In therapeutic cloning, the cloned blastocyst is used to harvest embryonic stem cells genetically identical to the donor patient, preventing immunological rejection during tissue replacement therapy.",
     bookReference: {
-      bookName: 'Science and Technology by Ravi P. Agrahari',
-      edition: '7th Edition',
-      chapter: 'Chapter 11: Biotechnology & Assisted Reproductive Technologies',
-      pageNumber: 'Page 11.24 – 11.28',
-      keyExcerpt: 'Pronuclear transfer is a mitochondrial replacement therapy used to prevent transmission of harmful maternal mitochondrial DNA mutations to offspring.'
+      bookName: "Science & Technology by Ravi P. Agrahari",
+      edition: "Latest Edition",
+      chapter: "Biotechnology: Cloning and Stem Cells",
+      pageNumber: "Page 114 – 118",
+      keyExcerpt: "SCNT transfers a somatic nucleus into an enucleated egg and was used to produce Dolly."
     },
-    eliminationTip: 'Pronuclear transfer is the standard medical procedure for "mitochondrial replacement therapy" to avoid maternal mitochondrial genetic disorders.',
-    difficulty: 'Easy',
+    eliminationTip: "SCNT is the fundamental protocol of animal cloning and therapeutic stem cell creation. All statements are scientifically accurate.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'Pronuclear Transfer', 'Mitochondrial Replacement Therapy', 'Genetics']
+    tags: [
+      "UPSC 2020",
+      "SCNT",
+      "Cloning",
+      "Dolly",
+      "Stem Cells",
+      "Biotechnology"
+    ]
   },
-  {
+{
     id: 'pyq-2020-gs-43',
     subject: 'science_tech',
     topic: 'Nanotechnology & Advanced Materials',

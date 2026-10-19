@@ -762,36 +762,43 @@ export const pyq2018_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2018', 'Cripps Mission 1942', 'Dominion Status', 'World War II', 'Modern History']
   },
-  {
-    id: 'pyq-2018-gs-77',
-    subject: 'history',
-    topic: 'Modern Indian History: Mass Movements',
-    subTopic: 'Quit India Movement (1942) Characteristics',
-    question: 'With reference to the 8th August 1942 in Indian history, which one of the following statements is correct? (UPSC CSE Prelims 2018)',
+          {
+    id: "pyq-2018-gs-77",
+    subject: "history",
+    topic: "Modern Indian History: Peasant Movements",
+    subTopic: "Kheda Satyagraha (1918) and Non-Payment of Revenue",
+    question: "With reference to the Kheda Satyagraha of 1918 in Gujarat, consider the following statements:\n\n1. It was organized because the British colonial administration refused to grant land revenue remission despite widespread crop failure.\n2. Under the British Revenue Code, if the crop yield was less than 25% of normal, the cultivators were legally entitled to complete revenue remission.\n3. Sardar Vallabhbhai Patel joined Mahatma Gandhi during this movement and emerged as a prominent mass leader.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2018)",
     options: [
-      'The Quit India Resolution was adopted by the AICC.',
-      'The Viceroy\'s Executive Council was expanded to include more Indians.',
-      'The Congress ministries resigned in seven provinces.',
-      'Cripps proposed an Indian Union with full Dominion Status once the Second World War was over.'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'On 8th August 1942, at the Gowalia Tank Maidan in Bombay, the All India Congress Committee (AICC) officially ratified and adopted the historic QUIT INDIA RESOLUTION.\nIn his impassioned address, Mahatma Gandhi gave the clarion call: "Karo ya Maro" (Do or Die):\n"Here is a mantra, a short one, that I give you. You may imprint it on your hearts and let every breath of yours give expression to it. The mantra is: Do or Die. We shall either free India or die in the attempt."\nIn the early hours of 9th August, the British colonial authorities launched "Operation Zero Hour", arresting the entire senior Congress leadership.',
+    correctAnswer: 3,
+    explanation: "All three statements are historically correct regarding the Kheda Satyagraha of 1918:\n1. Non-Remission of Revenue: In 1918, crops failed in Kheda district of Gujarat due to severe drought and plague, yet the British revenue authorities insisted on full collection of land revenue and threatened to seize the cattle and lands of defaulters.\n2. Revenue Code 25% Rule: Under the Bombay Revenue Code, cultivators were entitled to complete suspension and remission of revenue if crop yield was less than one-fourth (25% or 4 annas) of the normal yield. Ground surveys confirmed the crop was under 25%, but the government refused.\n3. Leadership: Gandhi gave spiritual leadership and advised peasants not to pay, while Sardar Vallabhbhai Patel, along with Indulal Yagnik and Mohanlal Pandya, organized the peasants, traveling from village to village to maintain strict non-violent discipline.",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / Spectrum',
-      edition: 'Penguin / Spectrum 2024',
-      chapter: 'Chapter 27: The Quit India Movement and the INA',
-      pageNumber: 'Page 375 – 384',
-      keyExcerpt: 'On 8 August 1942, the Quit India resolution was passed at Gowalia Tank Maidan in Bombay, where Gandhi gave the Do or Die call.'
+      bookName: "India's Struggle for Independence by Bipan Chandra / Spectrum",
+      edition: "Revised Edition",
+      chapter: "Chapter 14: Gandhi's Early Career and Activism (Kheda Satyagraha)",
+      pageNumber: "Page 180 – 186",
+      keyExcerpt: "Kheda Satyagraha arose from refusal of revenue remission despite crop yield under 25%. Sardar Patel played a central role."
     },
-    eliminationTip: '8th August 1942 is commemorated across India as "August Kranti Diwas"—the day the Quit India Resolution was passed at Gowalia Tank.',
-    difficulty: 'Easy',
+    eliminationTip: "All three statements capture the authentic legal, economic, and leadership aspects of Kheda Satyagraha 1918. All 1, 2 and 3 are correct.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2018', 'Quit India Movement', '8th August 1942', 'Do or Die', 'AICC', 'Modern History']
+    tags: [
+      "UPSC 2018",
+      "Kheda Satyagraha",
+      "Mahatma Gandhi",
+      "Sardar Patel",
+      "Peasant Movement",
+      "Modern History"
+    ]
   },
-  {
+{
     id: 'pyq-2018-gs-78',
     subject: 'polity',
     topic: 'Judicial Remedies: Writ Jurisdiction',
@@ -1407,36 +1414,42 @@ export const pyq2018_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2018', 'Mycorrhizae', 'Phosphorus Uptake', 'Symbiosis', 'Fungi', 'Biofertilizers', 'Environment']
   },
-  {
-    id: 'pyq-2018-gs-99',
-    subject: 'polity',
-    topic: 'Directive Principles of State Policy',
-    subTopic: 'Separation of Judiciary from Executive (Article 50)',
-    question: 'Separation of the judiciary from the executive is enjoined by: (UPSC CSE Prelims 2018)',
+          {
+    id: "pyq-2018-gs-99",
+    subject: "polity",
+    topic: "Constitutional Bodies & Safeguards",
+    subTopic: "Special Officer for Linguistic Minorities (Article 350B)",
+    question: "With reference to the \"Special Officer for Linguistic Minorities\", consider the following statements:\n\n1. It was provided in the original Constitution of India adopted in 1950.\n2. The Special Officer is appointed by the President of India under Article 350B.\n3. The office submits its annual reports to the Union Ministry of Minority Affairs, which takes the final decision without placing it before Parliament.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2018)",
     options: [
-      'The Preamble of the Constitution',
-      'A Directive Principle of State Policy',
-      'The Seventh Schedule',
-      'The Conventional practice'
+      "2 only",
+      "1 and 2 only",
+      "2 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Under ARTICLE 50 of the Constitution of India, located in Part IV (DIRECTIVE PRINCIPLES OF STATE POLICY):\n"The State shall take steps to separate the judiciary from the executive in the public services of the State."\nThis fundamental directive principle was enacted to ensure the absolute impartiality and independence of the subordinate magistracy, leading to the enactment of the Code of Criminal Procedure, 1973 (CrPC) which legally separated Judicial Magistrates (functioning under the High Court) from Executive Magistrates (District Magistrates and Sub-Divisional Magistrates under the State Executive).',
+    correctAnswer: 0,
+    explanation: "Statement 2 only is correct:\nStatement 1 is incorrect: The office was NOT in the original Constitution. It was inserted by the 7th Constitutional Amendment Act, 1956, following the recommendations of the States Reorganisation Commission (1953–55).\nStatement 2 is correct: Under Article 350B, there shall be a Special Officer for Linguistic Minorities to be appointed by the President of India.\nStatement 3 is incorrect: The Special Officer reports directly to the President, and the President causes all such reports to be laid before each House of Parliament and sent to the Governments of the States concerned.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 8: Directive Principles of State Policy (Liberal-Intellectual Principles)',
-      pageNumber: 'Page 8.4 – 8.7',
-      keyExcerpt: 'Article 50 directs the State to separate the judiciary from the executive in the public services of the State.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition",
+      chapter: "Chapter 54: Special Officer for Linguistic Minorities",
+      pageNumber: "Page 54.1 – 54.3",
+      keyExcerpt: "Article 350-B was inserted by the 7th Amendment Act 1956. Appointed by President; reports laid before Parliament."
     },
-    eliminationTip: 'Article 50 of DPSP specifically directs the separation of the judiciary from the executive in the public services.',
-    difficulty: 'Easy',
+    eliminationTip: "Article 350B was added by the 7th Amendment 1956 (not original). Reports are placed before Parliament. Only 2 is correct.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2018', 'Article 50', 'DPSP', 'Separation of Powers', 'Judiciary and Executive', 'Polity']
+    pyqPaper: "GS",
+    frequency: 8,
+    tags: [
+      "UPSC 2018",
+      "Article 350B",
+      "Linguistic Minorities",
+      "Constitutional Bodies",
+      "Polity"
+    ]
   },
-  {
+{
     id: 'pyq-2018-gs-100',
     subject: 'polity',
     topic: 'Constitutional Amendments & Basic Structure',

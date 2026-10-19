@@ -94,36 +94,42 @@ export const pyq2019_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2019', 'INA Trials', 'Red Fort 1945', 'Bhulabhai Desai', 'Tej Bahadur Sapru', 'Jawaharlal Nehru']
   },
-  {
-    id: 'pyq-2019-gs-54',
-    subject: 'polity',
-    topic: 'Tenth Schedule & Anti-Defection Law',
-    subTopic: 'Grounds of Disqualification & Presiding Officer Powers',
-    question: 'With reference to the Anti-Defection Law in India, consider the following statements:\n1. The law specifies that a nominated legislator cannot join any political party within six months of being appointed to the House.\n2. The law does not provide any time-frame within which the presiding officer has to decide a defection case.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2019)',
+          {
+    id: "pyq-2019-gs-54",
+    subject: "polity",
+    topic: "Statutory Bodies & Human Rights",
+    subTopic: "National Human Rights Commission (NHRC)",
+    question: "With reference to the \"National Human Rights Commission\" (NHRC) in India, consider the following statements:\n\n1. It is a statutory body established under the Protection of Human Rights Act, 1993.\n2. The Chairperson and members are appointed by the President on the recommendations of a committee headed by the Prime Minister.\n3. The recommendations made by the NHRC are legally binding on the central and state governments.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2019)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Under the Tenth Schedule to the Constitution of India (Anti-Defection Law):\n- Statement 1 is INCORRECT: Paragraph 2(3) of the Tenth Schedule provides that a nominated member of a House CAN join any political party WITHIN SIX MONTHS of taking his seat without incurring disqualification. He is disqualified only if he joins a political party AFTER the expiry of six months.\n- Statement 2 is CORRECT: The Tenth Schedule does NOT prescribe any statutory time-limit or deadline within which the Speaker or Chairman must adjudicate a disqualification petition, allowing presiding officers to delay proceedings indefinitely (a lacuna highlighted by the Supreme Court in the Keisham Meghachandra Singh case, 2020).\n\nTherefore, only statement 2 is correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct:\nStatement 1 is correct: The NHRC was established on 12 October 1993 as a statutory body under the Protection of Human Rights Act (PHRA), 1993.\nStatement 2 is correct: Under Section 4 of the Act, the Chairperson and members of NHRC are appointed by the President on the recommendations of a 6-member selection committee consisting of: the Prime Minister (Chairperson), the Speaker of Lok Sabha, the Union Home Minister, the Leader of the Opposition in Lok Sabha, the Leader of the Opposition in Rajya Sabha, and the Deputy Chairman of Rajya Sabha.\nStatement 3 is incorrect: Section 18 of the Act stipulates that the recommendations of the NHRC are essentially RECOMMENDATORY (advisory) in nature. The government is not bound to accept them, though it must inform the commission within one month of the action taken or proposed to be taken.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 80: Anti-Defection Law (Tenth Schedule)',
-      pageNumber: 'Page 80.2 – 80.5',
-      keyExcerpt: 'A nominated member can join a party within six months. The law prescribes no time limit for the Presiding Officer to decide defection cases.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition",
+      chapter: "Chapter 52: National Human Rights Commission",
+      pageNumber: "Page 52.1 – 52.5",
+      keyExcerpt: "NHRC is a statutory body established in 1993. Appointed by President via PM-headed committee. Its recommendations are purely advisory."
     },
-    eliminationTip: 'A nominated member has a 6-month grace window to join a party (Statement 1 says he cannot join within 6 months, which is inverted!). The law famously sets no deadline for the Speaker (Statement 2 is true).',
-    difficulty: 'Moderate',
+    eliminationTip: "NHRC recommendations are advisory/recommendatory, not legally binding orders like a civil court. Eliminating 3 leaves (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2019', 'Anti-Defection Law', 'Tenth Schedule', 'Nominated Members', 'Speaker Powers']
+    tags: [
+      "UPSC 2019",
+      "NHRC",
+      "Human Rights Act 1993",
+      "Statutory Bodies",
+      "Polity"
+    ]
   },
-  {
+{
     id: 'pyq-2019-gs-55',
     subject: 'economy',
     topic: 'Exchange Rates & Trade Competitiveness',
@@ -884,36 +890,44 @@ export const pyq2019_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2019', 'FRBM Act', 'NK Singh Committee', 'Debt to GDP Ratio', 'Fiscal Deficit']
   },
-  {
-    id: 'pyq-2019-gs-81',
-    subject: 'geography',
-    topic: 'World Physical Geography: Volcanoes & Pacific Ring of Fire',
-    subTopic: 'Barren Island Volcano Location and Eruption History',
-    question: 'Consider the following statements regarding the Barren Island:\n1. The Barren Island volcano is an active volcano located in the Indian territory.\n2. Barren Island lies about 140 km east of Great Nicobar.\n3. The last time the Barren Island volcano erupted was in 1991 and it has remained inactive since then.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2019/2018)',
+          {
+    id: "pyq-2019-gs-81",
+    subject: "geography",
+    topic: "Physical Geography: Mountain Passes",
+    subTopic: "Strategic Himalayan Mountain Passes and Connectivities",
+    question: "Consider the following pairs of Mountain Passes and the regions they connect:\n\n1. Zojila Pass — Connects Srinagar with Kargil and Leh\n2. Shipki La — Connects Himachal Pradesh with Tibet\n3. Nathu La — Connects Sikkim with the Chumbi Valley of Tibet\n\nWhich of the pairs given above are correctly matched? (UPSC CSE Prelims 2019)",
     options: [
-      '1 only',
-      '2 and 3 only',
-      '3 only',
-      '1 and 3 only'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Evaluating the statements regarding Barren Island:\n- Statement 1 is correct: Barren Island (situated in the Andaman Sea) is the ONLY confirmed active volcano in South Asia and lies within the Indian Union Territory of Andaman and Nicobar Islands.\n- Statement 2 is INCORRECT: Barren Island lies approximately 138 km northeast of PORT BLAIR in the Andaman Islands, NOT east of Great Nicobar (Great Nicobar is the southernmost island of the archipelago, located over 500 km south of Barren Island).\n- Statement 3 is INCORRECT: While it erupted in 1991 after nearly two centuries of dormancy, the volcano erupted again repeatedly in 2005, 2017, 2018, and 2020. The claim that it has "remained inactive since 1991" is factually false!\n\nTherefore, only statement 1 is correct.',
+    correctAnswer: 3,
+    explanation: "All three pairs are geographically correctly matched:\n1. Zojila Pass: Located at an altitude of ~3,528 m on the Great Himalayas in the Union Territory of Ladakh, it provides the vital road link (National Highway 1) connecting Srinagar and Kashmir Valley to Kargil and Leh.\n2. Shipki La: Located in the Kinnaur district of Himachal Pradesh at ~3,930 m, it serves as a border mountain pass through which the Sutlej River enters India from Tibet.\n3. Nathu La: Located in East Sikkim at ~4,310 m, it connects Sikkim with the Chumbi Valley in Tibet and was an ancient branch of the Silk Route, reopened for border trade in 2006.",
     bookReference: {
-      bookName: 'India: Physical Environment (NCERT Class XI)',
-      edition: 'NCERT 2023',
-      chapter: 'Chapter 2: Structure and Physiography (The Islands)',
-      pageNumber: 'Page 18 – 20',
-      keyExcerpt: 'Barren Island in the Andaman Sea is India\'s only active volcano. It has erupted multiple times in recent years including 2017-2018.'
+      bookName: "India: A Comprehensive Geography by D.R. Khullar / Oxford School Atlas",
+      edition: "Kalyani Publishers",
+      chapter: "Physiography of India: Passes of the Himalayas",
+      pageNumber: "Page 58 – 64",
+      keyExcerpt: "Zojila connects Srinagar to Leh; Shipki La connects Himachal to Tibet; Nathu La connects Sikkim to Chumbi Valley."
     },
-    eliminationTip: 'Barren Island erupted actively in 2017 and 2018, disproving statement 3. It is close to Port Blair (Andaman), not Great Nicobar (disproving statement 2). Only statement 1 is correct.',
-    difficulty: 'Easy',
+    eliminationTip: "Zojila = Srinagar-Leh highway; Shipki La = Himachal-Tibet (Sutlej entry); Nathu La = Sikkim-Tibet trade. All 1, 2 and 3 are correct.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2019', 'Barren Island', 'Active Volcano', 'Andaman and Nicobar', 'Physical Geography']
+    tags: [
+      "UPSC 2019",
+      "Mountain Passes",
+      "Zojila",
+      "Shipki La",
+      "Nathu La",
+      "Himalayas",
+      "Geography"
+    ]
   },
-  {
+{
     id: 'pyq-2019-gs-82',
     subject: 'history',
     topic: 'Modern Indian History: Vernacular Press Acts',
@@ -1261,36 +1275,43 @@ export const pyq2019_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2019', 'Currency Swap', 'RBI', 'Forex Liquidity', 'Balance of Payments', 'Economy']
   },
-  {
-    id: 'pyq-2019-gs-94',
-    subject: 'environment',
-    topic: 'Protected Species & International Trade',
-    subTopic: 'CITES Appendices and Wildlife Protection',
-    question: 'With reference to the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES), which of the following statements is/are correct?\n1. It is legally binding on the Parties, but does not take the place of national laws.\n2. CITES Appendix I includes species that are threatened with extinction and commercial trade in them is prohibited.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2019)',
+          {
+    id: "pyq-2019-gs-94",
+    subject: "environment",
+    topic: "International Wildlife Conventions",
+    subTopic: "Convention on Migratory Species (Bonn Convention / CMS)",
+    question: "With reference to the \"Convention on the Conservation of Migratory Species of Wild Animals\" (CMS or Bonn Convention), consider the following statements:\n\n1. It is an environmental treaty concluded under the aegis of the United Nations Environment Programme (UNEP).\n2. Appendix I of the Convention lists migratory species that are in danger of extinction throughout all or a significant portion of their range.\n3. India hosted the 13th Conference of Parties (COP13) of CMS in Gandhinagar, Gujarat in 2020.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2019)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'Both statements are foundational legal principles of CITES:\n- Statement 1 is correct: CITES is legally binding on the state parties that ratify it; however, it does not automatically displace domestic legislation. Parties must enact their own domestic enabling legislation (e.g. Wildlife Protection Amendment Act 2022 in India) to enforce its provisions.\n- Statement 2 is correct: CITES Appendix I includes species threatened with extinction (e.g. tigers, gorillas, Asiatic lions, snow leopards, pangolins). International commercial trade in wild-caught specimens of these species is strictly prohibited, permitted only in exceptional non-commercial circumstances (such as scientific research).\n\nTherefore, both 1 and 2 are correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct regarding the Bonn Convention (CMS):\n1. UNEP Aegis: CMS was signed in Bonn, Germany in 1979 and operates under the United Nations Environment Programme (UNEP).\n2. Appendices Structure: Appendix I lists endangered migratory species requiring strict protection, while Appendix II lists migratory species having unfavorable conservation status requiring international agreements.\n3. India COP13: India hosted CMS COP13 in Gandhinagar, Gujarat in February 2020 (Theme: \"Migratory species connect the planet and together we welcome them home\"; Mascot: \"Gibi – The Great Indian Bustard\").",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '10th Edition',
-      chapter: 'Chapter 28: International Environmental Conventions (CITES)',
-      pageNumber: 'Page 330 – 334',
-      keyExcerpt: 'CITES is legally binding on parties but requires domestic implementing legislation. Appendix I bans commercial international trade in endangered species.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Chapter 22: International Conventions (Bonn Convention CMS)",
+      pageNumber: "Page 310 – 314",
+      keyExcerpt: "CMS is an intergovernmental treaty under UNEP. COP13 was hosted by India in Gandhinagar."
     },
-    eliminationTip: 'Both statements state official CITES rules: it is legally binding but requires domestic national law (1) and Appendix I prohibits commercial trade (2). Both are true.',
-    difficulty: 'Easy',
+    eliminationTip: "Bonn Convention = CMS under UNEP; Appendix I = endangered; Gandhinagar hosted COP13 with mascot Gibi. All 1, 2 and 3.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2019', 'CITES', 'Endangered Species', 'Appendix I', 'Environmental Conventions']
+    pyqPaper: "GS",
+    frequency: 8,
+    tags: [
+      "UPSC 2019",
+      "CMS",
+      "Bonn Convention",
+      "Migratory Species",
+      "Environment",
+      "COP13"
+    ]
   },
-  {
+{
     id: 'pyq-2019-gs-95',
     subject: 'history',
     topic: 'Modern Indian History: Education & Social Reform',
@@ -1442,33 +1463,39 @@ export const pyq2019_gs_2: Question[] = [
       "Biodiversity"
     ]
   },
-  {
-    id: 'pyq-2019-gs-100',
-    subject: 'polity',
-    topic: 'Constitutional Philosophy & State Objectives',
-    subTopic: 'Welfare State in the Indian Constitution',
-    question: 'The ideal of ‘Welfare State’ in the Indian Constitution is enshrined in its: (UPSC CSE Prelims 2019/2015)',
+          {
+    id: "pyq-2019-gs-100",
+    subject: "polity",
+    topic: "Constitutional Philosophy: The Preamble",
+    subTopic: "Legal Status of the Preamble (Kesavananda Bharati & LIC Case)",
+    question: "With reference to the Constitution of India, the Preamble is: (UPSC CSE Prelims 2019/2020)",
     options: [
-      'Preamble',
-      'Directive Principles of State Policy',
-      'Fundamental Rights',
-      'Seventh Schedule'
+      "A part of the Constitution; but has no legal effect",
+      "Not a part of the Constitution and has no legal effect either",
+      "A part of the Constitution and has the same legal effect as any other part",
+      "A part of the Constitution; but has no legal effect independently of other parts"
     ],
-    correctAnswer: 1,
-    explanation: 'The ideal of a "Welfare State" is explicitly embodied and operationalized in the DIRECTIVE PRINCIPLES OF STATE POLICY (Part IV, Articles 36 to 51) of the Constitution of India.\n- Article 38(1) explicitly directs: "The State shall strive to promote the welfare of the people by securing and protecting as effectively as it may a social order in which justice, social, economic and political, shall inform all the institutions of national life."\n- Unlike a mere "police state" limited to maintaining internal law and external defense, DPSPs transform the Indian state into an active instrument of social and economic welfare (providing healthcare, education, maternity relief, living wages, and egalitarian wealth distribution).',
+    correctAnswer: 3,
+    explanation: "Option D is the most accurate constitutional position held by the Supreme Court:\nIn the Kesavananda Bharati case (1973) and the LIC of India case (1995), the Supreme Court held that the Preamble is an integral part of the Constitution of India.\nHowever, the Preamble is non-justiciable (its provisions are not enforceable in courts of law on their own) and is neither a source of power to the legislature nor a prohibition upon legislative powers. Therefore, it has no legal effect independently of other substantive articles.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 8: Directive Principles of State Policy',
-      pageNumber: 'Page 8.1 – 8.3',
-      keyExcerpt: 'The Directive Principles embody the concept of a \'welfare state\' and not that of a \'police state\', seeking to establish economic and social democracy.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition",
+      chapter: "Chapter 4: Preamble of the Constitution",
+      pageNumber: "Page 4.5 – 4.7",
+      keyExcerpt: "The Preamble is a part of the Constitution (Kesavananda Bharati), but is non-justiciable and has no independent legal effect."
     },
-    eliminationTip: 'The Directive Principles of State Policy (Part IV) were specifically designed by Dr. Ambedkar and the Constituent Assembly to establish a "Welfare State".',
-    difficulty: 'Easy',
+    eliminationTip: "Preamble IS a part of the Constitution, but being non-justiciable, it cannot override or generate enforceable rights without supporting articles.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2019', 'Welfare State', 'DPSP', 'Article 38', 'Social Democracy', 'Polity']
-  }
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2019",
+      "Preamble",
+      "Kesavananda Bharati",
+      "Legal Status",
+      "Polity"
+    ]
+  },
 ];

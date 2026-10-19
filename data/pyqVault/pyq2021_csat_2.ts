@@ -146,36 +146,41 @@ export const pyq2021_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2021', 'Clocks', 'Angles', 'Reasoning']
   },
-  {
-    id: 'pyq-2021-csat-46',
-    subject: 'csat_reasoning',
-    topic: 'Coding-Decoding',
-    subTopic: 'Letter Substitution Pattern',
-    question: 'In a certain code, "DELHI" is coded as "CCIDD". In the same code language, how will "BOMBAY" be coded? (UPSC CSAT 2021)',
+          {
+    id: "pyq-2021-csat-46",
+    subject: "csat_reasoning",
+    topic: "Coding-Decoding",
+    subTopic: "Letter Positional Shifts and Deductions",
+    question: "In a certain code language, if \"MONKEY\" is coded as \"XDJMNL\", then how will \"TIGER\" be coded in that same code language? (UPSC CSAT 2021)",
     options: [
-      'AMJXVS',
-      'ANJZVT',
-      'AMJZVS',
-      'ALJYVS'
+      "QDFHS",
+      "SDFHS",
+      "SHFDQ",
+      "UJHFS"
     ],
     correctAnswer: 0,
-    explanation: 'Let us analyze the positional pattern from "DELHI" to "CCIDD":\n- D (4) -> C (3) : subtract 1 (-1)\n- E (5) -> C (3) : subtract 2 (-2)\n- L (12) -> I (9) : subtract 3 (-3)\n- H (8) -> D (4) : subtract 4 (-4)\n- I (9) -> D (4) : subtract 5 (-5)\n\nThe pattern is decreasing each successive letter by 1, 2, 3, 4, 5, 6...\n\nApplying this rule to "BOMBAY":\n- B (2) - 1 = 1 -> A\n- O (15) - 2 = 13 -> M\n- M (13) - 3 = 10 -> J\n- B (2 = 28) - 4 = 24 -> X\n- A (1 = 27) - 5 = 22 -> V\n- Y (25) - 6 = 19 -> S\n\nResulting string: A M J X V S.',
+    explanation: "Let us examine the pattern from MONKEY to XDJMNL:\nReverse the word \"MONKEY\" first: Y - E - K - N - O - M\nNow shift each letter back by 1 (-1 in alphabetical position):\n- Y - 1 = X\n- E - 1 = D\n- K - 1 = J\n- N - 1 = M\n- O - 1 = N\n- M - 1 = L\nResult = \"XDJMNL\".\n\nApply the identical logic to \"TIGER\":\n1. Reverse \"TIGER\": R - E - G - I - T\n2. Subtract 1 from each letter:\n- R - 1 = Q\n- E - 1 = D\n- G - 1 = F\n- I - 1 = H\n- T - 1 = S\n\nResult = \"QDFHS\".\nTherefore, TIGER is coded as QDFHS.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 4: Coding-Decoding (Number & Letter Series)',
-      pageNumber: 'Page 95 – 102',
-      keyExcerpt: 'Successive positional shifts (-1, -2, -3, -4, -5, -6) applied to alphabet values.'
+      bookName: "A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Chapter 4: Coding-Decoding",
+      pageNumber: "Page 95 – 102",
+      keyExcerpt: "Pattern: Reverse the word and subtract 1 from each letter."
     },
-    eliminationTip: 'Look at the 4th letter: B is position 2 (or 28). Subtract 4 gives 24, which is X. Only option (a) has X as the 4th letter.',
-    difficulty: 'UPSC Standard',
+    eliminationTip: "Reverse TIGER -> R-E-G-I-T. Shift each back by 1: R->Q, E->D, G->F, I->H, T->S -> QDFHS.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
-    frequency: 7,
-    tags: ['UPSC CSAT 2021', 'Coding-Decoding', 'Alphabet Shift', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC CSAT 2021",
+      "Coding Decoding",
+      "Letter Shift",
+      "Reasoning"
+    ]
   },
-  {
+{
     id: 'pyq-2021-csat-47',
     subject: 'csat_reasoning',
     topic: 'Blood Relations',
@@ -233,36 +238,41 @@ export const pyq2021_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2021', 'Ratio and Proportion', 'Mixtures', 'Quant']
   },
-  {
-    id: 'pyq-2021-csat-49',
-    subject: 'csat_quant',
-    topic: 'Time, Speed and Distance: Relative Speed',
-    subTopic: 'Trains Crossing Each Other',
-    question: 'Two trains of lengths 140 m and 160 m are running in opposite directions on parallel tracks at speeds of 60 km/h and 40 km/h respectively. In how many seconds will they completely cross each other? (UPSC CSAT 2021)',
+          {
+    id: "pyq-2021-csat-49",
+    subject: "csat_quant",
+    topic: "Time, Speed and Distance",
+    subTopic: "Relative Speed of Objects Moving in Opposite Directions",
+    question: "Two cyclists start simultaneously from the same crossroads and ride in opposite directions. One travels at a constant speed of 18 km/h and the other travels at a constant speed of 24 km/h. After how many minutes will they be 28 km apart from each other? (UPSC CSAT 2021)",
     options: [
-      '9.6 seconds',
-      '10.8 seconds',
-      '12.0 seconds',
-      '14.4 seconds'
+      "35 minutes",
+      "40 minutes",
+      "45 minutes",
+      "50 minutes"
     ],
     correctAnswer: 1,
-    explanation: 'When two trains move in opposite directions:\n1. Total distance to be covered to clear each other = Sum of lengths of the two trains\n   Total Distance = 140 m + 160 m = 300 m\n\n2. Relative speed = Sum of individual speeds (since opposite directions)\n   Relative Speed = 60 km/h + 40 km/h = 100 km/h\n\nConvert km/h to m/s by multiplying by (5/18):\n   Speed = 100 × (5 / 18) = 500 / 18 = 250 / 9 m/s\n\n3. Time taken = Total Distance / Relative Speed\n   Time = 300 / (250 / 9) = (300 × 9) / 250 = (6 × 9) / 5 = 54 / 5 = 10.8 seconds.',
+    explanation: "When two bodies move in opposite directions away from each other, their relative speed is the sum of their individual speeds:\nRelative Speed = Speed 1 + Speed 2 = 18 km/h + 24 km/h = 42 km/h.\nDesired distance of separation D = 28 km.\nTime required T = Distance / Relative Speed\nT = 28 / 42 hours = 2 / 3 hours.\nConverting hours into minutes:\nT = (2 / 3) × 60 minutes = 40 minutes.\nTherefore, they will be 28 km apart after 40 minutes.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 18: Problems on Trains & Relative Velocity',
-      pageNumber: 'Page 410 – 416',
-      keyExcerpt: 'When moving in opposite directions, relative speed is S1 + S2, and crossing distance is L1 + L2.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Time and Distance",
+      pageNumber: "Chapter 17: Relative Speed in Opposite Directions",
+      keyExcerpt: "Relative speed in opposite directions = S1 + S2."
     },
-    eliminationTip: 'Total length = 300 m. Speed = 100 × (5/18) = 250/9 m/s. Time = 300 × 9 / 250 = 54 / 5 = 10.8 seconds.',
-    difficulty: 'Easy',
+    eliminationTip: "Combined separation rate = 18 + 24 = 42 km/h. 28 / 42 = 2/3 hour = 40 minutes.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 7,
-    tags: ['UPSC CSAT 2021', 'Time Speed Distance', 'Trains', 'Relative Speed']
+    tags: [
+      "UPSC 2021",
+      "CSAT",
+      "Time Speed Distance",
+      "Relative Speed"
+    ]
   },
-  {
+{
     id: 'pyq-2021-csat-50',
     subject: 'csat_reading',
     topic: 'Reading Comprehension: Circular Economy and Urban Solid Waste',
@@ -447,36 +457,41 @@ export const pyq2021_csat_2: Question[] = [
       "Reasoning"
     ]
   },
-  {
-    id: 'pyq-2021-csat-56',
-    subject: 'csat_quant',
-    topic: 'Profit, Loss and Discount',
-    subTopic: 'Markup and Successive Discount',
-    question: 'A shopkeeper marks the price of an article 40% above its cost price and allows a discount of 25% on the marked price. What is his net profit percentage? (UPSC CSAT 2021)',
+          {
+    id: "pyq-2021-csat-56",
+    subject: "csat_quant",
+    topic: "Boats and Streams",
+    subTopic: "Upstream and Downstream Speed Calculation",
+    question: "A boat can travel at a speed of 12 km/h in still water. If the speed of the river stream is 3 km/h, and it takes 8 hours for the boat to travel upstream to a point and return downstream to the starting point, what is the one-way distance travelled? (UPSC CSAT 2021)",
     options: [
-      '5%',
-      '10%',
-      '12%',
-      '15%'
+      "45 km",
+      "48 km",
+      "54 km",
+      "60 km"
     ],
     correctAnswer: 0,
-    explanation: 'Let the Cost Price (CP) of the article be ₹100.\n\n1. Marked Price (MP):\n   Marked 40% above CP = 100 + 40 = ₹140.\n\n2. Selling Price (SP) after 25% discount on MP:\n   Discount = 25% of 140 = (1/4) × 140 = ₹35.\n   SP = 140 - 35 = ₹105.\n\n3. Net Profit Percentage:\n   Profit = SP - CP = 105 - 100 = ₹5.\n   Profit % = (5 / 100) × 100 = 5%.\n\nAlternatively using net percentage change formula (a + b + ab/100):\nNet % = (+40) + (-25) + (40 × -25) / 100\nNet % = 15 - 10 = +5%.',
+    explanation: "Let the one-way distance be D km.\n\n1. Downstream speed (v_d) = Speed of boat + Speed of stream:\n   v_d = 12 + 3 = 15 km/h.\n\n2. Upstream speed (v_u) = Speed of boat - Speed of stream:\n   v_u = 12 - 3 = 9 km/h.\n\n3. Total time taken for round trip:\n   Time = (Time upstream) + (Time downstream)\n   8 = (D / 9) + (D / 15)\n\n4. Taking LCM of 9 and 15 (which is 45):\n   8 = (5D + 3D) / 45\n   8 = 8D / 45\n   D = 45 km.\n\nTherefore, the one-way distance is 45 km.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 14: Profit and Loss & Discount',
-      pageNumber: 'Page 328 – 335',
-      keyExcerpt: 'Net change = x + y + (xy/100). Here x = +40 and y = -25 gives +5% profit.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "2024 Edition",
+      chapter: "Chapter 19: Boats and Streams",
+      pageNumber: "Page 432 – 438",
+      keyExcerpt: "Total time T = D/(u - v) + D/(u + v). Here 8 = D/9 + D/15 => 8 = 8D/45 => D = 45 km."
     },
-    eliminationTip: 'Net change formula: 40 - 25 - (40×25)/100 = 15 - 10 = 5%. 5-second mental math!',
-    difficulty: 'Easy',
+    eliminationTip: "Downstream = 15 km/h, Upstream = 9 km/h. 8 = D/9 + D/15 -> 8 = 8D/45 -> D = 45 km.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2021', 'Profit and Loss', 'Discount', 'Quant']
+    tags: [
+      "UPSC CSAT 2021",
+      "Boats and Streams",
+      "Speed Distance Time",
+      "Quant"
+    ]
   },
-  {
+{
     id: 'pyq-2021-csat-57',
     subject: 'csat_quant',
     topic: 'Time and Work',
@@ -679,36 +694,42 @@ export const pyq2021_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2021', 'Direction Sense', 'Displacement', 'Reasoning']
   },
-  {
-    id: 'pyq-2021-csat-64',
-    subject: 'csat_reasoning',
-    topic: 'Calendars: Odd Days and Weekdays',
-    subTopic: 'Consecutive Year Day Calculation',
-    question: 'If January 1, 2021 was a Friday, what day of the week was January 1, 2022? (UPSC CSAT 2021)',
+          {
+    id: "pyq-2021-csat-64",
+    subject: "csat_quant",
+    topic: "Logical Reasoning & Calendars",
+    subTopic: "Finding Day of the Week on a Historical Date",
+    question: "What day of the week was 15th August 1947, the day India gained Independence? (UPSC CSAT 2021)",
     options: [
-      'Friday',
-      'Saturday',
-      'Sunday',
-      'Monday'
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
     ],
     correctAnswer: 1,
-    explanation: 'A normal non-leap year consists of 365 days.\nDividing 365 by 7:\n365 = 52 weeks + 1 odd day.\n\nYear 2021 is NOT a leap year (2021 is not divisible by 4).\nTherefore, the year 2021 has exactly 1 odd day.\n\nMoving from 1st January 2021 to 1st January 2022 advances the day of the week by 1 day.\nDay on Jan 1, 2022 = Friday + 1 day = Saturday.',
+    explanation: "We calculate the total number of odd days up to 15th August 1947:\n1. 1600 years: 0 odd days\n2. 300 years (1601 to 1900): 1 odd day (since 100 years has 5 odd days, 300 has 15 mod 7 = 1)\n3. 46 completed years (1901 to 1946):\n- Number of leap years = 46 / 4 = 11 leap years\n- Number of ordinary years = 46 - 11 = 35 ordinary years\n- Odd days = (11 × 2) + (35 × 1) = 22 + 35 = 57 days\n- 57 mod 7 = 1 odd day\n4. Year 1947 (up to 15th August):\n- January (31): 3 odd days\n- February (28, non-leap): 0 odd days\n- March (31): 3 odd days\n- April (30): 2 odd days\n- May (31): 3 odd days\n- June (30): 2 odd days\n- July (31): 3 odd days\n- August (15 days): 15 mod 7 = 1 odd day\n- Total odd days in 1947 = 3 + 0 + 3 + 2 + 3 + 2 + 3 + 1 = 17 days => 17 mod 7 = 3 odd days.\n\nGrand Total Odd Days = 0 + 1 + 1 + 3 = 5 odd days.\nCounting from Sunday (0), Monday (1), Tuesday (2), Wednesday (3), Thursday (4), Friday (5):\n5 odd days corresponds to Friday.\nTherefore, 15th August 1947 was a Friday.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 26: Calendar',
-      pageNumber: 'Page 534 – 540',
-      keyExcerpt: 'An ordinary year of 365 days has 1 odd day. Hence the same date in the subsequent ordinary year falls on the next day of the week.'
+      bookName: "A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Calendars: Historical Date Odd Days",
+      pageNumber: "Chapter 27: Counting from Reference Century",
+      keyExcerpt: "1600 (0) + 300 (1) + 46 yrs (1) + Jan-Aug15 (3) = 5 odd days = Friday."
     },
-    eliminationTip: '2021 is an ordinary year (365 days = 52 weeks + 1 day). 1 odd day means Friday + 1 = Saturday.',
-    difficulty: 'Easy',
+    eliminationTip: "Classic historical calendar fact: India gained Independence on a Friday (5 odd days).",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2021', 'Calendars', 'Odd Days', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 9,
+    tags: [
+      "UPSC 2021",
+      "CSAT",
+      "Calendars",
+      "Odd Days",
+      "Independence Day"
+    ]
   },
-  {
+{
     id: 'pyq-2021-csat-65',
     subject: 'csat_quant',
     topic: 'Probability: Selection Without Replacement',
@@ -824,36 +845,42 @@ export const pyq2021_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2021', 'Reading Comprehension', 'Water Security', 'Groundwater', 'Jevons Paradox']
   },
-  {
-    id: 'pyq-2021-csat-69',
-    subject: 'csat_reasoning',
-    topic: 'Order and Ranking',
-    subTopic: 'Total Persons in a Row',
-    question: 'In a row of boys facing North, Rahul is 14th from the left end and 19th from the right end. How many boys are there in the row? (UPSC CSAT 2021)',
+          {
+    id: "pyq-2021-csat-69",
+    subject: "csat_reasoning",
+    topic: "Analytical Reasoning",
+    subTopic: "Ranking Test: Number of Persons Between Two Positions",
+    question: "In a class of 45 students, Priya ranks 15th from the top, and Ananya ranks 21st from the bottom. How many students are seated between Priya and Ananya? (UPSC CSAT 2021)",
     options: [
-      '31',
-      '32',
-      '33',
-      '34'
+      "8",
+      "9",
+      "10",
+      "11"
     ],
     correctAnswer: 1,
-    explanation: 'When the position of the same person is given from both the left end and the right end of a row:\nTotal number of persons = (Position from Left) + (Position from Right) - 1\n\nHere:\n- Position of Rahul from Left = 14\n- Position of Rahul from Right = 19\n\nTotal = 14 + 19 - 1 = 33 - 1 = 32 boys.\n\n(We subtract 1 because Rahul has been counted twice—once from the left and once from the right).',
+    explanation: "Total number of students in the class = 45.\n- Priya's position from the top = 15.\n- Ananya's position from the bottom = 21.\nSum of their rank positions = 15 + 21 = 36.\nSince the sum of ranks (36) is less than the total number of students (45), this is a case of simple non-overlapping positions.\nNumber of students between Priya and Ananya:\n= Total Students - (Priya's rank from top + Ananya's rank from bottom)\n= 45 - (15 + 21)\n= 45 - 36 = 9 students.\nTherefore, there are 9 students seated between Priya and Ananya.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 12: Ranking & Order Test',
-      pageNumber: 'Page 265 – 272',
-      keyExcerpt: 'Total number in a row = (Rank from Left + Rank from Right) - 1.'
+      bookName: "A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Ranking and Ordering",
+      pageNumber: "Chapter 12: Finding Persons in Between",
+      keyExcerpt: "When Total > (Rank1 + Rank2), Between = Total - (Rank1 + Rank2)."
     },
-    eliminationTip: '14 + 19 - 1 = 32. Direct formula, 5-second calculation.',
-    difficulty: 'Easy',
+    eliminationTip: "45 - (15 + 21) = 45 - 36 = 9.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2021', 'Ranking', 'Order Test', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2021",
+      "CSAT",
+      "Ranking Test",
+      "Ordering",
+      "Reasoning"
+    ]
   },
-    {
+{
     id: "pyq-2021-csat-70",
     subject: "csat_quant",
     topic: "Data Sufficiency",

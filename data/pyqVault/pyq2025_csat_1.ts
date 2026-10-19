@@ -320,36 +320,41 @@ export const pyq2025_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Divisibility Rules', 'Number System', 'Coprime Factors']
   },
-  {
-    id: 'pyq-2025-csat-12',
-    subject: 'csat_quant',
-    topic: 'Time and Work / Alternate Days',
-    subTopic: 'Efficiency and Alternating Shifts',
-    question: 'Three persons, P, Q, and R, can independently complete a work in 10 days, 15 days, and 30 days respectively. P works on all days, while Q and R assist P on every third day together. In how many days will the entire work be completed? (UPSC CSAT 2025)',
+          {
+    id: "pyq-2025-csat-12",
+    subject: "csat_quant",
+    topic: "Time and Work",
+    subTopic: "Simultaneous Work by Three Individuals",
+    question: "Three persons, P, Q, and R, can independently complete a work in 10 days, 15 days, and 30 days respectively. If they all work together, in how many days will the entire work be completed? (UPSC CSAT 2025)",
     options: [
-      '6 days',
-      '7.5 days',
-      '8 days',
-      '9 days'
+      "4 days",
+      "5 days",
+      "6 days",
+      "7.5 days"
     ],
-    correctAnswer: 2,
-    explanation: 'Let total work = LCM(10, 15, 30) = 30 units.\n- P\'s efficiency = 30 / 10 = 3 units/day\n- Q\'s efficiency = 30 / 15 = 2 units/day\n- R\'s efficiency = 30 / 30 = 1 unit/day\n\nWork done in a 3-day cycle:\n- Day 1: P alone = 3 units\n- Day 2: P alone = 3 units\n- Day 3: P, Q, and R together = 3 + 2 + 1 = 6 units\nTotal work in 1 cycle (3 days) = 3 + 3 + 6 = 12 units.\n\nAfter 2 full cycles (6 days):\nWork completed = 2 × 12 = 24 units.\nRemaining work = 30 - 24 = 6 units.\n- Day 7: P works alone and does 3 units (remaining = 3 units).\n- Day 8: P works alone and does 3 units (remaining = 0 units).\nTotal time taken = 6 + 2 = 8 days.',
+    correctAnswer: 1,
+    explanation: "Let the total work be the LCM of 10, 15, and 30 = 30 units.\n- Efficiency of P = 30 / 10 = 3 units/day.\n- Efficiency of Q = 30 / 15 = 2 units/day.\n- Efficiency of R = 30 / 30 = 1 unit/day.\nCombined efficiency of P, Q, and R = 3 + 2 + 1 = 6 units/day.\nTime taken to complete the total work of 30 units:\nTime = Total Work / Combined Efficiency = 30 / 6 = 5 days.\nTherefore, all three working together will complete the work in 5 days.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 15: Time and Work',
-      pageNumber: 'Page 288 – 294',
-      keyExcerpt: 'Calculate work per cycle, evaluate integer cycles, then track individual days sequentially.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Time and Work",
+      pageNumber: "Chapter 15: Unit Method for Three Individuals",
+      keyExcerpt: "Total days = LCM(t1, t2, t3) / Sum of efficiencies."
     },
-    eliminationTip: '3-day cycle yields 12 units. In 6 days = 24 units. Remaining 6 units take P (3 units/day) exactly 2 more days. 6 + 2 = 8 days.',
-    difficulty: 'Moderate',
+    eliminationTip: "Combined rate: 1/10 + 1/15 + 1/30 = (3+2+1)/30 = 6/30 = 1/5. Total time = 5 days.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2025', 'Time and Work', 'Cycle Method', 'Efficiency']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Time and Work",
+      "Unit Method"
+    ]
   },
-  {
+{
     id: 'pyq-2025-csat-13',
     subject: 'csat_quant',
     topic: 'Number System & Remainder Theorem',

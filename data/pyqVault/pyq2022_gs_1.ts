@@ -710,36 +710,42 @@ export const pyq2022_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2022', 'Namdapha', 'National Parks', 'Arunachal Pradesh', 'Climate Zones']
   },
-  {
-    id: 'pyq-2022-gs-25',
-    subject: 'economy',
-    topic: 'International Debt Initiatives & Multilateral Forums',
-    subTopic: 'G20 Common Framework for Debt Treatments',
-    question: 'With reference to the "G20 Common Framework for Debt Treatments", consider the following statements:\n\n1. It is an initiative endorsed by the G20 together with the Paris Club.\n2. It is an initiative to support low-income countries with unsustainable debt.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2022)',
+          {
+    id: "pyq-2022-gs-25",
+    subject: "international",
+    topic: "International Financial Architecture & Sovereign Debt",
+    subTopic: "G20 Common Framework for Debt Treatments",
+    question: "With reference to the \"G20 Common Framework for Debt Treatments\", consider the following statements:\n\n1. It is an initiative endorsed by the G20 together with the Paris Club creditors.\n2. It is an initiative specifically established to coordinate debt restructuring for low-income countries with unsustainable sovereign debt burdens.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2022)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
     ],
     correctAnswer: 2,
-    explanation: 'Both statements are correct:\nStatement 1 is correct: The "Common Framework for Debt Treatments beyond the DSSI" was jointly endorsed in November 2020 by the G20 nations and the Paris Club of sovereign creditor countries.\nStatement 2 is correct: Its primary objective is to coordinate structured, multi-creditor sovereign debt restructuring and relief for low-income countries (eligible under the Debt Service Suspension Initiative) facing sovereign insolvency risks following the pandemic.',
+    explanation: "Both statements are correct:\n- Statement 1 is correct: The G20 Common Framework for Debt Treatments beyond the DSSI was launched in November 2020 by the G20 nations in direct conjunction with the Paris Club of official bilateral creditors.\n- Statement 2 is correct: It was created to provide structural debt relief, maturity reprofiling, or debt write-downs on a case-by-case basis for IDA-eligible low-income developing nations facing severe sovereign solvency distress following external economic shocks (countries like Zambia, Ghana, and Chad have utilized this framework). It notably requires comparable debt relief terms from private commercial lenders.",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition',
-      chapter: 'Chapter 16: International Economic Organizations (G20 & Multilateral Debt)',
-      pageNumber: 'Page 16.24 – 16.28',
-      keyExcerpt: 'G20 Common Framework was established in coordination with the Paris Club to coordinate debt relief for low-income countries.'
+      bookName: "Indian Economy by Ramesh Singh / IMF-World Bank Annual Reports",
+      edition: "15th Edition (2024)",
+      chapter: "Chapter 14: International Financial Institutions and Debt Crises",
+      pageNumber: "Page 14.38 – 14.41",
+      keyExcerpt: "G20 Common Framework is partnered with the Paris Club to coordinate debt relief for low-income nations."
     },
-    eliminationTip: 'The G20 Common Framework is the official joint mechanism between G20 and Paris Club to tackle sovereign insolvency for low-income countries. Both statements are correct.',
-    difficulty: 'Moderate',
+    eliminationTip: "Both statements are standard definitions of the G20-Paris Club debt resolution architecture.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
-    frequency: 7,
-    tags: ['UPSC 2022', 'G20', 'Common Framework', 'Paris Club', 'Sovereign Debt']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2022",
+      "G20 Common Framework",
+      "Paris Club",
+      "Sovereign Debt",
+      "International Relations"
+    ]
   },
-  {
+{
     id: 'pyq-2022-gs-26',
     subject: 'science_tech',
     topic: 'Microbiology & Food Biotechnology',

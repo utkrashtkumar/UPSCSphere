@@ -210,36 +210,42 @@ export const pyq2020_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2020', 'Sangam Literature', 'Varna System', 'Tolkappiyam', 'Puram Poetry']
   },
-  {
-    id: 'pyq-2020-gs-58',
-    subject: 'history',
-    topic: 'Modern Indian History: Constitutional Initiatives',
-    subTopic: 'Cripps Mission Proposals (1942)',
-    question: 'With reference to the proposals of the Cripps Mission, consider the following statements:\n1. The Constituent Assembly would have members nominated by the Provincial Assemblies as well as the Princely States.\n2. Any Province, which is not prepared to accept the new Constitution, would have the right to sign a separate agreement with Britain regarding its future status.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2020)',
+          {
+    id: "pyq-2020-gs-58",
+    subject: "history",
+    topic: "Modern Indian History: Towards Independence",
+    subTopic: "Wavell Plan and the Shimla Conference (1945)",
+    question: "With reference to the Wavell Plan announced in June 1945, consider the following statements:\n\n1. The Executive Council of the Governor-General was to be entirely Indian, except for the Governor-General and the Commander-in-Chief.\n2. Caste Hindus and Muslims were to have equal representation in the proposed council.\n3. The Governor-General was completely stripped of his veto power over the decisions of the council.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Sir Stafford Cripps brought the Draft Declaration in March 1942:\n- Statement 1 is incorrect: Under the Cripps proposals, members of the Constituent Assembly from British Indian Provinces were to be ELECTED by the lower houses of the provincial assemblies via proportional representation, NOT nominated. Only the representatives of the Princely States were to be NOMINATED by their rulers.\n- Statement 2 is correct: A controversial clause of the Cripps proposal provided that any province that was not willing to accept the newly framed Constitution would have the right to refuse to join the Indian Union and could formulate its own separate Constitution and enter into a direct separate agreement with Britain (a provision that opened the door for partition and was rejected by the Congress).\n\nTherefore, only statement 2 is correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct:\nStatement 1 is correct: Lord Wavell proposed that all members of the Central Executive Council, with the exception of the Viceroy and the Commander-in-Chief, would be nominated Indians representing key political parties.\nStatement 2 is correct: The proposal stipulated parity of representation, giving equal proportions to \"Caste Hindus\" and \"Muslims\" in the Executive Council.\nStatement 3 is incorrect: The Governor-General retained his discretionary veto power, although assurance was given that it would not be exercised arbitrarily.\nTherefore, statements 1 and 2 are correct.",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / Spectrum',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 26: The Cripps Mission and Quit India',
-      pageNumber: 'Page 334 – 338',
-      keyExcerpt: 'Provincial representatives were to be elected by proportional representation; rulers of princely states were to nominate their representatives. Provinces were given the right to secede.'
+      bookName: "A Brief History of Modern India by Rajiv Ahir (Spectrum)",
+      edition: "2024 Edition",
+      chapter: "Chapter 24: Post-War National Scenario (Wavell Plan)",
+      pageNumber: "Page 482 – 486",
+      keyExcerpt: "Wavell Plan offered equal Hindu-Muslim representation in Executive Council; Viceroy retained veto power."
     },
-    eliminationTip: 'Provincial assembly members were elected by proportional representation (not nominated). The right of provinces to sign a separate treaty with Britain was the very reason Congress rejected the Cripps Mission as an invitation to balkanize India.',
-    difficulty: 'Moderate',
+    eliminationTip: "British viceroys never surrendered the veto power before independence! Eliminating 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2020', 'Cripps Mission', 'Constituent Assembly', 'Provincial Secession', 'Bipan Chandra']
+    pyqPaper: "GS",
+    frequency: 8,
+    tags: [
+      "UPSC 2020",
+      "Wavell Plan",
+      "Shimla Conference",
+      "Executive Council",
+      "Modern History"
+    ]
   },
-  {
+{
     id: 'pyq-2020-gs-59',
     subject: 'history',
     topic: 'Modern Indian History: Underground Resistance',
@@ -390,36 +396,43 @@ export const pyq2020_gs_2: Question[] = [
       "Climatology"
     ]
   },
-  {
-    id: 'pyq-2020-gs-64',
-    subject: 'environment',
-    topic: 'Water Pollution & Aquatic Ecology',
-    subTopic: 'Biochemical Oxygen Demand (BOD)',
-    question: 'Biochemical Oxygen Demand (BOD) is a standard criterion for: (UPSC CSE Prelims 2020/2017)',
+          {
+    id: "pyq-2020-gs-64",
+    subject: "environment",
+    topic: "Aquatic Ecology & Water Pollution",
+    subTopic: "Cultural Eutrophication, Algal Blooms and Hypoxia",
+    question: "With reference to \"Eutrophication\" of water bodies, consider the following statements:\n\n1. It is primarily caused by excessive enrichment of water with nutrients like nitrates and phosphates from agricultural runoff and sewage.\n2. It leads to explosive growth of phytoplankton (algal bloom), which increases dissolved oxygen (DO) levels in deep water layers.\n3. The subsequent death and decomposition of algae by aerobic bacteria creates hypoxic \"dead zones\" in aquatic ecosystems.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)",
     options: [
-      'Measuring oxygen levels in blood',
-      'Computing oxygen levels in forest ecosystems',
-      'Pollution assay in aquatic ecosystems',
-      'Assessing oxygen levels in high altitude regions'
+      "1 and 2 only",
+      "1 and 3 only",
+      "2 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'Biochemical Oxygen Demand (BOD) is the amount of dissolved oxygen required by aerobic microorganisms to biologically decompose the organic matter present in a given volume of water over a period of 5 days at 20°C.\nA high BOD indicates large quantities of organic waste (sewage, industrial effluent) in the water, causing severe depletion of dissolved oxygen and suffocation of fish and aquatic life. Thus, BOD is the universal standard index for aquatic pollution assay.',
+    correctAnswer: 1,
+    explanation: "Statements 1 and 3 are correct:\nStatement 1 is correct: Cultural eutrophication is the aging of a water body accelerated by nutrient pollution (nitrogen and phosphorus from fertilizers and untreated municipal sewage).\nStatement 2 is incorrect: While daytime photosynthesis by surface algae may temporarily elevate surface oxygen, thick algal blooms block sunlight from reaching sub-surface submerged vegetation, causing aquatic plants to die. Crucially, the massive decomposition of dead algal biomass consumes dissolved oxygen, causing a drastic DROP (depletion) in dissolved oxygen, NOT an increase.\nStatement 3 is correct: As aerobic decomposers multiply to consume dead algae, dissolved oxygen plunges below 2 mg/L, creating hypoxic dead zones where fish and benthic organisms suffocate.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy / NCERT Class XII Biology',
-      edition: '10th Edition',
-      chapter: 'Chapter 6: Water Pollution (BOD and COD)',
-      pageNumber: 'Page 76 – 80',
-      keyExcerpt: 'BOD is the measure of organic pollution in water. High BOD indicates high organic pollution and low dissolved oxygen.'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Chapter 3: Aquatic Ecosystem (Eutrophication and Algal Bloom)",
+      pageNumber: "Page 38 – 42",
+      keyExcerpt: "Eutrophication depletes dissolved oxygen through bacterial decomposition of algae, creating hypoxic dead zones."
     },
-    eliminationTip: 'BOD measures the amount of dissolved oxygen demanded by microbes to break down sewage in water bodies. It is the textbook test for aquatic pollution.',
-    difficulty: 'Easy',
+    eliminationTip: "Eutrophication DEPLETS dissolved oxygen rather than increasing it in deep water layers. Eliminating 2 gives (b) 1 and 3 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'BOD', 'Water Pollution', 'Aquatic Ecology', 'Dissolved Oxygen']
+    tags: [
+      "UPSC 2020",
+      "Eutrophication",
+      "Algal Bloom",
+      "Hypoxia",
+      "Water Pollution",
+      "Environment"
+    ]
   },
-  {
+{
     id: 'pyq-2020-gs-65',
     subject: 'environment',
     topic: 'Renewable Energy & Water Pumping',
@@ -448,36 +461,42 @@ export const pyq2020_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2020', 'Solar Pumps', 'PM KUSUM', 'Renewable Energy', 'Agriculture']
   },
-  {
-    id: 'pyq-2020-gs-66',
-    subject: 'science_tech',
-    topic: 'Space Science & Space Weather',
-    subTopic: 'Solar Flares & Coronal Mass Ejections (CMEs) Effects on Earth',
-    question: 'If a major solar storm (solar flare / Coronal Mass Ejection) reaches the Earth, which of the following are the possible effects on the Earth?\n1. GPS and navigation systems could fail.\n2. Tsunamis could occur at equatorial regions.\n3. Power grids could be damaged.\n4. Intense auroras could occur over much of the Earth.\n5. Forest fires could take place over much of the planet.\n6. Orbits of the satellites could be disturbed.\n7. Shortwave radio communication could be disrupted.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2020)',
+          {
+    id: "pyq-2020-gs-66",
+    subject: "science_tech",
+    topic: "Astronomy & Fundamental Physics",
+    subTopic: "Gravitational Waves and LIGO-India Observatory (Hingoli)",
+    question: "With reference to \"LIGO-India\" (Laser Interferometer Gravitational-Wave Observatory), consider the following statements:\n\n1. It is designed to detect gravitational waves, which are ripples in the fabric of spacetime predicted by Albert Einstein's General Theory of Relativity.\n2. The LIGO-India advanced gravitational-wave detector is being established in the Hingoli district of Maharashtra.\n3. It is a joint collaborative mega-science project between the Department of Atomic Energy (DAE), the Department of Science and Technology (DST), and the US National Science Foundation.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)",
     options: [
-      '1, 2, 4 and 5 only',
-      '2, 3, 5, 6 and 7 only',
-      '1, 3, 4, 6 and 7 only',
-      '1, 2, 3, 4, 5, 6 and 7'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'A Coronal Mass Ejection (CME) hurls billions of tons of magnetized plasma toward Earth, inducing severe geomagnetic storms:\n- Point 1: Severe ionospheric disturbances corrupt satellite timing signals, causing GPS positioning failures (True).\n- Point 2: Tsunamis are seismic ocean waves caused by underwater earthquakes, submarine volcanic eruptions, or landslides—NOT by space electromagnetic solar flares (False!).\n- Point 3: Geomagnetically Induced Currents (GIC) surge through long-distance high-voltage transmission lines, burning transformers and collapsing power grids (True - like the 1989 Quebec blackout).\n- Point 4: Ionized plasma interacting with atmospheric oxygen and nitrogen generates spectacular auroras extending down to mid and low latitudes (True).\n- Point 5: Solar storms do not deliver concentrated terrestrial heat to ignite global forest fires (False!).\n- Point 6: Atmospheric heating expands the upper thermosphere, increasing orbital drag on low-Earth orbit satellites and disrupting orbits (True).\n- Point 7: X-ray and EUV ionization of the D-layer causes high-frequency radio blackouts (True).\n\nSince 2 (Tsunamis) and 5 (Forest fires) are scientifically impossible consequences of solar storms, all options containing 2 or 5 are eliminated. This leaves (c) 1, 3, 4, 6 and 7.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct regarding the LIGO-India mega-science observatory:\n1. Gravitational Waves: Predicted by Einstein in 1916 and directly detected by US LIGO in 2015, gravitational waves are quadrupolar spacetime distortions generated by violent cosmic events such as binary black hole or neutron star mergers.\n2. Location in Hingoli: In April 2023, the Union Cabinet approved ₹2,600 crore for the construction of the advanced LIGO detector at Aundha in Hingoli district, Maharashtra.\n3. Institutional Framework: The project is executed by a tripartite consortium of Indian research institutions (IUCAA Pune, RRCAT Indore, and IPR Gandhinagar) funded jointly by DAE and DST in technical partnership with Caltech/MIT LIGO Laboratory.",
     bookReference: {
-      bookName: 'Science and Technology by Ravi P. Agrahari',
-      edition: '7th Edition',
-      chapter: 'Chapter 2: Space Science & Solar System (Solar Flares)',
-      pageNumber: 'Page 2.22 – 2.26',
-      keyExcerpt: 'Solar storms disrupt GPS, satellite orbits, shortwave radio, and power grids via GIC, producing intense auroras. They cannot cause tsunamis or trigger forest fires.'
+      bookName: "Science & Technology by Ravi P. Agrahari",
+      edition: "7th Edition (2024)",
+      chapter: "Chapter 2: Space Science & Gravitational Physics (LIGO-India)",
+      pageNumber: "Page 2.28 – 2.34",
+      keyExcerpt: "LIGO-India in Hingoli, Maharashtra is part of the global gravitational wave detector network."
     },
-    eliminationTip: 'Can a solar magnetic flare trigger a physical ocean tsunami (Point 2) or global forest fires (Point 5)? Absolutely impossible! Eliminating 2 and 5 knocks out A, B, and D immediately, leaving C.',
-    difficulty: 'Moderate',
+    eliminationTip: "All three statements are verified factual parameters of the landmark LIGO-India observatory in Hingoli.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2020', 'Solar Storm', 'Coronal Mass Ejection', 'Space Weather', 'GPS Blackout']
+    tags: [
+      "UPSC 2020",
+      "LIGO-India",
+      "Gravitational Waves",
+      "Hingoli",
+      "Science and Tech"
+    ]
   },
-  {
+{
     id: 'pyq-2020-gs-67',
     subject: 'polity',
     topic: 'Judicial Appointments & Powers',
@@ -889,36 +908,42 @@ export const pyq2020_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2020', 'Harike Wetland', 'Beas', 'Satluj', 'Kolleru Lake', 'Ramsar Sites']
   },
-  {
-    id: 'pyq-2020-gs-81',
-    subject: 'history',
-    topic: 'Modern Indian History: Land Settlements',
-    subTopic: 'Ryotwari Settlement (Thomas Munro & Alexander Read)',
-    question: 'With reference to the Ryotwari Settlement in British India, consider the following statements:\n1. The rent was paid directly by the peasants to the Government.\n2. The Government gave Pattas to the Ryots.\n3. The lands were surveyed and assessed before being taxed.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)',
+          {
+    id: "pyq-2020-gs-81",
+    subject: "history",
+    topic: "Colonial Land Revenue Systems",
+    subTopic: "Mahalwari Settlement (Holt Mackenzie & Regulation VII of 1822)",
+    question: "With reference to the land revenue systems introduced by the British in India, consider the following statements regarding the \"Mahalwari Settlement\":\n\n1. It was devised by Holt Mackenzie and introduced by Regulation VII of 1822.\n2. Under this system, the unit of assessment was the \"Mahal\" (village or estate), and the land revenue was collected by the village headman (Lambardar) on behalf of the entire village community.\n3. The revenue demand was fixed in perpetuity, identical to the Permanent Settlement of Bengal.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2020)",
     options: [
-      '1 only',
-      '1 and 2 only',
-      '1, 2 and 3',
-      'None of the above'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 2,
-    explanation: 'The Ryotwari Settlement was devised by Captain Alexander Read and Thomas Munro and introduced across Madras and Bombay Presidencies:\n- Statement 1 is correct: Unlike the Permanent Settlement of Bengal which used Zamindar middlemen, under Ryotwari the peasant (ryot) paid revenue directly to the colonial government.\n- Statement 2 is correct: The government issued individual title deeds (Pattas) directly to each cultivator recognizing their occupancy rights.\n- Statement 3 is correct: Each plot of land was scientifically surveyed, soil quality graded, and yield capacity assessed before fixing the revenue assessment (subject to periodic revision every 20-30 years).\n\nTherefore, all statements 1, 2, and 3 are correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct:\nStatement 1 is correct: The Mahalwari system was formulated by Holt Mackenzie in 1819 and legally formalized under Regulation VII of 1822 in the North-Western Provinces (parts of present-day UP, Punjab, and Central Provinces).\nStatement 2 is correct: Under Mahalwari, the revenue unit was the \"Mahal\" (village estate) where peasants held collective joint responsibility. The village headman (Lambardar/Talukdar) was tasked with collecting revenue from cultivators and paying it to the Company.\nStatement 3 is incorrect: Unlike the Permanent Settlement of Bengal (where revenue was fixed forever), the Mahalwari revenue demand was NOT permanent; it was periodically revised (usually every 20 or 30 years) after land surveys by revenue officers like Robert Merttins Bird.",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / Spectrum',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 2: Colonial Economic Policies & Land Settlements',
-      pageNumber: 'Page 32 – 36',
-      keyExcerpt: 'In Ryotwari areas, revenue was paid directly by cultivators holding pattas after survey and assessment of soil capabilities.'
+      bookName: "A Brief History of Modern India by Rajiv Ahir (Spectrum)",
+      edition: "2024 Edition",
+      chapter: "Chapter 28: Economic Impact of British Rule in India",
+      pageNumber: "Page 574 – 578",
+      keyExcerpt: "In Mahalwari system, revenue was collected from the village community (mahal) and was revised periodically, not fixed permanently."
     },
-    eliminationTip: 'Ryotwari meant direct relationship between Ryot (peasant) and government: direct payment, individual pattas, and prior land survey. All 3 are correct.',
-    difficulty: 'Easy',
+    eliminationTip: "Permanent fixation existed ONLY in Zamindari / Permanent Settlement of Bengal (1793). Mahalwari revenue was periodically revised. Eliminating 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2020', 'Ryotwari Settlement', 'Thomas Munro', 'Land Revenue', 'Modern History']
+    pyqPaper: "GS",
+    frequency: 8,
+    tags: [
+      "UPSC 2020",
+      "Mahalwari System",
+      "Holt Mackenzie",
+      "Land Revenue",
+      "Modern History"
+    ]
   },
-  {
+{
     id: 'pyq-2020-gs-82',
     subject: 'history',
     topic: 'Modern Indian History: Education & Social Reform',

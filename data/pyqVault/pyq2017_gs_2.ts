@@ -385,36 +385,42 @@ export const pyq2017_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2017', 'Current Account Deficit', 'CAD', 'Devaluation', 'Export Subsidies', 'Balance of Payments', 'Economy']
   },
-  {
-    id: 'pyq-2017-gs-64',
-    subject: 'economy',
-    topic: 'Agricultural Insurance & Risk Mitigation',
-    subTopic: 'Pradhan Mantri Fasal Bima Yojana (PMFBY)',
-    question: 'With reference to \'Pradhan Mantri Fasal Bima Yojana\' (PMFBY), consider the following statements:\n\n1. Under this scheme, farmers have to pay a uniform premium of two percent for any crop they cultivate in any season of the year.\n2. This scheme covers post-harvest losses arising out of cyclones and unseasonal rains.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2017)',
+          {
+    id: "pyq-2017-gs-64",
+    subject: "economy",
+    topic: "Agricultural Inputs & Soil Health",
+    subTopic: "Soil Health Card Scheme",
+    question: "With reference to the \"Soil Health Card Scheme\", consider the following statements:\n\n1. It provides a printed report to farmers assessing the nutrient status of their soil across 12 physical and chemical parameters.\n2. The card is issued to farmers once every 3 years so that they can apply targeted fertilizer dosages.\n3. The scheme is completely funded by the World Bank with zero financial contribution from the Central or State Governments.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2017)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'Statement 1 is INCORRECT: The premium paid by farmers is NOT a uniform 2% for all crops across all seasons. The subsidized premium rates under PMFBY are differentiated:\n- 2.0% for all KHARIF food grains and oilseed crops\n- 1.5% for all RABI food grains and oilseed crops\n- 5.0% for annual commercial and HORTICULTURAL crops.\n(The remaining actuarial premium is subsidized equally by the Central and State Governments).\nStatement 2 is CORRECT: Unlike previous crop insurance schemes, PMFBY provides comprehensive risk coverage across the entire crop cycle—including prevented sowing, mid-season adversity, localized natural calamities (hailstorm, landslide, inundation), and POST-HARVEST LOSSES up to a maximum period of 14 days for crops kept in "cut and spread" condition in the field against cyclones, cyclonic rains, and unseasonal rains.\nTherefore, only Statement 2 is correct.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct:\nStatement 1 is correct: Launched in 2015 with the motto \"Swasth Dharaa, Khet Haraa\", the Soil Health Card assesses 12 vital parameters: Macro-nutrients (N, P, K), Secondary nutrients (S), Micro-nutrients (Zn, Fe, Cu, Mn, Bo), and Physical parameters (pH, Electrical Conductivity, Organic Carbon).\nStatement 2 is correct: Soil Health Cards are issued once every 3 years to individual farmers indicating crop-specific fertilizer and nutrient recommendations.\nStatement 3 is incorrect: The scheme is a Centrally Sponsored Scheme funded on a cost-sharing basis (60:40 between Centre and States; 90:10 for Himalayan/NE states), not 100% funded by the World Bank.",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition',
-      chapter: 'Chapter 9: Agriculture and Food Management (PMFBY Scheme)',
-      pageNumber: 'Page 9.24 – 9.28',
-      keyExcerpt: 'PMFBY charges 2% for Kharif, 1.5% for Rabi, and 5% for commercial/horticultural crops. It covers post-harvest losses up to 14 days.'
+      bookName: "Indian Economy by Ramesh Singh",
+      edition: "15th Edition",
+      chapter: "Chapter 8: Agriculture and Food Management (Soil Health & Inputs)",
+      pageNumber: "Page 8.30 – 8.34",
+      keyExcerpt: "Soil Health Card evaluates 12 parameters and is issued every 3 years on a 60:40 Centre-State sharing basis."
     },
-    eliminationTip: 'Premium is 2% for Kharif, but 1.5% for Rabi and 5% for horticultural crops (not uniform 2% for all crops). Statement 1 is false. Statement 2 is true.',
-    difficulty: 'Easy',
+    eliminationTip: "Claiming the scheme is \"completely funded by the World Bank with zero government contribution\" is factually absurd for an Indian central agricultural scheme. Eliminating 3 leaves (a) 1 and 2 only.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2017', 'PMFBY', 'Crop Insurance', 'Post-Harvest Losses', 'Kharif', 'Rabi', 'Agriculture']
+    tags: [
+      "UPSC 2017",
+      "Soil Health Card",
+      "Fertilizers",
+      "Agriculture",
+      "Economy"
+    ]
   },
-  {
+{
     id: 'pyq-2017-gs-65',
     subject: 'history',
     topic: 'Modern Indian History: Early Gandhian Movements',

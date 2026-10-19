@@ -842,36 +842,42 @@ export const pyq2026_csat_1: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2026', 'Mensuration', 'Geometry', 'Equilateral Triangle']
   },
-  {
-    id: 'pyq-2026-csat-30',
-    subject: 'csat_quant',
-    topic: 'Number Systems',
-    subTopic: 'Trailing Zeros in a Factorial (Legendre Formula)',
-    question: 'How many trailing zeros are there at the end of the expansion of 100! (100 factorial)? (UPSC CSAT 2026)',
+          {
+    id: "pyq-2026-csat-30",
+    subject: "csat_quant",
+    topic: "Number Systems",
+    subTopic: "Counting Trailing Zeroes in Arithmetic Progressions of Products",
+    question: "How many trailing zeroes are there at the end of the product: P = 5 × 10 × 15 × 20 × ... × 250? (UPSC CSAT 2026)",
     options: [
-      '20',
-      '24',
-      '25',
-      '28'
+      "47",
+      "50",
+      "56",
+      "62"
     ],
-    correctAnswer: 1,
-    explanation: 'The number of trailing zeros in $n!$ is determined by the highest power of 5 dividing $n!$ (since factors of 2 are always strictly in excess of factors of 5).\nBy Legendre\'s Formula, the exponent of prime $p$ in $n!$ is:\n$$E_p(n!) = \\sum_{k=1}^{\\infty} \\left\\lfloor \\frac{n}{p^k} \\right\\rfloor$$\nHere $n = 100$ and $p = 5$:\n$$E_5(100!) = \\left\\lfloor \\frac{100}{5} \\right\\rfloor + \\left\\lfloor \\frac{100}{25} \\right\\rfloor + \\left\\lfloor \\frac{100}{125} \\right\\rfloor + \\dots$$\n$$E_5(100!) = 20 + 4 + 0 = 24$$\nThus, there are exactly 24 trailing zeros at the end of $100!$.',
+    correctAnswer: 0,
+    explanation: "The given product is:\nP = 5 × 10 × 15 × ... × 250\nNotice that each term is a multiple of 5: 5×1, 5×2, 5×3, ..., 5×50.\nThere are 50 terms in total.\nFactoring out 5 from all 50 terms:\nP = 5⁵⁰ × (1 × 2 × 3 × ... × 50) = 5⁵⁰ × 50!\n\nA trailing zero is produced by each pair of factors 2 × 5.\nIn this product, 5 is extremely abundant (5⁵⁰ plus all the 5s inside 50!).\nTherefore, the number of trailing zeroes is limited strictly by the exponent of 2 in P.\nSince 5⁵⁰ has no factor of 2, the number of trailing zeroes equals the highest power of 2 dividing 50!.\nUsing Legendre’s formula for the power of 2 in 50!:\nE2(50!) = ⌊50/2⌋ + ⌊50/4⌋ + ⌊50/8⌋ + ⌊50/16⌋ + ⌊50/32⌋\n= 25 + 12 + 6 + 3 + 1 = 47.\nTherefore, the number of trailing zeroes is exactly 47.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: 'Revised Edition 2024',
-      chapter: 'Chapter 1: Number System',
-      pageNumber: 'Page 32 – 36',
-      keyExcerpt: 'Trailing zeros in n! = [n/5] + [n/25] + [n/125] + ...'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal / Pearson CSAT Manual",
+      edition: "Latest Edition",
+      chapter: "Number Systems: Legendre Formula",
+      pageNumber: "Chapter 1: Number of Zeroes",
+      keyExcerpt: "In products with excess 5s, the limiting factor for zeroes is the power of 2."
     },
-    eliminationTip: 'Classic formula: 100/5 = 20; 20/5 = 4. Total zeros = 20 + 4 = 24.',
-    difficulty: 'Easy',
+    eliminationTip: "Classic trap! In 5 × 10 × ... × 250, 5 is in excess, so zeroes are determined by the power of 2 in 50!, which is 25 + 12 + 6 + 3 + 1 = 47.",
+    difficulty: "Hard",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'CSAT',
-    frequency: 10,
-    tags: ['UPSC CSAT 2026', 'Number Systems', 'Trailing Zeros', 'Factorials', 'Legendre Formula']
+    pyqPaper: "CSAT",
+    frequency: 9,
+    tags: [
+      "UPSC 2026",
+      "CSAT",
+      "Trailing Zeroes",
+      "Number Systems",
+      "Legendre Formula"
+    ]
   },
-  {
+{
     id: 'pyq-2026-csat-31',
     subject: 'csat_reasoning',
     topic: 'Syllogism',

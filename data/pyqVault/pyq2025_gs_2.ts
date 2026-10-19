@@ -146,36 +146,42 @@ export const pyq2025_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2025', 'Rajya Sabha', 'Article 249', 'Article 312', 'Article 67', 'Parliament']
   },
-  {
-    id: 'pyq-2025-gs-56',
-    subject: 'economy',
-    topic: 'Monetary Policy Operations',
-    subTopic: 'Standing Deposit Facility (SDF) vs Reverse Repo Rate',
-    question: 'With reference to the Standing Deposit Facility (SDF) introduced by the Reserve Bank of India, consider the following statements:\n\n1. Unlike the Reverse Repo mechanism, the SDF allows the RBI to absorb surplus liquidity from commercial banks without providing government collateral securities.\n2. The SDF rate replaced the fixed Reverse Repo rate as the floor of the Liquidity Adjustment Facility (LAF) corridor.\n3. The SDF rate is set 25 basis points below the prevailing Policy Repo Rate.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)',
+          {
+    id: "pyq-2025-gs-56",
+    subject: "economy",
+    topic: "Monetary Systems & Digital Currencies",
+    subTopic: "Central Bank Digital Currency (Digital Rupee or e₹)",
+    question: "With reference to the \"Digital Rupee\" (e₹)—India’s Central Bank Digital Currency (CBDC) issued by the Reserve Bank of India, consider the following statements:\n\n1. It is a sovereign digital legal tender that appears as a direct liability on the Reserve Bank of India’s balance sheet.\n2. The retail Digital Rupee (e₹-R) earns daily compound interest at the policy Repo rate to encourage cashless digital savings.\n3. It is fungible with physical currency notes and coins at a 1:1 parity and can be converted into bank deposits.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: 'All three statements are correct:\n1. Under Section 17 of the RBI Act (amended in 2018), SDF is an uncollateralized liquidity absorption tool. In Reverse Repo, the central bank had to pledge government bonds (G-Secs) as collateral; SDF removes this collateral constraint during periods of massive liquidity flush (e.g. demonetisation or capital surges).\n2. In April 2022, the RBI instituted the SDF as the new non-collateralized floor of the LAF corridor, while the Marginal Standing Facility (MSF) forms the ceiling.\n3. The width of the corridor is 50 basis points symmetrically: MSF is 25 bps above the Repo rate, and SDF is 25 bps below the Repo rate.',
+    correctAnswer: 2,
+    explanation: "Statements 1 and 3 are correct: The Digital Rupee is a sovereign digital currency issued under the amended RBI Act, 1934. It is sovereign currency holding legal tender status, forming a direct liability of the RBI, and convertible at face value (1:1) with physical currency.\nStatement 2 is incorrect: By deliberate design to prevent disintermediation of commercial bank deposits, the Digital Rupee is NON-INTEREST BEARING, exactly like physical currency cash in a citizen’s wallet. If it earned interest, citizens would withdraw money from commercial banks and hold it as central bank cash, destabilizing the banking system.",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh / Macroeconomics NCERT',
-      edition: '15th Edition (2024)',
-      chapter: 'Chapter 11: Monetary Policy & Liquidity Management',
-      pageNumber: 'Page 305 – 312',
-      keyExcerpt: 'SDF absorbs liquidity without G-Sec collateral. It operates as the floor of the LAF corridor at Repo - 25 bps.'
+      bookName: "Indian Economy by Ramesh Singh / RBI Concept Note on CBDC",
+      edition: "15th Edition (2024)",
+      chapter: "Chapter 12: Central Banking and Digital Currency",
+      pageNumber: "Page 12.45 – 12.50",
+      keyExcerpt: "Digital Rupee is non-interest bearing and a direct liability of the RBI, fungible 1:1 with cash."
     },
-    eliminationTip: 'The defining characteristic of SDF is "uncollateralized liquidity absorption" at 25 bps below repo, serving as the floor of the LAF corridor. All 3 statements are true.',
-    difficulty: 'Moderate',
+    eliminationTip: "Digital Rupee does not earn interest—it mirrors physical cash notes. Eliminating Statement 2 gives (c) 1 and 3 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2025', 'Standing Deposit Facility', 'SDF', 'LAF Corridor', 'RBI', 'Monetary Policy']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2025",
+      "CBDC",
+      "Digital Rupee",
+      "RBI",
+      "Monetary Economics"
+    ]
   },
-  {
+{
     id: 'pyq-2025-gs-57',
     subject: 'economy',
     topic: 'Multilateral Trade & Subsidies',
@@ -233,42 +239,43 @@ export const pyq2025_gs_2: Question[] = [
     frequency: 8,
     tags: ['UPSC 2025', 'Angel Tax', 'Startups', 'Direct Taxes', 'Union Budget 2024', 'Section 56']
   },
-    {
+            {
     id: "pyq-2025-gs-59",
     subject: "environment",
-    topic: "International Environmental Frameworks",
-    subTopic: "Kunming-Montreal Global Biodiversity Framework (KMGBF) & Target 3",
-    question: "With reference to the \"Kunming-Montreal Global Biodiversity Framework\" (KMGBF) adopted at COP15 of the Convention on Biological Diversity (CBD), consider the following statements:\n\n1. Under Target 3 (the \"30x30 target\"), nations commit to conserve at least 30% of global terrestrial, inland water, coastal, and marine areas by 2030.\n2. It officially created the Global Biodiversity Framework Fund (GBFF) hosted under the Global Environment Facility (GEF) to channel financing to developing nations.\n3. The framework completely exempts developed nations from mobilizing international financial resources for biodiversity conservation.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)",
+    topic: "International Ocean Governance & Marine Conservation",
+    subTopic: "BBNJ Agreement (High Seas Treaty) under UNCLOS",
+    question: "With reference to the \"High Seas Treaty\", officially known as the agreement on Marine Biodiversity of Areas Beyond National Jurisdiction (BBNJ), consider the following statements:\n\n1. It is a legally binding international instrument adopted under the United Nations Convention on the Law of the Sea (UNCLOS).\n2. It establishes a legal mechanism to create Marine Protected Areas (MPAs) in international waters outside Exclusive Economic Zones (EEZs).\n3. It mandates fair and equitable sharing of benefits arising from Marine Genetic Resources (MGRs) collected from international waters.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)",
     options: [
       "1 and 2 only",
       "2 and 3 only",
       "1 and 3 only",
       "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: "Statement 1 is correct: Target 3 mandates protecting at least 30% of Earth's land and ocean ecosystems by 2030 through protected area networks and Other Effective Area-based Conservation Measures (OECMs).\nStatement 2 is correct: The Global Biodiversity Framework Fund (GBFF) was established under GEF in 2023 to finance KMGBF implementation in low- and middle-income nations.\nStatement 3 is incorrect: Target 19 explicitly commits developed countries to mobilize at least $20 billion annually by 2025 and $30 billion annually by 2030 in international biodiversity finance to developing nations.",
+    correctAnswer: 3,
+    explanation: "All three statements are correct regarding the landmark BBNJ Treaty (High Seas Treaty) adopted in June 2023:\n1. UNCLOS Framework: It is the third implementing agreement under UNCLOS (alongside the 1994 Part XI Agreement on deep seabed mining and the 1995 Fish Stocks Agreement).\n2. Marine Protected Areas on High Seas: Prior to this treaty, there was no legal mechanism to establish comprehensive MPAs in the High Seas (which cover nearly two-thirds of the world's oceans beyond 200-nautical-mile EEZs). The treaty is vital for achieving the \"30x30\" global conservation target.\n3. Marine Genetic Resources (MGRs): The treaty establishes a clearing-house mechanism and a specialized fund for the monetary and non-monetary benefit-sharing of discoveries derived from marine organisms and deep-sea extremophiles.",
     bookReference: {
-      bookName: "Environment by Shankar IAS Academy / UNEP CBD Reports",
+      bookName: "Environment by Shankar IAS Academy / UN Treaty Collection",
       edition: "10th Edition (2024)",
-      chapter: "International Conventions: CBD & Biodiversity Targets",
-      pageNumber: "Page 328 – 334",
-      keyExcerpt: "KMGBF Target 3 sets the 30x30 goal. Target 19 obligates international climate/biodiversity finance from developed to developing countries."
+      chapter: "International Marine Conventions: UNCLOS and BBNJ Treaty",
+      pageNumber: "Page 340 – 346",
+      keyExcerpt: "The BBNJ Agreement provides the legal framework for establishing high seas MPAs and sharing genetic benefits."
     },
-    eliminationTip: "Exempting developed nations from funding biodiversity contradicts Common But Differentiated Responsibilities (CBDR). Eliminating Statement 3 gives (a) 1 and 2 only.",
+    eliminationTip: "BBNJ is under UNCLOS, creates high seas MPAs, and ensures fair sharing of Marine Genetic Resources. All 1, 2 and 3 are correct.",
     difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2025,
     pyqPaper: "GS",
-    frequency: 9,
+    frequency: 10,
     tags: [
       "UPSC 2025",
-      "KMGBF",
-      "CBD COP15",
-      "30x30 Target",
-      "Biodiversity Fund"
+      "BBNJ Treaty",
+      "High Seas Treaty",
+      "UNCLOS",
+      "Marine Genetic Resources",
+      "Environment"
     ]
   },
-  {
+{
     id: 'pyq-2025-gs-60',
     subject: 'environment',
     topic: 'Wetland Ecology & Conservation',

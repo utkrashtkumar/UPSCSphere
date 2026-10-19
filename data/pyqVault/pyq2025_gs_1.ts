@@ -1022,36 +1022,43 @@ export const pyq2025_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2025', 'Critical Minerals', 'Lithium', 'Cobalt', 'MMDR Act', 'Economic Geography']
   },
-  {
-    id: 'pyq-2025-gs-36',
-    subject: 'science_tech',
-    topic: 'Artificial Intelligence & Computing',
-    subTopic: 'Generative AI, Large Language Models (LLMs) & Hallucination',
-    question: 'With reference to Artificial Intelligence and Large Language Models (LLMs), what does the term "Hallucination" refer to? (UPSC CSE Prelims 2025)',
+          {
+    id: "pyq-2025-gs-36",
+    subject: "science_tech",
+    topic: "Space Exploration & Earth Observation",
+    subTopic: "NASA-ISRO Synthetic Aperture Radar (NISAR) Mission",
+    question: "With reference to the \"NASA-ISRO Synthetic Aperture Radar\" (NISAR) satellite mission, consider the following statements:\n\n1. It is a dual-frequency radar imaging mission utilizing both L-band (developed by NASA) and S-band (developed by ISRO) radar frequencies.\n2. Being an active radar satellite, it can observe Earth’s surface day and night and penetrate through dense cloud cover, fog, and vegetation.\n3. It is designed to map the entire Earth's land and ice-covered surfaces every 12 days to measure changes in ecosystems, ice sheets, and seismic faults.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)",
     options: [
-      'A cyber-attack wherein malicious code causes neural networks to shut down physical servers',
-      'A phenomenon where an AI model generates factually incorrect, nonsensical, or fabricated outputs with high linguistic confidence',
-      'The optical illusion experienced by human operators monitoring quantum computer displays',
-      'The process of compressing gigabyte-scale datasets into low-dimensional latent vector spaces'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'In generative artificial intelligence, "hallucination" denotes a scenario where an LLM generates text or assertions that appear convincing, fluent, and syntactically flawless, but are factually untruthful, ungrounded, or entirely invented, arising from statistical token predictions rather than factual knowledge.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under the joint NASA-ISRO NISAR mission:\n1. NISAR is the first satellite mission to carry dual-frequency radar: NASA provides the L-band radar (ideal for penetrating vegetation canopy and soil) and ISRO provides the S-band radar (optimized for light vegetation and crop monitoring).\n2. Synthetic Aperture Radar transmits its own microwave signals, enabling round-the-clock all-weather imaging unaffected by darkness or thick tropical cloud cover.\n3. In a Sun-synchronous orbit, NISAR maps the global landmass and polar ice sheets every 12 days with millimeter-level surface displacement precision to monitor earthquakes, landslides, and biomass changes.",
     bookReference: {
-      bookName: 'Science & Technology by Ravi P. Agrahari',
-      edition: '7th Edition (2024)',
-      chapter: 'Chapter 16: Artificial Intelligence, Robotics & Machine Learning',
-      pageNumber: 'Page 16.14 – 16.20',
-      keyExcerpt: 'AI hallucination occurs when generative models synthesize ungrounded, fabricated responses presented as definitive facts.'
+      bookName: "Science & Technology by Ravi P. Agrahari / ISRO Mission Dossiers",
+      edition: "Latest Edition",
+      chapter: "Space Missions: Earth Observation Satellites",
+      pageNumber: "Page 62 – 68",
+      keyExcerpt: "NISAR is a joint dual-frequency (L & S band) radar mission for all-weather 12-day repeat global surface mapping."
     },
-    eliminationTip: 'AI hallucination is universally recognized as the generation of convincing-sounding but fabricated untruths (Option B).',
-    difficulty: 'Easy',
+    eliminationTip: "Dual frequency (L+S), all-weather day/night radar, and 12-day global orbit are the signature specifications of NISAR.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2025', 'Artificial Intelligence', 'LLM', 'AI Hallucination', 'Generative AI']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2025",
+      "NISAR",
+      "ISRO",
+      "NASA",
+      "SAR",
+      "Earth Observation"
+    ]
   },
-  {
+{
     id: 'pyq-2025-gs-37',
     subject: 'history',
     topic: 'Modern History: Tribal & Peasant Movements',
@@ -1254,36 +1261,43 @@ export const pyq2025_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2025', 'PMLA', 'Enforcement Directorate', 'Section 45', 'Bail Conditions', 'Supreme Court']
   },
-  {
-    id: 'pyq-2025-gs-44',
-    subject: 'environment',
-    topic: 'Climate Finance & UNFCCC Negotiations',
-    subTopic: 'Loss and Damage Fund Operationalization at COP28',
-    question: 'With reference to the "Loss and Damage Fund" operationalized at COP28 of the UNFCCC in Dubai, consider the following statements:\n\n1. It is designed to assist particularly vulnerable developing countries in coping with the irreversible economic and non-economic losses caused by climate extremes.\n2. The World Bank was designated to serve as the interim host of the fund for an initial period of four years.\n3. Contributions to the fund are legally binding and mandatory for all developed countries listed under Annex I of the UNFCCC.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)',
+          {
+    id: "pyq-2025-gs-44",
+    subject: "environment",
+    topic: "Coastal Ecosystems & Climate Mitigation",
+    subTopic: "Mangrove Alliance for Climate (MAC) and MISHTI Initiative",
+    question: "With reference to the \"Mangrove Alliance for Climate\" (MAC) launched at COP27 of the UNFCCC, consider the following statements:\n\n1. It was jointly spearheaded by the United Arab Emirates (UAE) and Indonesia to scale up the conservation and restoration of mangrove ecosystems.\n2. India joined the Mangrove Alliance for Climate as one of its prominent partner nations.\n3. The alliance establishes legally binding national targets with financial penalties for countries that fail to expand mangrove forest cover.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2025)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 0,
-    explanation: 'Statement 1 is correct: The fund provides financial rescue to developing nations suffering irreversible damages from slow-onset events (sea-level rise) and severe climate shocks.\nStatement 2 is correct: The transitional committee agreed that the World Bank would serve as the financial trustee and interim host for four years, subject to operational guardrails.\nStatement 3 is incorrect: Contributions to the Loss and Damage Fund are purely voluntary. Developing countries fought for mandatory contributions from historical polluters, but developed nations (led by the US) successfully insisted that contributions be non-obligatory.',
+    explanation: "Statements 1 and 2 are correct: The Mangrove Alliance for Climate (MAC) was launched at COP27 in Sharm El-Sheikh (2022) by the UAE and Indonesia. India joined the alliance at its inception, linking it domestically with the MISHTI (Mangrove Initiative for Shoreline Habitats & Tangible Incomes) scheme.\nStatement 3 is incorrect: MAC is a voluntary, non-binding global coalition aimed at knowledge exchange, research, and technical collaboration; it does NOT impose any legally binding targets or punitive financial sanctions on member countries.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition (2024)',
-      chapter: 'Chapter 22: Climate Negotiations from COP27 Sharm el-Sheikh to COP28 Dubai',
-      pageNumber: 'Page 318 – 324',
-      keyExcerpt: 'COP28 operationalized the Loss and Damage Fund hosted by the World Bank. Contributions remain voluntary.'
+      bookName: "Environment by Shankar IAS Academy / MoEFCC Annual Reports",
+      edition: "10th Edition (2024)",
+      chapter: "Coastal Wetlands: Mangroves and Global Alliances",
+      pageNumber: "Page 230 – 234",
+      keyExcerpt: "MAC is a voluntary initiative by UAE and Indonesia joined by India to expand blue carbon sinks."
     },
-    eliminationTip: 'The US and EU refused to sign any agreement that imposed legally binding liability or compensation. Statement 3 is false. Select (a) 1 and 2 only.',
-    difficulty: 'Moderate',
+    eliminationTip: "International multi-country environmental alliances under COP are non-binding coalitions. Eliminating Statement 3 gives (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2025', 'COP28', 'Loss and Damage Fund', 'UNFCCC', 'World Bank', 'Climate Finance']
+    tags: [
+      "UPSC 2025",
+      "Mangrove Alliance",
+      "MAC",
+      "MISHTI",
+      "Blue Carbon",
+      "Environment"
+    ]
   },
-  {
+{
     id: 'pyq-2025-gs-45',
     subject: 'history',
     topic: 'Medieval South India: Vijayanagara Empire',

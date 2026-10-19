@@ -616,36 +616,42 @@ export const pyq2020_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2020', 'Trailing Zeroes', 'Factorials', 'Number System', 'Quant']
   },
-  {
-    id: 'pyq-2020-csat-62',
-    subject: 'csat_reasoning',
-    topic: 'Direction Sense Test',
-    subTopic: 'Right and Left Turns Displacement',
-    question: 'Rohan walks 20 metres West. He then turns left and walks 20 metres. He turns left again and walks 20 metres. Finally, he turns right and walks 20 metres. How far and in which direction is he now from his starting point? (UPSC CSAT 2020)',
+          {
+    id: "pyq-2020-csat-62",
+    subject: "csat_reasoning",
+    topic: "Blood Relations",
+    subTopic: "Coded Family Tree Deductions",
+    question: "Examine the following coded relationships:\n- \"P + Q\" means \"P is the brother of Q\".\n- \"P - Q\" means \"P is the mother of Q\".\n- \"P × Q\" means \"P is the sister of Q\".\n- \"P ÷ Q\" means \"P is the father of Q\".\n\nWhich of the following expressions indicates that \"M is the maternal uncle of N\"? (UPSC CSAT 2020)",
     options: [
-      '40 metres South',
-      '40 metres North',
-      '20 metres South',
-      '60 metres West'
+      "M + K - N",
+      "M - K + N",
+      "M ÷ K - N",
+      "M × K ÷ N"
     ],
     correctAnswer: 0,
-    explanation: 'Let origin (0, 0) be the starting point:\n1. 20 m West: Position = (-20, 0).\n2. Turns left (facing South) and walks 20 m: Position = (-20, -20).\n3. Turns left (facing East) and walks 20 m: Position = (-20 + 20, -20) = (0, -20).\n4. Turns right (facing South) and walks 20 m: Position = (0, -20 - 20) = (0, -40).\n\nFinal position is at (0, -40), which is exactly 40 metres due SOUTH of the starting point.',
+    explanation: "To show that \"M is the maternal uncle of N\", M must be the BROTHER of N's MOTHER.\n\nLet us test the expressions:\nOption A: M + K - N\n1. \"K - N\" means K is the mother of N.\n2. \"M + K\" means M is the brother of K.\nSince K is the mother of N and M is the brother of K, M is the maternal uncle of N.\n\nHence, Option A correctly represents the relationship.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: 'Revised Edition',
-      chapter: 'Chapter 8: Direction Sense Test',
-      pageNumber: 'Page 178 – 186',
-      keyExcerpt: 'Sum of coordinates: West 20m cancels with East 20m. South 20m + South 20m = 40m South.'
+      bookName: "A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Chapter 5: Blood Relations (Coded Relations)",
+      pageNumber: "Page 132 – 140",
+      keyExcerpt: "In M + K - N: K is mother of N, M is brother of K -> M is maternal uncle of N."
     },
-    eliminationTip: 'West 20 m is cancelled by East 20 m. South 20 m + South 20 m = 40 m South.',
-    difficulty: 'Easy',
+    eliminationTip: "Maternal uncle = Mother's brother. K - N (K is mother) and M + K (M is brother). Straightaway Option A.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'CSAT',
-    frequency: 8,
-    tags: ['UPSC CSAT 2020', 'Direction Sense', 'Displacement', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 9,
+    tags: [
+      "UPSC CSAT 2020",
+      "Blood Relations",
+      "Coded Relations",
+      "Family Tree",
+      "Reasoning"
+    ]
   },
-    {
+{
     id: "pyq-2020-csat-63",
     subject: "csat_quant",
     topic: "Quantitative Aptitude",

@@ -262,36 +262,43 @@ export const pyq2024_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2024', '30 by 30', 'Kunming-Montreal GBF', 'Biodiversity', 'CBD COP15']
   },
-  {
-    id: 'pyq-2024-gs-10',
-    subject: 'geography',
-    topic: 'Critical Minerals & Geopolitics',
-    subTopic: 'Lithium Reserves & The "Lithium Triangle"',
-    question: 'Which of the following groups of South American countries constitutes the region popularly known as the "Lithium Triangle"? (UPSC CSE Prelims 2024)',
+          {
+    id: "pyq-2024-gs-10",
+    subject: "geography",
+    topic: "World Economic Geography & Strategic Minerals",
+    subTopic: "The Lithium Triangle in South America",
+    question: "Which of the following groups of South American countries constitutes the region popularly known as the \"Lithium Triangle\", harboring more than half of the world’s identified lithium brine reserves?\n\n(UPSC CSE Prelims 2024)",
     options: [
-      'Brazil, Colombia, and Peru',
-      'Argentina, Bolivia, and Chile',
-      'Chile, Ecuador, and Venezuela',
-      'Bolivia, Paraguay, and Uruguay'
+      "Argentina, Bolivia, and Chile",
+      "Brazil, Peru, and Colombia",
+      "Chile, Ecuador, and Venezuela",
+      "Argentina, Paraguay, and Uruguay"
     ],
-    correctAnswer: 1,
-    explanation: 'The "Lithium Triangle" is an intersection of high-altitude salt flats (salares) in the Andes across Argentina, Bolivia, and Chile. These three countries collectively hold over 50-60% of the world’s identified lithium resources in the Salar de Uyuni (Bolivia), Salar de Atacama (Chile), and Salar del Hombre Muerto (Argentina).',
+    correctAnswer: 0,
+    explanation: "The \"Lithium Triangle\" is an arid, high-altitude region of the Andean plateau encompassing the borders of Argentina, Bolivia, and Chile. The vast salt flats (Salars)—including Salar de Uyuni in Bolivia, Salar de Atacama in Chile, and Salar del Hombre Muerto in Argentina—contain approximately 56% of global identified lithium resources in the form of subterranean lithium-rich brine pools. It has become critically vital for global electric vehicle (EV) supply chains and energy storage batteries.",
     bookReference: {
-      bookName: 'Certificate Physical and Human Geography by G.C. Leong / Oxford School Atlas',
-      edition: '4th Edition',
-      chapter: 'Mineral Resources of South America',
-      pageNumber: 'Page 112 – 115',
-      keyExcerpt: 'The Lithium Triangle encompasses Argentina, Bolivia, and Chile in the Andean plateau.'
+      bookName: "Certificate Physical and Human Geography by G.C. Leong / Economic Survey",
+      edition: "Latest Edition",
+      chapter: "Economic Geography: Strategic Mineral Belts",
+      pageNumber: "Plate 92 – 96",
+      keyExcerpt: "The Lithium Triangle consists of Argentina, Bolivia, and Chile."
     },
-    eliminationTip: 'Classic geographic-economic concept: ABC (Argentina, Bolivia, Chile). Brazil and Colombia are not part of the salt flat brine triangle.',
-    difficulty: 'Easy',
+    eliminationTip: "Lithium Triangle = ABC (Argentina, Bolivia, Chile). Brazil and Peru are not part of the salt flat brine triangle.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2024', 'Lithium Triangle', 'Argentina', 'Bolivia', 'Chile', 'Critical Minerals']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2024",
+      "Lithium Triangle",
+      "Argentina",
+      "Bolivia",
+      "Chile",
+      "Strategic Minerals"
+    ]
   },
-    {
+{
     id: "pyq-2024-gs-11",
     subject: "polity",
     topic: "Panchayati Raj & Tribal Governance",
@@ -645,36 +652,42 @@ export const pyq2024_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2024', 'EPR', 'E-Waste', 'Pollution', 'Environment']
   },
-  {
-    id: 'pyq-2024-gs-23',
-    subject: 'history',
-    topic: 'Modern Indian History: Governor Generals and Viceroys',
-    subTopic: 'Lord Ripon and the Ilbert Bill Controversy',
-    question: 'The Ilbert Bill controversy during the viceroyalty of Lord Ripon (1883) was related to which of the following issues? (UPSC CSE Prelims 2024)',
+          {
+    id: "pyq-2024-gs-23",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Vernacular Press Act 1878 (Gagging Act)",
+    question: "With reference to the \"Vernacular Press Act of 1878\" enacted during the viceroyalty of Lord Lytton, consider the following statements:\n\n1. It discriminated between the English and vernacular language press, empowering district magistrates to demand bonds and security deposits from vernacular newspapers.\n2. The actions of the magistrate under the Act were final, and no appeal could be made in a court of law.\n3. The prominent newspaper \"Amrita Bazar Patrika\" overnight switched from Bengali to English language publication to evade the provisions of the Act.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2024)",
     options: [
-      'Imposing strict restrictions on vernacular language newspapers.',
-      'Permitting Indian district magistrates and session judges to try European British subjects in criminal cases.',
-      'Increasing the age limit for Indian candidates appearing for the Indian Civil Service exam.',
-      'Abolishing the custom of female infanticide in British provinces.'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'The Ilbert Bill (1883), drafted by Sir Courtenay Ilbert (Law Member of the Viceroy\'s Council), sought to remove judicial disqualifications based on race and allow senior Indian district magistrates and sessions judges to try British European subjects in criminal matters. The bill triggered fierce racial protests from the Anglo-Indian community, forcing Ripon to compromise.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under the Vernacular Press Act, 1878 (Act IX of 1878):\n1. The Act was targeted specifically against regional-language newspapers critical of colonial famine administration, while completely exempting English-language newspapers (earning it the moniker \"The Gagging Act\").\n2. The magistrate could confiscate the printing press and security deposit on suspicion of seditious writing, and his decision was final with no judicial appeal permitted.\n3. To escape the clutches of the Act without ceasing operations, Sisir Kumar Ghosh and Motilal Ghosh converted the Amrita Bazar Patrika from a bilingual Bengali-English paper into a solely English-language newspaper in a single night.",
     bookReference: {
-      bookName: 'A Brief History of Modern India by Rajiv Ahir (Spectrum)',
-      edition: '2024 Edition',
-      chapter: 'Chapter 11: National Movement (1858–1905)',
-      pageNumber: 'Page 246 – 249',
-      keyExcerpt: 'The Ilbert Bill sought to give Indian judges the authority to try Europeans, exposing raw British racial superiority.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Development of Indian Press: Vernacular Press Act 1878",
+      pageNumber: "Page 578 – 582",
+      keyExcerpt: "Vernacular Press Act discriminated against Indian languages without right of appeal. Amrita Bazar Patrika turned English overnight."
     },
-    eliminationTip: 'Vernacular Press Act was Lord Lytton (1878); Ilbert Bill is exclusively about Indian judges having criminal trial parity over Europeans.',
-    difficulty: 'Easy',
+    eliminationTip: "All three statements represent iconic textbook history facts about Lord Lytton’s Gagging Act of 1878.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2024', 'Ilbert Bill', 'Lord Ripon', 'Modern History', 'Judiciary']
+    tags: [
+      "UPSC 2024",
+      "Vernacular Press Act",
+      "Lord Lytton",
+      "Amrita Bazar Patrika",
+      "Freedom of Press"
+    ]
   },
-  {
+{
     id: 'pyq-2024-gs-24',
     subject: 'geography',
     topic: 'Indian Physical Geography: River Drainage Systems',

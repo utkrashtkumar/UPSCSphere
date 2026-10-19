@@ -653,36 +653,43 @@ export const pyq2018_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2018', 'Siachen Glacier', 'Nubra Valley', 'Karakoram', 'Physical Geography']
   },
-  {
-    id: 'pyq-2018-gs-23',
-    subject: 'polity',
-    topic: 'State Legislature & Union-State Relations',
-    subTopic: 'Governor\'s Discretionary Powers',
-    question: 'Which of the following are the discretionary powers given to the Governor of a State?\n\n1. Sending a report to the President of India for imposing the President\'s rule\n2. Appointing the Ministers\n3. Reserving certain bills passed by the State Legislature for consideration of the President of India\n4. Making the rules to conduct the business of the State Government\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2018)',
+          {
+    id: "pyq-2018-gs-23",
+    subject: "polity",
+    topic: "Parliamentary Budgetary Process",
+    subTopic: "Vote on Account vs Interim Budget (Article 116)",
+    question: "What is the difference between \"Vote-on-Account\" and \"Interim Budget\"?\n\n1. The provision of a \"Vote-on-Account\" is used by a regular Government, while an \"Interim Budget\" is a provision used exclusively by a caretaker Government.\n2. A \"Vote-on-Account\" only deals with the expenditure in the Government's budget, while an \"Interim Budget\" includes both expenditure and receipts.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2018)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2, 3 and 4 only',
-      '1, 2, 3 and 4'
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
     ],
     correctAnswer: 1,
-    explanation: 'Under Article 163 of the Constitution, the Governor exercises both constitutional and situational discretion:\n1. Discretionary (Item 1): Recommending the imposition of President\'s Rule under Article 356 when the government of the state cannot be carried on in accordance with the provisions of the Constitution.\n2. Discretionary (Item 3): Reserving a bill passed by the state legislature for the consideration of the President under Article 200 (such as bills endangering the position of the High Court).\n\nNon-discretionary (Items 2 & 4):\n- Item 2: The Governor appoints ministers ONLY ON THE ADVICE of the Chief Minister (Article 164(1)). He has no personal discretion here.\n- Item 4: Making rules for the convenient transaction of the business of the state government (Article 166(3)) is done on the aid and advice of the Council of Ministers.\n\nTherefore, only 1 and 3 are discretionary powers.',
+    explanation: "Statement 2 only is correct:\nStatement 1 is incorrect: There is no constitutional provision for a \"caretaker government\" in India (the Prime Minister and Council of Ministers always hold regular office until a successor takes over). An \"Interim Budget\" is conventionally presented by the incumbent government in an election year before Lok Sabha polls to outline budgetary projections until the new parliament convenes, not exclusively by a caretaker government. Furthermore, a Vote-on-Account can be passed by any regular government to keep administrative machinery funded pending passage of the Appropriation Bill.\nStatement 2 is correct: A \"Vote-on-Account\" (under Article 116(a)) deals solely with an advance grant for anticipated expenditures (usually for two months, equivalent to one-sixth of estimated expenditure) to avoid a government shutdown. Conversely, an \"Interim Budget\" is a comprehensive financial statement that details both expected revenue receipts (taxes and non-tax receipts) and expenditures.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 30: Governor (Powers and Functions)',
-      pageNumber: 'Page 30.7 – 30.12',
-      keyExcerpt: 'Constitutional discretion of the Governor includes reservation of bills for Presidential consideration and recommending President\'s Rule under Article 356. Ministers are appointed only on the advice of the CM.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition",
+      chapter: "Chapter 22: Parliament (Budget in Parliament - Article 116)",
+      pageNumber: "Page 22.25 – 22.28",
+      keyExcerpt: "Vote-on-account deals exclusively with the expenditure side, whereas an interim budget includes both receipts and expenditure."
     },
-    eliminationTip: 'The Governor CANNOT arbitrarily appoint ministers; he appoints them solely on the advice of the Chief Minister. Eliminating 2 immediately rules out Options A, C, and D.',
-    difficulty: 'Easy',
+    eliminationTip: "Vote on account is an advance purely for expenditure. An interim budget is a full mini-budget with receipts and expenditures. Statement 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2018,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2018', 'Governor', 'Discretionary Powers', 'Article 163', 'Article 356', 'Polity']
+    tags: [
+      "UPSC 2018",
+      "Vote on Account",
+      "Interim Budget",
+      "Article 116",
+      "Parliament",
+      "Polity"
+    ]
   },
-  {
+{
     id: 'pyq-2018-gs-24',
     subject: 'polity',
     topic: 'Judicial Institutions: Alternative Dispute Resolution',

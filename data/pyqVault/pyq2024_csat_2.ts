@@ -731,36 +731,42 @@ export const pyq2024_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2024', 'Reading Comprehension', 'Urban Transport', 'Induced Demand']
   },
-  {
-    id: 'pyq-2024-csat-66',
-    subject: 'csat_quant',
-    topic: 'Profit, Loss and Marked Price',
-    subTopic: 'Cost Price Calculation from Profit and Discount',
-    question: 'A trader marks his goods at 25% above the cost price and allows a discount of 10% for cash payment. What is his net profit percentage? (UPSC CSAT 2024)',
+          {
+    id: "pyq-2024-csat-66",
+    subject: "csat_quant",
+    topic: "Quantitative Aptitude",
+    subTopic: "Profit and Loss with Altered Purchase and Selling Prices",
+    question: "A shopkeeper sells an article at a profit of 20%. If he had purchased it at 10% less and sold it for ₹18 less, he would have gained 25%. What was the original cost price of the article? (UPSC CSAT 2024)",
     options: [
-      '12.5%',
-      '14.5%',
-      '15.0%',
-      '17.5%'
+      "₹200",
+      "₹240",
+      "₹280",
+      "₹300"
     ],
-    correctAnswer: 0,
-    explanation: 'Let the Cost Price (CP) = 100.\nMarked Price (MP) = 100 + 25 = 125.\nDiscount allowed = 10% of MP = 10% of 125 = 12.5.\nSelling Price (SP) = MP - Discount = 125 - 12.5 = 112.5.\nNet Profit = SP - CP = 112.5 - 100 = 12.5.\nProfit Percentage = (12.5 / 100) × 100 = 12.5%.\n\nUsing net percentage formula:\nNet Change = [+25 - 10 - (25 × 10 / 100)] = [15 - 2.5] = 12.5%.',
+    correctAnswer: 1,
+    explanation: "Let the original Cost Price (CP) be 100x.\nSince it was originally sold at 20% profit, the original Selling Price (SP1) = 120x.\n\nUnder the hypothetical scenario:\n- New Cost Price (CP2) = 10% less than 100x = 90x.\n- New Selling Price (SP2) = SP1 - ₹18 = 120x - 18.\nUnder this scenario, the profit gained is 25% on CP2:\nSP2 = CP2 × (1 + 0.25) = 90x × 1.25 = 112.5x.\n\nEquating the two expressions for SP2:\n120x - 18 = 112.5x\n120x - 112.5x = 18\n7.5x = 18\nx = 18 / 7.5 = 2.4.\n\nOriginal Cost Price = 100x = 100 × 2.4 = ₹240.\nTherefore, the original cost price of the article was ₹240.",
     bookReference: {
-      bookName: 'Quantitative Aptitude by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 11: Profit and Loss',
-      pageNumber: 'Page 234 – 240',
-      keyExcerpt: 'Net profit % = m - d - (md/100) = 25 - 10 - 2.5 = 12.5%.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Profit and Loss",
+      pageNumber: "Chapter 11: Changed Conditions Problems",
+      keyExcerpt: "Set up equations linking initial CP and hypothetical CP with profit margins."
     },
-    eliminationTip: 'CP = 100 → MP = 125 → SP = 125 - 12.5 = 112.5. Profit = 12.5%.',
-    difficulty: 'Easy',
+    eliminationTip: "120x - 1.25(90x) = 18 => 7.5x = 18 => x = 2.4 => CP = 100 × 2.4 = ₹240.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2024', 'Profit and Loss', 'Marked Price', 'Quant']
+    tags: [
+      "UPSC 2024",
+      "CSAT",
+      "Profit and Loss",
+      "Equations",
+      "Arithmetic"
+    ]
   },
-  {
+{
     id: 'pyq-2024-csat-67',
     subject: 'csat_reasoning',
     topic: 'Statement and Conclusions',
@@ -1108,36 +1114,42 @@ export const pyq2024_csat_2: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2024', 'Coding Decoding', 'Numeral Encoding', 'Reasoning']
   },
-  {
-    id: 'pyq-2024-csat-79',
-    subject: 'csat_quant',
-    topic: 'Number System: Sum of First N Natural Numbers',
-    subTopic: 'Arithmetic Progression Sum',
-    question: 'What is the sum of the first 50 natural numbers (1 + 2 + 3 + ... + 50)? (UPSC CSAT 2024)',
+          {
+    id: "pyq-2024-csat-79",
+    subject: "csat_quant",
+    topic: "Number Systems",
+    subTopic: "Arithmetic Progressions and Sum of Odd Integers",
+    question: "What is the sum of all two-digit odd positive integers from 11 to 99 inclusive? (UPSC CSAT 2024)",
     options: [
-      '1,225',
-      '1,250',
-      '1,275',
-      '1,300'
+      "2,425",
+      "2,475",
+      "2,525",
+      "2,550"
     ],
-    correctAnswer: 2,
-    explanation: 'Formula for the sum of the first n natural numbers:\nSum = [n(n + 1)] / 2\nHere n = 50:\nSum = (50 × 51) / 2\n= 25 × 51 = 1,275.\nTherefore, the sum is 1,275.',
+    correctAnswer: 1,
+    explanation: "The two-digit odd positive integers form an Arithmetic Progression (AP):\n11, 13, 15, ..., 99\n- First term a = 11\n- Common difference d = 2\n- Last term l = 99\n\nNumber of terms n in the AP:\nl = a + (n - 1)d\n99 = 11 + (n - 1)2\n88 = 2(n - 1)\nn - 1 = 44  =>  n = 45 terms.\n\nSum of an Arithmetic Progression S = (n / 2) × (a + l):\nS = (45 / 2) × (11 + 99)\nS = (45 / 2) × 110\nS = 45 × 55 = 2,475.\nTherefore, the sum of all two-digit odd numbers is 2,475.",
     bookReference: {
-      bookName: 'Quantitative Aptitude by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 1: Number System (Arithmetic Progressions)',
-      pageNumber: 'Page 16 – 20',
-      keyExcerpt: 'Sum of first n natural numbers = n(n + 1) / 2 = 50 * 51 / 2 = 1275.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Progression: Arithmetic Progression",
+      pageNumber: "Chapter 4: AP Sum Formula",
+      keyExcerpt: "Sum of AP = (n/2) * (first + last)."
     },
-    eliminationTip: '25 × 51 = 1,275. Standard textbook formula.',
-    difficulty: 'Easy',
+    eliminationTip: "45 terms with average (11 + 99)/2 = 55. Sum = 45 × 55 = 2,475.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2024,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2024', 'Sum of Numbers', 'Natural Numbers', 'Arithmetic', 'Quant']
+    tags: [
+      "UPSC 2024",
+      "CSAT",
+      "Arithmetic Progression",
+      "Sum of Series",
+      "Number Systems"
+    ]
   },
-  {
+{
     id: 'pyq-2024-csat-80',
     subject: 'csat_reasoning',
     topic: 'Critical Reasoning: Statement and Inference',

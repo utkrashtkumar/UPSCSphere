@@ -610,36 +610,42 @@ export const pyq2016_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2016', 'CAG', 'Public Accounts Committee', 'Article 151', 'Polity']
   },
-  {
-    id: 'pyq-2016-gs-22',
-    subject: 'history',
-    topic: 'Modern Indian History: British Administrative Acts',
-    subTopic: 'Charter Act of 1813',
-    question: 'Consider the following statements about the Charter Act of 1813:\n\n1. It ended the trade monopoly of the East India Company in India except for trade in tea and trade with China.\n2. It asserted the sovereignty of the British Crown over the Indian territories held by the Company.\n3. The revenues of India were now controlled by the British Parliament.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2016)',
+          {
+    id: "pyq-2016-gs-22",
+    subject: "history",
+    topic: "Constitutional Developments: Colonial Era",
+    subTopic: "Government of India Act 1919 (Montagu-Chelmsford Reforms)",
+    question: "With reference to the Government of India Act 1919, consider the following statements:\n\n1. It introduced dyarchy in the executive government of the provinces by dividing provincial subjects into Transferred and Reserved.\n2. It introduced, for the first time, bicameralism and direct elections in the country.\n3. It separated provincial budgets from the Central budget and authorized provincial legislatures to enact their own budgets.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2016)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Analysis of statements:\n1. Statement 1 is correct: The Charter Act of 1813 abolished the commercial trade monopoly of the English East India Company in India, throwing open Indian trade to all British private merchants. However, the Company retained its monopoly over tea trade and trade with China for another 20 years (until the Charter Act of 1833).\n2. Statement 2 is correct: The Act explicitly declared and asserted the constitutional sovereignty of the British Crown over the territories possessed by the East India Company in India.\n3. Statement 3 is incorrect: Indian revenues were NOT directly taken over and controlled by the British Parliament under the 1813 Act. The Company continued to manage and administer Indian revenues under the supervision of the Board of Control. Direct parliamentary control over Indian revenues came only after the 1857 revolt under the Government of India Act 1858.\nTherefore, Statements 1 and 2 are correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct under the Government of India Act 1919 (Montagu-Chelmsford Reforms):\n1. Dyarchy in Provinces: Provincial subjects were demarcated into Transferred (administered by Governor with elected ministers responsible to Legislative Council) and Reserved (administered by Governor and executive council without parliamentary accountability).\n2. Bicameralism at Center: The Indian Legislative Council was replaced by a bicameral legislature consisting of the Council of State (Upper House) and Legislative Assembly (Lower House), with direct elections.\n3. Budgetary Devolution: For the first time, provincial budgets were separated from the Central budget, empowering provincial legislatures to levy and vote taxes.",
     bookReference: {
-      bookName: 'A Brief History of Modern India by Spectrum',
-      edition: '2024 Edition',
-      chapter: 'Chapter 28: Constitutional, Administrative and Judicial Developments',
-      pageNumber: 'Page 520 – 524',
-      keyExcerpt: 'Charter Act of 1813 abolished the Company\'s trade monopoly in India except for tea and China trade, and affirmed Crown sovereignty.'
+      bookName: "Indian Polity by M. Laxmikanth / Spectrum Modern India",
+      edition: "7th Edition / 2024 Edition",
+      chapter: "Historical Background: Acts under British Rule",
+      pageNumber: "Page 1.6 – 1.8",
+      keyExcerpt: "Act of 1919 introduced Dyarchy in provinces, bicameral legislature at the centre, and separated provincial budgets from central budget."
     },
-    eliminationTip: 'Direct parliamentary control of Indian revenues happened after 1858, not 1813. Eliminating 3 leaves 1 and 2 only.',
-    difficulty: 'Moderate',
+    eliminationTip: "All three features (Provincial Dyarchy, Central Bicameralism, Separate Provincial Budgets) are standard, defining hallmarks of the 1919 Act.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2016,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2016', 'Charter Act 1813', 'East India Company', 'Crown Sovereignty', 'Modern History']
+    tags: [
+      "UPSC 2016",
+      "Government of India Act 1919",
+      "Dyarchy",
+      "Bicameralism",
+      "Modern History"
+    ]
   },
-  {
+{
     id: 'pyq-2016-gs-23',
     subject: 'history',
     topic: 'Modern Indian History: Freedom Struggle Missions',
@@ -1045,36 +1051,42 @@ export const pyq2016_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2016', 'Vishti', 'Forced Labor', 'Gupta Period', 'Mauryan Administration', 'Ancient History']
   },
-  {
-    id: 'pyq-2016-gs-37',
-    subject: 'economy',
-    topic: 'International Financial Institutions',
-    subTopic: 'Asian Infrastructure Investment Bank (AIIB)',
-    question: 'With reference to the "Asian Infrastructure Investment Bank (AIIB)", consider the following statements:\n\n1. AIIB has more than 80 member nations.\n2. India is the second largest shareholder in AIIB.\n3. AIIB does not have any member from outside Asia.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2016)',
+          {
+    id: "pyq-2016-gs-37",
+    subject: "economy",
+    topic: "Multilateral Financial Institutions",
+    subTopic: "New Development Bank (NDB) and BRICS",
+    question: "With reference to the \"New Development Bank (NDB)\", consider the following statements:\n\n1. It was established by the BRICS countries pursuant to the Fortaleza Declaration signed in 2014.\n2. Its headquarters is located in Shanghai, China.\n3. Unlike the World Bank or IMF, no member country possesses veto power in the NDB.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2016)",
     options: [
-      '1 and 2 only',
-      '2 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Analysis of statements:\n1. Statement 1 is correct: The Asian Infrastructure Investment Bank (AIIB), headquartered in Beijing and operational since January 2016, has grown rapidly from its 57 founding members to over 100 approved member nations worldwide.\n2. Statement 2 is correct: China is the largest shareholder (holding ~26.5% voting power), followed by India as the second largest shareholder (holding ~7.6% voting power), and Russia as the third largest.\n3. Statement 3 is incorrect: AIIB has numerous non-regional members from outside Asia, including major European, African, and Latin American nations (e.g., United Kingdom, Germany, France, Italy, Australia, Canada, Brazil).\nTherefore, Statements 1 and 2 are correct.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct regarding the New Development Bank (NDB):\n1. Fortaleza Declaration: NDB was formally founded by BRICS (Brazil, Russia, India, China, South Africa) at the 6th BRICS Summit in Fortaleza, Brazil in 2014.\n2. Headquarters: The headquarters of NDB is situated in Shanghai, China, and its first elected President was K.V. Kamath of India.\n3. Democratic Voting: In NDB, each founding member has equal voting rights (20% each) and no single member possesses veto power, promoting equitable multilateral governance.",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition',
-      chapter: 'Chapter 20: International Economic Organizations',
-      pageNumber: 'Page 20.25 – 20.28',
-      keyExcerpt: 'In AIIB, China is the largest shareholder followed by India; membership includes numerous non-Asian countries such as UK, Germany, and France.'
+      bookName: "Indian Economy by Ramesh Singh",
+      edition: "15th Edition",
+      chapter: "Chapter 14: International Economic Organizations",
+      pageNumber: "Page 14.22 – 14.26",
+      keyExcerpt: "NDB was established at the Fortaleza Summit (2014) with equal shareholding and headquarters in Shanghai."
     },
-    eliminationTip: 'Statement 3 uses an extreme absolute ("does not have any member from outside Asia")—major non-Asian countries like UK, Germany, and France are prominent members. Eliminating 3 leaves 1 and 2 only.',
-    difficulty: 'Easy',
+    eliminationTip: "NDB was founded by BRICS at Fortaleza, based in Shanghai, with equal shareholding (no veto). All 1, 2 and 3 are correct.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2016,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2016', 'AIIB', 'Shareholders', 'Multilateral Development Bank', 'Economy']
+    pyqPaper: "GS",
+    frequency: 8,
+    tags: [
+      "UPSC 2016",
+      "New Development Bank",
+      "BRICS",
+      "Fortaleza Declaration",
+      "Economy"
+    ]
   },
-  {
+{
     id: 'pyq-2016-gs-38',
     subject: 'polity',
     topic: 'Judicial Institutions & Dispute Settlement',

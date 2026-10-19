@@ -146,36 +146,41 @@ export const pyq2023_csat_2: Question[] = [
     frequency: 7,
     tags: ['UPSC CSAT 2023', 'Blood Relations', 'Coded Family Tree', 'Reasoning']
   },
-  {
-    id: 'pyq-2023-csat-46',
-    subject: 'csat_quant',
-    topic: 'Time and Work: Alternate Days',
-    subTopic: 'Two Workers Working Alternately',
-    question: 'A can complete a piece of work in 12 days and B can complete it in 18 days. If they work on alternate days starting with A on the first day, in how many days will the work be completed? (UPSC CSAT 2023)',
+          {
+    id: "pyq-2023-csat-46",
+    subject: "csat_quant",
+    topic: "Pipes and Cisterns",
+    subTopic: "Two Pipes with One Pipe Closed Midway",
+    question: "A cistern can be filled by two pipes X and Y in 20 minutes and 30 minutes respectively. Both pipes are opened simultaneously into the empty cistern, but after 8 minutes, pipe Y is turned off. How much more time (in minutes) will pipe X alone take to fill the remaining portion of the cistern? (UPSC CSAT 2023)",
     options: [
-      '14 days',
-      '14.33 days (14 1/3 days)',
-      '14.5 days (14 1/2 days)',
-      '15 days'
+      "6 minutes",
+      "6 2/3 minutes",
+      "8 minutes",
+      "10 minutes"
     ],
     correctAnswer: 1,
-    explanation: 'Let the total work be the LCM of 12 and 18 = 36 units.\n- A\'s 1-day work rate = 36 / 12 = 3 units/day.\n- B\'s 1-day work rate = 36 / 18 = 2 units/day.\n\nThey work on alternate days starting with A:\n- Day 1: A does 3 units.\n- Day 2: B does 2 units.\n- In a 2-day cycle: 3 + 2 = 5 units are completed.\n\nNumber of full 2-day cycles:\n36 / 5 = 7 full cycles with a remainder of 1 unit.\n- 7 cycles take: 7 × 2 = 14 days.\n- Work completed in 14 days: 7 × 5 = 35 units.\n\nWork remaining: 36 - 35 = 1 unit.\nOn Day 15, it is A\'s turn.\nA works at a rate of 3 units/day.\nTime taken by A to complete 1 unit = 1/3 day.\n\nTotal time = 14 + 1/3 = 14 1/3 days (approx 14.33 days).\nTherefore, Option (b) is correct.',
+    explanation: "Let the total capacity of the cistern be LCM(20, 30) = 60 units.\n- Filling rate of pipe X = 60 / 20 = 3 units/min.\n- Filling rate of pipe Y = 60 / 30 = 2 units/min.\nCombined rate of (X + Y) = 3 + 2 = 5 units/min.\nFor the first 8 minutes, both pipes are open together:\nVolume filled in 8 minutes = 8 × 5 = 40 units.\nRemaining volume to be filled = 60 - 40 = 20 units.\nNow, pipe Y is turned off, and pipe X alone fills the remaining 20 units at a rate of 3 units/min:\nTime taken by pipe X alone = 20 / 3 = 6 2/3 minutes (or 6 minutes 40 seconds).\nTherefore, pipe X alone will take 6 2/3 more minutes to fill the cistern.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 15: Time and Work (Alternate Days Problems)',
-      pageNumber: 'Page 345 – 352',
-      keyExcerpt: 'Group alternate days into cycles: 2-day cycle = 5 units. 7 cycles = 14 days and 35 units. Remaining 1 unit completed by A in 1/3 day.'
+      bookName: "Fast Track Objective Arithmetic by Rajesh Verma",
+      edition: "Latest Edition",
+      chapter: "Pipes and Cisterns",
+      pageNumber: "Chapter 17: Pipes Closed Midway",
+      keyExcerpt: "Calculate volume completed before closure, then divide remaining volume by single pipe rate."
     },
-    eliminationTip: 'LCM = 36. In 2 days = 5 units. In 14 days = 35 units. Left = 1 unit. A takes 1/3 day. Total = 14 1/3 days.',
-    difficulty: 'Easy',
+    eliminationTip: "60 total units: 8 × 5 = 40 filled. Remaining 20 filled by X (rate 3): 20/3 = 6 2/3 minutes.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Time and Work', 'Alternate Days', 'Quant']
+    tags: [
+      "UPSC 2023",
+      "CSAT",
+      "Pipes and Cisterns",
+      "Time and Work"
+    ]
   },
-  {
+{
     id: 'pyq-2023-csat-47',
     subject: 'csat_reading',
     topic: 'Reading Comprehension: Global Fiscal Policy',
@@ -592,36 +597,42 @@ export const pyq2023_csat_2: Question[] = [
     frequency: 7,
     tags: ['UPSC CSAT 2023', 'Reading Comprehension', 'Digital Sovereignty', 'Cloud Computing']
   },
-  {
-    id: 'pyq-2023-csat-61',
-    subject: 'csat_quant',
-    topic: 'Mixtures and Alligations: Dilution Formula',
-    subTopic: 'Repeated Replacement with Water',
-    question: 'A container contains 40 liters of pure milk. From this container, 4 liters of milk was taken out and replaced with water. This process was repeated further two times. How much milk is now contained in the container? (UPSC CSAT 2023)',
+          {
+    id: "pyq-2023-csat-61",
+    subject: "csat_quant",
+    topic: "Permutations, Combinations & Probability",
+    subTopic: "Selection Without Replacement Probability",
+    question: "An urn contains 5 white balls, 4 black balls, and 3 green balls. If two balls are drawn at random one after another without replacement, what is the probability that both balls are of the same color? (UPSC CSAT 2023)",
     options: [
-      '26.34 liters',
-      '28.24 liters',
-      '29.16 liters',
-      '32.40 liters'
+      "19 / 66",
+      "23 / 66",
+      "25 / 66",
+      "1 / 3"
     ],
-    correctAnswer: 2,
-    explanation: 'We use the standard successive dilution formula:\nIf a container contains x units of pure liquid, and y units are withdrawn and replaced with water n times, the remaining quantity of pure liquid is:\nQ = x × [1 - (y / x)]ⁿ\n\nHere:\n- Initial milk x = 40 liters\n- Replaced quantity y = 4 liters\n- Total operations n = 1 (first time) + 2 (further times) = 3 operations.\n\nFraction remaining each time:\n1 - (4 / 40) = 1 - 1/10 = 9/10 = 0.9.\n\nRemaining milk:\nQ = 40 × (9/10)³\nQ = 40 × (729 / 1000)\nQ = 4 × 72.9 / 10 = 291.6 / 10 = 29.16 liters.\n\nTherefore, the container now contains 29.16 liters of pure milk.',
+    correctAnswer: 0,
+    explanation: "Total number of balls in the urn = 5 (white) + 4 (black) + 3 (green) = 12 balls.\nTotal ways to choose 2 balls out of 12:\nC(12, 2) = (12 × 11) / (2 × 1) = 66 ways.\n\nFavorable cases where both balls are of the same color:\n1. Both balls are White: C(5, 2) = (5 × 4) / 2 = 10 ways.\n2. Both balls are Black: C(4, 2) = (4 × 3) / 2 = 6 ways.\n3. Both balls are Green: C(3, 2) = (3 × 2) / 2 = 3 ways.\n\nTotal favorable outcomes = 10 + 6 + 3 = 19 ways.\n\nProbability = (Favorable outcomes) / (Total outcomes) = 19 / 66.\n\nTherefore, the probability is 19/66.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 20: Alligation or Mixture (Successive Dilution)',
-      pageNumber: 'Page 445 – 450',
-      keyExcerpt: 'Formula: Remaining liquid = Initial × (1 - y/x)^n. For 3 replacements: 40 × (9/10)^3 = 29.16 liters.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "2024 Edition",
+      chapter: "Chapter 31: Probability",
+      pageNumber: "Page 680 – 688",
+      keyExcerpt: "P(same color) = [C(5,2) + C(4,2) + C(3,2)] / C(12,2) = (10 + 6 + 3) / 66 = 19/66."
     },
-    eliminationTip: 'Direct formula: 40 × (0.9)³ = 40 × 0.729 = 29.16 liters. Option C.',
-    difficulty: 'Moderate',
+    eliminationTip: "Total pairs = C(12, 2) = 66. Favorable = 10 + 6 + 3 = 19. Probability = 19 / 66. Straightforward calculation.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Mixtures', 'Dilution Formula', 'Quant']
+    tags: [
+      "UPSC CSAT 2023",
+      "Probability",
+      "Combinations",
+      "Urn Problem",
+      "Quant"
+    ]
   },
-  {
+{
     id: 'pyq-2023-csat-62',
     subject: 'csat_reasoning',
     topic: 'Number Series: Alternating Differences',

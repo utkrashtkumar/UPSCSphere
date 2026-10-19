@@ -586,36 +586,42 @@ export const pyq2023_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2023', 'Blood Relations', 'Family Tree', 'Niece', 'Reasoning']
   },
-  {
-    id: 'pyq-2023-csat-21',
-    subject: 'csat_quant',
-    topic: 'Speed, Time and Distance: Two Trains',
-    subTopic: 'Crossing Each Other in Opposite Directions',
-    question: 'Two trains of lengths 140 meters and 160 meters are running on parallel tracks in opposite directions at speeds of 60 km/h and 48 km/h respectively. In how many seconds will they cross each other completely from the moment they meet? (UPSC CSAT 2023)',
+          {
+    id: "pyq-2023-csat-21",
+    subject: "csat_quant",
+    topic: "Time, Speed and Distance",
+    subTopic: "Train Crossing a Moving Person in the Same Direction",
+    question: "A train running at 54 km/h takes 20 seconds to completely cross a pedestrian walking at 6 km/h in the same direction along the railway track. What is the length of the train? (UPSC CSAT 2023)",
     options: [
-      '9 seconds',
-      '10 seconds',
-      '11 seconds',
-      '12 seconds'
+      "240 meters",
+      "266 2/3 meters",
+      "280 meters",
+      "300 meters"
     ],
     correctAnswer: 1,
-    explanation: '1. Total distance to be cleared = Sum of lengths of both trains = 140 m + 160 m = 300 meters.\n2. Since they run in opposite directions, relative speed = 60 km/h + 48 km/h = 108 km/h.\n3. Convert relative speed to m/s:\n108 × (5 / 18) = 6 × 5 = 30 m/s.\n4. Time taken to cross = Total distance / Relative speed = 300 / 30 = 10 seconds.',
+    explanation: "Since the train and the pedestrian are moving in the SAME direction, their relative speed is the difference of their speeds:\nRelative Speed = Speed of Train - Speed of Pedestrian\n= 54 km/h - 6 km/h = 48 km/h.\nConverting relative speed to m/s:\n48 × (5 / 18) = (8 × 5) / 3 = 40 / 3 m/s.\nWhen a train passes a walking person (a point object of negligible length), the distance covered equals the length of the train (L):\nLength of train L = Relative Speed × Time\nL = (40 / 3 m/s) × 20 s\nL = 800 / 3 meters = 266 2/3 meters (or 266.67 meters).\nTherefore, the length of the train is 266 2/3 meters.",
     bookReference: {
-      bookName: 'Quantitative Aptitude by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 18: Problems on Trains',
-      pageNumber: 'Page 382 – 388',
-      keyExcerpt: 'Distance = L1 + L2 = 300 m. Relative speed = 108 km/h = 30 m/s. Time = 300/30 = 10 s.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Problems on Trains",
+      pageNumber: "Chapter 18: Passing a Moving Person in Same Direction",
+      keyExcerpt: "Distance = Relative Speed (S_train - S_man) × Time."
     },
-    eliminationTip: 'Distance = 300 m. Relative speed = 108 km/h = 30 m/s. 300 / 30 = 10 seconds.',
-    difficulty: 'Easy',
+    eliminationTip: "Relative speed = 54 - 6 = 48 km/h = 40/3 m/s. Length = (40/3) × 20 = 800/3 = 266 2/3 meters.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2023,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2023', 'Trains', 'Relative Speed', 'Distance', 'Quant']
+    tags: [
+      "UPSC 2023",
+      "CSAT",
+      "Trains",
+      "Relative Speed",
+      "Time Speed Distance"
+    ]
   },
-  {
+{
     id: 'pyq-2023-csat-22',
     subject: 'csat_reading',
     topic: 'Reading Comprehension: Coastal Mangroves and Storm Surges',

@@ -1033,36 +1033,42 @@ export const pyq2020_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2020', 'Reading Comprehension', 'Agricultural Credit', 'Tenant Farmers', 'Corollary']
   },
-  {
-    id: 'pyq-2020-csat-36',
-    subject: 'csat_quant',
-    topic: 'Percentages: Successive Discounts',
-    subTopic: 'Single Equivalent Discount',
-    question: 'A shopkeeper offers two successive discounts of 20% and 10% on an item. What is the single equivalent discount percentage? (UPSC CSAT 2020)',
+          {
+    id: "pyq-2020-csat-36",
+    subject: "csat_quant",
+    topic: "Simple and Compound Interest",
+    subTopic: "Difference between CI and SI for 3 Years",
+    question: "The difference between the compound interest (compounded annually) and simple interest on a certain principal sum of money for 3 years at 10% per annum is ₹155. What is the principal sum? (UPSC CSAT 2020)",
     options: [
-      '28%',
-      '30%',
-      '32%',
-      '25%'
+      "₹4,000",
+      "₹5,000",
+      "₹6,000",
+      "₹6,500"
     ],
-    correctAnswer: 0,
-    explanation: 'Let the original marked price be ₹100.\n\n1. First discount of 20%:\n   Price becomes = 100 - 20 = ₹80.\n\n2. Second discount of 10% on the reduced price of ₹80:\n   Discount = 10% of 80 = ₹8.\n   Final Selling Price = 80 - 8 = ₹72.\n\n3. Total single equivalent discount:\n   Total discount = 100 - 72 = ₹28.\n   Percentage = 28%.\n\nAlternatively using successive discount formula:\nEquivalent Discount = d1 + d2 - (d1 × d2) / 100\n= 20 + 10 - (20 × 10) / 100\n= 30 - 2 = 28%.',
+    correctAnswer: 1,
+    explanation: "Formula for the difference (D) between Compound Interest and Simple Interest for 3 years at rate r%:\nD = P × (r / 100)² × (3 + r / 100)\n\nGiven:\nD = ₹155\nr = 10%\n\nSubstitute the values:\n155 = P × (10 / 100)² × (3 + 10 / 100)\n155 = P × (1 / 100) × (3.1)\n155 = P × (3.1 / 100)\n155 = P × (31 / 1000)\nP = (155 × 1000) / 31\nSince 155 / 31 = 5:\nP = 5 × 1000 = ₹5,000.\n\nTherefore, the principal sum is ₹5,000.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 14: Profit, Loss and Discount',
-      pageNumber: 'Page 330 – 335',
-      keyExcerpt: 'Single equivalent discount = d1 + d2 - (d1 × d2)/100.'
+      bookName: "Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal",
+      edition: "2024 Edition",
+      chapter: "Chapter 22: Compound Interest",
+      pageNumber: "Page 504 – 510",
+      keyExcerpt: "Difference for 3 years: D = P(r/100)^2 * (300 + r)/100."
     },
-    eliminationTip: '20 + 10 - (20×10)/100 = 30 - 2 = 28%. 5-second calculation.',
-    difficulty: 'Easy',
+    eliminationTip: "155 = P * (1/100) * (31/10). P = (155 * 1000)/31 = 5 * 1000 = ₹5,000.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2020,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2020', 'Successive Discounts', 'Profit and Loss', 'Quant']
+    tags: [
+      "UPSC CSAT 2020",
+      "Compound Interest",
+      "Simple Interest",
+      "Difference Formula",
+      "Quant"
+    ]
   },
-  {
+{
     id: 'pyq-2020-csat-37',
     subject: 'csat_reasoning',
     topic: 'Critical Deduction: Syllogisms with Possibilities',

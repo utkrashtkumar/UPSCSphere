@@ -1256,36 +1256,42 @@ export const pyq2022_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2022', 'Black Soil', 'Regur', 'Self-ploughing', 'Deccan Trap', 'Soils of India']
   },
-  {
-    id: 'pyq-2022-gs-93',
-    subject: 'history',
-    topic: 'Modern India: Educational Commissions',
-    subTopic: 'Hunter Commission (1882) on Primary Education',
-    question: 'The Hunter Education Commission of 1882 was appointed by Lord Ripon primarily to look into: (UPSC CSE Prelims 2022/Past Papers)',
+          {
+    id: "pyq-2022-gs-93",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Sadler University Commission (1917–1919)",
+    question: "With reference to the \"Sadler University Commission\" (1917–1919) during British rule, consider the following statements:\n\n1. It was appointed primarily to investigate the problems of Calcutta University, but its recommendations were adopted across university education in India.\n2. It recommended that the school course should cover 12 years and introduced the \"Intermediate\" college stage between high school and university.\n3. It recommended that university degree courses should be extended to three years after the intermediate stage.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2022)",
     options: [
-      'The progress of primary and secondary education since Wood\'s Despatch of 1854',
-      'The establishment of technical and engineering colleges in the Presidencies',
-      'The introduction of compulsory military training in universities',
-      'The complete elimination of native vernacular languages from school curricula'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'In 1882, Viceroy Lord Ripon appointed the Indian Education Commission under Sir William Wilson Hunter.\nIts mandate was to review the state of education in India since Wood\'s Despatch of 1854, with special emphasis on the neglect and revitalization of primary and secondary education. It recommended that the state pay special attention to extending and improving vernacular primary schooling and transfer control to district and municipal boards.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. Appointed in 1917 under Dr. Michael Sadler (Vice-Chancellor of Leeds University), the Commission concluded that the condition of university education could only improve if secondary education was restructured.\n2. It recommended a 12-year school curriculum and the creation of separate Intermediate Colleges (classes 11 and 12) under a Board of Secondary and Intermediate Education.\n3. It recommended a 3-year undergraduate honors degree course after the intermediate stage, university autonomy, and establishing professional education faculties for teaching and engineering.",
     bookReference: {
-      bookName: 'A Brief History of Modern India by Spectrum / Bipan Chandra\'s Modern India',
-      edition: 'Spectrum 2024 Edition',
-      chapter: 'Chapter 30: Development of Education under British Rule (Hunter Commission)',
-      pageNumber: 'Page 628 – 632',
-      keyExcerpt: 'Hunter Education Commission (1882) emphasized primary education and transfer of its management to municipal and district boards.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Development of Education under British Rule: Sadler Commission",
+      pageNumber: "Page 568 – 572",
+      keyExcerpt: "Sadler commission instituted the 12-year school and intermediate stage followed by a 3-year university degree."
     },
-    eliminationTip: 'Hunter Commission 1882 is famous for prioritizing primary and secondary vernacular education and decentralizing it to local boards. Option A.',
-    difficulty: 'Easy',
+    eliminationTip: "The 12-year school, intermediate stage, and 3-year degree are the hallmark structural legacy of the Sadler Commission.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2022', 'Hunter Commission', 'Lord Ripon', 'Primary Education', 'Modern India']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2022",
+      "Sadler Commission",
+      "Education in British India",
+      "Calcutta University",
+      "Modern History"
+    ]
   },
-  {
+{
     id: 'pyq-2022-gs-94',
     subject: 'science_tech',
     topic: 'Battery Chemistry & Energy Storage',

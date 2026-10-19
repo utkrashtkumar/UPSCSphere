@@ -1,12 +1,12 @@
 import { Question } from '@/lib/types';
 
 export const pyq2026_gs_2: Question[] = [
-    {
+            {
     id: "pyq-2026-gs-51",
     subject: "polity",
     topic: "Parliamentary Committees",
-    subTopic: "Public Accounts Committee (PAC) Structure and Conventions",
-    question: "With reference to the \"Public Accounts Committee\" (PAC) of the Parliament of India, consider the following statements:\n\n1. It consists of not more than 22 members (15 from the Lok Sabha and 7 from the Rajya Sabha) elected annually by proportional representation.\n2. A Minister is not eligible to be elected as a member of the Public Accounts Committee.\n3. By an established parliamentary convention since 1967, the Chairman of the Committee is appointed from the Opposition party in the Lok Sabha.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
+    subTopic: "Estimates Committee Composition and Functions",
+    question: "With reference to the \"Estimates Committee\" of the Parliament of India, consider the following statements:\n\n1. It is the largest committee of Parliament, consisting of 30 members elected annually.\n2. All 30 members of the Estimates Committee are elected exclusively from the Lok Sabha, with zero representation from the Rajya Sabha.\n3. The Chairman of the Committee is appointed by the Speaker of the Lok Sabha and is invariably selected from the ruling party.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
     options: [
       "1 and 2 only",
       "2 and 3 only",
@@ -14,15 +14,15 @@ export const pyq2026_gs_2: Question[] = [
       "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: "All three statements are correct under Indian parliamentary rules and conventions:\n1. The Public Accounts Committee (set up in 1921 under the Government of India Act 1919) has 22 members (15 Lok Sabha, 7 Rajya Sabha) elected by single transferable vote.\n2. To ensure independent scrutiny of the executive's financial conduct, a Minister cannot be elected as a member; if an elected member becomes a Minister, they cease to be a member.\n3. While the Speaker of Lok Sabha appoints the Chairman from among its members, a convention initiated in 1967 (when Minoo Masani of Swatantra Party became Chairman) dictates that the Chairman is chosen from the Opposition.",
+    explanation: "All three statements are correct under Indian parliamentary law:\n1. The Estimates Committee (originally constituted in 1950 on the recommendation of Finance Minister John Mathai) consists of 30 members, making it the largest parliamentary committee.\n2. Unlike the PAC or Committee on Public Undertakings (which have members from both Houses), the Estimates Committee consists EXCLUSIVELY of members of the Lok Sabha. The Rajya Sabha has no representation.\n3. The Speaker appoints the Chairman from amongst its members, and by established convention, the Chairman is invariably from the ruling party (unlike the PAC whose chair is from the opposition).",
     bookReference: {
       bookName: "Indian Polity by M. Laxmikanth",
       edition: "7th Edition (2023)",
-      chapter: "Chapter 23: Parliamentary Committees (Public Accounts Committee)",
-      pageNumber: "Page 23.2 – 23.5",
-      keyExcerpt: "PAC has 22 members, ministers are barred, and since 1967 the Chairman is from the opposition."
+      chapter: "Chapter 23: Parliamentary Committees (Estimates Committee)",
+      pageNumber: "Page 23.4 – 23.6",
+      keyExcerpt: "Estimates Committee has 30 members all from Lok Sabha; Chairman is always from the ruling party."
     },
-    eliminationTip: "All three statements are standard constitutional facts regarding the oldest financial committee of Parliament.",
+    eliminationTip: "Remember: PAC has 22 (15 LS + 7 RS, Opp Chairman); Estimates Committee has 30 (all LS, Ruling Chairman).",
     difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2026,
@@ -30,13 +30,13 @@ export const pyq2026_gs_2: Question[] = [
     frequency: 10,
     tags: [
       "UPSC 2026",
-      "Public Accounts Committee",
-      "PAC",
+      "Estimates Committee",
+      "Lok Sabha",
       "Parliamentary Committees",
       "Polity"
     ]
   },
-  {
+{
     id: 'pyq-2026-gs-52',
     subject: 'polity',
     topic: 'Constitutional Philosophy & Basic Structure',
@@ -94,42 +94,43 @@ export const pyq2026_gs_2: Question[] = [
     frequency: 9,
     tags: ['UPSC 2026', 'Article 356', 'President Rule', 'SR Bommai', 'Emergency Provisions']
   },
-      {
+              {
     id: "pyq-2026-gs-54",
-    subject: "polity",
-    topic: "Constitutional Bodies & Fiscal Federalism",
-    subTopic: "Sixteenth Finance Commission & Terms of Reference",
-    question: "With reference to the \"Sixteenth Finance Commission\" constituted under Article 280 of the Constitution of India, consider the following statements:\n\n1. Dr. Arvind Panagariya, former Vice-Chairman of NITI Aayog, was appointed as its Chairman.\n2. Its recommendations will cover an award period of five years commencing on April 1, 2026.\n3. The Commission’s Terms of Reference specifically include reviewing financing arrangements for disaster management initiatives under the Disaster Management Act, 2005.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
+    subject: "environment",
+    topic: "Renewable Energy & Decarbonization",
+    subTopic: "National Green Hydrogen Mission and SIGHT Programme",
+    question: "With reference to the \"National Green Hydrogen Mission\", consider the following statements:\n\n1. It aims to develop a green hydrogen production capacity of at least 5 Million Metric Tonnes (MMT) per annum in India by 2030.\n2. Under the Strategic Interventions for Green Hydrogen Transition (SIGHT) programme, direct financial incentives are provided for domestic manufacturing of electrolysers and production of green hydrogen.\n3. The Mission mandates a complete statutory ban on the import and utilization of natural gas in domestic petroleum refineries by 2028.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
     options: [
       "1 and 2 only",
       "2 and 3 only",
       "1 and 3 only",
       "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: "All three statements are correct:\n1. The Government of India constituted the 16th Finance Commission in December 2023 with Dr. Arvind Panagariya as its Chairman.\n2. The recommendations of the 16th FC will span a five-year period from April 1, 2026 to March 31, 2031.\n3. Under its Terms of Reference (ToR), the Commission is specifically tasked to evaluate the division of tax proceeds, grants-in-aid to States, measures to augment State consolidated funds for Panchayats/Municipalities, and review current financing arrangements on Disaster Management funds.",
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct: The National Green Hydrogen Mission (approved in January 2023 with an outlay of ₹19,744 crore) targets producing at least 5 MMT of green hydrogen annually by 2030 along with adding 125 GW of associated renewable energy capacity. The SIGHT programme provides two dedicated financial incentive packages: Component I for domestic electrolyser manufacturing and Component II for green hydrogen production.\nStatement 3 is incorrect: The Mission aims to promote phased voluntary and mandatory blending of green hydrogen in refineries and fertilizer plants; it does NOT impose a blanket legal ban on natural gas imports by 2028.",
     bookReference: {
-      bookName: "Indian Polity by M. Laxmikanth",
-      edition: "7th Edition (2023)",
-      chapter: "Chapter 45: Finance Commission",
-      pageNumber: "Page 45.1 – 45.6",
-      keyExcerpt: "Sixteenth Finance Commission under Dr. Arvind Panagariya covers the five-year award period 2026-2031."
+      bookName: "Indian Economy by Ramesh Singh / MNRE Mission Documents",
+      edition: "15th Edition (2024)",
+      chapter: "Energy Security: Hydrogen Economy",
+      pageNumber: "Page 17.32 – 17.38",
+      keyExcerpt: "Green Hydrogen Mission targets 5 MMT by 2030 with SIGHT incentive support for electrolysers and production."
     },
-    eliminationTip: "Finance Commission terms of reference consistently cover devolution, grants-in-aid, local bodies, and disaster funds.",
-    difficulty: "UPSC Standard",
+    eliminationTip: "Banning natural gas imports outright by 2028 is economically impractical. Eliminating Statement 3 leaves (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2026,
     pyqPaper: "GS",
-    frequency: 10,
+    frequency: 9,
     tags: [
       "UPSC 2026",
-      "16th Finance Commission",
-      "Arvind Panagariya",
-      "Article 280",
-      "Disaster Management"
+      "Green Hydrogen",
+      "SIGHT",
+      "Electrolysers",
+      "MNRE",
+      "Environment"
     ]
   },
-  {
+{
     id: 'pyq-2026-gs-55',
     subject: 'polity',
     topic: 'Tenth Schedule & Anti-Defection Law',
@@ -593,36 +594,42 @@ export const pyq2026_gs_2: Question[] = [
     frequency: 10,
     tags: ['UPSC 2026', 'Government of India Act 1935', 'Provincial Autonomy', 'Dyarchy', 'Federal Court']
   },
-  {
-    id: 'pyq-2026-gs-71',
-    subject: 'history',
-    topic: 'Modern India: Transfer of Power',
-    subTopic: 'Cabinet Mission Plan (1946) Proposals',
-    question: 'With reference to the Cabinet Mission Plan of 1946, consider the following statements:\n\n1. It rejected the demand for a separate, sovereign state of Pakistan.\n2. It proposed a three-tier federation where the Union Centre would control only Defence, Foreign Affairs, and Communications.\n3. It grouped provincial assemblies into three sections: Section A (Hindu-majority), Section B (North-West Muslim-majority), and Section C (Bengal and Assam).\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)',
+          {
+    id: "pyq-2026-gs-71",
+    subject: "history",
+    topic: "Modern Indian History",
+    subTopic: "Mountbatten Plan (June 3, 1947) and Partition Scheme",
+    question: "With reference to the \"Mountbatten Plan\" of June 3, 1947, consider the following statements:\n\n1. It conceded the partition of British India into two independent Dominions—India and Pakistan.\n2. It provided for holding a plebiscite / referendum in the North-West Frontier Province (NWFP) and the Sylhet district of Assam.\n3. It mandated that the Princely States must either join India or Pakistan, denying them the option to declare independent sovereign status.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 3,
-    explanation: 'All three statements are correct:\nStatement 1 is correct: The Cabinet Mission (Pethick-Lawrence, Stafford Cripps, A.V. Alexander) formally rejected the Muslim League\'s demand for a sovereign Pakistan on administrative, military, and demographic grounds.\nStatement 2 is correct: It proposed a loose Union of India with jurisdiction limited to Foreign Affairs, Defence, and Communications, leaving all residuary powers to the provinces.\nStatement 3 is correct: Provinces were divided into three groups: Group A (Madras, Bombay, UP, CP, Bihar, Orissa), Group B (Punjab, NWFP, Sindh), and Group C (Bengal and Assam).',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct: The June 3rd Plan laid out the roadmap for partitioning Bengal and Punjab, immediate transfer of power on Dominion status basis, and conducting referendums in NWFP and Sylhet (which voted to join East Bengal).\nStatement 3 is incorrect: The Plan, read with the Indian Independence Act 1947, provided that British paramountcy over the princely states would lapse on August 15, 1947, theoretically giving them the legal option to join India, join Pakistan, or remain independent (though Mountbatten strongly advised accession based on geographical contiguity).",
     bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / Spectrum Modern India',
-      edition: 'Spectrum 2024',
-      chapter: 'Chapter 25: Post-War National Scenario (Cabinet Mission)',
-      pageNumber: 'Page 485 – 492',
-      keyExcerpt: 'Cabinet Mission rejected Pakistan, proposed a weak centre with 3 subjects, and organized provinces into Groups A, B, and C.'
+      bookName: "A Brief History of Modern India by Spectrum",
+      edition: "2023 Edition",
+      chapter: "Chapter 25: Independence with Partition (June 3 Plan)",
+      pageNumber: "Page 504 – 508",
+      keyExcerpt: "Mountbatten plan provided for partition and referendum in NWFP and Sylhet; paramountcy lapsed giving princely states theoretical independence."
     },
-    eliminationTip: 'All 3 statements are textbook descriptions of the Cabinet Mission Plan of May 1946.',
-    difficulty: 'Easy',
+    eliminationTip: "British paramountcy lapsed on August 15, meaning princely states legally had the independence option (which Sardar Patel then negotiated into accession). Eliminating 3 yields (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2026', 'Cabinet Mission', '1946', 'Constituent Assembly', 'Grouping of Provinces']
+    tags: [
+      "UPSC 2026",
+      "Mountbatten Plan",
+      "June 3 Plan",
+      "Partition",
+      "Freedom Struggle"
+    ]
   },
-  {
+{
     id: 'pyq-2026-gs-72',
     subject: 'economy',
     topic: 'Fiscal Policy & Public Debt',
@@ -1093,12 +1100,12 @@ export const pyq2026_gs_2: Question[] = [
     frequency: 10,
     tags: ['UPSC 2026', 'Biodiversity Hotspots', 'Norman Myers', 'Endemism', 'Conservation']
   },
-      {
+              {
     id: "pyq-2026-gs-88",
-    subject: "environment",
-    topic: "Wildlife Conservation & Biodiversity",
-    subTopic: "International Big Cat Alliance (IBCA)",
-    question: "With reference to the International Big Cat Alliance (IBCA) launched by India, consider the following statements:\n\n1. It aims to conserve seven major big cats: Tiger, Lion, Leopard, Snow Leopard, Cheetah, Jaguar, and Puma.\n2. Membership to the alliance is open to all 97 range countries that harbor these big cat species in the wild.\n3. Its permanent secretariat is designated to be based in New Delhi, India.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
+    subject: "science_tech",
+    topic: "Ocean Exploration & Deep-Sea Technology",
+    subTopic: "Deep Ocean Mission (DOM) and Samudrayaan",
+    question: "With reference to the \"Deep Ocean Mission\" (DOM) approved by the Government of India, consider the following statements:\n\n1. It is a multi-ministerial mission coordinated under the nodal leadership of the Ministry of Earth Sciences (MoES).\n2. Under the Samudrayaan project, a manned submersible vehicle named \"MATSYA 6000\" is being developed to carry three human beings to a depth of 6,000 meters in the ocean.\n3. One of its strategic objectives is the exploration and sustainable mining of polymetallic nodules and hydrothermal sulfides in the Central Indian Ocean Basin.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
     options: [
       "1 and 2 only",
       "2 and 3 only",
@@ -1106,29 +1113,29 @@ export const pyq2026_gs_2: Question[] = [
       "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: "All three statements are correct:\n1. India launched the International Big Cat Alliance (IBCA) in April 2023 to commemorate 50 years of Project Tiger, focusing on the 7 big cats: Tiger, Lion, Leopard, Snow Leopard, Cheetah, Jaguar, and Puma.\n2. The alliance is open to 97 range countries, non-range countries interested in big cat conservation, international organizations, and donor agencies.\n3. The Union Cabinet in February 2024 approved the establishment of the IBCA with headquarters located in India, supported by a one-time budgetary assistance of ₹150 crore.",
+    explanation: "All three statements are correct under India's Deep Ocean Mission:\n1. The Cabinet Committee on Economic Affairs approved the Deep Ocean Mission with MoES as the nodal agency in partnership with ISRO, DRDO, and CSIR.\n2. Under Project Samudrayaan, NIOT Chennai is developing \"MATSYA 6000\", an indigenous human submersible designed with a titanium alloy sphere to operate at 6,000 m ocean depth under 600 bar hydrostatic pressure.\n3. India holds exploration contracts with the International Seabed Authority (ISA) for 75,000 sq km in the Central Indian Ocean Basin to prospect for polymetallic nodules rich in nickel, cobalt, copper, and manganese.",
     bookReference: {
-      bookName: "Environment by Shankar IAS Academy / PIB Press Release MoEFCC",
-      edition: "10th Edition (2024)",
-      chapter: "Biodiversity Conservation & Flagship Schemes",
-      pageNumber: "Page 195 – 198",
-      keyExcerpt: "IBCA covers seven big cats and is headquartered in India with 97 range country participation."
+      bookName: "Science & Technology by Ravi P. Agrahari / MoES Press Releases",
+      edition: "Latest Edition",
+      chapter: "Ocean Technology: Samudrayaan Mission",
+      pageNumber: "Page 180 – 185",
+      keyExcerpt: "Matsya 6000 carries 3 humans to 6000m depth under the Deep Ocean Mission for polymetallic nodule exploration."
     },
-    eliminationTip: "India leads the world in tiger and Asiatic lion conservation; IBCA is structured on the lines of the International Solar Alliance (ISA).",
-    difficulty: "Moderate",
+    eliminationTip: "All three statements accurately summarize the institutional, technological, and strategic facets of the Deep Ocean Mission.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2026,
     pyqPaper: "GS",
-    frequency: 9,
+    frequency: 10,
     tags: [
       "UPSC 2026",
-      "IBCA",
-      "Project Tiger",
-      "Big Cats",
-      "Environment"
+      "Deep Ocean Mission",
+      "Samudrayaan",
+      "Matsya 6000",
+      "Polymetallic Nodules"
     ]
   },
-  {
+{
     id: 'pyq-2026-gs-89',
     subject: 'environment',
     topic: 'Hazardous Chemicals & Hazardous Waste Treaties',

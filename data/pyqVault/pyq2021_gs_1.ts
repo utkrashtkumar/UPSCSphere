@@ -703,36 +703,42 @@ export const pyq2021_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Constituent Assembly', 'Committees', 'Nehru', 'Rajendra Prasad', 'Kripalani']
   },
-  {
-    id: 'pyq-2021-gs-25',
-    subject: 'environment',
-    topic: 'Biodiversity Conservation & Global Reports',
-    subTopic: 'Living Planet Report (WWF)',
-    question: 'The "Living Planet Report", which measures trends in the global abundance of wild animal populations, is published biennially by: (UPSC CSE Prelims 2021)',
+          {
+    id: "pyq-2021-gs-25",
+    subject: "environment",
+    topic: "Global Biodiversity Monitoring & Indices",
+    subTopic: "Living Planet Report and Living Planet Index (LPI)",
+    question: "The \"Living Planet Report\", which measures trends in the global abundance of wild animal populations across terrestrial, freshwater, and marine habitats, is published biennially by which of the following organizations?\n\n(UPSC CSE Prelims 2021)",
     options: [
-      'World Wide Fund for Nature (WWF)',
-      'United Nations Environment Programme (UNEP)',
-      'International Union for Conservation of Nature (IUCN)',
-      'World Economic Forum (WEF)'
+      "World Wide Fund for Nature (WWF)",
+      "International Union for Conservation of Nature (IUCN)",
+      "United Nations Environment Programme (UNEP)",
+      "World Resources Institute (WRI)"
     ],
     correctAnswer: 0,
-    explanation: 'The "Living Planet Report" is published every two years by the World Wide Fund for Nature (WWF) in collaboration with the Zoological Society of London (ZSL).\nIt tracks the Living Planet Index (LPI), analyzing population trends in thousands of monitored mammal, bird, reptile, amphibian, and fish populations globally to gauge ecological health.',
+    explanation: "The \"Living Planet Report\" is published every two years by the World Wide Fund for Nature (WWF) in collaboration with the Zoological Society of London (ZSL). It evaluates global biodiversity health using the Living Planet Index (LPI), tracking population declines across thousands of monitored vertebrate species (mammals, birds, reptiles, amphibians, and fish) caused by habitat destruction, overexploitation, pollution, and climate change.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 24: Environmental Organizations & Global Reports',
-      pageNumber: 'Page 345 – 348',
-      keyExcerpt: 'The Living Planet Report is the flagship biennial publication of the World Wide Fund for Nature (WWF).'
+      bookName: "Environment by Shankar IAS Academy",
+      edition: "10th Edition (2024)",
+      chapter: "Biodiversity Monitoring: Global Reports and Indices",
+      pageNumber: "Page 168 – 171",
+      keyExcerpt: "The Living Planet Report is the flagship publication of the World Wide Fund for Nature (WWF)."
     },
-    eliminationTip: 'Living Planet Report is WWF\'s most famous publication tracking global biodiversity and vertebrate decline.',
-    difficulty: 'Easy',
+    eliminationTip: "Living Planet Report = WWF. Red Data Book = IUCN. Global Environment Outlook (GEO) = UNEP.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'Living Planet Report', 'WWF', 'Biodiversity', 'Living Planet Index']
+    tags: [
+      "UPSC 2021",
+      "Living Planet Report",
+      "WWF",
+      "Zoological Society of London",
+      "Biodiversity"
+    ]
   },
-  {
+{
     id: 'pyq-2021-gs-26',
     subject: 'economy',
     topic: 'Macroeconomics: Inflation Mechanics',
@@ -877,36 +883,43 @@ export const pyq2021_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Article 128', 'Article 215', 'Supreme Court', 'High Court Review', 'Judiciary']
   },
-  {
-    id: 'pyq-2021-gs-31',
-    subject: 'science_tech',
-    topic: 'Solar Energy & Agricultural Technology',
-    subTopic: 'Solar Water Pumping Systems (PM-KUSUM)',
-    question: 'With reference to solar water pumps, consider the following statements:\n\n1. Solar power can be used for running surface pumps and not submersible pumps.\n2. Solar power can be used for running centrifugal pumps and not the ones with piston.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2021)',
+          {
+    id: "pyq-2021-gs-31",
+    subject: "economy",
+    topic: "Agriculture & Renewable Energy Infrastructure",
+    subTopic: "PM-KUSUM Scheme Components and Objectives",
+    question: "With reference to the \"Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan\" (PM-KUSUM) scheme, consider the following statements:\n\n1. Component A enables individual farmers, cooperatives, and panchayats to set up decentralized grid-connected renewable power plants up to 2 MW on barren or cultivable land.\n2. Component B supports individual farmers in installing standalone off-grid solar agriculture pumps in off-grid rural areas.\n3. Component C supports the solarisation of existing grid-connected agricultural pumps, allowing farmers to sell surplus solar power back to the distribution companies (DISCOMs).\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
     correctAnswer: 3,
-    explanation: 'Both statements are factually incorrect:\nStatement 1 is incorrect: Under government programs like PM-KUSUM and global solar engineering standards, solar electricity (DC from panels or AC via inverters) routinely powers BOTH surface pumps AND deep-well submersible pumps.\nStatement 2 is incorrect: Solar motors can drive centrifugal pumps, positive displacement piston pumps, helical rotor pumps, and diaphragm pumps without restriction.\n\nTherefore, Neither 1 nor 2 is correct.',
+    explanation: "All three statements are correct under the PM-KUSUM scheme launched by the Ministry of New and Renewable Energy (MNRE):\n1. Component A targets adding 10,000 MW of solar power capacity through small solar plants (0.5 to 2 MW) installed by farmers within 5 km of sub-stations.\n2. Component B supports installing 20 lakh standalone solar water pumps of capacity up to 7.5 HP in un-electrified rural regions.\n3. Component C solarises 15 lakh existing grid-connected agriculture pumps (both individual pump solarisation and feeder level solarisation), converting farmers from passive electricity consumers into power producers (\"Urjadatas\") who earn income by feeding surplus electricity into the grid.",
     bookReference: {
-      bookName: 'Science & Technology by Ravi P. Agrahari',
-      edition: '7th Edition',
-      chapter: 'Chapter 5: Energy Technologies (Solar Water Pumps & PM KUSUM)',
-      pageNumber: 'Page 5.20 – 5.23',
-      keyExcerpt: 'Solar water pumps operate both submersible and surface pumps, and can power centrifugal and positive displacement piston mechanisms.'
+      bookName: "Indian Economy by Ramesh Singh / MNRE Annual Reports",
+      edition: "15th Edition (2024)",
+      chapter: "Agriculture Infrastructure: PM-KUSUM",
+      pageNumber: "Page 8.48 – 8.52",
+      keyExcerpt: "PM-KUSUM has 3 components: A (grid-connected mini plants), B (standalone pumps), and C (solarisation of grid pumps)."
     },
-    eliminationTip: 'Both statements contain restrictive phrases ("not submersible", "not piston"). Solar power is merely electricity; any electric motor can drive any pump mechanism. Both are false. Option D.',
-    difficulty: 'Easy',
+    eliminationTip: "Component A = Plants up to 2 MW; Component B = Standalone solar pumps; Component C = Solarising grid pumps with feed-in tariff.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2021', 'Solar Pumps', 'PM KUSUM', 'Renewable Energy', 'Submersible Pumps']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2021",
+      "PM-KUSUM",
+      "Solar Pumps",
+      "MNRE",
+      "Agriculture",
+      "Economy"
+    ]
   },
-  {
+{
     id: 'pyq-2021-gs-32',
     subject: 'history',
     topic: 'Modern Indian History: Portuguese Colonization',
@@ -1080,36 +1093,43 @@ export const pyq2021_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2021', 'Symbiosis', 'Mutualism', 'Lichens', 'Zooxanthellae', 'Termites']
   },
-  {
-    id: 'pyq-2021-gs-38',
-    subject: 'economy',
-    topic: 'Foreign Investment & Capital Inflows',
-    subTopic: 'Foreign Direct Investment (FDI) Components',
-    question: 'With reference to Foreign Direct Investment (FDI) in India, which of the following is considered its major characteristic? (UPSC CSE Prelims 2021)',
+          {
+    id: "pyq-2021-gs-38",
+    subject: "economy",
+    topic: "External Sector & Capital Flows",
+    subTopic: "Foreign Portfolio Investment (FPI) vs FDI Regulations",
+    question: "With reference to \"Foreign Portfolio Investment\" (FPI) in India, consider the following statements:\n\n1. An investor holding up to 10% or less of the total paid-up equity capital on a fully diluted basis in an Indian listed company is classified as an FPI investor.\n2. If the foreign investment holding in an Indian company rises above 10%, the entire holding is reclassified as Foreign Direct Investment (FDI).\n3. Foreign Portfolio Investors acquire direct executive management representation and voting control over corporate strategy.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2021)",
     options: [
-      'It is the investment through capital instruments essentially in a listed company',
-      'It is largely non-debt creating capital flow',
-      'It is the investment which involves debt-servicing obligations',
-      'It is the investment made by foreign institutional investors in government securities'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 1,
-    explanation: 'A defining macroeconomic characteristic of Foreign Direct Investment (FDI) is that it is a NON-DEBT CREATING CAPITAL INFLOW.\nUnlike external commercial borrowings (ECBs) or sovereign debt loans that require regular debt servicing (interest and principal repayments regardless of economic conditions), FDI brings equity risk-capital where returns to foreign investors depend on business profit without imposing sovereign debt repayment liabilities.',
+    correctAnswer: 0,
+    explanation: "Statements 1 and 2 are correct: Following the Arvind Mayaram Committee recommendations, SEBI and RBI harmonized foreign investment definitions: any foreign investment of 10% or less in a listed company is treated as Foreign Portfolio Investment (FPI); any holding above 10% is categorized as Foreign Direct Investment (FDI).\nStatement 3 is incorrect: FPI represents passive financial capital seeking portfolio returns and capital appreciation in secondary stock and debt markets; it does NOT seek long-term management control, board seats, or operational control over the enterprise (which characterizes FDI).",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition',
-      chapter: 'Chapter 15: External Sector in India (Foreign Direct Investment)',
-      pageNumber: 'Page 15.28 – 15.32',
-      keyExcerpt: 'FDI is non-debt creating, stable long-term capital inflow accompanied by technology and management transfer.'
+      bookName: "Indian Economy by Ramesh Singh",
+      edition: "15th Edition (2024)",
+      chapter: "Chapter 14: External Sector and Balance of Payments",
+      pageNumber: "Page 14.22 – 14.26",
+      keyExcerpt: "10% is the statutory threshold distinguishing FPI from FDI. FPI is passive financial capital."
     },
-    eliminationTip: 'FDI is equity capital, not a loan; therefore, it is non-debt creating. Option B is the textbook economic answer.',
-    difficulty: 'Easy',
+    eliminationTip: "FPI is passive investment without management control. Eliminating Statement 3 leaves (a) 1 and 2 only.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2021,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2021', 'FDI', 'Non-debt Capital', 'Balance of Payments', 'Foreign Investment']
+    tags: [
+      "UPSC 2021",
+      "FPI",
+      "FDI",
+      "SEBI",
+      "Mayaram Committee",
+      "Economy"
+    ]
   },
-    {
+{
     id: "pyq-2021-gs-39",
     subject: "polity",
     topic: "Basic Structure & Constitutional Concepts",

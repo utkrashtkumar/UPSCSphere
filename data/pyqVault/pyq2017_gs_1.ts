@@ -384,94 +384,114 @@ export const pyq2017_gs_1: Question[] = [
       "Polity"
     ]
   },
-  {
-    id: 'pyq-2017-gs-14',
-    subject: 'environment',
-    topic: 'Marine Biodiversity & Mammals',
-    subTopic: 'Dugong (Sea Cow) Distribution and Conservation',
-    question: 'With reference to the \'Dugong\', a mammal found in India, which of the following statements is/are correct?\n\n1. It is an herbivorous marine mammal.\n2. It is found along the entire coast of India.\n3. It is given legal protection under Schedule I of the Wildlife (Protection) Act, 1972.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2017)',
+          {
+    id: "pyq-2017-gs-14",
+    subject: "economy",
+    topic: "Intellectual Property Rights & Industrial Policy",
+    subTopic: "National Intellectual Property Rights (IPR) Policy",
+    question: "With reference to the \"National Intellectual Property Rights (IPR) Policy\" adopted by India, consider the following statements:\n\n1. It reiterates India’s commitment to the Doha Development Agenda and the TRIPS Agreement.\n2. The Department for Promotion of Industry and Internal Trade (DPIIT) is the nodal department to coordinate, guide and oversee the implementation and future development of IPRs in India.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2017)",
     options: [
-      '1 and 2',
-      '2 only',
-      '1 and 3',
-      '3 only'
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
     ],
     correctAnswer: 2,
-    explanation: 'Statement 1 is correct: The Dugong (Dugong dugon), commonly known as the "sea cow", is the world\'s only strictly herbivorous marine mammal, feeding almost exclusively on marine seagrasses.\nStatement 2 is INCORRECT: Dugongs are NOT found along the "entire coast of India". In Indian waters, their surviving populations are restricted to isolated, fragmented seagrass meadow habitats in:\n- Gulf of Mannar and Palk Bay (Tamil Nadu)\n- Gulf of Kutch (Gujarat)\n- Andaman and Nicobar Islands.\nStatement 3 is correct: The Dugong is listed as Vulnerable on the IUCN Red List and is accorded the highest level of legal protection under SCHEDULE I of the Wildlife (Protection) Act, 1972.\nTherefore, 1 and 3 are correct.',
+    explanation: "Both statements are correct under the National IPR Policy adopted in May 2016 (motto: \"Creative India; Innovative India\"):\nStatement 1 is correct: The policy expressly affirms India's unwavering commitment to the TRIPS Agreement and the Doha Declaration on TRIPS and Public Health (2001), ensuring full utilization of flexibilities to protect public health and access to affordable essential medicines.\nStatement 2 is correct: DPIIT (Department for Promotion of Industry and Internal Trade, formerly DIPP) under the Ministry of Commerce and Industry was designated as the single nodal department for coordinating, administering, and modernizing all intellectual property offices and rights (patents, designs, trademarks, geographical indications, copyrights, and semiconductor layout designs) in India.",
     bookReference: {
-      bookName: 'Environment by Shankar IAS Academy',
-      edition: '9th Edition',
-      chapter: 'Chapter 11: Indian Biodiversity (Fauna - Dugong)',
-      pageNumber: 'Page 152 – 156',
-      keyExcerpt: 'Dugong is an herbivorous marine mammal protected under Schedule I of WPA 1972. Found in Gulf of Mannar, Gulf of Kutch, and Andaman & Nicobar, not the entire coast.'
+      bookName: "Indian Economy by Ramesh Singh",
+      edition: "15th Edition",
+      chapter: "Chapter 10: Industry and Infrastructure (National IPR Policy)",
+      pageNumber: "Page 10.18 – 10.22",
+      keyExcerpt: "National IPR Policy recognizes TRIPS flexibilities and designates DPIIT as the nodal agency."
     },
-    eliminationTip: 'Extreme word trap: "found along the ENTIRE coast of India". Dugongs only live in quiet seagrass bays (Gulf of Mannar, Gulf of Kutch, Andamans). Statement 2 is false, giving (c) 1 and 3.',
-    difficulty: 'Easy',
+    eliminationTip: "Both statements are the foundational, headline pillars of India's 2016 National IPR Policy. Both 1 and 2 are correct.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2017', 'Dugong', 'Sea Cow', 'Seagrass', 'Schedule I', 'WPA 1972', 'Environment']
+    tags: [
+      "UPSC 2017",
+      "National IPR Policy",
+      "TRIPS",
+      "DPIIT",
+      "Patents",
+      "Economy"
+    ]
   },
   {
-    id: 'pyq-2017-gs-15',
-    subject: 'history',
-    topic: 'Modern Indian History: Freedom Movement',
-    subTopic: 'Rowlatt Satyagraha (1919)',
-    question: 'With reference to the Rowlatt Satyagraha, which of the following statements is/are correct?\n\n1. The Rowlatt Act was based on the recommendations of the \'Sedition Committee\'.\n2. In Rowlatt Satyagraha, Gandhiji tried to utilize the Home Rule League.\n3. Demonstrations against the arrival of Simon Commission coincided with Rowlatt Satyagraha.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2017)',
+    id: "pyq-2017-gs-15",
+    subject: "history",
+    topic: "Modern Indian History: Partition Era",
+    subTopic: "Radcliffe Boundary Commission (1947)",
+    question: "The Radcliffe Committee was appointed to: (UPSC CSE Prelims 2017)",
     options: [
-      '1 only',
-      '1 and 2 only',
-      '2 and 3 only',
-      '1, 2 and 3'
-    ],
-    correctAnswer: 1,
-    explanation: 'Statement 1 is correct: The Anarchical and Revolutionary Crimes Act of 1919 (popularly termed the Rowlatt Act) was enacted based on the recommendations of the Sedition Committee, chaired by Sir Sidney Rowlatt in 1918.\nStatement 2 is correct: Mahatma Gandhi organized a \'Satyagraha Sabha\' and actively drew upon the organized networks and volunteer base of the Home Rule Leagues (founded by Annie Besant and Tilak) to mobilize mass protests across the country.\nStatement 3 is INCORRECT: The Simon Commission was appointed in November 1927 and arrived in Bombay in FEBRUARY 1928—nine years AFTER the 1919 Rowlatt Satyagraha! They did not coincide at all.\nTherefore, 1 and 2 only are correct.',
-    bookReference: {
-      bookName: 'India\'s Struggle for Independence by Bipan Chandra / Spectrum',
-      edition: 'Penguin / Spectrum 2024',
-      chapter: 'Chapter 14: Non-Cooperation and Khilafat Movements (Rowlatt Act 1919)',
-      pageNumber: 'Page 180 – 186',
-      keyExcerpt: 'Rowlatt Act arose from the Sedition Committee. Gandhi used the Home Rule League network for the Rowlatt Satyagraha in 1919. Simon Commission arrived in 1928.'
-    },
-    eliminationTip: 'Simon Commission arrived in 1928, whereas Rowlatt Satyagraha took place in 1919. Statement 3 is anachronistic and false. Eliminating 3 leaves (b) 1 and 2 only.',
-    difficulty: 'Easy',
-    isPYQ: true,
-    pyqYear: 2017,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2017', 'Rowlatt Satyagraha', 'Sedition Committee', 'Home Rule League', 'Simon Commission', 'Modern History']
-  },
-  {
-    id: 'pyq-2017-gs-16',
-    subject: 'economy',
-    topic: 'Banking Regulation & Monetary Operations',
-    subTopic: 'Marginal Cost of Funds based Lending Rate (MCLR)',
-    question: 'What is the purpose of the setting up of \'Marginal Cost of Funds based Lending Rate (MCLR)\' by the Reserve Bank of India?\n\n1. These guidelines help improve the transparency in the methodology followed by banks for determining the interest rates on advances.\n2. These guidelines help ensure availability of bank credit at interest rates which are fair to the borrowers as well as the banks.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2017)',
-    options: [
-      '1 only',
-      '2 only',
-      'Both 1 and 2',
-      'Neither 1 nor 2'
+      "Solve the problem of minorities in India",
+      "Give effect to the Independence Bill",
+      "Delimit the boundaries between India and Pakistan",
+      "Enquire into the riots in East Bengal"
     ],
     correctAnswer: 2,
-    explanation: 'Both statements describe the official regulatory objectives of the MCLR framework introduced by the RBI in April 2016:\n1. Statement 1 is correct: MCLR established a standardized, formulaic methodology for loan pricing based on marginal cost of funds (deposit rates, repo rate changes), operating costs, and tenor premium, significantly improving transparency compared to the opaque Base Rate regime.\n2. Statement 2 is correct: By mandating that commercial banks transmit policy repo rate cuts into lower borrowing rates in a timely manner, MCLR aimed to ensure fair, competitive, and transparent credit pricing for borrowers while allowing banks to remain financially sound.\nBoth 1 and 2 are correct.',
+    explanation: "Sir Cyril Radcliffe was appointed Chairman of two boundary commissions (one for Punjab and one for Bengal) in June 1947 to demarcate the international borders between India and newly created Pakistan (West and East Pakistan).\nThe resulting boundary line between India and Pakistan is known as the \"Radcliffe Line\", which was officially published on 17 August 1947.",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition',
-      chapter: 'Chapter 12: Banking in India (Monetary Transmission & MCLR)',
-      pageNumber: 'Page 12.24 – 12.28',
-      keyExcerpt: 'MCLR replaced the Base Rate system in 2016 to improve transparency and ensure monetary transmission in bank lending rates.'
+      bookName: "A Brief History of Modern India by Rajiv Ahir (Spectrum)",
+      edition: "2024 Edition",
+      chapter: "Chapter 25: Post-War National Scenario and Partition",
+      pageNumber: "Page 504 – 508",
+      keyExcerpt: "The Radcliffe Commission was tasked with drawing the boundary between India and Pakistan in Punjab and Bengal."
     },
-    eliminationTip: 'Both statements reflect the dual statutory goals of the MCLR regime: transparent loan pricing methodology and fair interest rates for borrowers and banks.',
-    difficulty: 'Easy',
+    eliminationTip: "Radcliffe Line = Border between India and Pakistan. Delimit the boundaries between India and Pakistan.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2017,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2017', 'MCLR', 'RBI', 'Monetary Transmission', 'Banking', 'Economy']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2017",
+      "Radcliffe Committee",
+      "Radcliffe Line",
+      "Partition",
+      "Modern History"
+    ]
   },
   {
+    id: "pyq-2017-gs-16",
+    subject: "economy",
+    topic: "Corporate Governance & NPA Resolution",
+    subTopic: "Insolvency and Bankruptcy Code, 2016 (IBC)",
+    question: "With reference to the \"Insolvency and Bankruptcy Code, 2016\" (IBC), consider the following statements:\n\n1. It provides a time-bound process for resolving insolvency in companies and individuals.\n2. The National Company Law Tribunal (NCLT) is the adjudicating authority for corporate persons.\n3. The Insolvency and Bankruptcy Board of India (IBBI) is the regulatory body overseeing insolvency proceedings.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2017)",
+    options: [
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
+    ],
+    correctAnswer: 3,
+    explanation: "All three statements are correct under the Insolvency and Bankruptcy Code, 2016 (IBC):\n1. Time-Bound Resolution: The Corporate Insolvency Resolution Process (CIRP) must be completed within 180 days (extendable by 90 days, capped at 330 days including litigation).\n2. Adjudicating Authority: The National Company Law Tribunal (NCLT) adjudicates corporate insolvency, while the Debt Recovery Tribunal (DRT) handles individuals and unlimited partnerships.\n3. Regulatory Body: The Insolvency and Bankruptcy Board of India (IBBI) regulates insolvency professionals, insolvency professional agencies, and information utilities.",
+    bookReference: {
+      bookName: "Indian Economy by Ramesh Singh",
+      edition: "15th Edition",
+      chapter: "Chapter 12: Banking in India (NPA Resolution & IBC 2016)",
+      pageNumber: "Page 12.35 – 12.40",
+      keyExcerpt: "IBC 2016 sets time-bound CIRP with NCLT as corporate adjudicator and IBBI as regulator."
+    },
+    eliminationTip: "All three statements capture the foundational tripartite institutional architecture of IBC 2016.",
+    difficulty: "Moderate",
+    isPYQ: true,
+    pyqYear: 2017,
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2017",
+      "IBC 2016",
+      "NCLT",
+      "IBBI",
+      "Insolvency",
+      "Economy"
+    ]
+  },
+{
     id: 'pyq-2017-gs-17',
     subject: 'history',
     topic: 'Ancient India: Cultural & Religious Traditions',

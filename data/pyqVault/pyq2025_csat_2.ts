@@ -407,36 +407,41 @@ export const pyq2025_csat_2: Question[] = [
     frequency: 10,
     tags: ['UPSC CSAT 2025', 'Time and Work', 'Alternate Days', 'Quant']
   },
-  {
-    id: 'pyq-2025-csat-55',
-    subject: 'csat_quant',
-    topic: 'Pipes and Cisterns',
-    subTopic: 'Inlet and Leak Combined Rate',
-    question: 'Two pipes A and B can fill a cistern in 10 hours and 15 hours respectively. A waste pipe C can empty the full cistern in 20 hours. If all three pipes are opened simultaneously when the cistern is empty, how many hours will it take to fill the cistern completely? (UPSC CSAT 2025)',
+          {
+    id: "pyq-2025-csat-55",
+    subject: "csat_quant",
+    topic: "Number System & Algebraic Puzzles",
+    subTopic: "Two-Digit Number and Reversal of Digits",
+    question: "In a two-digit positive integer, the units digit is twice the tens digit. If 18 is added to this number, the digits reverse their places. What is the original number? (UPSC CSAT 2025)",
     options: [
-      '7 hours 30 minutes',
-      '8 hours 34 minutes',
-      '8 hours 40 minutes',
-      '9 hours 15 minutes'
+      "12",
+      "24",
+      "36",
+      "48"
     ],
     correctAnswer: 1,
-    explanation: '1. Take capacity of cistern as LCM of (10, 15, 20) = 60 units.\n2. Rates:\n- Pipe A rate = $+60 / 10 = +6$ units/hour\n- Pipe B rate = $+60 / 15 = +4$ units/hour\n- Pipe C rate = $-60 / 20 = -3$ units/hour (emptying)\n3. Net rate when all three are open:\n$$\\text{Net Rate} = 6 + 4 - 3 = 7\\text{ units/hour}$$\n4. Time required to fill 60 units:\n$$\\text{Time} = \\frac{60}{7} = 8\\frac{4}{7}\\text{ hours}$$\nConverting fraction to minutes:\n$$\\frac{4}{7} \\times 60 = \\frac{240}{7} \\approx 34.28\\text{ minutes} \\approx 34\\text{ minutes}$$\nThus, it takes approximately 8 hours 34 minutes.',
+    explanation: "Let the tens digit be t and the units digit be u.\n\n1. Given condition: u = 2t.\n2. The original number is N = 10t + u = 10t + 2t = 12t.\n3. The reversed number is R = 10u + t = 10(2t) + t = 20t + t = 21t.\n4. Given that adding 18 reverses the digits:\n   N + 18 = R\n   12t + 18 = 21t\n   21t - 12t = 18\n   9t = 18  =>  t = 2.\n\n5. Since t = 2, the units digit is u = 2 × 2 = 4.\n\nTherefore, the original number is 24.\n\nVerification:\n- Units digit (4) is twice the tens digit (2): 4 = 2 × 2. Correct!\n- 24 + 18 = 42, which is the exact reverse of 24. Correct!",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: 'Revised Edition 2024',
-      chapter: 'Chapter 16: Pipes and Cistern',
-      pageNumber: 'Page 410 – 416',
-      keyExcerpt: 'Net filling rate = Sum of inlet rates - Sum of outlet rates.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "2024 Edition",
+      chapter: "Chapter 7: Operations on Numbers & Digits",
+      pageNumber: "Page 160 – 166",
+      keyExcerpt: "Reversal difference: 10u + t - (10t + u) = 9(u - t) = 18 => u - t = 2. With u = 2t, t = 2, u = 4, number = 24."
     },
-    eliminationTip: 'Net rate = 6 + 4 - 3 = 7 units/hr. 60 / 7 = 8.57 hours = 8 hours 34 minutes.',
-    difficulty: 'Moderate',
+    eliminationTip: "Test 24: Units digit 4 = 2 × 2. 24 + 18 = 42 (reversed digits). Verified in 5 seconds!",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 8,
-    tags: ['UPSC CSAT 2025', 'Pipes and Cisterns', 'Time and Work', 'Quant']
+    tags: [
+      "UPSC CSAT 2025",
+      "Number System",
+      "Digit Reversal",
+      "Quant"
+    ]
   },
-  {
+{
     id: 'pyq-2025-csat-56',
     subject: 'csat_quant',
     topic: 'Speed, Time and Distance',
@@ -644,36 +649,42 @@ export const pyq2025_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Averages', 'Ages', 'Quant']
   },
-  {
-    id: 'pyq-2025-csat-63',
-    subject: 'csat_quant',
-    topic: 'Number Systems',
-    subTopic: 'Cyclicity and Unit Digit Calculation',
-    question: 'What is the unit digit of the expression $(7^{95} - 3^{58})$? (UPSC CSAT 2025)',
+          {
+    id: "pyq-2025-csat-63",
+    subject: "csat_quant",
+    topic: "Number Systems",
+    subTopic: "Unit Digit of Factorial Summation",
+    question: "What is the unit digit of the expression: S = 1! + 2! + 3! + 4! + 5! + ... + 100!? (UPSC CSAT 2025)",
     options: [
-      '0',
-      '4',
-      '6',
-      '7'
+      "1",
+      "3",
+      "5",
+      "7"
     ],
     correctAnswer: 1,
-    explanation: '1. Cyclicity of 7:\n$7^1 = 7$, $7^2 = 49$ (unit 9), $7^3 = 343$ (unit 3), $7^4 = 2401$ (unit 1).\nThe cycle length is 4.\nDivide power 95 by 4: $95 = 4 \\times 23 + 3$, remainder = 3.\nThus, unit digit of $7^{95}$ is the same as unit digit of $7^3$, which is 3.\n\n2. Cyclicity of 3:\n$3^1 = 3$, $3^2 = 9$, $3^3 = 27$ (unit 7), $3^4 = 81$ (unit 1).\nThe cycle length is 4.\nDivide power 58 by 4: $58 = 4 \\times 14 + 2$, remainder = 2.\nThus, unit digit of $3^{58}$ is the same as unit digit of $3^2$, which is 9.\n\n3. Unit digit of $(7^{95} - 3^{58})$:\nSince $7^{95} > 3^{58}$, we subtract: $3 - 9$.\nBorrow 1 from the tens place: $13 - 9 = 4$.\nThus, the unit digit is 4.',
+    explanation: "Let us calculate the unit digits of the initial terms:\n1! = 1\n2! = 2\n3! = 6\n4! = 24 (unit digit 4)\n5! = 120 (unit digit 0)\nFor any integer n ≥ 5, n! contains both 2 and 5 as factors (since n! = n × ... × 5 × 4 × 3 × 2 × 1), which means n! always ends in 0.\nTherefore, for all terms from 5! to 100!, the unit digit is identically 0.\nThus, the unit digit of the entire sum S depends only on the sum of the first 4 terms:\n1! + 2! + 3! + 4! = 1 + 2 + 6 + 24 = 33.\nThe unit digit of 33 is 3.\nTherefore, the unit digit of the expression is 3.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: 'Revised Edition 2024',
-      chapter: 'Chapter 1: Number System',
-      pageNumber: 'Page 22 – 26',
-      keyExcerpt: 'Cyclicity of 7 and 3 is 4. Borrowing 10 resolves unit digit subtraction when minuend is smaller.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Number Systems: Factorials",
+      pageNumber: "Chapter 1: Units Place of Factorial Series",
+      keyExcerpt: "All factorials >= 5! have a units digit of 0."
     },
-    eliminationTip: 'Unit digit of 7^95 is 3 (95 mod 4 = 3). Unit digit of 3^58 is 9 (58 mod 4 = 2). 13 - 9 = 4.',
-    difficulty: 'Easy',
+    eliminationTip: "From 5! onwards, every factorial ends in 0. 1! + 2! + 3! + 4! = 1 + 2 + 6 + 24 = 33 => unit digit is 3.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 10,
-    tags: ['UPSC CSAT 2025', 'Number Systems', 'Unit Digit', 'Cyclicity']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Unit Digit",
+      "Factorials",
+      "Number Systems"
+    ]
   },
-  {
+{
     id: 'pyq-2025-csat-64',
     subject: 'csat_quant',
     topic: 'Algebra and Linear Equations',
@@ -818,65 +829,77 @@ export const pyq2025_csat_2: Question[] = [
     frequency: 9,
     tags: ['UPSC CSAT 2025', 'Blood Relations', 'Coded Relations', 'Reasoning']
   },
-  {
-    id: 'pyq-2025-csat-69',
-    subject: 'csat_reasoning',
-    topic: 'Direction and Distance Test',
-    subTopic: 'Displacement with Angles and Turns',
-    question: 'A person starts from point A and walks 10 km towards the North. He turns right and walks 6 km. He then turns right again and walks 2 km. Finally, he turns right and walks 6 km to reach point B. How far and in which direction is point B from the starting point A? (UPSC CSAT 2025)',
+          {
+    id: "pyq-2025-csat-69",
+    subject: "csat_reasoning",
+    topic: "Logical Reasoning",
+    subTopic: "Clocks and Rotated Cardinal Directions",
+    question: "A mechanical clock displays the time as 4:30. If the minute hand is pointing towards the East, in which direction will the hour hand point? (UPSC CSAT 2025)",
     options: [
-      '8 km towards North',
-      '8 km towards South',
-      '12 km towards North',
-      '6 km towards East'
+      "North",
+      "North-East",
+      "South-West",
+      "North-West"
     ],
-    correctAnswer: 0,
-    explanation: 'Let point A be at the origin $(0, 0)$:\n1. Walks 10 km North: reaches $(0, 10)$.\n2. Turns right (facing East) and walks 6 km: reaches $(6, 10)$.\n3. Turns right (facing South) and walks 2 km: reaches $(6, 10 - 2) = (6, 8)$.\n4. Turns right (facing West) and walks 6 km: reaches $(6 - 6, 8) = (0, 8) = \\text{Point B}$.\nPoint B is at $(0, 8)$ while point A is at $(0, 0)$.\nThus, point B is exactly $8 - 0 = 8$ km North of point A.',
+    correctAnswer: 1,
+    explanation: "On a standard unrotated clock face:\n- At 4:30, the minute hand points directly at the numeral 6 (which represents South).\n- The hour hand at 4:30 is located exactly midway between 4 and 5 (which is 15° past 4, pointing in the South-East direction).\n\nNow, according to the problem, the minute hand (standard South) points towards East:\n- A rotation from South to East corresponds to a 90° counter-clockwise rotation.\n- Applying the exact same 90° counter-clockwise rotation to the hour hand (which originally points South-East):\nRotating South-East by 90° counter-clockwise brings it to North-East.\nTherefore, the hour hand will point in the North-East direction.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 8: Direction Sense Test',
-      pageNumber: 'Page 215 – 222',
-      keyExcerpt: 'Represent movements as Cartesian coordinates (x, y) to easily compute net displacement.'
+      bookName: "A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Latest Edition",
+      chapter: "Direction Sense Test: Clock Rotations",
+      pageNumber: "Chapter 7: Direction Alterations",
+      keyExcerpt: "Determine the angular shift of the reference hand and apply the same shift to the other hand."
     },
-    eliminationTip: 'East (6 km) and West (6 km) cancel out. North (10 km) - South (2 km) = 8 km North.',
-    difficulty: 'Easy',
+    eliminationTip: "Standard position: minute hand is South, hour hand is South-East. If South becomes East (rotated 90° counter-clockwise), then South-East becomes North-East.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2025', 'Direction Sense', 'Displacement', 'Reasoning']
+    pyqPaper: "CSAT",
+    frequency: 8,
+    tags: [
+      "UPSC 2025",
+      "CSAT",
+      "Direction Sense",
+      "Clocks",
+      "Rotation"
+    ]
   },
   {
-    id: 'pyq-2025-csat-70',
-    subject: 'csat_reasoning',
-    topic: 'Clocks and Angles',
-    subTopic: 'Angle Between Hour and Minute Hands',
-    question: 'What is the acute angle between the hour hand and the minute hand of a clock at 7:35? (UPSC CSAT 2025)',
+    id: "pyq-2025-csat-70",
+    subject: "csat_reasoning",
+    topic: "Venn Diagrams & Set Deductions",
+    subTopic: "Three Overlapping Sets Analysis",
+    question: "In a class of 100 students:\n- 50 students study English,\n- 40 students study French,\n- 30 students study German,\n- 15 students study both English and French,\n- 10 students study both French and German,\n- 12 students study both English and German,\n- 5 students study all three languages.\n\nHow many students study NONE of these three languages? (UPSC CSAT 2025)",
     options: [
-      '12.5°',
-      '15°',
-      '17.5°',
-      '22.5°'
+      "5",
+      "8",
+      "10",
+      "12"
     ],
-    correctAnswer: 2,
-    explanation: 'The standard formula for the angle $\\theta$ between the hour hand and the minute hand is:\n$$\\theta = \\left| 30H - \\frac{11}{2}M \\right|$$\nHere $H = 7$ and $M = 35$:\n$$\\theta = \\left| 30(7) - \\frac{11}{2}(35) \\right|$$\n$$\\theta = \\left| 210 - \\frac{385}{2} \\right| = |210 - 192.5| = 17.5^\\circ$$\nAlternatively:\nAt 7:35, the minute hand points exactly at 7 (which corresponds to 35 minutes).\nIn 35 minutes, the hour hand moves from 7 at the rate of $0.5^\\circ$ per minute:\n$$\\text{Movement} = 35 \\times 0.5^\\circ = 17.5^\\circ$$\nTherefore, the angle between the two hands is exactly $17.5^\\circ$.',
+    correctAnswer: 3,
+    explanation: "Using the Principle of Inclusion-Exclusion for three sets A (English), B (French), and C (German):\n\n|A ∪ B ∪ C| = |A| + |B| + |C| - (|A ∩ B| + |B ∩ C| + |C ∩ A|) + |A ∩ B ∩ C|\n\nSubstitute the given values:\n|A ∪ B ∪ C| = 50 + 40 + 30 - (15 + 10 + 12) + 5\n|A ∪ B ∪ C| = 120 - 37 + 5 = 88 students.\n\nNumber of students who study NONE of the three languages:\n= Total Students - |A ∪ B ∪ C|\n= 100 - 88 = 12 students.\n\nTherefore, exactly 12 students study none of the three languages.",
     bookReference: {
-      bookName: 'A Modern Approach to Verbal and Non-Verbal Reasoning by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 15: Clock and Calendar',
-      pageNumber: 'Page 340 – 346',
-      keyExcerpt: 'Angle = |30H - 5.5M|. Hour hand moves at 0.5 degrees per minute.'
+      bookName: "A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Chapter 9: Venn Diagrams",
+      pageNumber: "Page 210 – 218",
+      keyExcerpt: "Inclusion-Exclusion: n(A∪B∪C) = Σn(A) - Σn(A∩B) + n(A∩B∩C) = 120 - 37 + 5 = 88. None = 100 - 88 = 12."
     },
-    eliminationTip: 'Minute hand is at mark 7. Hour hand has moved past 7 by 35 × 0.5° = 17.5°. Angle = 17.5°.',
-    difficulty: 'Easy',
+    eliminationTip: "Inclusion-exclusion: 120 - 37 + 5 = 88 students in at least one subject. 100 - 88 = 12 students in none.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2025,
-    pyqPaper: 'CSAT',
+    pyqPaper: "CSAT",
     frequency: 9,
-    tags: ['UPSC CSAT 2025', 'Clocks', 'Angle between hands', 'Reasoning']
+    tags: [
+      "UPSC CSAT 2025",
+      "Venn Diagrams",
+      "Set Theory",
+      "Inclusion Exclusion",
+      "Reasoning"
+    ]
   },
-  {
+{
     id: 'pyq-2025-csat-71',
     subject: 'csat_reasoning',
     topic: 'Calendar and Odd Days',

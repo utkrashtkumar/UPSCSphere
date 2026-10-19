@@ -209,36 +209,42 @@ export const pyq2022_csat_1: Question[] = [
     frequency: 8,
     tags: ['UPSC CSAT 2022', 'Reading Comprehension', 'Digital Privacy', 'Algorithms', 'Assumption']
   },
-  {
-    id: 'pyq-2022-csat-08',
-    subject: 'csat_quant',
-    topic: 'Time and Work: Men, Days and Hours',
-    subTopic: 'MDH Formula for Proportional Work',
-    question: 'If 15 men can complete a work in 12 days working 8 hours a day, in how many days can 18 men complete the same work working 10 hours a day? (UPSC CSAT 2022)',
+          {
+    id: "pyq-2022-csat-08",
+    subject: "csat_quant",
+    topic: "Time and Work",
+    subTopic: "Compound Work Formula (Chain Rule)",
+    question: "If 24 workers can construct a road of length 360 meters in 15 days working 6 hours a day, in how many days can 30 workers construct a road of length 480 meters working 8 hours a day? (UPSC CSAT 2022)",
     options: [
-      '6 days',
-      '8 days',
-      '9 days',
-      '10 days'
+      "10 days",
+      "12 days",
+      "14 days",
+      "16 days"
     ],
     correctAnswer: 1,
-    explanation: 'We use the standard Work-Efficiency formula (M₁ × D₁ × H₁ = M₂ × D₂ × H₂ for the same work W):\n\nHere:\n- M₁ = 15 men\n- D₁ = 12 days\n- H₁ = 8 hours/day\n\n- M₂ = 18 men\n- D₂ = ? days\n- H₂ = 10 hours/day\n\nEquating total man-hours:\n15 × 12 × 8 = 18 × D₂ × 10\n\nCalculate left side:\n15 × 12 × 8 = 180 × 8 = 1440 man-hours.\n\nNow solve for D₂:\n18 × 10 × D₂ = 180 × D₂\n180 × D₂ = 1440\nD₂ = 1440 / 180 = 8 days.\n\nTherefore, 18 men will complete the work in 8 days.',
+    explanation: "Using the Compound Work Formula (Chain Rule):\n(M1 × D1 × H1) / W1 = (M2 × D2 × H2) / W2\nwhere:\n- M1 = 24 workers, D1 = 15 days, H1 = 6 hours/day, W1 = 360 meters\n- M2 = 30 workers, D2 = ? days, H2 = 8 hours/day, W2 = 480 meters\n\nSubstituting the values:\n(24 × 15 × 6) / 360 = (30 × D2 × 8) / 480\nLeft Side:\n(24 × 90) / 360 = 2,160 / 360 = 6.\nRight Side:\n(240 × D2) / 480 = D2 / 2.\nEquating both sides:\n6 = D2 / 2\nD2 = 6 × 2 = 12 days.\nTherefore, 30 workers will take 12 days to construct the road.",
     bookReference: {
-      bookName: 'Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal',
-      edition: '2024 Edition',
-      chapter: 'Chapter 15: Time and Work (Chain Rule and MDH Formula)',
-      pageNumber: 'Page 340 – 345',
-      keyExcerpt: 'M1 × D1 × H1 = M2 × D2 × H2. D2 = (15 × 12 × 8) / (18 × 10) = 1440 / 180 = 8 days.'
+      bookName: "Quantitative Aptitude by R.S. Aggarwal",
+      edition: "Revised Edition",
+      chapter: "Time and Work: Chain Rule",
+      pageNumber: "Chapter 16: MDH Formula",
+      keyExcerpt: "(M1*D1*H1)/W1 = (M2*D2*H2)/W2."
     },
-    eliminationTip: 'MDH formula: (15 × 12 × 8) / (18 × 10) = 1440 / 180 = 8 days.',
-    difficulty: 'Easy',
+    eliminationTip: "Formula: (24 × 15 × 6)/360 = 6. (30 × D × 8)/480 = D/2. D/2 = 6 => D = 12 days.",
+    difficulty: "Easy",
     isPYQ: true,
     pyqYear: 2022,
-    pyqPaper: 'CSAT',
-    frequency: 9,
-    tags: ['UPSC CSAT 2022', 'Time and Work', 'MDH Formula', 'Chain Rule', 'Quant']
+    pyqPaper: "CSAT",
+    frequency: 7,
+    tags: [
+      "UPSC 2022",
+      "CSAT",
+      "Chain Rule",
+      "Time and Work",
+      "MDH Formula"
+    ]
   },
-  {
+{
     id: 'pyq-2022-csat-09',
     subject: 'csat_reasoning',
     topic: 'Coding-Decoding: Number-Symbol Logic',

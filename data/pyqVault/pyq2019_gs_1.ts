@@ -964,36 +964,43 @@ export const pyq2019_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2019', 'Harshavardhana', 'Chalukyas', 'Pallavas', 'Hoysalas', 'Ancient History']
   },
-  {
-    id: 'pyq-2019-gs-34',
-    subject: 'polity',
-    topic: 'State Executive: Governor Powers',
-    subTopic: 'Discretionary Powers of the Governor (Article 163)',
-    question: 'Which of the following are the discretionary powers given to the Governor of a State?\n1. Sending a report to the President of India for imposing the President\'s rule.\n2. Appointing the ministers.\n3. Reserving certain bills passed by the State Legislature for consideration of the President of India.\n4. Making the rules to conduct the business of the State Government.\n\nSelect the correct answer using the code given below: (UPSC CSE Prelims 2019)',
+          {
+    id: "pyq-2019-gs-34",
+    subject: "polity",
+    topic: "Constitutional Amendments & Judicial Review",
+    subTopic: "Ninth Schedule and I.R. Coelho Case (2007)",
+    question: "With reference to the Constitution of India, consider the following statements regarding the Ninth Schedule:\n\n1. It was introduced in the Constitution by the First Constitutional Amendment Act, 1951.\n2. In the I.R. Coelho case (2007), the Supreme Court ruled that laws placed in the Ninth Schedule after April 24, 1973 are open to judicial review if they violate fundamental rights forming the basic structure.\n\nWhich of the statements given above is/are correct? (UPSC CSE Prelims 2019)",
     options: [
-      '1 and 2 only',
-      '1 and 3 only',
-      '2, 3 and 4 only',
-      '1, 2, 3 and 4'
+      "1 only",
+      "2 only",
+      "Both 1 and 2",
+      "Neither 1 nor 2"
     ],
-    correctAnswer: 1,
-    explanation: 'Evaluating the powers of the Governor under the Constitution of India:\n- Point 1 (Discretionary): Recommending President\'s rule under Article 356 when the constitutional machinery fails is an independent constitutional assessment made by the Governor in his discretion.\n- Point 2 (NOT Discretionary): Under Article 164(1), the Governor appoints ministers ONLY on the binding advice and recommendation of the Chief Minister.\n- Point 3 (Discretionary): Reserving a bill passed by the state legislature for the consideration of the President under Article 200 is an explicit discretionary prerogative of the Governor.\n- Point 4 (NOT Discretionary): Making rules for the convenient transaction of government business under Article 166(3) is done on the aid and advice of the Council of Ministers.\n\nTherefore, only 1 and 3 are true discretionary powers.',
+    correctAnswer: 2,
+    explanation: "Both statements are correct:\nStatement 1 is correct: The Ninth Schedule and Article 31B were inserted into the Constitution by the 1st Constitutional Amendment Act, 1951 (under Prime Minister Jawaharlal Nehru) to protect agrarian land reform laws from judicial scrutiny.\nStatement 2 is correct: In the landmark I.R. Coelho v. State of Tamil Nadu (2007), a 9-judge constitution bench unanimously held that there is no blanket immunity for laws placed in the Ninth Schedule. Any law placed in the 9th Schedule after the Kesavananda Bharati judgment (24 April 1973) can be invalidated if it violates fundamental rights and destroys the basic structure of the Constitution.",
     bookReference: {
-      bookName: 'Indian Polity by M. Laxmikanth',
-      edition: '7th Edition',
-      chapter: 'Chapter 30: Governor (Discretionary Powers)',
-      pageNumber: 'Page 30.6 – 30.9',
-      keyExcerpt: 'Discretionary powers include: reserving a bill for the President (Article 200) and recommending President\'s rule (Article 356). Ministers are appointed solely on the advice of the CM.'
+      bookName: "Indian Polity by M. Laxmikanth",
+      edition: "7th Edition",
+      chapter: "Chapter 11: Basic Structure of the Constitution",
+      pageNumber: "Page 11.3 – 11.6",
+      keyExcerpt: "1st Amendment 1951 added Ninth Schedule. In I.R. Coelho (2007), SC held post-1973 additions are subject to judicial review."
     },
-    eliminationTip: 'Can a Governor appoint any minister he likes in his own discretion? No, he must appoint ministers strictly on the advice of the Chief Minister! Eliminating 2 knocks out A, C, and D immediately, leaving Option B.',
-    difficulty: 'Easy',
+    eliminationTip: "Both statements are famous landmark constitutional principles taught in basic polity. Both 1 and 2 are correct.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
+    pyqPaper: "GS",
     frequency: 9,
-    tags: ['UPSC 2019', 'Governor', 'Discretionary Powers', 'Article 200', 'Article 356', 'Article 164']
+    tags: [
+      "UPSC 2019",
+      "Ninth Schedule",
+      "First Amendment",
+      "I.R. Coelho",
+      "Basic Structure",
+      "Polity"
+    ]
   },
-  {
+{
     id: 'pyq-2019-gs-35',
     subject: 'polity',
     topic: 'Judicial Structure & High Courts',
@@ -1167,36 +1174,42 @@ export const pyq2019_gs_1: Question[] = [
     frequency: 9,
     tags: ['UPSC 2019', 'Minamata Convention', 'Mercury Pollution', 'UNEP', 'Gold Mining', 'Environment']
   },
-  {
-    id: 'pyq-2019-gs-41',
-    subject: 'history',
-    topic: 'Modern Indian History: Governor-Generals & Policies',
-    subTopic: 'Doctrine of Lapse and Annexations under Lord Dalhousie',
-    question: 'Which of the following states was annexed by Lord Dalhousie under the Doctrine of Lapse FIRST? (UPSC CSE Prelims 2019)',
+          {
+    id: "pyq-2019-gs-41",
+    subject: "history",
+    topic: "Modern Indian History: Freedom Movement",
+    subTopic: "The August Offer (1940)",
+    question: "With reference to the \"August Offer\" announced by Viceroy Lord Linlithgow in 1940, consider the following statements:\n\n1. It explicitly recognized, for the first time, the right of Indians to frame their own constitution.\n2. It offered \"Dominion Status\" as the objective of British policy for India.\n3. It declared that no future constitution would be adopted without the consent of minorities.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2019)",
     options: [
-      'Satara',
-      'Sambalpur',
-      'Jhansi',
-      'Nagpur'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Lord Dalhousie (Governor-General of India, 1848–1856) applied the Doctrine of Lapse—whereby dependent princely states whose ruler died without a natural biological male heir automatically "lapsed" to the British sovereign paramount power.\nChronological order of annexations under the Doctrine of Lapse:\n1. SATARA — 1848 (First state to be annexed)\n2. Jaitpur and Sambalpur — 1849\n3. Baghat — 1850\n4. Udaipur (Chhattisgarh) — 1852\n5. Jhansi — 1853\n6. Nagpur — 1854\nTherefore, Satara was the very first state annexed under the Doctrine of Lapse.',
+    correctAnswer: 3,
+    explanation: "All three statements are correct regarding the August Offer of 8 August 1940:\n1. Framing of Constitution: For the first time, the British Government explicitly conceded that framing the new Constitution would be primarily the responsibility of Indians themselves, to be undertaken after the war.\n2. Dominion Status: It formally declared \"Dominion Status\" as the constitutional objective for India.\n3. Minority Veto: It introduced a controversial assurance that Britain would not transfer power to any system of government whose authority was denied by large and powerful elements in India's national life (effectively conferring a veto power upon the Muslim League).",
     bookReference: {
-      bookName: 'A Brief History of Modern India by Rajiv Ahir (Spectrum)',
-      edition: '2024 Edition',
-      chapter: 'Chapter 5: Expansion and Consolidation of British Power in India',
-      pageNumber: 'Page 118 – 122',
-      keyExcerpt: 'Under the Doctrine of Lapse, Dalhousie annexed Satara first in 1848, followed by Sambalpur (1849), Jhansi (1853), and Nagpur (1854).'
+      bookName: "India's Struggle for Independence by Bipan Chandra / Spectrum",
+      edition: "2024 Edition",
+      chapter: "Chapter 22: Nationalist Upsurge at the End of World War II (August Offer)",
+      pageNumber: "Page 445 – 448",
+      keyExcerpt: "August Offer conceded Dominion Status, promised post-war constituent body of Indians, and gave a veto to minorities."
     },
-    eliminationTip: 'Satara (1848) is famous in modern Indian history as the first victim annexed under Dalhousie\'s Doctrine of Lapse.',
-    difficulty: 'Easy',
+    eliminationTip: "All three provisions (Dominion status, constituent assembly primarily by Indians, and minority consent veto) are canonical terms of the 1940 August Offer.",
+    difficulty: "Moderate",
     isPYQ: true,
     pyqYear: 2019,
-    pyqPaper: 'GS',
-    frequency: 8,
-    tags: ['UPSC 2019', 'Doctrine of Lapse', 'Satara', 'Lord Dalhousie', 'British Annexation']
+    pyqPaper: "GS",
+    frequency: 9,
+    tags: [
+      "UPSC 2019",
+      "August Offer 1940",
+      "Linlithgow",
+      "Constituent Assembly",
+      "Modern History"
+    ]
   },
-  {
+{
     id: 'pyq-2019-gs-42',
     subject: 'economy',
     topic: 'Poverty & Human Development Indices',

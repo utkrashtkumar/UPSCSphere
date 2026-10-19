@@ -262,36 +262,43 @@ export const pyq2026_gs_1: Question[] = [
     frequency: 8,
     tags: ['UPSC 2026', 'Artemis Accords', 'ISRO', 'Space Exploration', 'Outer Space Treaty']
   },
-  {
-    id: 'pyq-2026-gs-10',
-    subject: 'international',
-    topic: 'International Trade & Climate Policy',
-    subTopic: 'Carbon Border Adjustment Mechanism (CBAM) of the European Union',
-    question: 'With reference to the European Union\'s "Carbon Border Adjustment Mechanism (CBAM)", consider the following statements:\n\n1. It imposes a carbon price on imports of targeted carbon-intensive goods entering the EU, matching the carbon price paid by domestic EU producers under the EU Emissions Trading System (ETS).\n2. In its initial transitional phase, it covers steel, aluminium, cement, fertilizers, hydrogen, and electricity.\n3. Developing countries with per capita income below $2,000 are permanently exempted from CBAM compliance.\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)',
+          {
+    id: "pyq-2026-gs-10",
+    subject: "science_tech",
+    topic: "Industrial Policy & Electronics Manufacturing",
+    subTopic: "India Semiconductor Mission (ISM) and Ecosystem",
+    question: "With reference to the \"India Semiconductor Mission\" (ISM) launched under the Ministry of Electronics and Information Technology (MeitY), consider the following statements:\n\n1. It provides fiscal support of up to 50% of the project cost on an equal pari-passu basis for setting up Silicon semiconductor wafer fabrication facilities in India.\n2. The Design Linked Incentive (DLI) scheme offers financial incentives and design infrastructure access for domestic startups developing semiconductor chip designs.\n3. India’s first commercial semiconductor fabrication facility under ISM was approved for construction at Dholera in Gujarat by Tata Electronics in partnership with Powerchip (PSMC).\n\nWhich of the statements given above are correct? (UPSC CSE Prelims 2026)",
     options: [
-      '1 and 2 only',
-      '2 and 3 only',
-      '1 and 3 only',
-      '1, 2 and 3'
+      "1 and 2 only",
+      "2 and 3 only",
+      "1 and 3 only",
+      "1, 2 and 3"
     ],
-    correctAnswer: 0,
-    explanation: 'Statement 1 is correct: CBAM equalizes the price of carbon paid for domestic EU production under the EU ETS and that paid for imported goods to prevent "carbon leakage".\nStatement 2 is correct: The initial scope encompasses six emissions-intensive sectors: iron and steel, aluminium, cement, fertilizers, electricity, and hydrogen.\nStatement 3 is incorrect: CBAM contains no permanent exemptions based on national development status or per capita GDP; all foreign exporters must surrender CBAM certificates corresponding to embedded carbon emissions (less any verified carbon tax already paid in the country of origin). This lack of Special and Differential Treatment (S&DT) is the core contention raised by India, Brazil, and South Africa (BASIC).',
+    correctAnswer: 3,
+    explanation: "All three statements are correct:\n1. Under the modified Semicon India Programme, the Union Government uniformized fiscal support at 50% of project costs across all technology nodes for Semiconductor Fabs, Display Fabs, and Compound Semiconductor/OSAT facilities.\n2. The DLI scheme administered by C-DAC supports at least 100 domestic companies/startups engaged in semiconductor design with up to 50% financial reimbursement and EDA design tool access.\n3. In February 2024, the Union Cabinet approved India's first commercial semiconductor fabrication unit in Dholera, Gujarat, established by Tata Electronics in collaboration with Taiwan's Powerchip Semiconductor Manufacturing Corporation (PSMC).",
     bookReference: {
-      bookName: 'Indian Economy by Ramesh Singh',
-      edition: '15th Edition (2024)',
-      chapter: 'Chapter 15: External Sector and International Trade Agreements',
-      pageNumber: 'Page 15.42 – 15.48',
-      keyExcerpt: 'CBAM applies uniformly to steel, aluminium, cement, fertilizers, electricity, and hydrogen without exemptions for developing nations.'
+      bookName: "Science & Technology by Ravi P. Agrahari / MeitY ISM Dossier",
+      edition: "Latest Edition",
+      chapter: "Electronics Hardware: Semiconductor Ecosystem",
+      pageNumber: "Page 102 – 108",
+      keyExcerpt: "ISM offers 50% uniform subsidy and supports design via DLI. Tata-PSMC fab is in Dholera."
     },
-    eliminationTip: 'Developing nations oppose CBAM precisely because the EU refused to grant developing countries any permanent exemptions under Common But Differentiated Responsibilities (CBDR). Eliminating Statement 3 gives (a) 1 and 2 only.',
-    difficulty: 'UPSC Standard',
+    eliminationTip: "50% pari-passu subsidy, DLI for startups, and Dholera fab are the headline milestones of the India Semiconductor Mission.",
+    difficulty: "UPSC Standard",
     isPYQ: true,
     pyqYear: 2026,
-    pyqPaper: 'GS',
-    frequency: 9,
-    tags: ['UPSC 2026', 'CBAM', 'European Union', 'Carbon Tax', 'International Trade']
+    pyqPaper: "GS",
+    frequency: 10,
+    tags: [
+      "UPSC 2026",
+      "Semiconductor Mission",
+      "ISM",
+      "Dholera",
+      "DLI",
+      "MeitY"
+    ]
   },
-  {
+{
     id: 'pyq-2026-gs-11',
     subject: 'international',
     topic: 'Global Security & Anti-Money Laundering Frameworks',
